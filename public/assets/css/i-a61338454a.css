@@ -1,0 +1,9 @@
+ @font-face {
+ font-family: 'Cal Sans';
+ font-style: normal;
+ font-weight: normal;
+ font-display: auto;
+ src: url('/wp-content/themes/alphahardscapes/fonts/CalSans-Regular.woff2') format('woff2'),
+ url('/wp-content/themes/alphahardscapes/fonts/CalSans-Regular.ttf') format('truetype');
+}
+/*# sourceURL=elementor-pro-custom-fonts-inline-css */ 

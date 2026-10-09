@@ -1,0 +1,84 @@
+ .phone-btn {
+ background: #AECD38;
+ padding: 5px 20px!important;
+ border-radius: 4px
+}
+@media (min-width: 768px) {
+.menu-hide-desktop {
+ display: none!important;
+}
+ .small-h2 {
+ font-size: 24px;
+}
+}
+.elementor-icon-box-description a {
+ color: #AECD38;
+}
+@media (max-width: 767px) {
+.small-h2 {
+ font-size: 20px;
+}
+}
+/* client-review-slider-wrapper */
+.client-review-slider-wrapper{
+ overflow: hidden;
+}
+.client-review-slider-wrapper .swiper{
+ overflow: visible;
+}
+.client-review-slider-wrapper .elementor-testimonial{
+ display: flex;
+ flex-wrap: wrap;
+}
+.client-review-slider-wrapper .elementor-testimonial .elementor-testimonial__content{
+ order: 2;
+ margin-top: 20px;
+}
+.client-review-slider-wrapper .elementor-testimonial .elementor-testimonial__footer{
+ order: 1;
+ margin-top: 0;
+}
+.client-review-slider-wrapper .swiper .elementor-swiper-button{
+ top: -90px;
+ background-color: rgba(0,0,0,0.05);
+ border-radius: 5px;
+ padding: 20px;
+ transition: all 0.6s;
+}
+.client-review-slider-wrapper .swiper .elementor-swiper-button:hover{
+ background-color: rgba(0,0,0,0.1);
+}
+.client-review-slider-wrapper .swiper .elementor-swiper-button svg path{
+ fill: #000000;
+}
+.client-review-slider-wrapper .swiper .elementor-swiper-button.elementor-swiper-button-prev{
+ right: 80px;
+ left: auto;
+}
+/* client-review-slider-wrapper END*/
+.our-approach,
+.overflow-hide{
+ overflow: hidden;
+}
+/* service-block-wrap */
+.our-approach-arrow .service-block-wrap .slick-slide{
+ position: relative;
+}
+.our-approach-arrow .service-block-wrap .slick-slide:after{
+ content:'';
+ background-image: url('/wp-content/uploads/2025/04/Vector-1621.png');
+ background-size: 95px 17px;
+ background-repeat: no-repeat;
+ width: 95px;
+ height: 17px;
+ display: block;
+ position: absolute;
+ top: 50%;
+ left: 92%;
+ z-index: 1;
+}
+/* service-block-wrap eND */
+/* .landing-header-wrap,
+.landing-header-wrap:before{
+ background-image: none !important;
+} */ 
