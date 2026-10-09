@@ -297,6 +297,12 @@ for (const file of files.sort()) {
     const kind = cls.has("author") ? "author" : cls.has("category") ? "category" : "blog";
     const slug = path!.split("/").filter(Boolean).pop()!;
     const id = `archive-${kind}${kind === "blog" ? "" : `-${slug}`}`;
+    if (kind === "author" && !docs.has(`author-${slug}`)) {
+      // Authors without public posts are missing from the REST API; take the name from the page.
+      const name = $(".ast-author-bio .page-title").text().replace(/^Author name:\s*/, "").trim() || (seo.title || slug).split(/[,|]/)[0].trim();
+      const avatar = $(".ast-author-avatar img").attr("src");
+      docs.set(`author-${slug}`, { _id: `author-${slug}`, _type: "author", name, slug: { _type: "slug", current: slug }, avatar });
+    }
     Object.assign(doc, {
       _id: id,
       _type: "archivePage",
@@ -356,6 +362,7 @@ for (const file of files.sort()) {
 /* ---------------- authors, categories, post excerpts ---------------- */
 
 for (const u of wpUsers) {
+  if (docs.has(`author-${u.slug}`)) docs.delete(`author-${u.slug}`);
   docs.set(`author-${u.slug}`, { _id: `author-${u.slug}`, _type: "author", name: u.name, slug: { _type: "slug", current: u.slug }, wpId: u.id, description: u.description, avatar: u.avatar_urls?.["96"] });
 }
 for (const c of wpCats) {
@@ -389,11 +396,32 @@ docs.set("siteSettings", {
   footer: { _type: "reference", _ref: "template-102" },
   popups: (home.popups as number[]).map((id) => ({ _type: "reference", _ref: `template-${id}`, _key: `p${id}` })),
   postsPerPage: 10,
+  // Thank-you pages matched to each form by name (WordPress kept this in Elementor's form settings).
+  forms: [
+    ["Homepage Form", "100:7fa96b4", "/thank-you/"],
+    ["Book a Quote Form", "4223:d854bea", "/thank-you-book-your-quote/"],
+    ["Walkway Patio Form", "4206:d854bea", "/thank-you-walkway-patio/"],
+    ["Retaining Wall Block Form", "4194:d854bea", "/thank-you-retaining-wall-block/"],
+    ["Snow Removal Form", "4178:d854bea", "/thank-you-snow-removal/"],
+    ["Retaining Walls Stone Form", "4168:d854bea", "/thank-you-retaining-walls-stone/"],
+    ["Repairs & Maintenance Form", "4156:d854bea", "/thank-you-repairs-maintenance/"],
+    ["Pavers Form", "4143:d854bea", "/thank-you-pavers/"],
+    ["Retaining Walls Form", "4135:d854bea", "/thank-you-retaining-walls/"],
+    ["Leaf Removal Form", "4111:d854bea", "/thank-you-leaf-removal/"],
+    ["Landscaping Form", "4104:d854bea", "/thank-you-landscaping/"],
+    ["Seasonal Clean Up Form", "4091:d854bea", "/thank-you-seasonal-clean-up/"],
+    ["Quote Form (popup)", "377:d854bea", "/thank-you/"],
+    ["Landing Page Form", "2279:6989098", "/thank-you-lp/"],
+    ["Opt-in Form", "4233:6989098", "/optin-thank-you/"],
+  ].map(([name, formKey, redirect]) => ({ _type: "formSetting", _key: formKey.replace(/\W/g, ""), name, formKey, redirect })),
 });
 
 mkdirSync(join(ROOT, "content"), { recursive: true });
 mkdirSync(join(ROOT, "lib/generated"), { recursive: true });
-writeFileSync(join(ROOT, "content/seed.json"), JSON.stringify([...docs.values()], null, 1));
+// Referenced documents first, so the seed can be written in order.
+const ORDER = ["author", "category", "elementorTemplate", "page", "post", "archivePage", "notFoundPage", "siteSettings"];
+const sorted = [...docs.values()].sort((a, b) => ORDER.indexOf(String(a._type)) - ORDER.indexOf(String(b._type)));
+writeFileSync(join(ROOT, "content/seed.json"), JSON.stringify(sorted, null, 1));
 writeFileSync(join(ROOT, "lib/generated/shells.json"), JSON.stringify(Object.fromEntries(shells)));
 console.log(`docs: ${docs.size}, shells: ${shells.size}, templates: ${templateIds.size}`);
 console.log("widgets", stats.widgets, "rich", stats.rich, "rich fallback", stats.richFallback);

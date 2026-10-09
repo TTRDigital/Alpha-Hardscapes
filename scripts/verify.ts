@@ -13,7 +13,8 @@ import { resolveLazy } from "./lib/convert.ts";
 import { canonical, firstDiff } from "./lib/normalize.ts";
 
 const SRC = process.argv[2];
-const FILTER = process.argv[3];
+const SERVER = process.argv.find((a) => a.startsWith("--server="))?.slice(9);
+const FILTER = process.argv.slice(3).find((a) => !a.startsWith("--"));
 if (!SRC) throw new Error("Usage: npm run verify -- <crawl-dir> [filter]");
 const ROOT = new URL("..", import.meta.url).pathname;
 const docs: SeedDoc[] = JSON.parse(readFileSync(join(ROOT, "content/seed.json"), "utf8"));
@@ -33,12 +34,18 @@ for (const file of readdirSync(htmlDir).filter((f) => f.endsWith(".html")).sort(
   if (FILTER && !file.includes(FILTER)) continue;
   const base = file.replace(/\.html$/, "");
   const path = base === "home" ? "/" : base === "_404" ? "/this-page-does-not-exist-xyz/" : `/${base.replace(/__/g, "/")}/`;
-  const resolved = resolvePath(docs, path);
-  if (!resolved) {
-    failures.push(`${path}: not resolved`);
-    continue;
+  let html: string;
+  if (SERVER) {
+    // Full check of a running site (reads the CMS like production does).
+    html = await (await fetch(SERVER + path)).text();
+  } else {
+    const resolved = resolvePath(docs, path);
+    if (!resolved) {
+      failures.push(`${path}: not resolved`);
+      continue;
+    }
+    html = renderDocument(resolved, data, path, { projectId: "7ysj6im9", dataset: "production" });
   }
-  const html = renderDocument(resolved, data, path, { projectId: "7ysj6im9", dataset: "production" });
   const a = prep(readFileSync(join(htmlDir, file), "utf8"));
   const b = prep(html);
   const ca = canonical(a("body").html() || "");

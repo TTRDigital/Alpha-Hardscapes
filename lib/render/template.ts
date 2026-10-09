@@ -22,7 +22,7 @@ import { renderPortableText, type PtBlock } from "./portableText.ts";
 export type Fields = Record<string, unknown> & { _type?: string; _key?: string; tpl?: string };
 
 export type ElImage = {
-  _type?: "elImage";
+  _type?: "wpImage";
   /** Image uploaded in the CMS; when set it replaces the original file. */
   upload?: { asset?: { _ref?: string } } | null;
   src?: string;

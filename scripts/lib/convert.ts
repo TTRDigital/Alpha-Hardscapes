@@ -88,7 +88,7 @@ const IMG_FIELDS = ["src", "srcset", "sizes", "width", "height", "alt"] as const
 
 export function imageFields($: CheerioAPI, $img: Cheerio<Element>): ElImage {
   const attribs = { ...($img[0] as Element).attribs };
-  const img: ElImage = { _type: "elImage" };
+  const img: ElImage = { _type: "wpImage" };
   for (const f of IMG_FIELDS) {
     if (attribs[f] != null) {
       img[f] = f === "src" ? relativeUrl(attribs[f]) : f === "srcset" ? attribs[f].split(/,\s*/).map((s) => relativeUrl(s)).join(", ") : attribs[f];
@@ -281,7 +281,7 @@ export function convertChildren($: CheerioAPI, run: AnyNode[], ctx: ConvertCtx):
     }
     const html = relativizeTpl(loose.map((n) => (n.type === "text" ? textOf(n) : outer($, n))).join("")).trim();
     const pt = htmlToPortableText(html);
-    nodes.push(pt ? { _type: "el.richText", _key: key(), tpl: "[[@rich:body]]", body: pt } : { _type: "el.raw", _key: key(), tpl: html });
+    nodes.push(pt ? { _type: "elRichText", _key: key(), tpl: "[[@rich:body]]", body: pt } : { _type: "elRaw", _key: key(), tpl: html });
     loose = [];
   };
   for (const n of run) {
@@ -295,6 +295,24 @@ export function convertChildren($: CheerioAPI, run: AnyNode[], ctx: ConvertCtx):
   return nodes;
 }
 
+/**
+ * A section whose only content is another section is merged with it (same
+ * HTML, one level less). Keeps documents within Sanity's nesting limit and
+ * saves editors a click.
+ */
+export function mergeWrapper(fields: Fields, slot: string): Fields {
+  const kids = fields[slot] as Fields[] | undefined;
+  const marker = `[[@nodes:${slot}]]`;
+  if (kids?.length !== 1 || kids[0]._type !== "elContainer" || !String(fields.tpl).includes(marker)) return fields;
+  const child = kids[0];
+  return {
+    ...fields,
+    tpl: String(fields.tpl).replace(marker, String(child.tpl).replace("[[@nodes:children]]", marker)),
+    [slot]: child.children,
+    mergedIds: [...((fields.mergedIds as string[]) || []), String(child.elId), ...((child.mergedIds as string[]) || [])],
+  };
+}
+
 export type ConvertCtx = { pageId?: number; pagesByPath: Map<string, number> };
 
 export function convertElement($: CheerioAPI, el: Element, ctx: ConvertCtx): Fields {
@@ -304,7 +322,7 @@ export function convertElement($: CheerioAPI, el: Element, ctx: ConvertCtx): Fie
   const root = clone[0] as Element;
   const fields: Fields = { _key: key(elId), elId };
   if (type === "container" || type === "section" || type === "column") {
-    fields._type = "el.container";
+    fields._type = "elContainer";
     let host: Element = root;
     const inner = clone.children(".e-con-inner, .elementor-container, .elementor-widget-wrap").first();
     if (inner.length) host = inner[0] as Element;
@@ -316,12 +334,12 @@ export function convertElement($: CheerioAPI, el: Element, ctx: ConvertCtx): Fie
     childrenSlot($, host, "children", fields, ctx);
     formContextSlots($, clone);
     fields.tpl = relativizeTpl(outer($, clone));
-    return fields;
+    return mergeWrapper(fields, "children");
   }
   const widgetType = (el.attribs["data-widget_type"] || "unknown").replace(/\.default$/, "");
   stats.widgets[widgetType] = (stats.widgets[widgetType] || 0) + 1;
   const handler = WIDGETS[widgetType];
-  fields._type = handler ? `el.${handler.type}` : "el.raw";
+  fields._type = handler ? `el${handler.type[0].toUpperCase()}${handler.type.slice(1)}` : widgetType === "form" ? "elForm" : "elRaw";
   fields.widget = widgetType;
   if (handler) handler.slot($, clone, fields, ctx);
   formContextSlots($, clone);
@@ -471,6 +489,11 @@ const WIDGETS: Record<string, WidgetHandler> = {
         if (t) contentSlot($, t, "title", item);
         childrenSlot($, $i[0], "content", item, ctx);
       });
+      f.items = (f.items as Fields[]).map((it) => {
+        const merged = mergeWrapper(it, "content");
+        delete merged.mergedIds;
+        return merged;
+      });
     },
   },
   reviews: {
@@ -561,7 +584,8 @@ function itemsSlot(
       $(prev).remove();
     }
     const $i = $(el).clone() as Cheerio<Element>;
-    const item: Fields = { _type: `${String(fields._type).replace(/^el\./, "")}Item`, _key: key() };
+    const t = String(fields._type).replace(/^el/, "");
+    const item: Fields = { _type: `${t[0].toLowerCase()}${t.slice(1)}Item`, _key: key() };
     fill($i, item);
     item.tpl = relativizeTpl(lead + outer($, $i));
     items.push(item);
