@@ -1,25 +1,18 @@
-/** 301 redirects carried over from WordPress (old URLs that still have links or rankings). */
-export const redirects = [
-  { source: "/landscaping-connecticut/", destination: "/landscaping/", permanent: true },
-  { source: "/masonry-repairs-and-maintenance/", destination: "/repairs-maintenance-connecticut/", permanent: true },
-  { source: "/masonry/repairs-maintenance/", destination: "/repairs-maintenance-connecticut/", permanent: true },
-  { source: "/masonry/retaining-walls/", destination: "/retaining-walls-connecticut/", permanent: true },
-  { source: "/masonry/walkway-patio-masonry/", destination: "/walkway-patio-connecticut/", permanent: true },
-  { source: "/get-a-quote/", destination: "/", permanent: true },
-  { source: "/our-process/", destination: "/", permanent: true },
-  { source: "/landscaping-services/", destination: "/landscaping/", permanent: true },
-  { source: "/masonry-services/", destination: "/masonry/", permanent: true },
-  { source: "/masonry/retaining-walls/stone/", destination: "/stone/", permanent: true },
-  { source: "/masonry/retaining-walls/wall-block/", destination: "/wall-block/", permanent: true },
-  { source: "/service-areas/fairfield-county-ct/", destination: "/fairfield-county-ct/", permanent: true },
-  { source: "/service-areas/hartford-county-ct/", destination: "/hartford-county-ct/", permanent: true },
-  { source: "/service-areas/hartford-county-ct/avon/", destination: "/avon/", permanent: true },
-  { source: "/service-areas/hartford-county-ct/berlin/", destination: "/berlin/", permanent: true },
-  { source: "/service-areas/hartford-county-ct/farmington/", destination: "/farmington/", permanent: true },
-  { source: "/service-areas/hartford-county-ct/glastonbury/", destination: "/glastonbury/", permanent: true },
-  { source: "/service-areas/hartford-county-ct/southington/", destination: "/southington/", permanent: true },
-  { source: "/service-areas/hartford-county-ct/west-hartford/", destination: "/uncategorized/west-hartford/", permanent: true },
-  { source: "/service-areas/new-haven-county-ct/", destination: "/new-haven-county-ct/", permanent: true },
-  { source: "/uncategorized/hardscaping-pavers-contractor-complete-guide-to-planning-installation-and-maintenance/", destination: "/blog/hardscaping-pavers-contractor-complete-guide-to-planning-installation-and-maintenance/", permanent: true },
-  { source: "/uncategorized/hardscaping-pavers-planning-your-outdoor-space/", destination: "/blog/hardscaping-pavers-planning-your-outdoor-space/", permanent: true },
-];
+import wordpress from "./content/redirects.json" with { type: "json" };
+
+/**
+ * 301 redirects carried over from WordPress: the redirects the live site
+ * answered for old/alternative URLs (collected by probing it), so old
+ * backlinks and indexed URLs keep landing on the right page. Unknown URLs
+ * whose last part matches a page are also redirected at request time
+ * (lib/site/guess.ts), like WordPress did.
+ */
+type Row = { source: string; destination: string; query?: Record<string, string> };
+
+export const redirects = (wordpress as Row[]).map((r) => ({
+  source: r.source,
+  destination: r.destination,
+  statusCode: 301 as const,
+  // WordPress shortlinks: /?p=123 and /?page_id=123
+  ...(r.query ? { has: Object.entries(r.query).map(([key, value]) => ({ type: "query" as const, key, value })) } : {}),
+}));

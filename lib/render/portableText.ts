@@ -1,4 +1,4 @@
-import { escapeAttr, escapeHtml } from "./html.ts";
+import { escapeAttr, escapeHtml, withYear } from "./html.ts";
 
 /**
  * Portable Text as used by the rich text fields (Elementor "Text editor"
@@ -44,7 +44,7 @@ function openMark(mark: string, defs: Map<string, PtMarkDef>): [string, string] 
 }
 
 function spanText(text: string): string {
-  return escapeHtml(text).replace(/\n/g, "<br>");
+  return escapeHtml(withYear(text)).replace(/\n/g, "<br>");
 }
 
 /** Renders spans, nesting shared marks the way they were nested originally. */

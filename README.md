@@ -4,7 +4,33 @@ An exact copy of the WordPress site alphahardscapes.com (Astra + Elementor), reb
 
 - **Identical output:** every page prints the same HTML, CSS and scripts as the WordPress site, so it looks and behaves the same (menus, popups, sliders, FAQ accordions, gallery lightbox, forms). URLs are unchanged, and old redirects are kept in `redirects.ts`.
 - **Editable:** all text, links, images, menus, reviews, FAQs, blog posts and SEO fields are in Sanity. The layout of each block stays fixed (it is stored with the block), so edits never break the design.
-- **Proven:** `npm run verify` re-renders all 90 crawled URLs and compares them with the WordPress HTML, tag by tag. Current result: 90 identical, 0 different (from the CMS and from the built-in copy).
+- **Proven:** `npm run verify` re-renders all 90 crawled URLs and compares them with the WordPress HTML, tag by tag: the migrated content is identical (90/90). The review fixes below are then applied on top by `npm run fixes`.
+
+## Review fixes (scripts/fixes.ts)
+
+Applied to the migrated content and published to Sanity:
+
+- Removed two homepage sections that were hidden on every device (duplicate "Transformative Landscaping & Masonry Solutions" headings).
+- Quote heading copied from the paver repair page ("Get Your Free Paver Repair & Maintenance Quote") replaced on 15 pages with a page-specific one.
+- /retaining-walls-connecticut/ H1 now matches its title (Fairfield & New Haven County).
+- Alt text on all content photos (from the file name or the page topic), "Alpha Hardscapes" on logos, post title on blog hero images. Decorative graphics keep `alt=""` on purpose.
+- Blog index H1 and meta descriptions for the blog, categories, posts and other indexable pages that had none.
+- Outdoor kitchen cost post: "Walkway & Patio Connecticut" now links to /walkway-patio-connecticut/.
+- Header and footer menus use the final URLs (/landscaping/, /service-areas/).
+- Footer copyright year follows the calendar (`{year}` in any text field prints the current year).
+- Structured data: Yoast's graph is kept (WebPage, BreadcrumbList, WebSite, Article on posts) and its Organization is replaced with a HomeAndConstructionBusiness (phone, logo, address, hours, areas served, Facebook/Instagram, services), editable in **Site settings > Business schema**. The site search action was removed (there is no search page).
+- Favicon set at the site root (favicon.ico, 32/192/512 px icons, apple-touch-icon, web manifest), rendered from the vector logo.
+- Social images: a 1200x630 photo per page in `public/og/` (the homepage used a 136x118 background graphic).
+
+## Redirects
+
+- `content/redirects.json` (loaded by `next.config.ts`, all 301): every redirect the live WordPress site answered when probed with ~1,350 old and alternative URLs (old slugs, renamed parents, the redirect plugin's rules, WordPress' own "did you mean" redirects), plus `/?p=ID` and `/?page_id=ID` shortlinks. 711 rules, all tested.
+- Any other unknown URL whose last part matches a page or post is 301'd there at request time (`lib/site/guess.ts`), like WordPress did.
+- The redirect plugin's own list could not be exported without a WordPress login. If you have one, export it (Tools > Redirection, or the "Redirect Redirection" plugin screen) and add any rule missing from `content/redirects.json`.
+
+## Forms
+
+All 15 Elementor forms (homepage, landing page, opt-in, and the 12 quote popups) post to `/wp-admin/admin-ajax.php`, which is now this site's route, not WordPress. Each one was submitted end to end in a browser: lead delivered to the webhook with readable field names (Phone, Project Address, Service...), visitor redirected to the form's thank-you page. The GoHighLevel forms on the $1000-off/20%-off landing pages are GoHighLevel iframes and do not depend on WordPress.
 
 ## How it works
 
@@ -46,6 +72,8 @@ npm run lint       # ESLint
 npm run typecheck  # TypeScript
 npm run build      # production build
 npm run verify -- <crawl-dir> [--server=http://localhost:3000]  # compare with the WordPress HTML
+npm run fixes      # apply the review fixes to content/seed.json (after extract)
+npm run seed -- --force  # publish content/seed.json to Sanity
 ```
 
 `scripts/extract.ts` converted the crawled WordPress pages (HTML plus the WordPress REST API) into `content/seed.json` and `lib/generated/shells.json`. It is a one-off migration tool; the crawl itself is not in the repo.

@@ -40,6 +40,7 @@ export function buildSiteData(docs: SeedDoc[]): SiteData {
     .sort((a, b) => String(b.date).localeCompare(String(a.date)));
   return {
     settings: {
+      businessSchema: settings.businessSchema as string,
       siteUrl: settings.siteUrl as string,
       postsPerPage: settings.postsPerPage as number,
       header: (deref(map, settings.header as Ref) as TemplateDoc) || null,

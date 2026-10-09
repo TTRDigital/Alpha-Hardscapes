@@ -1,5 +1,10 @@
 /** Escaping helpers shared by the renderer and the migration scripts. */
 
+/** "{year}" in any text field prints the current year (e.g. the footer copyright). */
+export function withYear(text: string): string {
+  return text.replace(/\{year\}/g, String(new Date().getUTCFullYear()));
+}
+
 export function escapeHtml(value: unknown): string {
   return String(value ?? "")
     .replace(/&/g, "&amp;")

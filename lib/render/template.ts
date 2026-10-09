@@ -1,4 +1,4 @@
-import { escapeAttr, escapeHtml } from "./html.ts";
+import { escapeAttr, escapeHtml, withYear } from "./html.ts";
 import { renderPortableText, type PtBlock } from "./portableText.ts";
 
 /**
@@ -74,7 +74,7 @@ function renderSlot(kind: string, name: string, fields: Fields, ctx: RenderConte
   const value = fields[name];
   switch (kind) {
     case "text":
-      return escapeHtml(value);
+      return escapeHtml(withYear(String(value ?? "")));
     case "html":
       return value == null ? "" : String(value);
     case "attr":

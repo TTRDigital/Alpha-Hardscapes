@@ -30,9 +30,38 @@ export type Seo = {
 const prop = (p: string, v?: string) => (v ? `<meta property="${p}" content="${escapeAttr(v)}" />` : "");
 const name = (n: string, v?: string) => (v ? `<meta name="${n}" content="${escapeAttr(v)}" />` : "");
 
+type Node = Record<string, unknown>;
+
+/**
+ * Yoast's graph, with the Organization replaced by the business details from
+ * Site settings (HomeAndConstructionBusiness, areas served, phone...) and
+ * without the site search action (the site has no search page).
+ */
+export function upgradeSchema(schema: string | undefined, business?: string): string | undefined {
+  if (!schema) return schema;
+  try {
+    const json = JSON.parse(schema) as { "@graph"?: Node[] };
+    const biz = business ? (JSON.parse(business) as Node) : null;
+    const graph = (json["@graph"] || []).map((node) => {
+      if (biz && node["@type"] === "Organization") return { ...node, ...biz, "@id": node["@id"] };
+      if (node["@type"] === "WebSite") {
+        const rest = { ...node };
+        delete rest.potentialAction;
+        return rest;
+      }
+      return node;
+    });
+    return JSON.stringify({ ...json, "@graph": graph });
+  } catch {
+    return schema;
+  }
+}
+
 /** `origin` replaces the old WordPress host in absolute URLs (preview deployments). */
-export function renderSeo(seo: Seo | undefined, origin?: string): string {
-  const s = seo || {};
+export function renderSeo(seo: Seo | undefined, origin?: string, business?: string): string {
+  const s = { ...(seo || {}) };
+  s.schema = upgradeSchema(s.schema, business);
+  if (s.schema && origin) s.schema = s.schema.replace(/https?:(\\?\/){2}(www\.)?alphahardscapes\.com/gi, (m) => (m.includes("\\") ? origin.replace(/\//g, "\\/") : origin));
   const abs = (v?: string) => (v && origin ? v.replace(/^https?:\/\/(www\.)?alphahardscapes\.com/i, origin) : v);
   const out = [
     name("robots", s.robots),

@@ -39,7 +39,7 @@ export type PostDoc = BaseDoc & {
 export type ArchiveDoc = BaseDoc & { kind: "blog" | "category" | "author"; slug?: string; authorName?: string; categoryName?: string };
 
 export type SiteData = {
-  settings: { siteUrl?: string; postsPerPage?: number; header?: TemplateDoc | null; footer?: TemplateDoc | null; popups?: TemplateDoc[] };
+  settings: { siteUrl?: string; postsPerPage?: number; businessSchema?: string; header?: TemplateDoc | null; footer?: TemplateDoc | null; popups?: TemplateDoc[] };
   /** All posts, newest first. */
   posts: PostDoc[];
 };
@@ -140,7 +140,7 @@ export function renderDocument(resolved: Resolved, data: SiteData, path: string,
   }
 
   const title = seo?.title || doc.title || "";
-  values.seo = renderSeo(seo, opts.origin);
+  values.seo = renderSeo(seo, opts.origin, data.settings.businessSchema);
   values.bodyClass = bodyClass ?? doc.bodyClass ?? "";
   values.queriedId = String(doc.wpId ?? "");
   values.refererTitle = title;

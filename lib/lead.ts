@@ -41,9 +41,20 @@ function phoneE164(raw = "") {
   return raw.trim();
 }
 
+/** First field whose label matches. */
+function pick(fields: Record<string, string>, re: RegExp) {
+  const key = Object.keys(fields).find((k) => re.test(k));
+  return key ? fields[key] : "";
+}
+
 export async function deliverLead(lead: Lead) {
   const f = lead.fields;
-  const name = f.name || [f.first_name, f.last_name].filter(Boolean).join(" ");
+  const name = pick(f, /^(full )?name$/i) || f.name || "";
+  const phone = pick(f, /phone/i);
+  const email = pick(f, /e-?mail/i);
+  const address = pick(f, /address/i);
+  const zip = pick(f, /zip|postal/i);
+  const service = pick(f, /service/i);
   const [first, ...rest] = name.trim().split(/\s+/);
   const tasks: Promise<void>[] = [];
 
@@ -61,11 +72,14 @@ export async function deliverLead(lead: Lead) {
           name,
           first_name: first || "",
           last_name: rest.join(" "),
-          email: f.email || "",
-          phone: phoneE164(f.phone || f.field_phone || ""),
-          address: f.address || f.project_address || "",
+          email,
+          phone: phoneE164(phone),
+          phone_raw: phone,
+          address,
+          postal_code: zip,
+          service_needed: service,
           page_url: lead.page,
-          ...f,
+          fields: f,
         }),
       }),
     );
@@ -84,7 +98,7 @@ export async function deliverLead(lead: Lead) {
         body: JSON.stringify({
           from: clean(process.env.LEAD_EMAIL_FROM) || "Alpha Hardscapes Website <onboarding@resend.dev>",
           to: to.split(/[,;]\s*/),
-          reply_to: f.email || undefined,
+          reply_to: email || undefined,
           subject: `New ${lead.form || "website"} submission${name ? ` from ${name}` : ""}`,
           html: `<p>New submission on <a href="${esc(lead.page)}">${esc(lead.page)}</a></p><table>${rows}</table>`,
         }),

@@ -139,6 +139,7 @@ export const archivePage = defineType({
     defineField({ name: "title", title: "Title", type: "string" }),
     defineField({ name: "kind", title: "Lists", type: "string", options: { list: ["blog", "category", "author"] }, readOnly: true }),
     pathField,
+    defineField({ name: "heading", title: "Page heading (H1)", type: "string" }),
     defineField({ name: "author", title: "Author", type: "reference", to: [{ type: "author" }], hidden: ({ document }) => document?.kind !== "author" }),
     defineField({ name: "category", title: "Category", type: "reference", to: [{ type: "category" }], hidden: ({ document }) => document?.kind !== "category" }),
     nodesField("content", "Content (Elementor archive)"),
@@ -227,6 +228,23 @@ export const siteSettings = defineType({
     defineField({ name: "footer", title: "Footer", type: "reference", to: [{ type: "elementorTemplate" }] }),
     defineField({ name: "popups", title: "Popups", type: "array", of: [defineArrayMember({ type: "reference", to: [{ type: "elementorTemplate" }] })] }),
     defineField({ name: "postsPerPage", title: "Posts per blog page", type: "number", initialValue: 10 }),
+    defineField({
+      name: "businessSchema",
+      title: "Business schema (JSON-LD)",
+      type: "text",
+      rows: 12,
+      description: "Business details for Google (type, phone, areas served, social profiles). Replaces the Organization in every page's structured data.",
+      validation: (r) =>
+        r.custom((v) => {
+          if (!v) return true;
+          try {
+            JSON.parse(String(v));
+            return true;
+          } catch {
+            return "Must be valid JSON";
+          }
+        }),
+    }),
     defineField({ name: "forms", title: "Forms", description: "Where each website form sends visitors after they submit.", type: "array", of: [defineArrayMember({ type: "formSetting" })] }),
   ],
   preview: { prepare: () => ({ title: "Site settings" }) },

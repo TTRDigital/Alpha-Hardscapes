@@ -1,5 +1,6 @@
 import { getSite } from "@/lib/site/data";
 import { deliverLead, verifyRecaptcha } from "@/lib/lead";
+import formFields from "@/content/form-fields.json";
 
 /**
  * The Elementor forms post here, exactly as they posted to WordPress'
@@ -21,13 +22,17 @@ export async function POST(req: Request) {
   }
   if (form.get("action") !== "elementor_pro_forms_send_form") return new Response("0", { status: 400 });
 
+  const postId = String(form.get("post_id") || "");
+  const formId = String(form.get("form_id") || "");
+  // Field IDs (field_89fc83e) become their labels (Phone) for the CRM and the email.
+  const labels = (formFields as Record<string, Record<string, string>>)[`${postId}:${formId}`] || {};
   const fields: Record<string, string> = {};
   for (const [k, v] of form.entries()) {
     const m = /^form_fields\[([^\]]+)\]/.exec(k);
-    if (m && typeof v === "string") fields[m[1]] = fields[m[1]] ? `${fields[m[1]]}, ${v}` : v;
+    if (!m || typeof v !== "string") continue;
+    const label = labels[m[1]] && labels[m[1]] !== m[1] ? labels[m[1]] : m[1];
+    fields[label] = fields[label] ? `${fields[label]}, ${v}` : v;
   }
-  const postId = String(form.get("post_id") || "");
-  const formId = String(form.get("form_id") || "");
   const page = String(form.get("referrer") || req.headers.get("referer") || "");
 
   // Honeypot fields (Elementor "honeypot" type) must stay empty.

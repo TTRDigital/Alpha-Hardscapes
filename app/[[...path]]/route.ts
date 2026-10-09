@@ -1,5 +1,6 @@
 import { allPaths, getSite, resolve, REVALIDATE_SECONDS } from "@/lib/site/data";
 import { feedXml, sitemapIndex, sitemapXml } from "@/lib/site/sitemaps";
+import { guessRedirect } from "@/lib/site/guess";
 import { renderDocument } from "@/lib/site/render";
 import { dataset, projectId } from "@/sanity/env";
 
@@ -32,6 +33,10 @@ export async function GET(_req: Request, ctx: { params: Promise<{ path?: string[
   const path = `/${segments.map((s) => decodeURIComponent(s)).join("/")}${segments.length ? "/" : ""}`;
   const resolved = await resolve(path, site.fromCms);
   if (!resolved) return new Response("Not found", { status: 404 });
+  if (resolved.kind === "notFound") {
+    const target = guessRedirect(path, await allPaths(site.fromCms));
+    if (target) return new Response(null, { status: 301, headers: { Location: target } });
+  }
   const html = renderDocument(resolved, site.data, path, { projectId, dataset, origin });
   return new Response(html, {
     status: resolved.kind === "notFound" ? 404 : 200,

@@ -97,6 +97,16 @@ function relHostCss(css: string) {
   return css.replace(/(https?:)?\/\/(www\.)?alphahardscapes\.com\//gi, "/");
 }
 
+const ICON_LINKS = [
+  '<link rel="icon" href="/favicon.ico" sizes="48x48">',
+  '<link rel="icon" href="/icon-32.png" type="image/png" sizes="32x32">',
+  '<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">',
+  '<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">',
+  '<link rel="manifest" href="/site.webmanifest">',
+  '<meta name="theme-color" content="#AECD38">',
+  '<meta name="msapplication-TileImage" content="/icon-192.png">',
+].join("\n");
+
 /** Builds the page skeleton. Mutates $ (call last). */
 function buildShell($: CheerioAPI): string {
   const head = $("head");
@@ -107,6 +117,14 @@ function buildShell($: CheerioAPI): string {
   ].join(",");
   head.find(seoSel).remove();
   head.find("title").replaceWith("[[@ctx:seo]]");
+  // Business details now live in the Yoast graph (Site settings > Business schema).
+  head.find('script[type="application/ld+json"]:not(.yoast-schema-graph)').remove();
+  // WordPress plugin leftovers.
+  head.find('meta[name="redi-version"]').remove();
+  // Favicons: one proper set at the site root.
+  const icons = head.find('link[rel="icon"], link[rel="apple-touch-icon"], meta[name="msapplication-TileImage"]');
+  icons.first().before(ICON_LINKS);
+  icons.remove();
   // Dead WordPress endpoints.
   head.find('link[rel="https://api.w.org/"], link[rel="EditURI"], link[rel="shortlink"], link[type="application/json+oembed"], link[type="text/xml+oembed"], link[rel="alternate"][type="application/json"], meta[name="generator"]').remove();
   head.find('link[rel="alternate"][type="application/rss+xml"]').filter((_, el) => /comments/i.test($(el).attr("href") || "")).remove();
@@ -358,6 +376,26 @@ for (const file of files.sort()) {
     docs.set(`page-${wpId}`, doc);
   }
 }
+
+/* ---------------- form field labels ---------------- */
+
+// Elementor posts fields by ID (form_fields[field_89fc83e]); leads are sent with the labels.
+const formFields: Record<string, Record<string, string>> = {};
+for (const file of files) {
+  const $ = cheerio.load(readFileSync(join(htmlDir, file), "utf8"));
+  $("form.elementor-form").each((_, f) => {
+    const key = `${$(f).find('input[name="post_id"]').val()}:${$(f).find('input[name="form_id"]').val()}`;
+    const map = (formFields[key] ||= {});
+    $(f).find("[name^='form_fields[']").each((_, el) => {
+      const id = /^form_fields\[([^\]]+)\]/.exec($(el).attr("name") || "")?.[1];
+      if (!id || map[id]) return;
+      const group = $(el).closest(".elementor-field-group");
+      const label = group.find("label.elementor-field-label").first().text().trim() || $(el).attr("placeholder") || id;
+      map[id] = label.replace(/\s+/g, " ");
+    });
+  });
+}
+writeFileSync(join(ROOT, "content/form-fields.json"), JSON.stringify(formFields, null, 1));
 
 /* ---------------- authors, categories, post excerpts ---------------- */
 
