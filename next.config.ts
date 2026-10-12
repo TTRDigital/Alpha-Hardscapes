@@ -22,6 +22,17 @@ const nextConfig: NextConfig = {
           { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
         ],
       },
+      // Only the real domain may be indexed: the vercel.app address and
+      // preview deployments get noindex (crawling stays allowed so search
+      // engines can see it and drop anything already indexed).
+      {
+        source: "/:path*",
+        missing: [
+          { type: "host", value: "alphahardscapes.com" },
+          { type: "host", value: "www.alphahardscapes.com" },
+        ],
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
     ];
   },
   async redirects() {

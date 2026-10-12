@@ -51,7 +51,8 @@ All 15 Elementor forms (homepage, landing page, opt-in, and the 12 quote popups)
 2. **Content (done):** all 109 documents are loaded. To reload: put an Editor token in `.env.local` as `SANITY_WRITE_TOKEN`, then `npm run seed` (adds missing documents) or `npm run seed -- --force` (overwrites the CMS with the built-in copy).
 3. **CORS (done):** `http://localhost:3000`, `https://alphahardscapes.com` and `https://www.alphahardscapes.com` are allowed with credentials. Add the Vercel preview URL too (sanity.io/manage > API > CORS origins).
 4. **Run locally:** `npm install`, `npm run dev`, open http://localhost:3000 and http://localhost:3000/cms.
-5. **Vercel:** import the repo, add the variables from `.env.example` (not `SANITY_WRITE_TOKEN`), deploy, then point alphahardscapes.com at it. reCAPTCHA in the forms only works on alphahardscapes.com (the site key is tied to that domain).
+5. **Search engines:** only alphahardscapes.com (and www) can be indexed. Every other host (the vercel.app address, preview deployments) answers with `X-Robots-Tag: noindex, nofollow` (`next.config.ts`). If the domain ever changes, update the host list there.
+6. **Vercel:** import the repo, add the variables from `.env.example` (not `SANITY_WRITE_TOKEN`), deploy, then point alphahardscapes.com at it. reCAPTCHA in the forms only works on alphahardscapes.com (the site key is tied to that domain).
 6. **Publish webhook:** in Sanity, API > Webhooks: URL `https://alphahardscapes.com/api/revalidate`, triggers create/update/delete, secret = `SANITY_REVALIDATE_SECRET`. Changes then go live within seconds (otherwise within 5 minutes).
 7. **Form leads:** set `GHL_WEBHOOK_URL` and/or `RESEND_API_KEY` + `LEAD_EMAIL_TO`. Without either, submissions are only logged. The thank-you page of each form is set in **Site settings > Forms**.
 
