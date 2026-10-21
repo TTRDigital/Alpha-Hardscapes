@@ -75,12 +75,15 @@ jobs:
       - name: Upload to SiteGround
         if: env.SG_FTP_SERVER != ''
         env:
+          # SiteGround's FTP certificate is issued for the server name, not
+          # ftp.<domain>, so connect by the server name (not a secret).
+          FTP_HOST: c1122362.sgvps.net
           SG_FTP_USERNAME: ${{ secrets.SG_FTP_USERNAME }}
           SG_FTP_PASSWORD: ${{ secrets.SG_FTP_PASSWORD }}
         run: |
           sudo apt-get install -y -qq lftp > /dev/null
-          # Which host names the FTP server's certificate is issued for (SG_FTP_SERVER must be one).
-          echo | openssl s_client -starttls ftp -connect "$SG_FTP_SERVER:21" 2>/dev/null | openssl x509 -noout -subject -ext subjectAltName || true
+          # Which host names the FTP server's certificate is issued for (FTP_HOST must be one).
+          echo | openssl s_client -starttls ftp -connect "$FTP_HOST:21" 2>/dev/null | openssl x509 -noout -subject -ext subjectAltName || true
           cat > lftp.rc <<'EOF'
           set ftp:ssl-force true
           set ftp:ssl-protect-data true
@@ -95,4 +98,4 @@ jobs:
           put out/.htaccess -o .htaccess
           bye
           EOF
-          lftp -u "$SG_FTP_USERNAME,$SG_FTP_PASSWORD" "$SG_FTP_SERVER" -e "source lftp.rc"
+          lftp -u "$SG_FTP_USERNAME,$SG_FTP_PASSWORD" "$FTP_HOST" -e "source lftp.rc"
