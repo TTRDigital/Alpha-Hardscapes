@@ -4,8 +4,8 @@
 # and scripts/siteground/export-static.mjs saves every page as HTML, plus the
 # PHP form handler and .htaccess (redirects). See that script for details.
 #
-# Runs on a push to this branch or main, every 6 hours (picks up Sanity edits),
-# on a Sanity webhook (repository_dispatch "sanity-publish") and from
+# Runs on a push to this branch or main, on a Sanity webhook
+# (repository_dispatch "sanity-publish") and from
 # Actions > "Deploy to SiteGround" > Run workflow.
 #
 # Repository secrets (Settings > Secrets and variables > Actions):
@@ -22,8 +22,6 @@ name: Deploy to SiteGround
 on:
   push:
     branches: [claude/tender-fermat-146lpz, main]
-  schedule:
-    - cron: "17 */6 * * *"
   repository_dispatch:
     types: [sanity-publish]
   workflow_dispatch:
@@ -70,14 +68,29 @@ jobs:
           test -s out/index.html
           test -s out/.htaccess
 
+      # lftp (FTPS with TLS session reuse, which SiteGround's FTP server needs
+      # on the data connection). Order: assets first (only when the size
+      # changed), then every page, sitemap and PHP file, and .htaccess last so
+      # the new rules switch on once everything they point to is in place.
       - name: Upload to SiteGround
         if: env.SG_FTP_SERVER != ''
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.SG_FTP_SERVER }}
-          username: ${{ secrets.SG_FTP_USERNAME }}
-          password: ${{ secrets.SG_FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./out/
-          server-dir: ./
-          timeout: 600000
+        env:
+          SG_FTP_USERNAME: ${{ secrets.SG_FTP_USERNAME }}
+          SG_FTP_PASSWORD: ${{ secrets.SG_FTP_PASSWORD }}
+        run: |
+          sudo apt-get install -y -qq lftp > /dev/null
+          cat > lftp.rc <<'EOF'
+          set ftp:ssl-force true
+          set ftp:ssl-protect-data true
+          set ftp:passive-mode true
+          set net:timeout 30
+          set net:max-retries 5
+          set net:reconnect-interval-base 5
+          set cmd:fail-exit true
+          mirror --reverse --ignore-time --no-perms --parallel=4 --verbose=1 --exclude-glob *.html --exclude-glob *.xml --exclude-glob .htaccess --exclude ^_sg/ out/ ./
+          mirror --reverse --no-perms --parallel=4 --verbose=1 --include-glob *.html --include-glob *.xml --exclude-glob .htaccess --exclude ^_sg/ out/ ./
+          mirror --reverse --no-perms --verbose=1 out/_sg/ _sg/
+          put out/.htaccess -o .htaccess
+          bye
+          EOF
+          lftp -u "$SG_FTP_USERNAME,$SG_FTP_PASSWORD" "$SG_FTP_SERVER" -e "source lftp.rc"
