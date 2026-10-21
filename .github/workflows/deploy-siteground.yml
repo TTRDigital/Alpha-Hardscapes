@@ -79,6 +79,8 @@ jobs:
           SG_FTP_PASSWORD: ${{ secrets.SG_FTP_PASSWORD }}
         run: |
           sudo apt-get install -y -qq lftp > /dev/null
+          # Which host names the FTP server's certificate is issued for (SG_FTP_SERVER must be one).
+          echo | openssl s_client -starttls ftp -connect "$SG_FTP_SERVER:21" 2>/dev/null | openssl x509 -noout -subject -ext subjectAltName || true
           cat > lftp.rc <<'EOF'
           set ftp:ssl-force true
           set ftp:ssl-protect-data true
