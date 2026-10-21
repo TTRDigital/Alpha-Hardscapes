@@ -1,0 +1,101 @@
+# Builds the site and uploads it to SiteGround (Apache + PHP) over FTPS.
+#
+# SiteGround has no Node server, so the app is built and started on the runner
+# and scripts/siteground/export-static.mjs saves every page as HTML, plus the
+# PHP form handler and .htaccess (redirects). See that script for details.
+#
+# Runs on a push to this branch or main, on a Sanity webhook
+# (repository_dispatch "sanity-publish") and from
+# Actions > "Deploy to SiteGround" > Run workflow.
+#
+# Repository secrets (Settings > Secrets and variables > Actions):
+#   SG_FTP_SERVER    FTP host from SiteGround Site Tools > Site > FTP Accounts
+#   SG_FTP_USERNAME  FTP account whose folder is the site's public_html
+#   SG_FTP_PASSWORD
+#   GHL_WEBHOOK_URL  optional: overrides the GoHighLevel webhook in lib/lead.ts
+# Until SG_FTP_SERVER is set the upload is skipped (build check only).
+#
+# The upload only adds and replaces files: nothing already on the server
+# (e.g. the old WordPress files) is deleted.
+name: Deploy to SiteGround
+
+on:
+  push:
+    branches: [claude/tender-fermat-146lpz, main]
+  repository_dispatch:
+    types: [sanity-publish]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-siteground
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      SG_FTP_SERVER: ${{ secrets.SG_FTP_SERVER }}
+      GHL_WEBHOOK_URL: ${{ secrets.GHL_WEBHOOK_URL }}
+      NEXT_PUBLIC_SITE_URL: https://alphahardscapes.com
+      NEXT_TELEMETRY_DISABLED: 1
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Export static site
+        env:
+          # Never deploy the built-in copy by accident if Sanity is unreachable.
+          REQUIRE_CMS: "1"
+        run: |
+          npx next start -p 3000 > next.log 2>&1 &
+          for i in $(seq 1 60); do curl -sf http://127.0.0.1:3000/robots.txt > /dev/null && break; sleep 1; done
+          node scripts/siteground/export-static.mjs http://127.0.0.1:3000
+          php -l out/_sg/ajax.php
+          php -l out/_sg/404.php
+          test -s out/index.html
+          test -s out/.htaccess
+
+      # lftp (FTPS with TLS session reuse, which SiteGround's FTP server needs
+      # on the data connection). Order: assets first (only when the size
+      # changed), then every page, sitemap and PHP file, and .htaccess last so
+      # the new rules switch on once everything they point to is in place.
+      - name: Upload to SiteGround
+        if: env.SG_FTP_SERVER != ''
+        env:
+          # SiteGround's FTP certificate is issued for the server name, not
+          # ftp.<domain>, so connect by the server name (not a secret).
+          FTP_HOST: c1122362.sgvps.net
+          SG_FTP_USERNAME: ${{ secrets.SG_FTP_USERNAME }}
+          SG_FTP_PASSWORD: ${{ secrets.SG_FTP_PASSWORD }}
+        run: |
+          sudo apt-get install -y -qq lftp > /dev/null
+          # Which host names the FTP server's certificate is issued for (FTP_HOST must be one).
+          echo | openssl s_client -starttls ftp -connect "$FTP_HOST:21" 2>/dev/null | openssl x509 -noout -subject -ext subjectAltName || true
+          cat > lftp.rc <<'EOF'
+          set ftp:ssl-force true
+          set ftp:ssl-protect-data true
+          set ftp:passive-mode true
+          set net:timeout 30
+          set net:max-retries 5
+          set net:reconnect-interval-base 5
+          set cmd:fail-exit true
+          mirror --reverse --ignore-time --no-perms --parallel=4 --verbose=1 --exclude-glob *.html --exclude-glob *.xml --exclude-glob .htaccess --exclude ^_sg/ out/ ./
+          mirror --reverse --no-perms --parallel=4 --verbose=1 --include-glob *.html --include-glob *.xml --exclude-glob .htaccess --exclude ^_sg/ out/ ./
+          mirror --reverse --no-perms --verbose=1 out/_sg/ _sg/
+          put out/.htaccess -o .htaccess
+          bye
+          EOF
+          lftp -u "$SG_FTP_USERNAME,$SG_FTP_PASSWORD" "$FTP_HOST" -e "source lftp.rc"
