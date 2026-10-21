@@ -58,7 +58,7 @@ function fileFor(path) {
   return join(...parts, "index.html");
 }
 
-const SKIP = /^\/(wp-content|wp-includes|wp-admin|wp-json|_next|cms|_sg|static-export\.json|search-results|search|xmlrpc\.php)(\/|$)|\/feed\/$/;
+const SKIP = /^\/(wp-content|wp-includes|wp-admin|wp-json|_next|cms|_sg|static-export|search-results|search|xmlrpc\.php)(\/|$)|\/feed\/$/;
 
 /** Internal page link -> canonical "/path/" or null. */
 function internal(href) {
@@ -86,7 +86,7 @@ async function main() {
   cpSync(join(ROOT, "public"), OUT, { recursive: true });
   cpSync(join(ROOT, ".next/static"), join(OUT, "_next/static"), { recursive: true });
 
-  const meta = await (await get("/static-export.json")).json();
+  const meta = await (await get("/static-export/")).json();
   log(`content from ${meta.fromCms ? "Sanity" : "the built-in copy"}: ${meta.paths.length} paths`);
   if (process.env.REQUIRE_CMS === "1" && !meta.fromCms) throw new Error("Sanity was not reachable: refusing to deploy the built-in copy");
 
