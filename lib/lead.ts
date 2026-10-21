@@ -7,6 +7,9 @@ import "server-only";
  * - RESEND_API_KEY + LEAD_EMAIL_TO (+ LEAD_EMAIL_FROM): email notification
  */
 
+/** GoHighLevel inbound webhook for website leads (GHL_WEBHOOK_URL overrides it). */
+const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/lrPBYGPJ5Pp68Mqe7rNd/webhook-trigger/696ad4ed-5819-4ace-9aa5-82d3e08217e2";
+
 export type Lead = {
   form: string;
   fields: Record<string, string>;
@@ -58,7 +61,7 @@ export async function deliverLead(lead: Lead) {
   const [first, ...rest] = name.trim().split(/\s+/);
   const tasks: Promise<void>[] = [];
 
-  const webhook = clean(process.env.GHL_WEBHOOK_URL);
+  const webhook = clean(process.env.GHL_WEBHOOK_URL) || GHL_WEBHOOK;
   if (/^https?:\/\//.test(webhook)) {
     tasks.push(
       post(webhook, {

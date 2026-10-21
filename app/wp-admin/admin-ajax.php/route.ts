@@ -46,7 +46,7 @@ export async function POST(req: Request) {
   const { settings } = await getSite();
   const setting = (settings.forms || []).find((f) => f.formKey === `${postId}:${formId}`) || (settings.forms || []).find((f) => f.formKey?.endsWith(`:${formId}`) && f.formKey.startsWith(`${postId}:`));
   const delivered = await deliverLead({ form: setting?.name || `${postId}:${formId}`, fields, page, tag: setting?.tag });
-  if (!delivered && (process.env.GHL_WEBHOOK_URL || process.env.RESEND_API_KEY)) {
+  if (!delivered) {
     return reply({ success: false, data: { message: "Something went wrong. Please call us at (475) 227-6896.", errors: [], data: [] } });
   }
   const origin = new URL(req.url).origin;

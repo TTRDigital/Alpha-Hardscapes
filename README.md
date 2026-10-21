@@ -54,7 +54,7 @@ All 15 Elementor forms (homepage, landing page, opt-in, and the 12 quote popups)
 5. **Search engines:** only alphahardscapes.com (and www) can be indexed. Every other host (the vercel.app address, preview deployments) answers with `X-Robots-Tag: noindex, nofollow` (`next.config.ts`). If the domain ever changes, update the host list there.
 6. **Vercel:** import the repo, add the variables from `.env.example` (not `SANITY_WRITE_TOKEN`), deploy, then point alphahardscapes.com at it. reCAPTCHA in the forms only works on alphahardscapes.com (the site key is tied to that domain).
 6. **Publish webhook:** in Sanity, API > Webhooks: URL `https://alphahardscapes.com/api/revalidate`, triggers create/update/delete, secret = `SANITY_REVALIDATE_SECRET`. Changes then go live within seconds (otherwise within 5 minutes).
-7. **Form leads:** set `GHL_WEBHOOK_URL` and/or `RESEND_API_KEY` + `LEAD_EMAIL_TO`. Without either, submissions are only logged. The thank-you page of each form is set in **Site settings > Forms**.
+7. **Form leads:** every form submission goes to the GoHighLevel webhook set in `lib/lead.ts` (the `GHL_WEBHOOK_URL` env var overrides it). Optional email copy: `RESEND_API_KEY` + `LEAD_EMAIL_TO`. The thank-you page of each form is set in **Site settings > Forms**.
 
 ## Editing in /cms
 
