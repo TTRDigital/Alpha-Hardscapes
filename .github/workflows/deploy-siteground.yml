@@ -1,0 +1,83 @@
+# Builds the site and uploads it to SiteGround (Apache + PHP) over FTPS.
+#
+# SiteGround has no Node server, so the app is built and started on the runner
+# and scripts/siteground/export-static.mjs saves every page as HTML, plus the
+# PHP form handler and .htaccess (redirects). See that script for details.
+#
+# Runs on a push to this branch or main, every 6 hours (picks up Sanity edits),
+# on a Sanity webhook (repository_dispatch "sanity-publish") and from
+# Actions > "Deploy to SiteGround" > Run workflow.
+#
+# Repository secrets (Settings > Secrets and variables > Actions):
+#   SG_FTP_SERVER    FTP host from SiteGround Site Tools > Site > FTP Accounts
+#   SG_FTP_USERNAME  FTP account whose folder is the site's public_html
+#   SG_FTP_PASSWORD
+#   GHL_WEBHOOK_URL  optional: overrides the GoHighLevel webhook in lib/lead.ts
+# Until SG_FTP_SERVER is set the upload is skipped (build check only).
+#
+# The upload only adds and replaces files: nothing already on the server
+# (e.g. the old WordPress files) is deleted.
+name: Deploy to SiteGround
+
+on:
+  push:
+    branches: [claude/tender-fermat-146lpz, main]
+  schedule:
+    - cron: "17 */6 * * *"
+  repository_dispatch:
+    types: [sanity-publish]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-siteground
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      SG_FTP_SERVER: ${{ secrets.SG_FTP_SERVER }}
+      GHL_WEBHOOK_URL: ${{ secrets.GHL_WEBHOOK_URL }}
+      NEXT_PUBLIC_SITE_URL: https://alphahardscapes.com
+      NEXT_TELEMETRY_DISABLED: 1
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Export static site
+        env:
+          # Never deploy the built-in copy by accident if Sanity is unreachable.
+          REQUIRE_CMS: "1"
+        run: |
+          npx next start -p 3000 > next.log 2>&1 &
+          for i in $(seq 1 60); do curl -sf http://127.0.0.1:3000/robots.txt > /dev/null && break; sleep 1; done
+          node scripts/siteground/export-static.mjs http://127.0.0.1:3000
+          php -l out/_sg/ajax.php
+          php -l out/_sg/404.php
+          test -s out/index.html
+          test -s out/.htaccess
+
+      - name: Upload to SiteGround
+        if: env.SG_FTP_SERVER != ''
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.SG_FTP_SERVER }}
+          username: ${{ secrets.SG_FTP_USERNAME }}
+          password: ${{ secrets.SG_FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./out/
+          server-dir: ./
+          timeout: 600000
