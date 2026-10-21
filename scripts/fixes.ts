@@ -225,6 +225,15 @@ walk(byId.get("template-102"), (n) => {
   if (n._type === "span" && typeof n.text === "string" && /Copyright © \d{4}/.test(n.text)) n.text = n.text.replace(/© \d{4}/, "© {year}");
 });
 
+/* 8b. Homepage form: a lone "Step 1" field made Elementor add a NEXT button. */
+walk(byPath.get("/"), (n) => {
+  if (n._type !== "elForm") return;
+  const before = String(n.tpl);
+  // The step's data-icon attribute holds an SVG with ">" inside, so match up to its closing tags.
+  n.tpl = before.replace(/<div class="elementor-field-type-step[^"]*">\s*<div class="e-field-step[\s\S]*?<\/svg>"><\/div>\s*<\/div>/g, "");
+  if (n.tpl !== before) log.push("removed step field (NEXT button) from homepage form");
+});
+
 /* 9. Business details for structured data (Site settings > Business schema). */
 const towns = ["New Haven", "Hamden", "North Haven", "West Haven", "Cheshire", "Wallingford", "Branford", "Guilford", "Madison", "Milford", "Orange", "Woodbridge", "Shelton", "Trumbull", "Fairfield", "Stratford", "Avon", "Berlin", "Farmington", "Glastonbury", "Southington", "West Hartford"];
 const business = {
