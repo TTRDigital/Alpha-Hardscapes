@@ -11,11 +11,12 @@
     "extract": "node --experimental-strip-types --no-warnings scripts/extract.ts",
     "verify": "node --experimental-strip-types --no-warnings scripts/verify.ts",
     "seed": "node --experimental-strip-types --no-warnings scripts/seed.ts",
-    "fixes": "node --experimental-strip-types --no-warnings scripts/fixes.ts"
+    "fixes": "node --experimental-strip-types --no-warnings scripts/fixes.ts",
+    "hero-images": "node --experimental-strip-types --no-warnings scripts/hero-images.ts"
   },
   "dependencies": {
     "@sanity/vision": "^6.18.0",
-    "next": "^16.4.0",
+    "next": "^16.4.2",
     "next-sanity": "^13.3.4",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
@@ -29,7 +30,7 @@
     "@types/react-dom": "^19.3.0",
     "cheerio": "^1.2.0",
     "eslint": "^9.39.5",
-    "eslint-config-next": "^16.4.0",
+    "eslint-config-next": "^16.4.2",
     "sharp": "^0.35.5",
     "typescript": "^5.9.3"
   }

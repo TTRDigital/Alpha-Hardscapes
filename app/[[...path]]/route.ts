@@ -2,6 +2,7 @@ import { allPaths, getSite, resolve, REVALIDATE_SECONDS } from "@/lib/site/data"
 import { feedXml, sitemapIndex, sitemapXml } from "@/lib/site/sitemaps";
 import { guessRedirect } from "@/lib/site/guess";
 import { renderDocument } from "@/lib/site/render";
+import { tuneHtml } from "@/lib/site/tune";
 import { dataset, projectId } from "@/sanity/env";
 
 /**
@@ -40,7 +41,8 @@ export async function GET(_req: Request, ctx: { params: Promise<{ path?: string[
   // TTR OS website tracker (visits by source and form leads; no personal data). The site key is public; "off" turns it off.
   const ttrKey = process.env.NEXT_PUBLIC_TTR_SITE_KEY === "off" ? "" : process.env.NEXT_PUBLIC_TTR_SITE_KEY || "8ntBK6QgvLkKLHNYnBTF8Q";
   const tracker = ttrKey ? `<script async src="https://ttr-portal.vercel.app/api/site/script" data-site="${ttrKey}"></script>` : "";
-  const html = renderDocument(resolved, site.data, path, { projectId, dataset, origin }).replace("</body>", `${tracker}</body>`);
+  // tuneHtml: Tag Manager and reCAPTCHA after the first interaction, hero image preload, font preloads, lazy footer images (lib/site/tune.ts).
+  const html = tuneHtml(renderDocument(resolved, site.data, path, { projectId, dataset, origin })).replace("</body>", `${tracker}</body>`);
   return new Response(html, {
     status: resolved.kind === "notFound" ? 404 : 200,
     headers: {
