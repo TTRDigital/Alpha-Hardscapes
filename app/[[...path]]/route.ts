@@ -37,7 +37,10 @@ export async function GET(_req: Request, ctx: { params: Promise<{ path?: string[
     const target = guessRedirect(path, await allPaths(site.fromCms));
     if (target) return new Response(null, { status: 301, headers: { Location: target } });
   }
-  const html = renderDocument(resolved, site.data, path, { projectId, dataset, origin });
+  // TTR OS website tracker (visits by source and form leads; no personal data). The site key is public; "off" turns it off.
+  const ttrKey = process.env.NEXT_PUBLIC_TTR_SITE_KEY === "off" ? "" : process.env.NEXT_PUBLIC_TTR_SITE_KEY || "8ntBK6QgvLkKLHNYnBTF8Q";
+  const tracker = ttrKey ? `<script async src="https://ttr-portal.vercel.app/api/site/script" data-site="${ttrKey}"></script>` : "";
+  const html = renderDocument(resolved, site.data, path, { projectId, dataset, origin }).replace("</body>", `${tracker}</body>`);
   return new Response(html, {
     status: resolved.kind === "notFound" ? 404 : 200,
     headers: {
