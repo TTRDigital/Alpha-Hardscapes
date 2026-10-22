@@ -45,6 +45,13 @@ export async function POST(req: Request) {
 
   const { settings } = await getSite();
   const setting = (settings.forms || []).find((f) => f.formKey === `${postId}:${formId}`) || (settings.forms || []).find((f) => f.formKey?.endsWith(`:${formId}`) && f.formKey.startsWith(`${postId}:`));
+  // Only the site's own forms, and only with a way to reach the person: bots posting an empty or
+  // made-up form straight at this address do not become leads in the CRM.
+  const known = Boolean(setting) || Object.keys(labels).length > 0;
+  const reachable = Object.entries(fields).some(([k, v]) => /name|phone|e-?mail/i.test(k) && v.trim());
+  if (!known || !reachable) {
+    return reply({ success: false, data: { message: "Please add your name and a phone number or email so we can reach you.", errors: [], data: [] } }, known ? 200 : 400);
+  }
   const delivered = await deliverLead({ form: setting?.name || `${postId}:${formId}`, fields, page, tag: setting?.tag });
   if (!delivered) {
     return reply({ success: false, data: { message: "Something went wrong. Please call us at (475) 227-6896.", errors: [], data: [] } });
