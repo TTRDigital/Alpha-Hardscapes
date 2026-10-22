@@ -54,14 +54,24 @@ const BY_PATH = `*[_type in ["page", "post", "archivePage"] && path == $path][0]
 type Settings = { siteUrl?: string; postsPerPage?: number; forms?: FormSetting[] } & SiteData["settings"];
 export type FormSetting = { name?: string; formKey?: string; redirect?: string; message?: string; tag?: string };
 
+/**
+ * True when pages come from the built-in copy (content/seed.json) instead of the CMS:
+ * SITE_CONTENT=local, or a Vercel preview deployment (every branch except production), so
+ * content on a branch can be reviewed on its preview link before anything is sent to Sanity.
+ * Production and local development are unchanged.
+ */
+export function localContent() {
+  return process.env.SITE_CONTENT === "local" || process.env.VERCEL_ENV === "preview";
+}
+
 /** True once the CMS has been loaded (npm run seed). Until then the built-in copy is used. */
 async function cmsSettings(): Promise<Settings | null> {
   return sanity<Settings>(SETTINGS);
 }
 
 export async function getSite(): Promise<{ data: SiteData; settings: Settings; fromCms: boolean }> {
-  // SITE_CONTENT=local forces the built-in copy (e.g. to compare with the CMS).
-  const settings = process.env.SITE_CONTENT === "local" ? null : await cmsSettings();
+  // SITE_CONTENT=local (and every Vercel preview deployment) forces the built-in copy.
+  const settings = localContent() ? null : await cmsSettings();
   // Only trust settings that point at this site's header template.
   if (settings?.header?.tpl) {
     const posts = (await sanity<SiteData["posts"]>(POSTS)) || [];

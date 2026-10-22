@@ -47,7 +47,7 @@ All 15 Elementor forms (homepage, landing page, opt-in, and the 12 quote popups)
 | Forms | Elementor's script posts to `/wp-admin/admin-ajax.php` as before: `app/wp-admin/admin-ajax.php/route.ts` sends the lead to GoHighLevel and/or email and redirects to the form's thank-you page |
 | Sitemaps, feed, robots | `/sitemap_index.xml` (same Yoast URLs), `/feed/`, `/robots.txt` |
 | Images, fonts, theme scripts | `public/wp-content/...` at the original URLs; split stylesheets in `public/assets/css`, scripts in `public/assets/js` |
-| Built-in copy | `content/seed.json`: used when the CMS is empty or unreachable, and the source for `npm run seed` |
+| Built-in copy | `content/seed.json`: used when the CMS is empty or unreachable, and the source for `npm run seed`. Vercel preview deployments (`VERCEL_ENV=preview`, every branch except production) always render from this copy, like `SITE_CONTENT=local`, so new content on a branch can be reviewed on its preview link before it is sent to Sanity. |
 
 ## Setup
 
