@@ -22,6 +22,10 @@ Applied to the migrated content and published to Sanity:
 - Favicon set at the site root (favicon.ico, 32/192/512 px icons, apple-touch-icon, web manifest), rendered from the vector logo.
 - Social images: a 1200x630 photo per page in `public/og/` (the homepage used a 136x118 background graphic).
 
+## Titles and descriptions (scripts/titles.ts)
+
+Every indexable page has a title of 50 to 60 characters and a description of 120 to 160 (proposed in the audit of October 22, 2026, approved by Kia). The texts live in `scripts/titles.ts`: `npm run titles` writes them into `content/seed.json`, and `npm run titles -- --publish` sends only those SEO fields (title, description, their Open Graph copies and the page's JSON-LD node) to Sanity with `SANITY_WRITE_TOKEN`. Blog posts keep their own title without the " | Alpha Hardscapes" suffix. The home page title is 61 characters, approved as written.
+
 ## Redirects
 
 - `content/redirects.json` (loaded by `next.config.ts`, all 301): every redirect the live WordPress site answered when probed with ~1,350 old and alternative URLs (old slugs, renamed parents, the redirect plugin's rules, WordPress' own "did you mean" redirects), plus `/?p=ID` and `/?page_id=ID` shortlinks. 711 rules, all tested.
@@ -74,6 +78,7 @@ npm run typecheck  # TypeScript
 npm run build      # production build
 npm run verify -- <crawl-dir> [--server=http://localhost:3000]  # compare with the WordPress HTML
 npm run fixes      # apply the review fixes to content/seed.json (after extract)
+npm run titles     # page titles and descriptions into content/seed.json (-- --publish sends them to Sanity)
 npm run seed -- --force  # publish content/seed.json to Sanity
 ```
 

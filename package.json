@@ -12,6 +12,7 @@
     "verify": "node --experimental-strip-types --no-warnings scripts/verify.ts",
     "seed": "node --experimental-strip-types --no-warnings scripts/seed.ts",
     "fixes": "node --experimental-strip-types --no-warnings scripts/fixes.ts",
+    "titles": "node --experimental-strip-types --no-warnings scripts/titles.ts",
     "hero-images": "node --experimental-strip-types --no-warnings scripts/hero-images.ts"
   },
   "dependencies": {
