@@ -41,8 +41,11 @@ export async function GET(_req: Request, ctx: { params: Promise<{ path?: string[
   // TTR OS website tracker (visits by source and form leads; no personal data). The site key is public; "off" turns it off.
   const ttrKey = process.env.NEXT_PUBLIC_TTR_SITE_KEY === "off" ? "" : process.env.NEXT_PUBLIC_TTR_SITE_KEY || "8ntBK6QgvLkKLHNYnBTF8Q";
   const tracker = ttrKey ? `<script async src="https://ttr-portal.vercel.app/api/site/script" data-site="${ttrKey}"></script>` : "";
+  // TTR OS's "Suggest a change" bar, on Vercel previews only (never the live site). It does nothing unless the page was opened
+  // from the client's private review link (a review token after #); the client highlights words and leaves notes for TTR.
+  const review = process.env.VERCEL_ENV === "preview" ? '<script defer src="https://ttr-portal.vercel.app/api/site/notes/bar"></script>' : "";
   // tuneHtml: Tag Manager and reCAPTCHA after the first interaction, hero image preload, font preloads, lazy footer images (lib/site/tune.ts).
-  const html = tuneHtml(renderDocument(resolved, site.data, path, { projectId, dataset, origin })).replace("</body>", `${tracker}</body>`);
+  const html = tuneHtml(renderDocument(resolved, site.data, path, { projectId, dataset, origin })).replace("</body>", `${tracker}${review}</body>`);
   return new Response(html, {
     status: resolved.kind === "notFound" ? 404 : 200,
     headers: {
