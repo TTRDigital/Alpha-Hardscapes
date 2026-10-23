@@ -78281,7 +78281,56 @@
    "alt": "Why is my retaining wall leaning, and can it be fixed?",
    "attrs": "loading=\"lazy\" class=\"attachment-medium size-medium\""
   },
-  "cardClass": "post-5106 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding"
+  "cardClass": "post-5106 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding",
+  "relatedPage": "/retaining-walls-connecticut/",
+  "ctaText": "Not sure whether your wall can be repaired or has to come down? Send us a few photos and we will tell you honestly.",
+  "sectionImages": [
+   {
+    "_key": "wall-rebuilt",
+    "_type": "sectionImage",
+    "heading": "Can a leaning retaining wall be repaired, or does it have to be rebuilt?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/retaining-wall-0282.jpg",
+     "width": "2560",
+     "height": "1920",
+     "alt": "New grey block retaining wall with a capped lamp pillar beside an asphalt driveway in Connecticut"
+    },
+    "caption": "A new block retaining wall and lamp pillar at the foot of a Connecticut driveway, built by Alpha Hardscapes.",
+    "ratio": "3:2",
+    "focus": "50% 52%"
+   },
+   {
+    "_key": "wall-underneath",
+    "_type": "sectionImage",
+    "heading": "What does a retaining wall that lasts in Connecticut look like underneath?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/retaining-wall-0313.jpg",
+     "width": "1920",
+     "height": "2560",
+     "alt": "Two tiers of grey block retaining wall with built-in steps on a sloped yard during construction"
+    },
+    "caption": "Two tiers of block wall and steps taking shape on a sloped yard. The base, the drainage and the backfill go in before anything gets planted.",
+    "ratio": "3:2",
+    "focus": "50% 56%"
+   },
+   {
+    "_key": "wall-permit",
+    "_type": "sectionImage",
+    "heading": "Do I need a permit or an engineer to rebuild a retaining wall in Connecticut?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/retaining-wall-stoneyard-stone-veneer-b.jpg",
+     "width": "1512",
+     "height": "2016",
+     "alt": "Low natural stone wall and pillar along a lawn in front of a grey Connecticut home"
+    },
+    "caption": "A low natural stone wall and pillar along a Connecticut lawn. Walls under four feet usually stay below the permit line, but check with your town first.",
+    "ratio": "3:2",
+    "focus": "50% 64%"
+   }
+  ]
  },
  {
   "seo": {
@@ -79070,7 +79119,56 @@
    "alt": "Can you put a fire pit on a paver patio?",
    "attrs": "loading=\"lazy\" class=\"attachment-medium size-medium\""
   },
-  "cardClass": "post-5107 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding"
+  "cardClass": "post-5107 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding",
+  "relatedPage": "/fire-features-connecticut/",
+  "ctaText": "Want a fire pit built into your patio before the cold really sets in? Tell us how you want to use it and we will design it in.",
+  "sectionImages": [
+   {
+    "_key": "pit-built-in",
+    "_type": "sectionImage",
+    "heading": "How do you build a fire pit into a paver patio the right way?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/fire-pit-1804.jpg",
+     "width": "2560",
+     "height": "1920",
+     "alt": "Round grey block fire pit with a stainless steel insert in the middle of a new grey paver patio"
+    },
+    "caption": "A built-in fire pit with a stainless steel insert on a new paver patio. The pavers are cut around the pit, never laid under it.",
+    "ratio": "3:2",
+    "focus": "50% 52%"
+   },
+   {
+    "_key": "pit-placement",
+    "_type": "sectionImage",
+    "heading": "Where should the fire pit go on the patio?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/fire-pit-2883.jpg",
+     "width": "1290",
+     "height": "858",
+     "alt": "Stone fire pit on a paver patio with low seating walls, a wooden deck and a lawn behind it"
+    },
+    "caption": "A fire pit set out on the patio with seating walls on two sides and open lawn behind it.",
+    "ratio": "3:2",
+    "focus": "50% 45%"
+   },
+   {
+    "_key": "pit-wood",
+    "_type": "sectionImage",
+    "heading": "Gas or wood: which is better on a paver patio?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/fire-pit-2254.jpg",
+     "width": "1920",
+     "height": "2560",
+     "alt": "Round natural stone fire pit with a steel ring beside a stone seat wall and a black metal fence"
+    },
+    "caption": "A wood-burning stone fire pit with a steel ring and a flat cap beside a seat wall. The ring takes the heat so the stone does not.",
+    "ratio": "3:2",
+    "focus": "50% 50%"
+   }
+  ]
  },
  {
   "seo": {

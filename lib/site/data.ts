@@ -3,8 +3,9 @@ import "server-only";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { apiVersion, dataset, projectId } from "@/sanity/env";
-import { buildSiteData, normalizePath, resolvePath, type SeedDoc } from "./local";
-import type { ArchiveDoc, PageDoc, PostDoc, Resolved, SiteData } from "./render";
+import { relativeUrl } from "@/lib/render/html";
+import { authorsFrom, buildSiteData, normalizePath, resolvePath, type SeedDoc } from "./local";
+import type { ArchiveDoc, PageDoc, PageSummary, PostDoc, Resolved, SiteData } from "./render";
 
 /** ISR window for CMS content, in seconds. Publishing also refreshes via /api/revalidate. */
 export const REVALIDATE_SECONDS = 300;
@@ -39,9 +40,14 @@ function seed(): SeedDoc[] {
 const SETTINGS = `*[_id == "siteSettings"][0]{..., header->, footer->, popups[]->}`;
 const POSTS = `*[_type == "post" && defined(path)] | order(date desc){
   _id, _type, wpId, title, path, date, excerpt, featuredImage, featuredMedium, cardClass, articleClass,
+  body, content, relatedPage, ctaText, sectionImages,
   "author": author->{name, "slug": slug.current},
   "categories": categories[]->{name, "slug": slug.current}
 }`;
+// The blog design needs the pages a post links to and the authors' own pages (photo, role).
+const PAGES = `*[_type == "page" && defined(path)]{path, title, "description": seo.description, "image": seo.ogImage}`;
+const AUTHORS = `*[_type == "author"]{_id, _type, name, slug, description, avatar}`;
+const AUTHOR_PAGES = `*[_type == "archivePage" && kind == "author"]{"slug": author->slug.current, content}`;
 const BY_PATH = `*[_type in ["page", "post", "archivePage"] && path == $path][0]{
   ...,
   _type == "post" => {
@@ -74,9 +80,19 @@ export async function getSite(): Promise<{ data: SiteData; settings: Settings; f
   const settings = localContent() ? null : await cmsSettings();
   // Only trust settings that point at this site's header template.
   if (settings?.header?.tpl) {
-    const posts = (await sanity<SiteData["posts"]>(POSTS)) || [];
+    const [posts, pages, authorDocs, authorPages] = await Promise.all([
+      sanity<SiteData["posts"]>(POSTS),
+      sanity<PageSummary[]>(PAGES),
+      sanity<SeedDoc[]>(AUTHORS),
+      sanity<{ slug?: string; content?: unknown }[]>(AUTHOR_PAGES),
+    ]);
     return {
-      data: { settings: { ...settings, popups: (settings.popups || []).filter(Boolean) }, posts },
+      data: {
+        settings: { ...settings, popups: (settings.popups || []).filter(Boolean) },
+        posts: posts || [],
+        pages: (pages || []).map((p) => ({ ...p, image: p.image ? relativeUrl(p.image) : undefined })),
+        authors: authorsFrom(authorDocs || [], authorPages || []),
+      },
       settings,
       fromCms: true,
     };
