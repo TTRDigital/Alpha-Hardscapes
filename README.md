@@ -26,9 +26,20 @@ Applied to the migrated content and published to Sanity:
 
 Every indexable page has a title of 50 to 60 characters and a description of 120 to 160 (proposed in the audit of October 22, 2026, approved by Kia). The texts live in `scripts/titles.ts`: `npm run titles` writes them into `content/seed.json`, and `npm run titles -- --publish` sends only those SEO fields (title, description, their Open Graph copies and the page's JSON-LD node) to Sanity with `SANITY_WRITE_TOKEN`. Blog posts keep their own title without the " | Alpha Hardscapes" suffix. The home page title is 61 characters, approved as written.
 
+## Speed and technical fixes at render time (lib/site/tune.ts)
+
+Applied to every page as it is served; the CMS content is not changed.
+
+- **Photos:** `npm run webp` (scripts/webp.ts) makes a WebP copy of every PNG/JPEG/WebP over 100 KB that a page or stylesheet uses (same width and height, kept only when at least 25% smaller: 265 MB of originals become 47 MB) and points the stylesheets at them; the page HTML is pointed at them when served. Run it again after adding images to the repo. The first section's background also gets a 1080 px copy for phones.
+- **Links:** internal links to an old address (a rule in `redirects.ts`) go straight to the final page.
+- **Alt text:** where the CMS left it empty, the two decorative graphics used on most pages, the photo beside the closing call to action and author avatars get one. Alt text set in the CMS always wins.
+- **Tables** in posts scroll inside their own box on phones instead of the whole page.
+- **Authors with no posts** are `noindex` and left out of the author sitemap, like Yoast's default.
+
 ## Redirects
 
 - `content/redirects.json` (loaded by `next.config.ts`, all 301): every redirect the live WordPress site answered when probed with ~1,350 old and alternative URLs (old slugs, renamed parents, the redirect plugin's rules, WordPress' own "did you mean" redirects), plus `/?p=ID` and `/?page_id=ID` shortlinks. 711 rules, all tested.
+- `redirects.ts` adds addresses that answered 404 in October 2026 (links in three blog posts to posts that were never published, `/sitemap.xml`, `/faq/`, `/contact-us/`...), each to the closest live page.
 - Any other unknown URL whose last part matches a page or post is 301'd there at request time (`lib/site/guess.ts`), like WordPress did.
 - The redirect plugin's own list could not be exported without a WordPress login. If you have one, export it (Tools > Redirection, or the "Redirect Redirection" plugin screen) and add any rule missing from `content/redirects.json`.
 
