@@ -153,11 +153,50 @@ export function renderDocument(resolved: Resolved, data: SiteData, path: string,
   const popups = data.settings.popups || [];
   const order = doc.popups || [];
   const sorted = [...popups].sort((x, y) => (order.indexOf(x.wpId!) + 1 || 999) - (order.indexOf(y.wpId!) + 1 || 999));
-  values.popups = sorted.map((p) => renderTpl(p.tpl, p, ctx)).join("\n");
   values.content = renderTpl(doc.frameTpl, doc, ctx);
+  values.popups = usedPopups(
+    sorted.map((p) => ({ id: String(p.wpId ?? ""), html: renderTpl(p.tpl, p, ctx) })),
+    values.header + values.content + values.footer,
+  ).join("\n");
 
   const shell = shells[doc.shell || ""] || shells[defaultShell(data)] || "";
   return renderTpl(shell, {}, ctx);
+}
+
+/** Popup ids a piece of HTML can open: "popup:open" action links (plain or URL-encoded) and form actions. */
+function popupIds(html: string): string[] {
+  const ids: string[] = [];
+  const add = (b64: string) => {
+    try {
+      const id = (JSON.parse(Buffer.from(b64, "base64").toString("utf8")) as { id?: string | number }).id;
+      if (id !== undefined) ids.push(String(id));
+    } catch {}
+  };
+  for (const m of html.matchAll(/action(?:=|%3D)popup(?::|%3A)open(?:&amp;|&|%26)settings(?:=|%3D)([A-Za-z0-9+/%=]+)/g)) add(decodeURIComponent(m[1]));
+  for (const m of html.matchAll(/popup_action_popup_id(?:&quot;|")\s*:\s*(?:&quot;|")?(\d+)/g)) ids.push(m[1]);
+  return ids;
+}
+
+/**
+ * Only the popups this page can open. None of the site's popups has a trigger of its own (timer, scroll,
+ * exit intent): each opens from a link or a form on the page, or from another popup. Every page printed
+ * all 12 (about a quarter of its HTML) though it opens one to three. A popup with triggers is always kept.
+ */
+function usedPopups(popups: { id: string; html: string }[], page: string): string[] {
+  const keep = new Set(popupIds(page));
+  for (const p of popups) if (/&quot;triggers&quot;:\{|"triggers":\{|&quot;timing&quot;:\{/.test(p.html.slice(0, 2000))) keep.add(p.id);
+  for (let grew = true; grew; ) {
+    grew = false;
+    for (const p of popups) {
+      if (!keep.has(p.id)) continue;
+      for (const id of popupIds(p.html)) {
+        if (keep.has(id)) continue;
+        keep.add(id);
+        grew = true;
+      }
+    }
+  }
+  return popups.filter((p) => !p.id || keep.has(p.id)).map((p) => p.html);
 }
 
 function defaultShell(data: SiteData) {
