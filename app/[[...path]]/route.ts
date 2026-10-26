@@ -1,3 +1,4 @@
+import { draftMode } from "next/headers";
 import { allPaths, getSite, resolve, REVALIDATE_SECONDS } from "@/lib/site/data";
 import { feedXml, sitemapIndex, sitemapXml } from "@/lib/site/sitemaps";
 import { guessRedirect } from "@/lib/site/guess";
@@ -26,6 +27,13 @@ const SITEMAPS = new Set(["page-sitemap.xml", "post-sitemap.xml", "category-site
 export async function GET(_req: Request, ctx: { params: Promise<{ path?: string[] }> }) {
   const { path: segments = [] } = await ctx.params;
   const site = await getSite();
+  // Draft preview must show Sanity's drafts or say it cannot: never the built-in copy in their place.
+  if (!site.fromCms && (await draftMode()).isEnabled) {
+    return new Response("Preview could not read the Sanity drafts (check SANITY_API_READ_TOKEN).", {
+      status: 503,
+      headers: { "Content-Type": "text/plain; charset=UTF-8", "Cache-Control": "private, no-store", "X-Robots-Tag": "noindex, nofollow" },
+    });
+  }
   const origin = (process.env.NEXT_PUBLIC_SITE_URL || site.settings.siteUrl || "https://alphahardscapes.com").replace(/\/$/, "");
 
   if (segments.length === 1 && segments[0] === "sitemap_index.xml") return xml(sitemapIndex(origin, await allPaths(site.fromCms), site.data.posts));
@@ -51,12 +59,15 @@ export async function GET(_req: Request, ctx: { params: Promise<{ path?: string[
   const bundle = stylesheetBundle(rendered);
   const cssBundle = bundle && (await bundleServed(bundle)) ? bundle : undefined;
   const html = tuneHtml(rendered, { cssBundle }).replace("</body>", `${tracker}${review}</body>`);
+  // Draft preview (lib/preview.ts): unpublished content is never cached or indexed.
+  const draft = (await draftMode()).isEnabled;
   return new Response(html, {
     status: resolved.kind === "notFound" ? 404 : 200,
     headers: {
       "Content-Type": "text/html; charset=UTF-8",
       "X-Content-Source": site.fromCms ? "cms" : "built-in",
-      "Cache-Control": `public, s-maxage=${REVALIDATE_SECONDS}, stale-while-revalidate=86400`,
+      "Cache-Control": draft ? "private, no-store" : `public, s-maxage=${REVALIDATE_SECONDS}, stale-while-revalidate=86400`,
+      ...(draft ? { "X-Robots-Tag": "noindex, nofollow", "X-Preview": "drafts" } : {}),
     },
   });
 }

@@ -46,6 +46,14 @@ Applied to every page as it is served; the CMS content is not changed.
 - Any other unknown URL whose last part matches a page or post is 301'd there at request time (`lib/site/guess.ts`), like WordPress did.
 - The redirect plugin's own list could not be exported without a WordPress login. If you have one, export it (Tools > Redirection, or the "Redirect Redirection" plugin screen) and add any rule missing from `content/redirects.json`.
 
+## Draft preview (TTR OS page fixer)
+
+TTR OS reads a page's unpublished Sanity changes before publishing them, through a signed link:
+
+`GET /api/preview?path=<path>&exp=<unix seconds>&sig=<hex HMAC-SHA256 of "<path>\n<exp>" with PREVIEW_SECRET>`
+
+A valid, unexpired link (at most 24 hours ahead; same-site paths only) turns on Next.js draft mode and redirects to the path. In draft mode pages read Sanity's drafts perspective from the live API with `SANITY_API_READ_TOKEN`, are never cached (`Cache-Control: private, no-store`), carry `X-Robots-Tag: noindex` and `X-Preview: drafts`, and answer 503 rather than show the built-in copy if the drafts cannot be read. `/api/preview/exit?path=<path>` turns draft mode off. Without both variables the route answers 503 and the site works exactly as before. Code: `lib/preview.ts`, `app/api/preview/`, `lib/site/data.ts`.
+
 ## Forms
 
 All 15 Elementor forms (homepage, landing page, opt-in, and the 12 quote popups) post to `/wp-admin/admin-ajax.php`, which is now this site's route, not WordPress. Each one was submitted end to end in a browser: lead delivered to the webhook with readable field names (Phone, Project Address, Service...), visitor redirected to the form's thank-you page. The GoHighLevel forms on the $1000-off/20%-off landing pages are GoHighLevel iframes and do not depend on WordPress.
