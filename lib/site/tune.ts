@@ -1,5 +1,7 @@
 import heroImagesJson from "../generated/hero-images.json" with { type: "json" };
+import webpJson from "../generated/webp.json" with { type: "json" };
 import { escapeAttr } from "../render/html.ts";
+import { redirectRows } from "../../redirects.ts";
 
 /**
  * Speed and accessibility tune-up applied to every rendered page at request
@@ -13,6 +15,7 @@ import { escapeAttr } from "../render/html.ts";
  */
 
 const heroImages = heroImagesJson as Record<string, string>;
+const webp = webpJson as { images: Record<string, string>; phone: Record<string, string> };
 
 /** Runs `load` on the first touch, scroll, key press or mouse move, or after `ms` milliseconds. */
 function onFirstInteraction(body: string, ms = 10000) {
@@ -72,9 +75,74 @@ const VIDEO_SCRIPT =
 
 /** The background image of the first section with a classic background: the largest paint on most pages. */
 export function heroImage(html: string): string | undefined {
+  return heroSection(html)?.src;
+}
+
+function heroSection(html: string): { id: string; src: string } | undefined {
   const start = Math.max(0, html.indexOf('id="content"'));
   const m = /elementor-element-([0-9a-f]+)[^>]*data-settings="[^"]*background_background&quot;:&quot;classic/.exec(html.slice(start));
-  return m ? heroImages[m[1]] : undefined;
+  return m && heroImages[m[1]] ? { id: m[1], src: heroImages[m[1]] } : undefined;
+}
+
+/* Photos: the WebP copies made by scripts/webp.ts (same size, 70 to 90% lighter) replace the PNG and
+ * JPEG originals in the page, in src, srcset, lightbox links and Elementor's JSON settings (escaped
+ * slashes). The <head> keeps the originals for social cards and structured data. */
+const UPLOAD = /(\\?\/)wp-content\1uploads\1[^"'\s()<>&?]+?\.(?:png|jpe?g|webp)(?=["'\s()<>&?,])/gi;
+
+function webpImages(body: string) {
+  return body.replace(UPLOAD, (m, slash: string) => {
+    const plain = slash === "/" ? m : m.replace(/\\\//g, "/");
+    const copy = webp.images[plain];
+    if (!copy) return m;
+    return slash === "/" ? copy : copy.replace(/\//g, "\\/");
+  });
+}
+
+/* Alt text where the CMS left it empty, for images that repeat on many pages: two decorative
+ * graphics (also hidden from screen readers) and the photo beside the closing call to action.
+ * Author avatars get the author's name. Any alt text set in the CMS is kept. */
+const DEFAULT_ALT: [RegExp, string, boolean][] = [
+  [/\/filled-bg(?:-portrait)?\.png/, "Green decorative shape", true],
+  [/\/dot-grahpic\.png/, "Decorative dot pattern", true],
+  [/\/uploads\/20\d\d\/\d\d\/alpha(?:-\d+x\d+)?\.png/, "Smiling man in an Alpha Hardscapes T-shirt and cap with his arms crossed", false],
+];
+
+function defaultAlt(html: string) {
+  const author = /<h1 class="page-title ast-archive-title">(?:Author name: )?([^<]+)<\/h1>/.exec(html)?.[1]?.trim();
+  return html.replace(/<img\s[^>]*>/g, (img) => {
+    if (!/\salt=""/.test(img)) return img;
+    const src = /\ssrc="([^"]*)"/.exec(img)?.[1] || "";
+    if (author && /^https:\/\/secure\.gravatar\.com\/avatar\//.test(src)) return img.replace(/\salt=""/, ` alt="${escapeAttr(author)}"`);
+    const hit = DEFAULT_ALT.find(([re]) => re.test(src));
+    if (!hit) return img;
+    return img.replace(/\salt=""/, ` alt="${hit[1]}"${hit[2] ? ' aria-hidden="true"' : ""}`);
+  });
+}
+
+/* Internal links that point at an old address go straight to the page it redirects to (redirects.ts),
+ * so visitors and crawlers skip the extra hop and every live page is linked under its own address. */
+const MOVED = new Map(redirectRows.filter((r) => !r.query).map((r) => [r.source, r.destination]));
+const SITE_HREF = /(<a\s[^>]*?href=")(?:https?:\/\/(?:www\.)?alphahardscapes\.com)?(\/[^"#?]*)([^"]*")/g;
+
+function finalLinks(body: string) {
+  return body.replace(SITE_HREF, (m, start: string, path: string, rest: string) => {
+    let target = MOVED.get(path);
+    for (let i = 0; target && MOVED.has(target) && i < 5; i++) target = MOVED.get(target);
+    return target ? `${start}${target}${rest}` : m;
+  });
+}
+
+/* Tables in blog posts are wider than a phone screen: they scroll inside their own box instead of
+ * pushing the whole page sideways. */
+function scrollTables(body: string) {
+  return body.replace(/<table[\s>][\s\S]*?<\/table>/g, (t) => `<div class="table-scroll" style="overflow-x:auto">${t}</div>`);
+}
+
+/* Phones: the first section's background comes from a 1080 px copy instead of the 1920 to 2880 px one.
+ * The repeated class outweighs the page stylesheet's selector (four classes), and this style comes later. */
+function phoneHero(id: string, small: string) {
+  const sel = `.elementor-element-${id}.elementor-element-${id}.elementor-element-${id}:not(.elementor-motion-effects-element-type-background)`;
+  return `<style id="hero-phone">@media (max-width:767px){${sel}{background-image:url("${small}")}}</style>`;
 }
 
 /** Adds loading="lazy" and decoding="async" to images in a slice of the page that is never in the first screen. */
@@ -104,12 +172,21 @@ export function tuneHtml(html: string): string {
 
   out = out.replace(JQUERY, '<script defer="" id="jquery-core-js" src="/wp-includes/js/jquery/jquery.min.js"></script>');
 
-  const hero = heroImage(out);
+  const hero = heroSection(out);
   if (hero) {
+    const big = webp.images[hero.src] || hero.src;
+    const small = webp.phone[big];
     const anchor = '<link rel="profile" href="https://gmpg.org/xfn/11">';
-    const preload = `<link rel="preload" as="image" href="${escapeAttr(hero)}" fetchpriority="high">`;
+    const preload = small
+      ? `<link rel="preload" as="image" href="${escapeAttr(small)}" media="(max-width: 767px)" fetchpriority="high">` +
+        `<link rel="preload" as="image" href="${escapeAttr(big)}" media="(min-width: 768px)" fetchpriority="high">`
+      : `<link rel="preload" as="image" href="${escapeAttr(big)}" fetchpriority="high">`;
     out = out.includes(anchor) ? out.replace(anchor, anchor + preload) : out.replace("</head>", `${preload}</head>`);
+    if (small) out = out.replace("</head>", `${phoneHero(hero.id, small)}</head>`);
   }
+
+  const bodyAt = out.indexOf("</head>");
+  if (bodyAt > 0) out = out.slice(0, bodyAt) + scrollTables(finalLinks(webpImages(defaultAlt(out.slice(bodyAt)))));
 
   if (AUTOPLAY_VIDEO.test(out)) {
     out = out.replace(AUTOPLAY_VIDEO, '<video class="elementor-video"$1 data-autoplay="" preload="metadata"$2>').replace("</body>", `${VIDEO_SCRIPT}</body>`);

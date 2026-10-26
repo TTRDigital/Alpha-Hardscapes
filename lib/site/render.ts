@@ -137,6 +137,8 @@ export function renderDocument(resolved: Resolved, data: SiteData, path: string,
       bodyClass = cls.join(" ");
     }
     seo = archiveSeo(a, page, pages);
+    // Like Yoast's default: an author with no posts is an empty page, kept out of search (and the sitemap).
+    if (a.kind === "author" && !list.length) seo = { ...seo, robots: "noindex, follow" };
   }
 
   const title = seo?.title || doc.title || "";
