@@ -6,7 +6,7 @@
  * skeleton's list, in the same order, into public/assets/css/b-<hash>.css, and
  * lib/site/tune.ts swaps the links for the bundle when the page is served.
  *
- *   node scripts/css-bundles.mjs     # runs before every `npm run build` and `npm run dev`
+ *   node scripts/css-bundles.mjs     # also run by next.config.ts on every build and dev server
  *
  * Plain JavaScript (no type stripping) so it runs on any Node the host builds
  * with. The bundles are build output (git-ignored): their names change with
