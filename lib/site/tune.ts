@@ -175,12 +175,17 @@ function videoPoster(html: string) {
 
 /* Stylesheets: the skeleton's 22 to 26 render-blocking files become the one bundle made from the same
  * files in the same order (scripts/css-bundles.mjs), in the place of the first. Nothing between them is a
- * style, so the cascade is unchanged. A list with no bundle is left as it is. */
+ * style, so the cascade is unchanged. The route only asks for the bundle once it has seen it served
+ * (lib/site/bundles.ts); otherwise, or for a list with no bundle, the original links stay. */
 const STYLESHEET = /<link rel="stylesheet"(?: id="[^"]*")? href="(\/assets\/css\/[a-z0-9-]+\.css)" media="all">/g;
 
-function bundleStylesheets(head: string) {
-  const bundle = cssBundles[[...head.matchAll(STYLESHEET)].map((m) => m[1]).join("|")];
-  if (!bundle) return head;
+/** The bundle for this page's stylesheets, if the build made one. */
+export function stylesheetBundle(html: string): string | undefined {
+  const head = html.slice(0, Math.max(0, html.indexOf("</head>")));
+  return cssBundles[[...head.matchAll(STYLESHEET)].map((m) => m[1]).join("|")];
+}
+
+function bundleStylesheets(head: string, bundle: string) {
   let first = true;
   return head.replace(STYLESHEET, () => {
     if (!first) return "";
@@ -201,7 +206,8 @@ function lazyImages(html: string, from: number, to: number) {
   return html.slice(0, from) + part + html.slice(to);
 }
 
-export function tuneHtml(html: string): string {
+/** `cssBundle`: the page's stylesheet bundle, only when it is known to be served (see stylesheetBundle). */
+export function tuneHtml(html: string, opts: { cssBundle?: string } = {}): string {
   let out = html;
 
   out = out.replace(GTM_SNIPPET, (_m, id: string) => gtmLoader(id));
@@ -232,7 +238,8 @@ export function tuneHtml(html: string): string {
   out = videoPoster(out);
 
   const bodyAt = out.indexOf("</head>");
-  if (bodyAt > 0) out = bundleStylesheets(out.slice(0, bodyAt)) + scrollTables(finalLinks(webpImages(defaultAlt(out.slice(bodyAt)))));
+  const bundle = opts.cssBundle && opts.cssBundle === stylesheetBundle(out) ? opts.cssBundle : undefined;
+  if (bodyAt > 0) out = (bundle ? bundleStylesheets(out.slice(0, bodyAt), bundle) : out.slice(0, bodyAt)) + scrollTables(finalLinks(webpImages(defaultAlt(out.slice(bodyAt)))));
 
   if (AUTOPLAY_VIDEO.test(out)) {
     out = out.replace(AUTOPLAY_VIDEO, '<video class="elementor-video"$1 data-autoplay="" preload="metadata"$2>').replace("</body>", `${VIDEO_SCRIPT}</body>`);
