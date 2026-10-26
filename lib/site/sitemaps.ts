@@ -14,6 +14,15 @@ function urlset(origin: string, rows: { path: string; modified?: string }[]) {
   return `${HEAD}\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>`;
 }
 
+/** Authors without posts are noindex (lib/site/render.ts). */
+function withoutEmptyAuthors(rows: Row[], posts: PostDoc[]) {
+  const authors = new Set(posts.map((p) => p.author?.slug).filter(Boolean));
+  return rows.filter((r) => {
+    const slug = /^\/author\/([^/]+)\/$/.exec(r.path)?.[1];
+    return !slug || authors.has(slug);
+  });
+}
+
 function rowsFor(name: string, rows: Row[]) {
   const indexable = rows.filter((r) => !r.noindex);
   switch (name) {
@@ -31,12 +40,11 @@ function rowsFor(name: string, rows: Row[]) {
 }
 
 export function sitemapXml(name: string, origin: string, rows: Row[], posts: PostDoc[]) {
-  void posts;
-  return urlset(origin, rowsFor(name, rows));
+  return urlset(origin, rowsFor(name, withoutEmptyAuthors(rows, posts)));
 }
 
-export function sitemapIndex(origin: string, rows: Row[], posts: PostDoc[]) {
-  void posts;
+export function sitemapIndex(origin: string, allRows: Row[], posts: PostDoc[]) {
+  const rows = withoutEmptyAuthors(allRows, posts);
   const maps = ["post-sitemap.xml", "page-sitemap.xml", "category-sitemap.xml", "author-sitemap.xml"].filter((n) => rowsFor(n, rows).length);
   const last = (n: string) =>
     rowsFor(n, rows)
