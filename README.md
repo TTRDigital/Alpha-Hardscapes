@@ -46,6 +46,17 @@ Applied to every page as it is served; the CMS content is not changed.
 - Any other unknown URL whose last part matches a page or post is 301'd there at request time (`lib/site/guess.ts`), like WordPress did.
 - The redirect plugin's own list could not be exported without a WordPress login. If you have one, export it (Tools > Redirection, or the "Redirect Redirection" plugin screen) and add any rule missing from `content/redirects.json`.
 
+## Draft preview (TTR OS page fixer)
+
+TTR OS reads a page's unpublished Sanity changes before publishing them, through a signed link (same contract as the Beverly Hills site):
+
+`GET /api/preview?path=<path>&exp=<unix seconds>&sig=<hex HMAC-SHA256 of "<path>\n<exp>">`, signed with `PREVIEW_SECRET` (or `SANITY_PREVIEW_SECRET`).
+
+- A valid link (path `/` plus URL-safe characters, up to 300; not expired; at most 31 days ahead; 64 lowercase hex signature) turns on Next.js draft mode and redirects (307) to the path. Otherwise plain text: 503 when no secret is set, 401 for anything else. Every response: `Cache-Control: no-store`, `X-Robots-Tag: noindex`.
+- `/api/preview/exit` turns draft mode off and goes to `/`.
+- In draft mode, on Vercel, pages read Sanity's drafts with `SANITY_READ_TOKEN` (from the live API, not the CDN), are never cached, carry `X-Robots-Tag: noindex, nofollow` and `X-Preview: drafts`, and answer 503 rather than show the built-in copy if Sanity cannot be read.
+- Without the variables nothing changes for visitors. Code: `lib/preview.ts`, `app/api/preview/`, `lib/site/data.ts`; tests: `npm test`.
+
 ## Forms
 
 All 15 Elementor forms (homepage, landing page, opt-in, and the 12 quote popups) post to `/wp-admin/admin-ajax.php`, which is now this site's route, not WordPress. Each one was submitted end to end in a browser: lead delivered to the webhook with readable field names (Phone, Project Address, Service...), visitor redirected to the form's thank-you page. The GoHighLevel forms on the $1000-off/20%-off landing pages are GoHighLevel iframes and do not depend on WordPress.
@@ -90,6 +101,7 @@ npm run dev        # local site
 npm run lint       # ESLint
 npm run typecheck  # TypeScript
 npm run build      # production build
+npm test           # unit tests (tests/*.test.ts, Node's test runner)
 npm run verify -- <crawl-dir> [--server=http://localhost:3000]  # compare with the WordPress HTML
 npm run fixes      # apply the review fixes to content/seed.json (after extract)
 npm run titles     # page titles and descriptions into content/seed.json (-- --publish sends them to Sanity)

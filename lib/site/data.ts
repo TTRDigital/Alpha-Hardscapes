@@ -2,6 +2,7 @@ import "server-only";
 
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { isPreview } from "@/lib/preview";
 import { apiVersion, dataset, projectId } from "@/sanity/env";
 import { buildSiteData, normalizePath, resolvePath, type SeedDoc } from "./local";
 import type { ArchiveDoc, PageDoc, PostDoc, Resolved, SiteData } from "./render";
@@ -9,12 +10,22 @@ import type { ArchiveDoc, PageDoc, PostDoc, Resolved, SiteData } from "./render"
 /** ISR window for CMS content, in seconds. Publishing also refreshes via /api/revalidate. */
 export const REVALIDATE_SECONDS = 300;
 
+/** Draft preview (lib/preview.ts): Sanity's drafts, with the read token, only while draft mode is on. */
+async function previewToken(): Promise<string | undefined> {
+  const token = process.env.SANITY_READ_TOKEN;
+  return token && (await isPreview()) ? token : undefined;
+}
+
 async function sanity<T>(query: string, params: Record<string, unknown> = {}): Promise<T | null> {
-  const search = new URLSearchParams({ query, perspective: "published" });
+  const token = await previewToken();
+  const search = new URLSearchParams({ query, perspective: token ? "drafts" : "published" });
   for (const [k, v] of Object.entries(params)) search.set(`$${k}`, JSON.stringify(v));
-  const url = `https://${projectId}.apicdn.sanity.io/v${apiVersion}/data/query/${dataset}?${search}`;
+  // Drafts come from the live API (the CDN only serves published content) and are never cached.
+  const url = `https://${projectId}.${token ? "api" : "apicdn"}.sanity.io/v${apiVersion}/data/query/${dataset}?${search}`;
   try {
-    const res = await fetch(url, { next: { revalidate: REVALIDATE_SECONDS, tags: ["sanity"] } });
+    const res = token
+      ? await fetch(url, { cache: "no-store", headers: { Authorization: `Bearer ${token}` } })
+      : await fetch(url, { next: { revalidate: REVALIDATE_SECONDS, tags: ["sanity"] } });
     if (!res.ok) {
       console.warn(`[sanity] ${res.status} for ${query.slice(0, 60)}`);
       return null;
