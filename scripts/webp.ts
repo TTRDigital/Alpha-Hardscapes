@@ -8,10 +8,10 @@
  * For every PNG, JPEG or WebP over 100 KB that a page, template or stylesheet
  * uses (content/seed.json, lib/generated/shells.json, public/assets/css):
  *   photo.png  -> photo.png.webp    same width and height, WebP quality 80
- *   photo.webp -> photo.min.webp    re-encoded at quality 80
+ *   photo.webp -> photo.min.webp    re-encoded at quality 75 (WordPress saved these close to lossless)
  * kept only when it is at least 25% smaller. Section backgrounds wider than
- * 1080 px also get photo.png.m.webp (photo.m.webp for a WebP), 1080 px wide,
- * used on phones.
+ * 1080 px also get photo.png.m.webp (photo.m.webp for a WebP), 1080 px wide at
+ * quality 70, used on phones.
  *
  *   npm run webp      # idempotent: existing copies are kept
  *
@@ -59,7 +59,8 @@ for (const src of [...sources].sort()) {
   const target = copyPath(src);
   const out = join(PUBLIC, target);
   if (!existsSync(out)) {
-    const buf = await sharp(file).rotate().webp({ quality: 80, alphaQuality: 100, effort: 5 }).toBuffer();
+    const quality = /\.webp$/i.test(src) ? 75 : 80;
+    const buf = await sharp(file).rotate().webp({ quality, alphaQuality: 100, effort: 5 }).toBuffer();
     if (buf.length <= size * 0.75) writeFileSync(out, buf);
   }
   const used = existsSync(out) ? target : src;
@@ -74,7 +75,7 @@ for (const src of [...sources].sort()) {
     if (width > PHONE_WIDTH) {
       const small = `${target.replace(/(?:\.min)?\.webp$/, "")}.m.webp`;
       const smallFile = join(PUBLIC, small);
-      if (!existsSync(smallFile)) writeFileSync(smallFile, await sharp(file).rotate().resize({ width: PHONE_WIDTH }).webp({ quality: 75, alphaQuality: 100, effort: 5 }).toBuffer());
+      if (!existsSync(smallFile)) writeFileSync(smallFile, await sharp(file).rotate().resize({ width: PHONE_WIDTH }).webp({ quality: 70, alphaQuality: 100, effort: 5 }).toBuffer());
       phone[used] = small;
     }
   }
