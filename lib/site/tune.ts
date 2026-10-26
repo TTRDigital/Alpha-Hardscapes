@@ -1,4 +1,5 @@
 import heroImagesJson from "../generated/hero-images.json" with { type: "json" };
+import cssBundlesJson from "../generated/css-bundles.json" with { type: "json" };
 import webpJson from "../generated/webp.json" with { type: "json" };
 import { escapeAttr } from "../render/html.ts";
 import { redirectRows } from "../../redirects.ts";
@@ -16,6 +17,7 @@ import { redirectRows } from "../../redirects.ts";
 
 const heroImages = heroImagesJson as Record<string, string>;
 const webp = webpJson as { images: Record<string, string>; phone: Record<string, string> };
+const cssBundles = cssBundlesJson as Record<string, string>;
 
 /** Runs `load` on the first touch, scroll, key press or mouse move, or after `ms` milliseconds. */
 function onFirstInteraction(body: string, ms = 10000) {
@@ -145,6 +147,48 @@ function phoneHero(id: string, small: string) {
   return `<style id="hero-phone">@media (max-width:767px){${sel}{background-image:url("${small}")}}</style>`;
 }
 
+/* Background videos (the home page reel): the section shows the video's own first frame until the video
+ * plays over it, instead of an empty dark box. Made with
+ *   ffmpeg -i <video>.mp4 -frames:v 1 frame.png   (then WebP, quality 70)
+ * Cover and centre, like Elementor sizes the video, so the switch is invisible. */
+const VIDEO_POSTERS: Record<string, string> = {
+  "/wp-content/uploads/2026/08/55AD24CF-90C1-4D9E-8E77-03BB607646C7.mp4": "/wp-content/uploads/2026/08/55AD24CF-90C1-4D9E-8E77-03BB607646C7-poster.webp",
+};
+const VIDEO_SECTION = /elementor-element-([0-9a-f]+)[^>]*data-settings="[^"]*background_video_link&quot;:&quot;https?:\\\/\\\/(?:www\.)?alphahardscapes\.com([^&]+)&quot;/;
+
+function videoPoster(html: string) {
+  const m = VIDEO_SECTION.exec(html.slice(Math.max(0, html.indexOf('id="content"'))));
+  const poster = m && VIDEO_POSTERS[m[2].replace(/\\\//g, "/")];
+  if (!m || !poster) return html;
+  const sel = `.elementor-element-${m[1]}.elementor-element-${m[1]}.elementor-element-${m[1]}`;
+  const head = `<link rel="preload" as="image" href="${poster}" fetchpriority="high"><style id="video-poster">${sel}{background-image:url("${poster}");background-position:center center;background-size:cover;background-repeat:no-repeat}</style>`;
+  // Elementor gives the video its src when its script starts; that one call waits for the page's load
+  // event, so the 1.3 MB video no longer competes with the first screen. Sizing and playback stay Elementor's.
+  const defer =
+    `<script>(function(){var v=document.querySelector('.elementor-element-${m[1]} .elementor-background-video-hosted');if(!v)return;var set=v.setAttribute;` +
+    `v.setAttribute=function(n,x){if(n==='src'&&document.readyState!=='complete'){addEventListener('load',function(){set.call(v,n,x)},{once:true});return}return set.call(v,n,x)}})();</script>`;
+  const out = html.replace("</head>", `${head}</head>`);
+  const tag = out.indexOf('<video class="elementor-background-video-hosted"', out.indexOf(`elementor-element-${m[1]}`, out.indexOf('id="content"')));
+  const end = tag < 0 ? -1 : out.indexOf("</video>", tag);
+  return end < 0 ? out : out.slice(0, end + 8) + defer + out.slice(end + 8);
+}
+
+/* Stylesheets: the skeleton's 22 to 26 render-blocking files become the one bundle made from the same
+ * files in the same order (scripts/css-bundles.mjs), in the place of the first. Nothing between them is a
+ * style, so the cascade is unchanged. A list with no bundle is left as it is. */
+const STYLESHEET = /<link rel="stylesheet"(?: id="[^"]*")? href="(\/assets\/css\/[a-z0-9-]+\.css)" media="all">/g;
+
+function bundleStylesheets(head: string) {
+  const bundle = cssBundles[[...head.matchAll(STYLESHEET)].map((m) => m[1]).join("|")];
+  if (!bundle) return head;
+  let first = true;
+  return head.replace(STYLESHEET, () => {
+    if (!first) return "";
+    first = false;
+    return `<link rel="stylesheet" href="${bundle}" media="all">`;
+  });
+}
+
 /** Adds loading="lazy" and decoding="async" to images in a slice of the page that is never in the first screen. */
 function lazyImages(html: string, from: number, to: number) {
   if (from < 0 || to <= from) return html;
@@ -185,8 +229,10 @@ export function tuneHtml(html: string): string {
     if (small) out = out.replace("</head>", `${phoneHero(hero.id, small)}</head>`);
   }
 
+  out = videoPoster(out);
+
   const bodyAt = out.indexOf("</head>");
-  if (bodyAt > 0) out = out.slice(0, bodyAt) + scrollTables(finalLinks(webpImages(defaultAlt(out.slice(bodyAt)))));
+  if (bodyAt > 0) out = bundleStylesheets(out.slice(0, bodyAt)) + scrollTables(finalLinks(webpImages(defaultAlt(out.slice(bodyAt)))));
 
   if (AUTOPLAY_VIDEO.test(out)) {
     out = out.replace(AUTOPLAY_VIDEO, '<video class="elementor-video"$1 data-autoplay="" preload="metadata"$2>').replace("</body>", `${VIDEO_SCRIPT}</body>`);
