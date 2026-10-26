@@ -10,3 +10,7 @@ npm-debug.log*
 .sanity
 
 !.env.example
+
+# Stylesheet bundles, made by scripts/css-bundles.mjs on every build
+/public/assets/css/b-*.css
+/public/assets/css/b-*.css.ok

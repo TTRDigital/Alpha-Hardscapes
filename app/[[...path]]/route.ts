@@ -2,7 +2,8 @@ import { allPaths, getSite, resolve, REVALIDATE_SECONDS } from "@/lib/site/data"
 import { feedXml, sitemapIndex, sitemapXml } from "@/lib/site/sitemaps";
 import { guessRedirect } from "@/lib/site/guess";
 import { renderDocument } from "@/lib/site/render";
-import { tuneHtml } from "@/lib/site/tune";
+import { bundleServed } from "@/lib/site/bundles";
+import { stylesheetBundle, tuneHtml } from "@/lib/site/tune";
 import { dataset, projectId } from "@/sanity/env";
 
 /**
@@ -45,7 +46,11 @@ export async function GET(_req: Request, ctx: { params: Promise<{ path?: string[
   // from the client's private review link (a review token after #); the client highlights words and leaves notes for TTR.
   const review = process.env.VERCEL_ENV === "preview" ? '<script defer src="https://ttr-portal.vercel.app/api/site/notes/bar"></script>' : "";
   // tuneHtml: Tag Manager and reCAPTCHA after the first interaction, hero image preload, font preloads, lazy footer images (lib/site/tune.ts).
-  const html = tuneHtml(renderDocument(resolved, site.data, path, { projectId, dataset, origin })).replace("</body>", `${tracker}${review}</body>`);
+  const rendered = renderDocument(resolved, site.data, path, { projectId, dataset, origin });
+  // One stylesheet instead of 22 to 26, only once that bundle is known to be served (lib/site/bundles.ts).
+  const bundle = stylesheetBundle(rendered);
+  const cssBundle = bundle && (await bundleServed(bundle)) ? bundle : undefined;
+  const html = tuneHtml(rendered, { cssBundle }).replace("</body>", `${tracker}${review}</body>`);
   return new Response(html, {
     status: resolved.kind === "notFound" ? 404 : 200,
     headers: {
