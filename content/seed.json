@@ -79931,5 +79931,810 @@
    }
   ],
   "businessSchema": "{\n  \"@type\": [\n    \"HomeAndConstructionBusiness\",\n    \"Organization\"\n  ],\n  \"name\": \"Alpha Hardscapes\",\n  \"url\": \"https://alphahardscapes.com/\",\n  \"logo\": {\n    \"@type\": \"ImageObject\",\n    \"url\": \"https://alphahardscapes.com/icon-512.png\",\n    \"contentUrl\": \"https://alphahardscapes.com/icon-512.png\",\n    \"width\": 512,\n    \"height\": 512,\n    \"caption\": \"Alpha Hardscapes\"\n  },\n  \"image\": \"https://alphahardscapes.com/og/home.jpg\",\n  \"telephone\": \"+1-475-227-6896\",\n  \"email\": \"alphahardscapes1@gmail.com\",\n  \"priceRange\": \"$$\",\n  \"description\": \"Hardscaping, paver and masonry contractor serving New Haven, Fairfield and Hartford Counties in Connecticut: patios, walkways, retaining walls, outdoor kitchens, fire features, landscaping and seasonal cleanups.\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"addressLocality\": \"New Haven\",\n    \"addressRegion\": \"CT\",\n    \"postalCode\": \"06510\",\n    \"addressCountry\": \"US\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": 41.3083,\n    \"longitude\": -72.9279\n  },\n  \"openingHoursSpecification\": [\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\"\n      ],\n      \"opens\": \"08:00\",\n      \"closes\": \"17:00\"\n    },\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": \"Saturday\",\n      \"opens\": \"09:00\",\n      \"closes\": \"13:00\"\n    }\n  ],\n  \"areaServed\": [\n    {\n      \"@type\": \"AdministrativeArea\",\n      \"name\": \"New Haven County, CT\"\n    },\n    {\n      \"@type\": \"AdministrativeArea\",\n      \"name\": \"Fairfield County, CT\"\n    },\n    {\n      \"@type\": \"AdministrativeArea\",\n      \"name\": \"Hartford County, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"New Haven, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Hamden, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"North Haven, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"West Haven, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Cheshire, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Wallingford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Branford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Guilford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Madison, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Milford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Orange, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Woodbridge, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Shelton, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Trumbull, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Fairfield, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Stratford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Avon, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Berlin, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Farmington, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Glastonbury, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Southington, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"West Hartford, CT\"\n    }\n  ],\n  \"sameAs\": [\n    \"https://www.facebook.com/AlphaHardscapes\",\n    \"https://www.instagram.com/alphahardscapes/\"\n  ],\n  \"hasOfferCatalog\": {\n    \"@type\": \"OfferCatalog\",\n    \"name\": \"Hardscaping & Landscaping Services\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Patios & Walkways\",\n          \"url\": \"https://alphahardscapes.com/walkway-patio-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Retaining Walls\",\n          \"url\": \"https://alphahardscapes.com/retaining-walls-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Masonry\",\n          \"url\": \"https://alphahardscapes.com/masonry/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Paver Repairs & Maintenance\",\n          \"url\": \"https://alphahardscapes.com/repairs-maintenance-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Outdoor Kitchens\",\n          \"url\": \"https://alphahardscapes.com/outdoor-kitchens-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Fire Features\",\n          \"url\": \"https://alphahardscapes.com/fire-features-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Stone Steps\",\n          \"url\": \"https://alphahardscapes.com/stone-steps-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Chimney Installation & Repair\",\n          \"url\": \"https://alphahardscapes.com/chimney-installation-and-repair-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Landscaping\",\n          \"url\": \"https://alphahardscapes.com/landscaping/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Seasonal Clean-Up\",\n          \"url\": \"https://alphahardscapes.com/seasonal-clean-up/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Snow Removal\",\n          \"url\": \"https://alphahardscapes.com/seasonal-clean-up/snow-removal/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Leaf Removal\",\n          \"url\": \"https://alphahardscapes.com/seasonal-clean-up/leaf-removal/\"\n        }\n      }\n    ]\n  }\n}"
+ },
+ {
+  "seo": {
+   "title": "Stone Steps in Connecticut: How Tall and Deep to Build",
+   "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+   "canonical": "https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/",
+   "ogLocale": "en_US",
+   "ogType": "article",
+   "ogTitle": "Stone Steps in Connecticut: How Tall and Deep to Build",
+   "ogDescription": "Outdoor stone steps in Connecticut follow set riser and tread sizes. A Cheshire-area hardscaper explains the code numbers, the base and the handrail rules.",
+   "ogUrl": "https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/",
+   "ogSiteName": "Alpha Hardscapes",
+   "articlePublisher": "https://www.facebook.com/AlphaHardscapes",
+   "articleAuthor": "https://www.facebook.com/sebastian.ullrich.710/",
+   "publishedTime": "2026-10-31T12:30:00+00:00",
+   "modifiedTime": "2026-10-31T12:30:00+00:00",
+   "ogImage": "https://alphahardscapes.com/og/blog-stone-steps-height-depth-connecticut.jpg",
+   "ogImageWidth": "1200",
+   "ogImageHeight": "630",
+   "ogImageType": "image/jpeg",
+   "author": "Sebastian Ullrich",
+   "twitterCard": "summary_large_image",
+   "twitterMisc": [
+    {
+     "_key": "t1",
+     "label": "Written by",
+     "data": "Sebastian Ullrich"
+    },
+    {
+     "_key": "t2",
+     "label": "Est. reading time",
+     "data": "6 minutes"
+    }
+   ],
+   "schema": "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/#article\",\"isPartOf\":{\"@id\":\"https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/\"},\"author\":{\"name\":\"Sebastian Ullrich\",\"@id\":\"https://alphahardscapes.com/#/schema/person/8ceca06083f68e876a7c24efb3008961\"},\"headline\":\"How tall and deep should outdoor stone steps be?\",\"datePublished\":\"2026-10-31T12:30:00+00:00\",\"dateModified\":\"2026-10-31T12:30:00+00:00\",\"mainEntityOfPage\":{\"@id\":\"https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/\"},\"wordCount\":1167,\"publisher\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"image\":{\"@id\":\"https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/#primaryimage\"},\"thumbnailUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/04/2026/07/stairs-5525.jpg\",\"articleSection\":[\"Blog\"],\"inLanguage\":\"en-US\"},{\"@type\":\"WebPage\",\"@id\":\"https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/\",\"url\":\"https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/\",\"name\":\"Stone Steps in Connecticut: How Tall and Deep to Build\",\"isPartOf\":{\"@id\":\"https://alphahardscapes.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/#primaryimage\"},\"image\":{\"@id\":\"https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/#primaryimage\"},\"thumbnailUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/04/2026/07/stairs-5525.jpg\",\"datePublished\":\"2026-10-31T12:30:00+00:00\",\"dateModified\":\"2026-10-31T12:30:00+00:00\",\"description\":\"Outdoor stone steps in Connecticut follow set riser and tread sizes. A Cheshire-area hardscaper explains the code numbers, the base and the handrail rules.\",\"breadcrumb\":{\"@id\":\"https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/#primaryimage\",\"url\":\"https://alphahardscapes.com/wp-content/uploads/2026/04/2026/07/stairs-5525.jpg\",\"contentUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/04/2026/07/stairs-5525.jpg\",\"width\":2560,\"height\":1920},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://alphahardscapes.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://alphahardscapes.com/blog/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How tall and deep should outdoor stone steps be?\"}]},{\"@type\":\"FAQPage\",\"@id\":\"https://alphahardscapes.com/blog/stone-steps-height-depth-connecticut/#faq\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What is a nosing?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"It is the front edge of a tread that overhangs the riser below. The code asks for a nosing when the tread is under 11 inches deep, projecting between \\u00be and 1\\u00bc inches. A tread that is 11 inches or deeper does not need one.\"}},{\"@type\":\"Question\",\"name\":\"Can I fix a step that has dropped instead of replacing it?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Often, yes. A step that has dropped or tilted usually means the base under it moved. The stone is lifted, the base is rebuilt and compacted, and the same stone is set back. A cracked slab is a different case and has to be replaced.\"}},{\"@type\":\"Question\",\"name\":\"How deep should each tread be?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"At least 10 inches under the code numbers above. Deeper treads feel more comfortable outdoors, and they give you a firmer footing when the steps are wet.\"}},{\"@type\":\"Question\",\"name\":\"Do I need a handrail on three steps?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"The code requirement starts at four risers. With three or fewer it is up to you and your town, but a rail is still worth thinking about for anyone who needs the support.\"}}]},{\"@type\":\"WebSite\",\"@id\":\"https://alphahardscapes.com/#website\",\"url\":\"https://alphahardscapes.com/\",\"name\":\"Alpha Hardscapes\",\"description\":\"\",\"publisher\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://alphahardscapes.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://alphahardscapes.com/#organization\",\"name\":\"Alpha Hardscapes\",\"url\":\"https://alphahardscapes.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://alphahardscapes.com/#/schema/logo/image/\",\"url\":\"https://alphahardscapes.com/wp-content/uploads/2025/06/alphahardscapes-logo-icon-green.svg\",\"contentUrl\":\"https://alphahardscapes.com/wp-content/uploads/2025/06/alphahardscapes-logo-icon-green.svg\",\"width\":40,\"height\":47,\"caption\":\"Alpha Hardscapes\"},\"image\":{\"@id\":\"https://alphahardscapes.com/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/AlphaHardscapes\",\"https://www.instagram.com/alphahardscapes/\"]},{\"@type\":\"Person\",\"@id\":\"https://alphahardscapes.com/#/schema/person/8ceca06083f68e876a7c24efb3008961\",\"name\":\"Sebastian Ullrich\",\"image\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://secure.gravatar.com/avatar/70defc4cce559a1d62f2747f3206894f6a49c5c4244b43a892c32b3f84c982ec?s=96&d=mm&r=g\",\"url\":\"https://secure.gravatar.com/avatar/70defc4cce559a1d62f2747f3206894f6a49c5c4244b43a892c32b3f84c982ec?s=96&d=mm&r=g\",\"contentUrl\":\"https://secure.gravatar.com/avatar/70defc4cce559a1d62f2747f3206894f6a49c5c4244b43a892c32b3f84c982ec?s=96&d=mm&r=g\",\"caption\":\"Sebastian Ullrich\"},\"description\":\"Sebastian Ullrich is the Founder and Hardscaping Specialist at Alpha Hardscapes, a hardscaping and outdoor living company serving Fairfield County, New Haven County, and the surrounding Southern Connecticut region. Based in Hamden, CT, and a graduate of Southern Connecticut State University, Sebastian brings hands-on field experience to every project, from patios and walkways to retaining walls and outdoor living spaces. He focuses on durable materials suited to New England's freeze-thaw climate, clean installation practices, and designs built to hold up season after season. Outside of fieldwork, Sebastian shares project walkthroughs and client results through Alpha Hardscapes' social channels, where the company has built a following of over 6,000 homeowners and industry followers.\",\"sameAs\":[\"https://alphahardscapes.com\",\"https://www.facebook.com/sebastian.ullrich.710/\",\"https://www.instagram.com/alphahardscapes/\",\"https://www.linkedin.com/in/sebastian-ullrich-45b41a129/\"],\"url\":\"https://alphahardscapes.com/author/sebastian/\"}]}",
+   "description": "Outdoor stone steps in Connecticut follow set riser and tread sizes. A Cheshire-area hardscaper explains the code numbers, the base and the handrail rules."
+  },
+  "bodyClass": "wp-singular post-template-default single single-post postid-5108 single-format-standard wp-custom-logo wp-theme-astra wp-child-theme-alphahardscapes ast-desktop ast-narrow-container ast-separate-container ast-no-sidebar astra-4.9.2 group-blog ast-blog-single-style-1 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-full-width-primary-header ast-normal-title-enabled elementor-default elementor-kit-7 astra-addon-4.10.0",
+  "popups": [
+   4223,
+   4206,
+   4194,
+   4178,
+   4168,
+   4156,
+   4143,
+   4135,
+   4111,
+   4104,
+   4091,
+   377
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "8c2b88d93d29",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b7a1dd1cb7a1",
+      "text": "By Sebastian Ullrich, founder and hardscaping specialist at Alpha Hardscapes. Updated October 31, 2026.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "bb882237fbab",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "864739292deb",
+      "text": "Outdoor stone steps in Connecticut should follow the same rules as indoor stairs: each riser no taller than 7¾ inches, each tread at least 10 inches deep, and every step in a flight within ⅜ inch of the others. Those are the 2021 International Residential Code numbers behind Connecticut's 2022 building code. Confirm the details with your town.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "91ed746c3197",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "027e706201ab",
+      "href": "/stone-steps-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "7c88c64ab25f",
+      "text": "If you are planning ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "c0bed65a1b34",
+      "text": "stone steps",
+      "marks": [
+       "027e706201ab"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "8df6d3cf4ed6",
+      "text": " in Cheshire, Southington or another nearby Connecticut town, size is the first design question. Get it right and the steps feel natural to climb. Get it wrong and they are the spot where people trip. Here is how the numbers work.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "31a0e83fc1d8",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "705bc9d7fd88",
+      "text": "What are the size rules for outdoor steps in Connecticut?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "659043ad94a8",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "87131c6cff69",
+      "text": "Connecticut's 2022 State Building Code applies to permit applications filed from October 1, 2022, and it is built on the 2021 International Residential Code. For stairs, that code sets these limits:",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6e68c310e947",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "26b2cc431bcf",
+      "text": "Riser (the vertical face of a step): no more than 7¾ inches tall.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "bb6ccd482cb6",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "783167a2b4b3",
+      "text": "Tread (the flat part you stand on): at least 10 inches deep.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "aced96b2b94e",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e36b6cb908c7",
+      "text": "Consistency: within one flight, the tallest riser and the deepest tread can be no more than ⅜ inch larger than the smallest.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "52a6187c8aab",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "fafe312502c7",
+      "text": "Handrail: at least one side of any flight with four or more risers.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "50f015394d9c",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c0ad4f80c6e6",
+      "text": "A building official in your town has the final say, and code editions get updated. Before any work starts, ask your town's building department which rules apply to your steps.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "54e56951714d",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2d5b8dd5e064",
+      "text": "How many steps will I need?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "69c7b2a50beb",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "6269a1f16370",
+      "text": "Start with the total rise: the height from the walkway or patio up to the door or the top landing. Divide it by 7¾ inches and round up to the next whole number. That is the fewest risers you can use.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ba390c6d3b76",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f78641c85d2f",
+      "text": "Here is an example, only to show the math. A 30 inch rise divided by 7¾ is about 3.9, so you need at least 4 risers. Four risers of 7½ inches each add up to exactly 30 inches, and each one is under the limit. Any flight with four or more risers also needs a handrail.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9bc8504bbe4b",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f65a91b57080",
+      "text": "Why does every step have to be the same size?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "608d2008b9cc",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5fc869b1a13b",
+      "text": "People learn the rhythm of a staircase in the first step or two. After that they stop looking at their feet. One step that is taller or shallower than the rest is the one that catches a toe, especially going down, in the dark, or with wet leaves or snow on the stone. That is why the code limits the difference to ⅜ inch.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "eb85aa61cd46",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "33b1db3e86e2",
+      "text": "Stone makes this harder than wood, because the treads are cut slabs and the risers may be brick, stone or veneer. We measure the whole flight first and set out every step before anything is cut or placed.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1547938ef799",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3aef46bb05fb",
+      "text": "What goes under stone steps so they stay level in winter?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b0cb886c1c25",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "aba60b5df57c",
+      "text": "Soil holds water. When it freezes, the water expands and lifts whatever sits on top. When it thaws, the ground settles, often unevenly. Steps built on loose or soggy soil can end up tilted, or with one step higher than the next. That breaks the equal-size rule above, even if the steps were perfect on day one.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "fc8c37f6c783",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "60faf3c58ce6",
+      "href": "/walkway-patio-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "10c01db3edcd",
+      "text": "The usual cure is the same one we use for ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "c821a6943a8d",
+      "text": "patios and walkways",
+      "marks": [
+       "60faf3c58ce6"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "1506466523e7",
+      "text": ": dig out the soft soil, build a compacted crushed stone base in layers, and give water somewhere to drain away from the steps. Where the steps meet a slab at the door, the top step has to line up with the threshold.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "25479c67d826",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8d8d35102a68",
+      "text": "Which stone and finish works best for steps?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "3dc2904032d6",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "180fdd858e96",
+      "text": "There is more than one good answer, and your house usually points to it. These are the combinations in our own step photos:",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "a8b7d4589d82",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "295c94ffce34",
+      "text": "Flat stone treads over solid risers. The tread is a single slab, so it should be fully supported underneath, not sitting over a gap.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "24b09358861e",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "702e959d5d45",
+      "text": "Brick risers under stone treads, which suits many older and traditional homes.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "7c237f8d13e6",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9dcb7e6752dc",
+      "text": "Stone veneer on the risers, which can match a stone foundation or a porch base.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "ca38064c3f6a",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b5d530e580f9",
+      "text": "Whatever you choose, ask about the surface. Polished stone gets slippery when wet. A textured finish gives your shoes more to grip, and that matters on steps that sit outside all year.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5940a07a7403",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "eb2d3579cde7",
+      "text": "Do outdoor steps need a handrail or lights?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "984fc99eb76b",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "bdb9c704998f",
+      "text": "Under the code numbers above, a flight with four or more risers needs a handrail on at least one side. Fewer than four risers is not a reason to skip one if anyone in the house has trouble with stairs.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5b35e717f2d4",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2d058c4cae23",
+      "text": "Lighting is a choice. Steps are the part of a path you most want to see after dark, and small lights set into the risers light each tread without glare. Plan the wiring before the stone goes in, because it is much harder to add afterward.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d240f0cd2275",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b0c10770c0c0",
+      "text": "Do I need a permit to build or replace stone steps in Connecticut?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e98d40012e81",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "4f7293675511",
+      "text": "Permits in Connecticut are handled by each town, and the answer can depend on whether the steps are new or replacing old ones, whether they attach to the house, and how far the ground drops. Some towns also handle zoning approval separately from the building permit. Do not assume either way. A short call to the building department answers it.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "4eaba0b3f33e",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "45b8ff91bae5",
+      "text": "Can stone steps still be built this late in the year?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "602319fd7700",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b1c40a7e684a",
+      "text": "Excavating and building the base need ground that is not frozen. If you want steps done before winter, ask early. If the ground freezes first, the work can start in spring and the plan will be ready.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "edf596f9c589",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "409cf23b5894",
+      "text": "Frequently asked questions",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "33dcfbbdf9a3",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "dcd2e3ab05f2",
+      "text": "What is a nosing?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1c5f901cc4fa",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "bae927561ecf",
+      "text": "It is the front edge of a tread that overhangs the riser below. The code asks for a nosing when the tread is under 11 inches deep, projecting between ¾ and 1¼ inches. A tread that is 11 inches or deeper does not need one.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "da11c5821f7c",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0017c9a9cefc",
+      "text": "Can I fix a step that has dropped instead of replacing it?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "a3956424f384",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "fbb5542d0c78",
+      "text": "Often, yes. A step that has dropped or tilted usually means the base under it moved. The stone is lifted, the base is rebuilt and compacted, and the same stone is set back. A cracked slab is a different case and has to be replaced.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9aac006f54db",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "383483715594",
+      "text": "How deep should each tread be?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "06e24468088e",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "aa7aca9991d2",
+      "text": "At least 10 inches under the code numbers above. Deeper treads feel more comfortable outdoors, and they give you a firmer footing when the steps are wet.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "040a4423c1c0",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a48e746debe8",
+      "text": "Do I need a handrail on three steps?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e01727da363a",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ef7cb1d392cb",
+      "text": "The code requirement starts at four risers. With three or fewer it is up to you and your town, but a rail is still worth thinking about for anyone who needs the support.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "148b0478fede",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "616eb24ee82f",
+      "text": "Ready to plan your stone steps?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5294aa850328",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "0e2f1d4fe4b8",
+      "href": "/contact/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3e1e13f4fe66",
+      "text": "Send us a photo of the spot and tell us where the steps need to land. We will come out, measure the rise and talk through the stone, the base, the railing and the lighting. ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "22cb2502df0c",
+      "text": "Ask for a free quote",
+      "marks": [
+       "0e2f1d4fe4b8"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "26dc34544fe7",
+      "text": " and we will get started on a plan for your Cheshire-area home.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "featuredImage": {
+   "_type": "wpImage",
+   "src": "/wp-content/uploads/2026/07/stairs-5525.jpg",
+   "width": "2560",
+   "height": "1920",
+   "sizes": "(max-width: 2560px) 100vw, 2560px",
+   "alt": "New stone steps with a black metal railing leading to a front door beside a paver walkway",
+   "attrs": "class=\"attachment-large size-large wp-post-image\" decoding=\"async\""
+  },
+  "articleClass": "post-5108 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-article-single",
+  "frameTpl": "<div id=\"content\" class=\"site-content\"><div class=\"ast-container\"><div id=\"primary\" class=\"content-area primary\"><main id=\"main\" class=\"site-main\"><article class=\"[[@ctxattr:articleClass]]\" id=\"post-5108\"><div class=\"ast-post-format- single-layout-1\"><header class=\"entry-header \"><h1 class=\"entry-title\">[[@text:title]]</h1>[[@ctx:entryMeta]][[@ctx:thumbnail]]</header><!-- .entry-header --><div class=\"entry-content clear\">[[@rich:body]]</div><!-- .entry-content .clear --></div></article><!-- #post-## -->[[@ctx:postNav]]</main><!-- #main --></div><!-- #primary --></div> <!-- ast-container --></div>",
+  "shell": "ccc5e19af0",
+  "_id": "post-5108",
+  "_type": "post",
+  "title": "How tall and deep should outdoor stone steps be?",
+  "path": "/blog/stone-steps-height-depth-connecticut/",
+  "wpId": 5108,
+  "date": "2026-10-31T12:30:00Z",
+  "modified": "2026-10-31T12:30:00Z",
+  "author": {
+   "_type": "reference",
+   "_ref": "author-sebastian"
+  },
+  "categories": [
+   {
+    "_type": "reference",
+    "_ref": "category-blog",
+    "_key": "blog"
+   }
+  ],
+  "wpTemplate": "",
+  "excerpt": "Outdoor stone steps in Connecticut follow set riser and tread sizes. A Cheshire-area hardscaper explains the code numbers, the base and the handrail rules.",
+  "featuredMedium": {
+   "_type": "wpImage",
+   "src": "/wp-content/uploads/2026/07/stairs-5525.jpg",
+   "width": "2560",
+   "height": "1920",
+   "alt": "New stone steps with a black metal railing leading to a front door beside a paver walkway",
+   "attrs": "loading=\"lazy\" class=\"attachment-medium size-medium\""
+  },
+  "cardClass": "post-5108 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding",
+  "relatedPage": "/stone-steps-connecticut/",
+  "ctaText": "Planning new stone steps at your front door or down a slope? Tell us where they go and we will lay out the rise and run before anything is cut.",
+  "sectionImages": [
+   {
+    "_key": "20dd9a83f60e",
+    "_type": "sectionImage",
+    "heading": "Which stone and finish works best for steps?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/stairs-0321.jpg",
+     "width": "1920",
+     "height": "2560",
+     "alt": "Flat grey stone steps with brick risers climbing a gentle slope to a house with a porch"
+    },
+    "caption": "Flat grey stone treads over brick risers on a sloped front walk. Every step in the flight is the same height.",
+    "ratio": "3:4",
+    "focus": "50% 60%"
+   },
+   {
+    "_key": "e2be3aa54c02",
+    "_type": "sectionImage",
+    "heading": "Do outdoor steps need a handrail or lights?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/stairs-1752.jpg",
+     "width": "1920",
+     "height": "2560",
+     "alt": "Long flight of stone steps at night with a light set into each riser and a white railing along one side"
+    },
+    "caption": "A long flight with a light in every riser and a white railing on one side.",
+    "ratio": "3:4",
+    "focus": "50% 50%"
+   }
+  ]
  }
 ]
