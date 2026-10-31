@@ -15,6 +15,7 @@
     "titles": "node --experimental-strip-types --no-warnings scripts/titles.ts",
     "hero-images": "node --experimental-strip-types --no-warnings scripts/hero-images.ts",
     "webp": "node --experimental-strip-types --no-warnings scripts/webp.ts",
+    "blog-images": "node --experimental-strip-types --no-warnings scripts/blog-images.ts",
     "test": "node --conditions=react-server --experimental-strip-types --no-warnings --test tests/*.test.ts"
   },
   "dependencies": {

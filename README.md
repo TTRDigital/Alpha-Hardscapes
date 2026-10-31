@@ -39,6 +39,10 @@ Applied to every page as it is served; the CMS content is not changed.
 - **Tables** in posts scroll inside their own box on phones instead of the whole page.
 - **Authors with no posts** are `noindex` and left out of the author sitemap, like Yoast's default.
 
+## Blog design (October 2026)
+
+Blog posts and the blog and category listings render through `lib/render/blog.ts` (styles and the few lines of script in `lib/render/blog-assets.ts`), inside the same header, footer and popups as every other page. A post gets a hero photo with a byline card (author photo, date, reading time), an "In short" box with the first paragraph, jump links to every section (a sticky column on desktop), section photos with captions, a numbered timeline for step lists and icon cards for option lists, a call-to-action band, FAQ cards, the related service page, the author card and three more posts. The approved text of a post is never changed. Three post fields feed it, all optional: **Related service page**, **Mid-article call to action** and **Section photos** (a photo from the site's own library, the H2 it goes before, a caption). Photos are served resized and as WebP through the Next.js image optimizer (`/_next/image/`). Posts built with other Elementor widgets (buttons, maps, galleries) keep their Elementor layout; the author pages are unchanged. Everything reads without JavaScript, and the structured data gains `wordCount`, `timeRequired` and a `FAQPage` when a post has FAQs. `npm run verify` compares pages with the WordPress HTML, so blog pages now differ on purpose.
+
 ## Redirects
 
 - `content/redirects.json` (loaded by `next.config.ts`, all 301): every redirect the live WordPress site answered when probed with ~1,350 old and alternative URLs (old slugs, renamed parents, the redirect plugin's rules, WordPress' own "did you mean" redirects), plus `/?p=ID` and `/?page_id=ID` shortlinks. 711 rules, all tested.
@@ -72,7 +76,7 @@ All 15 Elementor forms (homepage, landing page, opt-in, and the 12 quote popups)
 | Forms | Elementor's script posts to `/wp-admin/admin-ajax.php` as before: `app/wp-admin/admin-ajax.php/route.ts` sends the lead to GoHighLevel and/or email and redirects to the form's thank-you page |
 | Sitemaps, feed, robots | `/sitemap_index.xml` (same Yoast URLs), `/feed/`, `/robots.txt` |
 | Images, fonts, theme scripts | `public/wp-content/...` at the original URLs; split stylesheets in `public/assets/css`, scripts in `public/assets/js` |
-| Built-in copy | `content/seed.json`: used when the CMS is empty or unreachable, and the source for `npm run seed` |
+| Built-in copy | `content/seed.json`: used when the CMS is empty or unreachable, and the source for `npm run seed`. Vercel preview deployments (`VERCEL_ENV=preview`, every branch except production) always render from this copy, like `SITE_CONTENT=local`, so new content on a branch can be reviewed on its preview link before it is sent to Sanity. |
 
 ## Setup
 
