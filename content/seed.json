@@ -79931,5 +79931,847 @@
    }
   ],
   "businessSchema": "{\n  \"@type\": [\n    \"HomeAndConstructionBusiness\",\n    \"Organization\"\n  ],\n  \"name\": \"Alpha Hardscapes\",\n  \"url\": \"https://alphahardscapes.com/\",\n  \"logo\": {\n    \"@type\": \"ImageObject\",\n    \"url\": \"https://alphahardscapes.com/icon-512.png\",\n    \"contentUrl\": \"https://alphahardscapes.com/icon-512.png\",\n    \"width\": 512,\n    \"height\": 512,\n    \"caption\": \"Alpha Hardscapes\"\n  },\n  \"image\": \"https://alphahardscapes.com/og/home.jpg\",\n  \"telephone\": \"+1-475-227-6896\",\n  \"email\": \"alphahardscapes1@gmail.com\",\n  \"priceRange\": \"$$\",\n  \"description\": \"Hardscaping, paver and masonry contractor serving New Haven, Fairfield and Hartford Counties in Connecticut: patios, walkways, retaining walls, outdoor kitchens, fire features, landscaping and seasonal cleanups.\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"addressLocality\": \"New Haven\",\n    \"addressRegion\": \"CT\",\n    \"postalCode\": \"06510\",\n    \"addressCountry\": \"US\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": 41.3083,\n    \"longitude\": -72.9279\n  },\n  \"openingHoursSpecification\": [\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\"\n      ],\n      \"opens\": \"08:00\",\n      \"closes\": \"17:00\"\n    },\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": \"Saturday\",\n      \"opens\": \"09:00\",\n      \"closes\": \"13:00\"\n    }\n  ],\n  \"areaServed\": [\n    {\n      \"@type\": \"AdministrativeArea\",\n      \"name\": \"New Haven County, CT\"\n    },\n    {\n      \"@type\": \"AdministrativeArea\",\n      \"name\": \"Fairfield County, CT\"\n    },\n    {\n      \"@type\": \"AdministrativeArea\",\n      \"name\": \"Hartford County, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"New Haven, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Hamden, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"North Haven, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"West Haven, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Cheshire, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Wallingford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Branford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Guilford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Madison, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Milford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Orange, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Woodbridge, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Shelton, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Trumbull, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Fairfield, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Stratford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Avon, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Berlin, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Farmington, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Glastonbury, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Southington, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"West Hartford, CT\"\n    }\n  ],\n  \"sameAs\": [\n    \"https://www.facebook.com/AlphaHardscapes\",\n    \"https://www.instagram.com/alphahardscapes/\"\n  ],\n  \"hasOfferCatalog\": {\n    \"@type\": \"OfferCatalog\",\n    \"name\": \"Hardscaping & Landscaping Services\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Patios & Walkways\",\n          \"url\": \"https://alphahardscapes.com/walkway-patio-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Retaining Walls\",\n          \"url\": \"https://alphahardscapes.com/retaining-walls-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Masonry\",\n          \"url\": \"https://alphahardscapes.com/masonry/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Paver Repairs & Maintenance\",\n          \"url\": \"https://alphahardscapes.com/repairs-maintenance-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Outdoor Kitchens\",\n          \"url\": \"https://alphahardscapes.com/outdoor-kitchens-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Fire Features\",\n          \"url\": \"https://alphahardscapes.com/fire-features-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Stone Steps\",\n          \"url\": \"https://alphahardscapes.com/stone-steps-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Chimney Installation & Repair\",\n          \"url\": \"https://alphahardscapes.com/chimney-installation-and-repair-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Landscaping\",\n          \"url\": \"https://alphahardscapes.com/landscaping/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Seasonal Clean-Up\",\n          \"url\": \"https://alphahardscapes.com/seasonal-clean-up/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Snow Removal\",\n          \"url\": \"https://alphahardscapes.com/seasonal-clean-up/snow-removal/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Leaf Removal\",\n          \"url\": \"https://alphahardscapes.com/seasonal-clean-up/leaf-removal/\"\n        }\n      }\n    ]\n  }\n}"
+ },
+ {
+  "seo": {
+   "title": "Thin Stone Veneer in Connecticut: Where It Works Best",
+   "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+   "canonical": "https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/",
+   "ogLocale": "en_US",
+   "ogType": "article",
+   "ogTitle": "Thin Stone Veneer in Connecticut: Where It Works Best",
+   "ogDescription": "Thin stone veneer gives the look of real stone at a fraction of the weight. A Cheshire-area hardscaper explains where it works, how it is set and what to ask.",
+   "ogUrl": "https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/",
+   "ogSiteName": "Alpha Hardscapes",
+   "articlePublisher": "https://www.facebook.com/AlphaHardscapes",
+   "articleAuthor": "https://www.facebook.com/sebastian.ullrich.710/",
+   "publishedTime": "2026-10-31T12:30:00+00:00",
+   "modifiedTime": "2026-10-31T12:30:00+00:00",
+   "ogImage": "https://alphahardscapes.com/og/blog-thin-stone-veneer-connecticut.jpg",
+   "ogImageWidth": "1200",
+   "ogImageHeight": "630",
+   "ogImageType": "image/jpeg",
+   "author": "Sebastian Ullrich",
+   "twitterCard": "summary_large_image",
+   "twitterMisc": [
+    {
+     "_key": "t1",
+     "label": "Written by",
+     "data": "Sebastian Ullrich"
+    },
+    {
+     "_key": "t2",
+     "label": "Est. reading time",
+     "data": "6 minutes"
+    }
+   ],
+   "schema": "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/#article\",\"isPartOf\":{\"@id\":\"https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/\"},\"author\":{\"name\":\"Sebastian Ullrich\",\"@id\":\"https://alphahardscapes.com/#/schema/person/8ceca06083f68e876a7c24efb3008961\"},\"headline\":\"What is thin stone veneer, and where does it work best?\",\"datePublished\":\"2026-10-31T12:30:00+00:00\",\"dateModified\":\"2026-10-31T12:30:00+00:00\",\"mainEntityOfPage\":{\"@id\":\"https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/\"},\"wordCount\":1114,\"publisher\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"image\":{\"@id\":\"https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/#primaryimage\"},\"thumbnailUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/04/2026/07/stairs-3183.jpg\",\"articleSection\":[\"Blog\"],\"inLanguage\":\"en-US\"},{\"@type\":\"WebPage\",\"@id\":\"https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/\",\"url\":\"https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/\",\"name\":\"Thin Stone Veneer in Connecticut: Where It Works Best\",\"isPartOf\":{\"@id\":\"https://alphahardscapes.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/#primaryimage\"},\"image\":{\"@id\":\"https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/#primaryimage\"},\"thumbnailUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/04/2026/07/stairs-3183.jpg\",\"datePublished\":\"2026-10-31T12:30:00+00:00\",\"dateModified\":\"2026-10-31T12:30:00+00:00\",\"description\":\"Thin stone veneer gives the look of real stone at a fraction of the weight. A Cheshire-area hardscaper explains where it works, how it is set and what to ask.\",\"breadcrumb\":{\"@id\":\"https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/#primaryimage\",\"url\":\"https://alphahardscapes.com/wp-content/uploads/2026/04/2026/07/stairs-3183.jpg\",\"contentUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/04/2026/07/stairs-3183.jpg\",\"width\":2560,\"height\":1920},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://alphahardscapes.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://alphahardscapes.com/blog/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"What is thin stone veneer, and where does it work best?\"}]},{\"@type\":\"FAQPage\",\"@id\":\"https://alphahardscapes.com/blog/thin-stone-veneer-connecticut/#faq\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Is thin stone veneer real stone?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Natural thin stone veneer is real stone cut thin. Manufactured stone veneer is cast from concrete to look like stone. The label on the sample or the spec sheet should say which one you are looking at.\"}},{\"@type\":\"Question\",\"name\":\"Can thin stone go on concrete steps?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Often it can, if the concrete is sound and clean enough to bond to and the product's guide allows it. A smooth or sealed surface may need lath and a scratch coat first.\"}},{\"@type\":\"Question\",\"name\":\"Can thin stone be used on a retaining wall?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"It can face a wall, but it cannot hold soil back. The poured or block wall behind it has to do that job, and the veneer is added for looks.\"}},{\"@type\":\"Question\",\"name\":\"How much does thin stone weigh?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Thin natural stone is generally about 8 to 15 pounds per square foot. Some heavier products exist and may need extra support. Full-thickness stone can be several times that.\"}}]},{\"@type\":\"WebSite\",\"@id\":\"https://alphahardscapes.com/#website\",\"url\":\"https://alphahardscapes.com/\",\"name\":\"Alpha Hardscapes\",\"description\":\"\",\"publisher\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://alphahardscapes.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://alphahardscapes.com/#organization\",\"name\":\"Alpha Hardscapes\",\"url\":\"https://alphahardscapes.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://alphahardscapes.com/#/schema/logo/image/\",\"url\":\"https://alphahardscapes.com/wp-content/uploads/2025/06/alphahardscapes-logo-icon-green.svg\",\"contentUrl\":\"https://alphahardscapes.com/wp-content/uploads/2025/06/alphahardscapes-logo-icon-green.svg\",\"width\":40,\"height\":47,\"caption\":\"Alpha Hardscapes\"},\"image\":{\"@id\":\"https://alphahardscapes.com/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/AlphaHardscapes\",\"https://www.instagram.com/alphahardscapes/\"]},{\"@type\":\"Person\",\"@id\":\"https://alphahardscapes.com/#/schema/person/8ceca06083f68e876a7c24efb3008961\",\"name\":\"Sebastian Ullrich\",\"image\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://secure.gravatar.com/avatar/70defc4cce559a1d62f2747f3206894f6a49c5c4244b43a892c32b3f84c982ec?s=96&d=mm&r=g\",\"url\":\"https://secure.gravatar.com/avatar/70defc4cce559a1d62f2747f3206894f6a49c5c4244b43a892c32b3f84c982ec?s=96&d=mm&r=g\",\"contentUrl\":\"https://secure.gravatar.com/avatar/70defc4cce559a1d62f2747f3206894f6a49c5c4244b43a892c32b3f84c982ec?s=96&d=mm&r=g\",\"caption\":\"Sebastian Ullrich\"},\"description\":\"Sebastian Ullrich is the Founder and Hardscaping Specialist at Alpha Hardscapes, a hardscaping and outdoor living company serving Fairfield County, New Haven County, and the surrounding Southern Connecticut region. Based in Hamden, CT, and a graduate of Southern Connecticut State University, Sebastian brings hands-on field experience to every project, from patios and walkways to retaining walls and outdoor living spaces. He focuses on durable materials suited to New England's freeze-thaw climate, clean installation practices, and designs built to hold up season after season. Outside of fieldwork, Sebastian shares project walkthroughs and client results through Alpha Hardscapes' social channels, where the company has built a following of over 6,000 homeowners and industry followers.\",\"sameAs\":[\"https://alphahardscapes.com\",\"https://www.facebook.com/sebastian.ullrich.710/\",\"https://www.instagram.com/alphahardscapes/\",\"https://www.linkedin.com/in/sebastian-ullrich-45b41a129/\"],\"url\":\"https://alphahardscapes.com/author/sebastian/\"}]}",
+   "description": "Thin stone veneer gives the look of real stone at a fraction of the weight. A Cheshire-area hardscaper explains where it works, how it is set and what to ask."
+  },
+  "bodyClass": "wp-singular post-template-default single single-post postid-5109 single-format-standard wp-custom-logo wp-theme-astra wp-child-theme-alphahardscapes ast-desktop ast-narrow-container ast-separate-container ast-no-sidebar astra-4.9.2 group-blog ast-blog-single-style-1 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-full-width-primary-header ast-normal-title-enabled elementor-default elementor-kit-7 astra-addon-4.10.0",
+  "popups": [
+   4223,
+   4206,
+   4194,
+   4178,
+   4168,
+   4156,
+   4143,
+   4135,
+   4111,
+   4104,
+   4091,
+   377
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "4cecbb603805",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "4f3737037d9e",
+      "text": "By Sebastian Ullrich, founder and hardscaping specialist at Alpha Hardscapes. Updated October 31, 2026.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1dd033f9cea5",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a5e278ed3b47",
+      "text": "Thin stone veneer is a stone facing about an inch thick that is bonded with mortar onto a solid wall or base, instead of being stacked on its own footing. It gives the look of full stone at a fraction of the weight, which makes it a good fit for steps, porch landings, fireplaces and outdoor kitchen bases.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6753fc1c974e",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "d52c475a1d0f",
+      "href": "/thinstone-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a268f5e925cd",
+      "text": "If you are comparing ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "c63780812660",
+      "text": "thin stone",
+      "marks": [
+       "d52c475a1d0f"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "16a43a246daa",
+      "text": " options in Southington, Cheshire or a nearby Connecticut town, it helps to know what the product is, where it belongs and what has to happen behind it. The stone itself is only half of the job.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "cfb44db05b7b",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e29d31e868d2",
+      "text": "What is thin stone veneer?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "c64650261496",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "edfba22e3e4f",
+      "text": "Natural thin stone veneer is real quarried or fieldstone that has been cut to roughly ¾ to 1½ inches thick. Full-thickness stone veneer, by contrast, is typically 3 to 5 inches thick and can weigh up to around 60 pounds per square foot. Thin veneer is far lighter, and thin products are generally kept to about 15 pounds per square foot or less.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "159087900543",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "935e6dd93cf7",
+      "text": "There is also manufactured stone veneer, which is cast from concrete in molds taken from real stone. It is usually lighter again, and it has its own product standard, ASTM C1670. Both kinds are called adhered veneer because they are held on by mortar and bond, not by their own weight.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "8cc478e5c93e",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d353a52b6a0d",
+      "text": "Why choose thin stone instead of full-thickness stone?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e84d6d18a5d4",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a77159c24254",
+      "text": "Weight is the main reason. Full-thickness stone needs its own support, such as a foundation ledge or a footing, because it is heavy. Thin stone does not. It can go onto a wall, a step face or a concrete base that is already there, as long as that surface is solid.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6312f60cd64e",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "46f7e36fddd5",
+      "text": "That last part matters. Thin veneer is not structural. It does not hold anything up and it does not hold anything back. The wall or base behind it has to be sound, because the veneer is only as good as what it is stuck to.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "c47f56d1c11d",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "65aa074450d4",
+      "text": "Where does thin stone veneer work best?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "add4526cbadb",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9bea0513d7b9",
+      "text": "It suits places where you want the look of stone and the surface behind it is already built. Common uses include:",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d1f7c12f0fad",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "daaa3e5664ff",
+      "text": "Step risers and the faces of porch landings, which is what the photos in this article show.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "93af36e4c2d8",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "27917f176174",
+      "text": "Fireplace surrounds and fire feature walls. Follow the maker's clearance rules between the stone and the firebox.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "1cafa2c3abbb",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "14dd591d427c",
+      "text": "Outdoor kitchen islands and the bases of grill stations.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "6387f7c752e5",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ca25aa58dc0e",
+      "text": "Pillars and the lower part of a house wall, where it can match a stone foundation.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "60809687a8a2",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "79af920b4e9e",
+      "href": "/stone-steps-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a41b8b153bde",
+      "text": "A porch or step is a good example. The structure underneath is usually concrete or block, and the veneer dresses it so the finished step looks like stone. You can see more in our ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "e9fa95b98e71",
+      "text": "stone steps",
+      "marks": [
+       "79af920b4e9e"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "6bfbd03d0191",
+      "text": " work.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e110488e5ef7",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d4ba228e2eb3",
+      "text": "How is thin stone veneer installed so it lasts through Connecticut winters?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "dadeeac7e00e",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c6c26080490f",
+      "text": "Water is the enemy of any adhered veneer, and in Connecticut that water freezes. Most of the work is in the layers behind the stone, and most of it is hidden once the job is done. Manufacturers' installation guides and ASTM C1780, the installation standard for manufactured stone, describe a system like this on a framed wall:",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b357268879d8",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d43521797cea",
+      "text": "A water-resistive barrier over the sheathing (ASTM C1780 calls for two layers over wood sheathing), so moisture that gets behind the stone is shed.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "5ea68cbdded7",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8d33f2a2a306",
+      "text": "Metal lath fastened over the barrier.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "cc9e2a20f518",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "60e71ead2dd2",
+      "text": "A mortar scratch coat that fully covers the lath.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "782e4890f9e3",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "fd1182b140d1",
+      "text": "The stone, set in mortar on the scratch coat after it has cured.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "633cb0b70627",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5d4863f718ae",
+      "text": "A weep screed or flashing at the bottom, so water that gets in has a way out.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "a8f78cab6296",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ec30d6c1b600",
+      "text": "On solid concrete or masonry the system is simpler, but the surface must be clean enough to bond to. If it is not, guides call for lath and a scratch coat first. Whatever the surface, follow the instructions for the specific product you buy.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9d5abd62328d",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "78c80c9728f4",
+      "text": "How close to the ground can thin stone go?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f522efd1d710",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "56ec22ed871a",
+      "text": "Not all the way down. Installation instructions, and the adhered veneer section of the residential code (R703.12 in the 2021 edition), generally ask for the stone to stop at least 4 inches above soil and 2 inches above paving, so soil and splashing water do not sit against it. Connecticut's 2022 building code is built on that 2021 code. Check your product's guide and your town's building department for the exact figures.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1d11556d70da",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c1b428e8938b",
+      "text": "Natural thin stone or manufactured stone: which should I use?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6ffe68d30fc1",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "cfaf155a4714",
+      "text": "Both are used, and each has trade-offs:",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "abd99d823bd8",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "cb9fc3ba6707",
+      "text": "Natural thin stone is real rock, so no two pieces match. It is the heavier of the two, in the range of about 8 to 15 pounds per square foot for thin products.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "9aa7d406b75f",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8cb288003ee3",
+      "text": "Manufactured stone is cast, usually runs around 8 to 12 pounds per square foot and comes in uniform, repeatable styles.",
+      "marks": []
+     }
+    ],
+    "listItem": "bullet",
+    "level": 1
+   },
+   {
+    "_type": "block",
+    "_key": "ef8230cdce69",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "6c140836289d",
+      "text": "The right choice depends on the look you want, the surface behind it and what the product's installation instructions allow. Ask to see samples outside in daylight, next to your house.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "a88e24c855e5",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "76c7adff558b",
+      "text": "Do I need a permit for stone veneer?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d167ffd93829",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8bcc64b49f0d",
+      "text": "It depends on the work. Veneer on a house wall is exterior wall work, which the building code covers. A small veneer job on an outdoor feature may be different. Permits in Connecticut are handled by each town, so a short call to your building department settles it before work starts.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ddd013a850e4",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f17746d2b214",
+      "text": "Frequently asked questions",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "03fda1a074dd",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f2edc49e2bc1",
+      "text": "Is thin stone veneer real stone?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1154dc9b62fa",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5a78a7d5b495",
+      "text": "Natural thin stone veneer is real stone cut thin. Manufactured stone veneer is cast from concrete to look like stone. The label on the sample or the spec sheet should say which one you are looking at.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d643ee453005",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ad51768df954",
+      "text": "Can thin stone go on concrete steps?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5d5f178cc091",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1c3bbae99ca1",
+      "text": "Often it can, if the concrete is sound and clean enough to bond to and the product's guide allows it. A smooth or sealed surface may need lath and a scratch coat first.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d06f01f9d645",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "11e868b18d64",
+      "text": "Can thin stone be used on a retaining wall?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "779fcf9aaf42",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "63e42a3eeb23",
+      "text": "It can face a wall, but it cannot hold soil back. The poured or block wall behind it has to do that job, and the veneer is added for looks.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "780fea568b65",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "408f61fe8f17",
+      "text": "How much does thin stone weigh?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "86c1e3bb16d8",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e9e2232f30f6",
+      "text": "Thin natural stone is generally about 8 to 15 pounds per square foot. Some heavier products exist and may need extra support. Full-thickness stone can be several times that.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "44fe59eaca60",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "231181ee30de",
+      "text": "Want stone on your steps, porch or outdoor kitchen?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e4c32defc89f",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "baafc5fafb9b",
+      "href": "/contact/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8bf81306b19d",
+      "text": "Send us a photo of the spot and tell us how you use it. We will come out, look at what the stone will be attached to and talk through the options. ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "d1f3c5cd710a",
+      "text": "Ask for a free quote",
+      "marks": [
+       "baafc5fafb9b"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "aa83ed5de3ed",
+      "text": " and we will help you choose a stone that suits your Cheshire-area home.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "featuredImage": {
+   "_type": "wpImage",
+   "src": "/wp-content/uploads/2026/07/stairs-3183.jpg",
+   "width": "2560",
+   "height": "1920",
+   "sizes": "(max-width: 2560px) 100vw, 2560px",
+   "alt": "Three grey stone steps with stone veneer risers leading to a black front door over a patterned walkway",
+   "attrs": "class=\"attachment-large size-large wp-post-image\" decoding=\"async\""
+  },
+  "articleClass": "post-5109 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-article-single",
+  "frameTpl": "<div id=\"content\" class=\"site-content\"><div class=\"ast-container\"><div id=\"primary\" class=\"content-area primary\"><main id=\"main\" class=\"site-main\"><article class=\"[[@ctxattr:articleClass]]\" id=\"post-5109\"><div class=\"ast-post-format- single-layout-1\"><header class=\"entry-header \"><h1 class=\"entry-title\">[[@text:title]]</h1>[[@ctx:entryMeta]][[@ctx:thumbnail]]</header><!-- .entry-header --><div class=\"entry-content clear\">[[@rich:body]]</div><!-- .entry-content .clear --></div></article><!-- #post-## -->[[@ctx:postNav]]</main><!-- #main --></div><!-- #primary --></div> <!-- ast-container --></div>",
+  "shell": "ccc5e19af0",
+  "_id": "post-5109",
+  "_type": "post",
+  "title": "What is thin stone veneer, and where does it work best?",
+  "path": "/blog/thin-stone-veneer-connecticut/",
+  "wpId": 5109,
+  "date": "2026-10-31T12:30:00Z",
+  "modified": "2026-10-31T12:30:00Z",
+  "author": {
+   "_type": "reference",
+   "_ref": "author-sebastian"
+  },
+  "categories": [
+   {
+    "_type": "reference",
+    "_ref": "category-blog",
+    "_key": "blog"
+   }
+  ],
+  "wpTemplate": "",
+  "excerpt": "Thin stone veneer gives the look of real stone at a fraction of the weight. A Cheshire-area hardscaper explains where it works, how it is set and what to ask.",
+  "featuredMedium": {
+   "_type": "wpImage",
+   "src": "/wp-content/uploads/2026/07/stairs-3183.jpg",
+   "width": "2560",
+   "height": "1920",
+   "alt": "Three grey stone steps with stone veneer risers leading to a black front door over a patterned walkway",
+   "attrs": "loading=\"lazy\" class=\"attachment-medium size-medium\""
+  },
+  "cardClass": "post-5109 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding",
+  "relatedPage": "/thinstone-connecticut/",
+  "ctaText": "Thinking about stone on your steps, porch, fireplace or outdoor kitchen? Send us the spot and we will talk through which stone and which backing will work.",
+  "sectionImages": [
+   {
+    "_key": "8f6da7f7c807",
+    "_type": "sectionImage",
+    "heading": "Where does thin stone veneer work best?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/stairs-1898.jpg",
+     "width": "1275",
+     "height": "1591",
+     "alt": "Stone veneer on the face of a new porch landing with grey stone laid on top, photographed before the soil was graded back"
+    },
+    "caption": "Stone veneer on the face of a new porch landing, photographed during construction before the soil was graded back.",
+    "ratio": "4:5",
+    "focus": "50% 60%"
+   },
+   {
+    "_key": "be724a4f9d33",
+    "_type": "sectionImage",
+    "heading": "How is thin stone veneer installed so it lasts through Connecticut winters?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/stairs-1268.jpg",
+     "width": "1181",
+     "height": "2560",
+     "alt": "Dark stone veneer on the side of a new entry step beside a front door, with a granite curb stone on the bare soil"
+    },
+    "caption": "Dark stone veneer on the side of a new entry step, before the soil around it was finished.",
+    "ratio": "3:4",
+    "focus": "50% 45%"
+   },
+   {
+    "_key": "3f1648796ebb",
+    "_type": "sectionImage",
+    "heading": "Do I need a permit for stone veneer?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/stairs-3185.jpg",
+     "width": "1920",
+     "height": "2560",
+     "alt": "Grey stone steps with stone veneer risers at a front door with a black door and side windows"
+    },
+    "caption": "Stone veneer risers under grey stone treads at a front entry.",
+    "ratio": "3:4",
+    "focus": "50% 55%"
+   }
+  ]
  }
 ]
