@@ -38,6 +38,10 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // The season-end ad page is one static file in public/patios-walkways/ (Kia, Nov 6). Serve it at the folder address.
+  async rewrites() {
+    return { beforeFiles: [{ source: "/patios-walkways/", destination: "/patios-walkways/index.html" }], afterFiles: [], fallback: [] };
+  },
   async redirects() {
     return redirects;
   },
