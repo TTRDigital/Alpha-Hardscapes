@@ -78568,38 +78568,6 @@
    },
    {
     "_type": "block",
-    "_key": "741b458dc68e",
-    "style": "normal",
-    "markDefs": [],
-    "children": [
-     {
-      "_type": "span",
-      "_key": "697a54c319f1",
-      "text": "The wall units are set with a high heat adhesive, and any mortar is a refractory type made for fire.",
-      "marks": []
-     }
-    ],
-    "listItem": "bullet",
-    "level": 1
-   },
-   {
-    "_type": "block",
-    "_key": "fe223e96d6e9",
-    "style": "normal",
-    "markDefs": [],
-    "children": [
-     {
-      "_type": "span",
-      "_key": "ca8a35036e60",
-      "text": "A cap finishes the rim at a height that suits how you will use it: around 12 to 14 inches if you want to put your feet up, 18 to 20 inches if the rim doubles as a seat.",
-      "marks": []
-     }
-    ],
-    "listItem": "bullet",
-    "level": 1
-   },
-   {
-    "_type": "block",
     "_key": "265d40a1e869",
     "style": "normal",
     "markDefs": [],
