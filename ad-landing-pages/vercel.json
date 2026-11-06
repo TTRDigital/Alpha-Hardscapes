@@ -27,7 +27,7 @@
   "rewrites": [
     {
       "source": "/((?!api/|images/).*)",
-      "destination": "/index.html"
+      "destination": "/"
     }
   ]
 }
