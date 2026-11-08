@@ -22,6 +22,10 @@ Applied to the migrated content and published to Sanity:
 - Favicon set at the site root (favicon.ico, 32/192/512 px icons, apple-touch-icon, web manifest), rendered from the vector logo.
 - Social images: a 1200x630 photo per page in `public/og/` (the homepage used a 136x118 background graphic).
 
+## Sanity vs built-in copy (audit, TTR-1341)
+
+`npm run audit` (read-only, no token) lists what Sanity holds against `content/seed.json`: documents missing in Sanity (what `npm run seed` would add), documents only in Sanity (never deleted), and fields that differ in documents both have (`-- --details` for every field). On 8 Nov 2026 both held the same 109 documents; the only difference is the approved page titles, descriptions and schema (`npm run titles`), which are in the built-in copy but not yet in Sanity. The live site reads Sanity (`X-Content-Source: cms`); the built-in copy is only the fallback.
+
 ## Titles and descriptions (scripts/titles.ts)
 
 Every indexable page has a title of 50 to 60 characters and a description of 120 to 160 (proposed in the audit of October 22, 2026, approved by Kia). The texts live in `scripts/titles.ts`: `npm run titles` writes them into `content/seed.json`, and `npm run titles -- --publish` sends only those SEO fields (title, description, their Open Graph copies and the page's JSON-LD node) to Sanity with `SANITY_WRITE_TOKEN`. Blog posts keep their own title without the " | Alpha Hardscapes" suffix. The home page title is 61 characters, approved as written.
