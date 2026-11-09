@@ -25,7 +25,8 @@
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var btn=f.querySelector('button'); btn.disabled=true; btn.textContent='Sending...';
-    fetch(f.action,{method:'POST',body:new FormData(f)})
+    var fd=new FormData(f); fd.append('landingUrl',location.href); fd.append('referrer',document.referrer||'');
+    fetch(f.action,{method:'POST',body:fd})
       .then(function(r){ if(!r.ok) throw new Error('send failed'); return r; })
       .then(function(){
         if(window.gtag)gtag('event','conversion',{send_to:TRACK.form});

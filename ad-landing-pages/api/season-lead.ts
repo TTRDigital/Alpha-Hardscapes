@@ -15,6 +15,13 @@ export async function POST(req: Request) {
   const page = clean(form.get("page"), 20) === "go" ? "go" : "outdoor";
   const path = page === "go" ? "/go/" : "/patios-walkways/";
   const campaign = page === "go" ? "go-landing" : "season-end-2026";
+  // The visitor's real landing URL (keeps gclid and utm_*), sent by the page. Only the pages' own hosts are accepted.
+  let landing = `${ORIGIN}${path}?utm_source=google&utm_medium=cpc&utm_campaign=${campaign}`, lpath = path;
+  try {
+    const u = new URL(clean(form.get("landingUrl"), 1500));
+    if (u.protocol === "https:" && /(^|\.)alphahardscapes\.com$|\.vercel\.app$/.test(u.hostname)) { landing = u.toString(); lpath = u.pathname; }
+  } catch { /* keep the default */ }
+  const ref = clean(form.get("referrer"), 500) || req.headers.get("referer") || "";
   const digits = phone.replace(/\D/g, "");
   if (name.length < 2 || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || digits.length < 10) return Response.json({ ok: false, error: "Please check your name, email and phone." }, { status: 400 });
   const ua = req.headers.get("user-agent") || "", ip = (req.headers.get("x-forwarded-for") || "").split(",")[0].trim();
@@ -23,7 +30,7 @@ export async function POST(req: Request) {
   if (hook && /^https:\/\//.test(hook)) {
     tasks.push(fetch(hook, { method: "POST", headers: { "content-type": "application/json" }, signal: AbortSignal.timeout(5000), body: JSON.stringify({ fullName: name, email, phone, projectAddress: address, source, page }) }).then((r) => r.ok).catch(() => false));
   }
-  const os = new URLSearchParams({ k: SITE_KEY, p: path, r: req.headers.get("referer") || "", u: `${ORIGIN}${path}?utm_source=google&utm_medium=cpc&utm_campaign=${campaign}`, f_name: name, f_phone: phone, f_email: email, f_message: `${address ? `Project address: ${address}. ` : ""}${source}` });
+  const os = new URLSearchParams({ k: SITE_KEY, p: lpath, r: ref, u: landing, f_name: name, f_phone: phone, f_email: email, f_message: `${address ? `Project address: ${address}. ` : ""}${source}` });
   tasks.push(fetch(`${OS_URL}/api/site/form`, { method: "POST", headers: { "content-type": "application/x-www-form-urlencoded", "user-agent": ua || "Mozilla/5.0 (alphahardscapes.com form)", "x-forwarded-for": ip, origin: ORIGIN }, body: os, signal: AbortSignal.timeout(5000) }).then((r) => r.status < 500).catch(() => false));
   const done = await Promise.all(tasks);
   if (!done.some(Boolean)) return Response.json({ ok: false, error: "We could not send that. Please call (472) 203-3284." }, { status: 502 });
