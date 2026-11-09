@@ -1,0 +1,5592 @@
+{
+ "count": 798,
+ "missing": [],
+ "files": [
+  {
+   "path": "/og/1000-off-copy.jpg",
+   "file": "public/og/1000-off-copy.jpg",
+   "exists": true,
+   "bytes": 192761,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/1000-off.jpg",
+   "file": "public/og/1000-off.jpg",
+   "exists": true,
+   "bytes": 192761,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/20-off-patios-walkways.jpg",
+   "file": "public/og/20-off-patios-walkways.jpg",
+   "exists": true,
+   "bytes": 32471,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/20pct-off.jpg",
+   "file": "public/og/20pct-off.jpg",
+   "exists": true,
+   "bytes": 192761,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/about-us.jpg",
+   "file": "public/og/about-us.jpg",
+   "exists": true,
+   "bytes": 205004,
+   "usedIn": 4
+  },
+  {
+   "path": "/og/author-grok.jpg",
+   "file": "public/og/author-grok.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/author-kia.jpg",
+   "file": "public/og/author-kia.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/author-ryan.jpg",
+   "file": "public/og/author-ryan.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/author-sebastian.jpg",
+   "file": "public/og/author-sebastian.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/author-ttrdigital.jpg",
+   "file": "public/og/author-ttrdigital.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/avon.jpg",
+   "file": "public/og/avon.jpg",
+   "exists": true,
+   "bytes": 103714,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/berlin.jpg",
+   "file": "public/og/berlin.jpg",
+   "exists": true,
+   "bytes": 103714,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/blog-backyard-remodel-ideas-connecticut.jpg",
+   "file": "public/og/blog-backyard-remodel-ideas-connecticut.jpg",
+   "exists": true,
+   "bytes": 90237,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/blog-best-patio-materials-connecticut.jpg",
+   "file": "public/og/blog-best-patio-materials-connecticut.jpg",
+   "exists": true,
+   "bytes": 66680,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/blog-hardscaping-pavers-contractor-complete-guide-to-planning-installation-and-maintenance.jpg",
+   "file": "public/og/blog-hardscaping-pavers-contractor-complete-guide-to-planning-installation-and-maintenance.jpg",
+   "exists": true,
+   "bytes": 74120,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/blog-hardscaping-pavers-planning-your-outdoor-space.jpg",
+   "file": "public/og/blog-hardscaping-pavers-planning-your-outdoor-space.jpg",
+   "exists": true,
+   "bytes": 88717,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/blog-natural-stone-vs-wall-block.jpg",
+   "file": "public/og/blog-natural-stone-vs-wall-block.jpg",
+   "exists": true,
+   "bytes": 99436,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/blog-outdoor-kitchen-cost-connecticut.jpg",
+   "file": "public/og/blog-outdoor-kitchen-cost-connecticut.jpg",
+   "exists": true,
+   "bytes": 91519,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/blog-patio-and-walkway-maintenance-checklist.jpg",
+   "file": "public/og/blog-patio-and-walkway-maintenance-checklist.jpg",
+   "exists": true,
+   "bytes": 69907,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/blog-patio-installation-cost-connecticut-cost-guide.jpg",
+   "file": "public/og/blog-patio-installation-cost-connecticut-cost-guide.jpg",
+   "exists": true,
+   "bytes": 85441,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/blog-pool-patio-materials-connecticut.jpg",
+   "file": "public/og/blog-pool-patio-materials-connecticut.jpg",
+   "exists": true,
+   "bytes": 73698,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/blog-prepare-patio-for-winter-connecticut.jpg",
+   "file": "public/og/blog-prepare-patio-for-winter-connecticut.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/blog-small-backyard-patio-ideas-connecticut.jpg",
+   "file": "public/og/blog-small-backyard-patio-ideas-connecticut.jpg",
+   "exists": true,
+   "bytes": 94943,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/blog.jpg",
+   "file": "public/og/blog.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/category-blog.jpg",
+   "file": "public/og/category-blog.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/category-uncategorized.jpg",
+   "file": "public/og/category-uncategorized.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/chimney-installation-and-repair-connecticut.jpg",
+   "file": "public/og/chimney-installation-and-repair-connecticut.jpg",
+   "exists": true,
+   "bytes": 49746,
+   "usedIn": 2
+  },
+  {
+   "path": "/og/contact.jpg",
+   "file": "public/og/contact.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/deck-builders-connecticut.jpg",
+   "file": "public/og/deck-builders-connecticut.jpg",
+   "exists": true,
+   "bytes": 86911,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/fairfield-county-ct.jpg",
+   "file": "public/og/fairfield-county-ct.jpg",
+   "exists": true,
+   "bytes": 172754,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/farmington.jpg",
+   "file": "public/og/farmington.jpg",
+   "exists": true,
+   "bytes": 103714,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/fire-features-connecticut.jpg",
+   "file": "public/og/fire-features-connecticut.jpg",
+   "exists": true,
+   "bytes": 82559,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/frequently-asked-questions.jpg",
+   "file": "public/og/frequently-asked-questions.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/gallery.jpg",
+   "file": "public/og/gallery.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/glastonbury.jpg",
+   "file": "public/og/glastonbury.jpg",
+   "exists": true,
+   "bytes": 97034,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/hartford-county-ct.jpg",
+   "file": "public/og/hartford-county-ct.jpg",
+   "exists": true,
+   "bytes": 172754,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/home-draft.jpg",
+   "file": "public/og/home-draft.jpg",
+   "exists": true,
+   "bytes": 179617,
+   "usedIn": 4
+  },
+  {
+   "path": "/og/home.jpg",
+   "file": "public/og/home.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 5
+  },
+  {
+   "path": "/og/landing-page.jpg",
+   "file": "public/og/landing-page.jpg",
+   "exists": true,
+   "bytes": 115031,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/landscaping.jpg",
+   "file": "public/og/landscaping.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 4
+  },
+  {
+   "path": "/og/locations.jpg",
+   "file": "public/og/locations.jpg",
+   "exists": true,
+   "bytes": 28692,
+   "usedIn": 4
+  },
+  {
+   "path": "/og/masonry-retaining-walls-stone-3.jpg",
+   "file": "public/og/masonry-retaining-walls-stone-3.jpg",
+   "exists": true,
+   "bytes": 133248,
+   "usedIn": 4
+  },
+  {
+   "path": "/og/masonry-retaining-walls-wall-block-2.jpg",
+   "file": "public/og/masonry-retaining-walls-wall-block-2.jpg",
+   "exists": true,
+   "bytes": 220189,
+   "usedIn": 4
+  },
+  {
+   "path": "/og/masonry-walkway-patio-masonry-optin.jpg",
+   "file": "public/og/masonry-walkway-patio-masonry-optin.jpg",
+   "exists": true,
+   "bytes": 141268,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/masonry.jpg",
+   "file": "public/og/masonry.jpg",
+   "exists": true,
+   "bytes": 163870,
+   "usedIn": 4
+  },
+  {
+   "path": "/og/new-haven-county-ct.jpg",
+   "file": "public/og/new-haven-county-ct.jpg",
+   "exists": true,
+   "bytes": 172754,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/optin-thank-you.jpg",
+   "file": "public/og/optin-thank-you.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/optin.jpg",
+   "file": "public/og/optin.jpg",
+   "exists": true,
+   "bytes": 115031,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/outdoor-kitchens-connecticut.jpg",
+   "file": "public/og/outdoor-kitchens-connecticut.jpg",
+   "exists": true,
+   "bytes": 104133,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/outdoor-living-packages-connecticut.jpg",
+   "file": "public/og/outdoor-living-packages-connecticut.jpg",
+   "exists": true,
+   "bytes": 187274,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/pool-builders-south-connecticut.jpg",
+   "file": "public/og/pool-builders-south-connecticut.jpg",
+   "exists": true,
+   "bytes": 144390,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/privacy-policy.jpg",
+   "file": "public/og/privacy-policy.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/repairs-maintenance-connecticut.jpg",
+   "file": "public/og/repairs-maintenance-connecticut.jpg",
+   "exists": true,
+   "bytes": 172754,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/retaining-walls-connecticut.jpg",
+   "file": "public/og/retaining-walls-connecticut.jpg",
+   "exists": true,
+   "bytes": 146817,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/reviews.jpg",
+   "file": "public/og/reviews.jpg",
+   "exists": true,
+   "bytes": 32471,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/seasonal-clean-up-leaf-removal.jpg",
+   "file": "public/og/seasonal-clean-up-leaf-removal.jpg",
+   "exists": true,
+   "bytes": 169460,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/seasonal-clean-up-snow-removal.jpg",
+   "file": "public/og/seasonal-clean-up-snow-removal.jpg",
+   "exists": true,
+   "bytes": 69121,
+   "usedIn": 4
+  },
+  {
+   "path": "/og/seasonal-clean-up.jpg",
+   "file": "public/og/seasonal-clean-up.jpg",
+   "exists": true,
+   "bytes": 157650,
+   "usedIn": 4
+  },
+  {
+   "path": "/og/service-areas.jpg",
+   "file": "public/og/service-areas.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/southington.jpg",
+   "file": "public/og/southington.jpg",
+   "exists": true,
+   "bytes": 172411,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/stone-steps-connecticut.jpg",
+   "file": "public/og/stone-steps-connecticut.jpg",
+   "exists": true,
+   "bytes": 89317,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/stone.jpg",
+   "file": "public/og/stone.jpg",
+   "exists": true,
+   "bytes": 133248,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/terms-and-conditions.jpg",
+   "file": "public/og/terms-and-conditions.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thank-you-book-your-quote.jpg",
+   "file": "public/og/thank-you-book-your-quote.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thank-you-landscaping.jpg",
+   "file": "public/og/thank-you-landscaping.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thank-you-leaf-removal.jpg",
+   "file": "public/og/thank-you-leaf-removal.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thank-you-lp.jpg",
+   "file": "public/og/thank-you-lp.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thank-you-pavers.jpg",
+   "file": "public/og/thank-you-pavers.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thank-you-repairs-maintenance.jpg",
+   "file": "public/og/thank-you-repairs-maintenance.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thank-you-retaining-wall-block.jpg",
+   "file": "public/og/thank-you-retaining-wall-block.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thank-you-retaining-walls-stone.jpg",
+   "file": "public/og/thank-you-retaining-walls-stone.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thank-you-retaining-walls.jpg",
+   "file": "public/og/thank-you-retaining-walls.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thank-you-seasonal-clean-up.jpg",
+   "file": "public/og/thank-you-seasonal-clean-up.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thank-you-snow-removal.jpg",
+   "file": "public/og/thank-you-snow-removal.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thank-you-walkway-patio.jpg",
+   "file": "public/og/thank-you-walkway-patio.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thank-you.jpg",
+   "file": "public/og/thank-you.jpg",
+   "exists": true,
+   "bytes": 107229,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/thinstone-connecticut.jpg",
+   "file": "public/og/thinstone-connecticut.jpg",
+   "exists": true,
+   "bytes": 66230,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/uncategorized-fire-pit-vs-outdoor-fireplace-connecticut-guide.jpg",
+   "file": "public/og/uncategorized-fire-pit-vs-outdoor-fireplace-connecticut-guide.jpg",
+   "exists": true,
+   "bytes": 80291,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/uncategorized-hardscape-upgrades-before-fall.jpg",
+   "file": "public/og/uncategorized-hardscape-upgrades-before-fall.jpg",
+   "exists": true,
+   "bytes": 82059,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/uncategorized-how-do-i-automation-my-facebook-ad.jpg",
+   "file": "public/og/uncategorized-how-do-i-automation-my-facebook-ad.jpg",
+   "exists": true,
+   "bytes": 43130,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/uncategorized-how-long-does-a-paver-patio-last.jpg",
+   "file": "public/og/uncategorized-how-long-does-a-paver-patio-last.jpg",
+   "exists": true,
+   "bytes": 81902,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/uncategorized-patio-around-outdoor-kitchen-ct.jpg",
+   "file": "public/og/uncategorized-patio-around-outdoor-kitchen-ct.jpg",
+   "exists": true,
+   "bytes": 98187,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/uncategorized-paver-patio-vs-natural-stone-patio-connecticut.jpg",
+   "file": "public/og/uncategorized-paver-patio-vs-natural-stone-patio-connecticut.jpg",
+   "exists": true,
+   "bytes": 99760,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/uncategorized-west-hartford.jpg",
+   "file": "public/og/uncategorized-west-hartford.jpg",
+   "exists": true,
+   "bytes": 91159,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/walkway-patio-connecticut.jpg",
+   "file": "public/og/walkway-patio-connecticut.jpg",
+   "exists": true,
+   "bytes": 141268,
+   "usedIn": 1
+  },
+  {
+   "path": "/og/wall-block.jpg",
+   "file": "public/og/wall-block.jpg",
+   "exists": true,
+   "bytes": 220189,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alpha-150x150.png",
+   "file": "public/wp-content/uploads/2024/11/alpha-150x150.png",
+   "exists": true,
+   "bytes": 28683,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alpha-300x300.png",
+   "file": "public/wp-content/uploads/2024/11/alpha-300x300.png",
+   "exists": true,
+   "bytes": 99112,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alpha-footer-logo-300x40.png",
+   "file": "public/wp-content/uploads/2024/11/alpha-footer-logo-300x40.png",
+   "exists": true,
+   "bytes": 8467,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alpha-footer-logo.png",
+   "file": "public/wp-content/uploads/2024/11/alpha-footer-logo.png",
+   "exists": true,
+   "bytes": 28841,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alpha-hardscapes-logo-225x32.png",
+   "file": "public/wp-content/uploads/2024/11/alpha-hardscapes-logo-225x32.png",
+   "exists": true,
+   "bytes": 5597,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alpha-hardscapes-logo-300x42.png",
+   "file": "public/wp-content/uploads/2024/11/alpha-hardscapes-logo-300x42.png",
+   "exists": true,
+   "bytes": 8489,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alpha-hardscapes-logo.png",
+   "file": "public/wp-content/uploads/2024/11/alpha-hardscapes-logo.png",
+   "exists": true,
+   "bytes": 26479,
+   "usedIn": 10
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alpha.png",
+   "file": "public/wp-content/uploads/2024/11/alpha.png",
+   "exists": true,
+   "bytes": 396710,
+   "usedIn": 10
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-1-e1732133353618-150x150.jpg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-1-e1732133353618-150x150.jpg",
+   "exists": true,
+   "bytes": 8056,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-1-e1732133353618-300x300.jpg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-1-e1732133353618-300x300.jpg",
+   "exists": true,
+   "bytes": 28013,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-1-e1732133353618.jpg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-1-e1732133353618.jpg",
+   "exists": true,
+   "bytes": 146487,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-2-scaled-e1732133302669-1024x1024.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-2-scaled-e1732133302669-1024x1024.jpeg",
+   "exists": true,
+   "bytes": 225504,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-2-scaled-e1732133302669-150x150.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-2-scaled-e1732133302669-150x150.jpeg",
+   "exists": true,
+   "bytes": 6276,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-2-scaled-e1732133302669-300x300.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-2-scaled-e1732133302669-300x300.jpeg",
+   "exists": true,
+   "bytes": 21745,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-2-scaled-e1732133302669-768x768.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-2-scaled-e1732133302669-768x768.jpeg",
+   "exists": true,
+   "bytes": 132183,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-2-scaled-e1732133302669.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-2-scaled-e1732133302669.jpeg",
+   "exists": true,
+   "bytes": 461704,
+   "usedIn": 9
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-3-scaled-e1732133216441-1024x1024.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-3-scaled-e1732133216441-1024x1024.jpeg",
+   "exists": true,
+   "bytes": 302885,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-3-scaled-e1732133216441-150x150.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-3-scaled-e1732133216441-150x150.jpeg",
+   "exists": true,
+   "bytes": 7722,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-3-scaled-e1732133216441-1536x1536.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-3-scaled-e1732133216441-1536x1536.jpeg",
+   "exists": true,
+   "bytes": 641697,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-3-scaled-e1732133216441-300x300.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-3-scaled-e1732133216441-300x300.jpeg",
+   "exists": true,
+   "bytes": 27730,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-3-scaled-e1732133216441-768x768.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-3-scaled-e1732133216441-768x768.jpeg",
+   "exists": true,
+   "bytes": 176304,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-3-scaled-e1732133216441.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-3-scaled-e1732133216441.jpeg",
+   "exists": true,
+   "bytes": 1112203,
+   "usedIn": 9
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-4-scaled-e1732133186390-1024x1024.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-4-scaled-e1732133186390-1024x1024.jpeg",
+   "exists": true,
+   "bytes": 292766,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-4-scaled-e1732133186390-150x150.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-4-scaled-e1732133186390-150x150.jpeg",
+   "exists": true,
+   "bytes": 6448,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-4-scaled-e1732133186390-1536x1536.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-4-scaled-e1732133186390-1536x1536.jpeg",
+   "exists": true,
+   "bytes": 640134,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-4-scaled-e1732133186390-300x300.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-4-scaled-e1732133186390-300x300.jpeg",
+   "exists": true,
+   "bytes": 23861,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-4-scaled-e1732133186390-768x768.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-4-scaled-e1732133186390-768x768.jpeg",
+   "exists": true,
+   "bytes": 166214,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-4-scaled-e1732133186390.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-4-scaled-e1732133186390.jpeg",
+   "exists": true,
+   "bytes": 1113746,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-5-e1732223469745-1024x1024.jpg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-5-e1732223469745-1024x1024.jpg",
+   "exists": true,
+   "bytes": 315357,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-5-e1732223469745-150x150.jpg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-5-e1732223469745-150x150.jpg",
+   "exists": true,
+   "bytes": 8597,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-5-e1732223469745-300x300.jpg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-5-e1732223469745-300x300.jpg",
+   "exists": true,
+   "bytes": 32597,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-5-e1732223469745-768x768.jpg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-5-e1732223469745-768x768.jpg",
+   "exists": true,
+   "bytes": 195436,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-5-e1732223469745.jpg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-5-e1732223469745.jpg",
+   "exists": true,
+   "bytes": 550880,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-6-e1732223273419-150x150.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-6-e1732223273419-150x150.jpeg",
+   "exists": true,
+   "bytes": 7749,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-6-e1732223273419-300x300.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-6-e1732223273419-300x300.jpeg",
+   "exists": true,
+   "bytes": 28080,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-6-e1732223273419-768x768.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-6-e1732223273419-768x768.jpeg",
+   "exists": true,
+   "bytes": 169262,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-6-e1732223273419.jpeg",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-6-e1732223273419.jpeg",
+   "exists": true,
+   "bytes": 293122,
+   "usedIn": 9
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-8-1024x1024.webp",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-8-1024x1024.webp",
+   "exists": true,
+   "bytes": 330798,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-8-150x150.webp",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-8-150x150.webp",
+   "exists": true,
+   "bytes": 9300,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-8-300x300.webp",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-8-300x300.webp",
+   "exists": true,
+   "bytes": 34744,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-8-768x768.webp",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-8-768x768.webp",
+   "exists": true,
+   "bytes": 206428,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/alphahardscapes-image-8.webp",
+   "file": "public/wp-content/uploads/2024/11/alphahardscapes-image-8.webp",
+   "exists": true,
+   "bytes": 455550,
+   "usedIn": 9
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/block.png",
+   "file": "public/wp-content/uploads/2024/11/block.png",
+   "exists": true,
+   "bytes": 305,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/custom-landscape-300x197.png",
+   "file": "public/wp-content/uploads/2024/11/custom-landscape-300x197.png",
+   "exists": true,
+   "bytes": 144782,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/custom-landscape.png",
+   "file": "public/wp-content/uploads/2024/11/custom-landscape.png",
+   "exists": true,
+   "bytes": 248233,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/dot-grahpic.png",
+   "file": "public/wp-content/uploads/2024/11/dot-grahpic.png",
+   "exists": true,
+   "bytes": 5031,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/filled-bg-portrait.png",
+   "file": "public/wp-content/uploads/2024/11/filled-bg-portrait.png",
+   "exists": true,
+   "bytes": 772,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/filled-bg.png",
+   "file": "public/wp-content/uploads/2024/11/filled-bg.png",
+   "exists": true,
+   "bytes": 786,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/hardscaping-featires-300x197.png",
+   "file": "public/wp-content/uploads/2024/11/hardscaping-featires-300x197.png",
+   "exists": true,
+   "bytes": 140770,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/hardscaping-featires.png",
+   "file": "public/wp-content/uploads/2024/11/hardscaping-featires.png",
+   "exists": true,
+   "bytes": 225933,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/image-300x294.png",
+   "file": "public/wp-content/uploads/2024/11/image-300x294.png",
+   "exists": true,
+   "bytes": 200455,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/image-725-1-300x249.png",
+   "file": "public/wp-content/uploads/2024/11/image-725-1-300x249.png",
+   "exists": true,
+   "bytes": 173645,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/image-725-1.png",
+   "file": "public/wp-content/uploads/2024/11/image-725-1.png",
+   "exists": true,
+   "bytes": 321724,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/image-725-249x300.png",
+   "file": "public/wp-content/uploads/2024/11/image-725-249x300.png",
+   "exists": true,
+   "bytes": 153183,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/image-725.png",
+   "file": "public/wp-content/uploads/2024/11/image-725.png",
+   "exists": true,
+   "bytes": 438213,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/image.png",
+   "file": "public/wp-content/uploads/2024/11/image.png",
+   "exists": true,
+   "bytes": 485773,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/plant-selection-300x197.png",
+   "file": "public/wp-content/uploads/2024/11/plant-selection-300x197.png",
+   "exists": true,
+   "bytes": 122696,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/plant-selection.png",
+   "file": "public/wp-content/uploads/2024/11/plant-selection.png",
+   "exists": true,
+   "bytes": 198392,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/review-image-1.png",
+   "file": "public/wp-content/uploads/2024/11/review-image-1.png",
+   "exists": true,
+   "bytes": 5702,
+   "usedIn": 16
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/review-image-2.png",
+   "file": "public/wp-content/uploads/2024/11/review-image-2.png",
+   "exists": true,
+   "bytes": 5417,
+   "usedIn": 10
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/review-image-3.png",
+   "file": "public/wp-content/uploads/2024/11/review-image-3.png",
+   "exists": true,
+   "bytes": 5417,
+   "usedIn": 16
+  },
+  {
+   "path": "/wp-content/uploads/2024/11/review-image-4.png",
+   "file": "public/wp-content/uploads/2024/11/review-image-4.png",
+   "exists": true,
+   "bytes": 2468,
+   "usedIn": 16
+  },
+  {
+   "path": "/wp-content/uploads/2024/12/alphahardscapes-image-9-1024x1024.webp",
+   "file": "public/wp-content/uploads/2024/12/alphahardscapes-image-9-1024x1024.webp",
+   "exists": true,
+   "bytes": 329188,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/12/alphahardscapes-image-9-150x150.webp",
+   "file": "public/wp-content/uploads/2024/12/alphahardscapes-image-9-150x150.webp",
+   "exists": true,
+   "bytes": 9068,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/12/alphahardscapes-image-9-300x300.webp",
+   "file": "public/wp-content/uploads/2024/12/alphahardscapes-image-9-300x300.webp",
+   "exists": true,
+   "bytes": 34124,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/12/alphahardscapes-image-9-768x767.webp",
+   "file": "public/wp-content/uploads/2024/12/alphahardscapes-image-9-768x767.webp",
+   "exists": true,
+   "bytes": 201964,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2024/12/alphahardscapes-image-9.webp",
+   "file": "public/wp-content/uploads/2024/12/alphahardscapes-image-9.webp",
+   "exists": true,
+   "bytes": 791318,
+   "usedIn": 9
+  },
+  {
+   "path": "/wp-content/uploads/2024/12/review-image-11.png",
+   "file": "public/wp-content/uploads/2024/12/review-image-11.png",
+   "exists": true,
+   "bytes": 3777,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2024/12/review-image-12.png",
+   "file": "public/wp-content/uploads/2024/12/review-image-12.png",
+   "exists": true,
+   "bytes": 3186,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2024/12/review-image-13.png",
+   "file": "public/wp-content/uploads/2024/12/review-image-13.png",
+   "exists": true,
+   "bytes": 19851,
+   "usedIn": 17
+  },
+  {
+   "path": "/wp-content/uploads/2024/12/review-image-14.png",
+   "file": "public/wp-content/uploads/2024/12/review-image-14.png",
+   "exists": true,
+   "bytes": 2573,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2024/12/review-image-15.png",
+   "file": "public/wp-content/uploads/2024/12/review-image-15.png",
+   "exists": true,
+   "bytes": 3477,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2024/12/review-image-16.png",
+   "file": "public/wp-content/uploads/2024/12/review-image-16.png",
+   "exists": true,
+   "bytes": 11388,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/2-1024x576.png",
+   "file": "public/wp-content/uploads/2025/02/2-1024x576.png",
+   "exists": true,
+   "bytes": 1379773,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/2-1536x864.png",
+   "file": "public/wp-content/uploads/2025/02/2-1536x864.png",
+   "exists": true,
+   "bytes": 2887834,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/2-300x169.png",
+   "file": "public/wp-content/uploads/2025/02/2-300x169.png",
+   "exists": true,
+   "bytes": 131222,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/2-768x432.png",
+   "file": "public/wp-content/uploads/2025/02/2-768x432.png",
+   "exists": true,
+   "bytes": 807971,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/2.png",
+   "file": "public/wp-content/uploads/2025/02/2.png",
+   "exists": true,
+   "bytes": 4545369,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/3-e1738796283992-1024x1024.png",
+   "file": "public/wp-content/uploads/2025/02/3-e1738796283992-1024x1024.png",
+   "exists": true,
+   "bytes": 2342659,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/3-e1738796283992-150x150.png",
+   "file": "public/wp-content/uploads/2025/02/3-e1738796283992-150x150.png",
+   "exists": true,
+   "bytes": 58011,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/3-e1738796283992-300x300.png",
+   "file": "public/wp-content/uploads/2025/02/3-e1738796283992-300x300.png",
+   "exists": true,
+   "bytes": 229243,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/3-e1738796283992-768x768.png",
+   "file": "public/wp-content/uploads/2025/02/3-e1738796283992-768x768.png",
+   "exists": true,
+   "bytes": 1388242,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/3-e1738796283992.png",
+   "file": "public/wp-content/uploads/2025/02/3-e1738796283992.png",
+   "exists": true,
+   "bytes": 2837601,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/4-1024x576.png",
+   "file": "public/wp-content/uploads/2025/02/4-1024x576.png",
+   "exists": true,
+   "bytes": 1439016,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/4-1536x864.png",
+   "file": "public/wp-content/uploads/2025/02/4-1536x864.png",
+   "exists": true,
+   "bytes": 3114230,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/4-300x169.png",
+   "file": "public/wp-content/uploads/2025/02/4-300x169.png",
+   "exists": true,
+   "bytes": 128765,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/4-768x432.png",
+   "file": "public/wp-content/uploads/2025/02/4-768x432.png",
+   "exists": true,
+   "bytes": 830135,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/4.png",
+   "file": "public/wp-content/uploads/2025/02/4.png",
+   "exists": true,
+   "bytes": 5110866,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/6-1024x576.png",
+   "file": "public/wp-content/uploads/2025/02/6-1024x576.png",
+   "exists": true,
+   "bytes": 1282112,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/6-1536x864.png",
+   "file": "public/wp-content/uploads/2025/02/6-1536x864.png",
+   "exists": true,
+   "bytes": 2762185,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/6-300x169.png",
+   "file": "public/wp-content/uploads/2025/02/6-300x169.png",
+   "exists": true,
+   "bytes": 112784,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/6-768x432.png",
+   "file": "public/wp-content/uploads/2025/02/6-768x432.png",
+   "exists": true,
+   "bytes": 738967,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/6.png",
+   "file": "public/wp-content/uploads/2025/02/6.png",
+   "exists": true,
+   "bytes": 4615492,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/7-1024x576.png",
+   "file": "public/wp-content/uploads/2025/02/7-1024x576.png",
+   "exists": true,
+   "bytes": 1314680,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/7-1536x864.png",
+   "file": "public/wp-content/uploads/2025/02/7-1536x864.png",
+   "exists": true,
+   "bytes": 2702956,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/7-300x169.png",
+   "file": "public/wp-content/uploads/2025/02/7-300x169.png",
+   "exists": true,
+   "bytes": 125308,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/7-768x432.png",
+   "file": "public/wp-content/uploads/2025/02/7-768x432.png",
+   "exists": true,
+   "bytes": 777072,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/7.png",
+   "file": "public/wp-content/uploads/2025/02/7.png",
+   "exists": true,
+   "bytes": 4229135,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/8-1024x576.png",
+   "file": "public/wp-content/uploads/2025/02/8-1024x576.png",
+   "exists": true,
+   "bytes": 1230221,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/8-1536x864.png",
+   "file": "public/wp-content/uploads/2025/02/8-1536x864.png",
+   "exists": true,
+   "bytes": 2462630,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/8-300x169.png",
+   "file": "public/wp-content/uploads/2025/02/8-300x169.png",
+   "exists": true,
+   "bytes": 123016,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/8-768x432.png",
+   "file": "public/wp-content/uploads/2025/02/8-768x432.png",
+   "exists": true,
+   "bytes": 731474,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/8.png",
+   "file": "public/wp-content/uploads/2025/02/8.png",
+   "exists": true,
+   "bytes": 3700457,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/alpha-150x150.png",
+   "file": "public/wp-content/uploads/2025/02/alpha-150x150.png",
+   "exists": true,
+   "bytes": 28683,
+   "usedIn": 34
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/alpha-300x300.png",
+   "file": "public/wp-content/uploads/2025/02/alpha-300x300.png",
+   "exists": true,
+   "bytes": 99112,
+   "usedIn": 34
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/alpha.png",
+   "file": "public/wp-content/uploads/2025/02/alpha.png",
+   "exists": true,
+   "bytes": 396710,
+   "usedIn": 68
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/alphahardscapes-image-9-1024x1024.webp",
+   "file": "public/wp-content/uploads/2025/02/alphahardscapes-image-9-1024x1024.webp",
+   "exists": true,
+   "bytes": 329188,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/alphahardscapes-image-9-150x150.webp",
+   "file": "public/wp-content/uploads/2025/02/alphahardscapes-image-9-150x150.webp",
+   "exists": true,
+   "bytes": 9068,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/alphahardscapes-image-9-300x300.webp",
+   "file": "public/wp-content/uploads/2025/02/alphahardscapes-image-9-300x300.webp",
+   "exists": true,
+   "bytes": 34124,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/alphahardscapes-image-9-768x767.webp",
+   "file": "public/wp-content/uploads/2025/02/alphahardscapes-image-9-768x767.webp",
+   "exists": true,
+   "bytes": 201964,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/alphahardscapes-image-9.webp",
+   "file": "public/wp-content/uploads/2025/02/alphahardscapes-image-9.webp",
+   "exists": true,
+   "bytes": 791318,
+   "usedIn": 10
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/dot-grahpic.png",
+   "file": "public/wp-content/uploads/2025/02/dot-grahpic.png",
+   "exists": true,
+   "bytes": 5031,
+   "usedIn": 27
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/fairfield-county-map-300x228.webp",
+   "file": "public/wp-content/uploads/2025/02/fairfield-county-map-300x228.webp",
+   "exists": true,
+   "bytes": 19114,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/fairfield-county-map.webp",
+   "file": "public/wp-content/uploads/2025/02/fairfield-county-map.webp",
+   "exists": true,
+   "bytes": 111688,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/filled-bg-portrait.png",
+   "file": "public/wp-content/uploads/2025/02/filled-bg-portrait.png",
+   "exists": true,
+   "bytes": 772,
+   "usedIn": 32
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/filled-bg.png",
+   "file": "public/wp-content/uploads/2025/02/filled-bg.png",
+   "exists": true,
+   "bytes": 786,
+   "usedIn": 34
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/masonry-1-150x150.png",
+   "file": "public/wp-content/uploads/2025/02/masonry-1-150x150.png",
+   "exists": true,
+   "bytes": 41308,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/masonry-1-300x300.png",
+   "file": "public/wp-content/uploads/2025/02/masonry-1-300x300.png",
+   "exists": true,
+   "bytes": 157078,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/masonry-1.png",
+   "file": "public/wp-content/uploads/2025/02/masonry-1.png",
+   "exists": true,
+   "bytes": 861896,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/masonry-2-150x150.png",
+   "file": "public/wp-content/uploads/2025/02/masonry-2-150x150.png",
+   "exists": true,
+   "bytes": 54040,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/masonry-2-300x300.png",
+   "file": "public/wp-content/uploads/2025/02/masonry-2-300x300.png",
+   "exists": true,
+   "bytes": 198488,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/masonry-2.png",
+   "file": "public/wp-content/uploads/2025/02/masonry-2.png",
+   "exists": true,
+   "bytes": 1157368,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/masonry-3-150x150.png",
+   "file": "public/wp-content/uploads/2025/02/masonry-3-150x150.png",
+   "exists": true,
+   "bytes": 52297,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/masonry-3-300x300.png",
+   "file": "public/wp-content/uploads/2025/02/masonry-3-300x300.png",
+   "exists": true,
+   "bytes": 193562,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/masonry-3.png",
+   "file": "public/wp-content/uploads/2025/02/masonry-3.png",
+   "exists": true,
+   "bytes": 1029392,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/masonry-4-150x150.png",
+   "file": "public/wp-content/uploads/2025/02/masonry-4-150x150.png",
+   "exists": true,
+   "bytes": 63534,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/masonry-4-300x300.png",
+   "file": "public/wp-content/uploads/2025/02/masonry-4-300x300.png",
+   "exists": true,
+   "bytes": 250263,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/masonry-4.png",
+   "file": "public/wp-content/uploads/2025/02/masonry-4.png",
+   "exists": true,
+   "bytes": 1571560,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/new-haven-county-map-e1739821356608-300x261.webp",
+   "file": "public/wp-content/uploads/2025/02/new-haven-county-map-e1739821356608-300x261.webp",
+   "exists": true,
+   "bytes": 20496,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/new-haven-county-map-e1739821356608.webp",
+   "file": "public/wp-content/uploads/2025/02/new-haven-county-map-e1739821356608.webp",
+   "exists": true,
+   "bytes": 82470,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-1-300x251.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-1-300x251.png",
+   "exists": true,
+   "bytes": 172378,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-1-768x644.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-1-768x644.png",
+   "exists": true,
+   "bytes": 1055801,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-1.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-1.png",
+   "exists": true,
+   "bytes": 1716706,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-fall-300x251.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-fall-300x251.png",
+   "exists": true,
+   "bytes": 188026,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-fall-768x644.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-fall-768x644.png",
+   "exists": true,
+   "bytes": 1006843,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-fall.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-fall.png",
+   "exists": true,
+   "bytes": 1504494,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-spring-300x251.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-spring-300x251.png",
+   "exists": true,
+   "bytes": 192331,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-spring-768x644.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-spring-768x644.png",
+   "exists": true,
+   "bytes": 1067021,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-spring.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-spring.png",
+   "exists": true,
+   "bytes": 1635194,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-summer-300x251.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-summer-300x251.png",
+   "exists": true,
+   "bytes": 213221,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-summer-768x644.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-summer-768x644.png",
+   "exists": true,
+   "bytes": 1341059,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-summer.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-summer.png",
+   "exists": true,
+   "bytes": 2124480,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-winter-300x251.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-winter-300x251.png",
+   "exists": true,
+   "bytes": 122368,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-winter-768x644.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-winter-768x644.png",
+   "exists": true,
+   "bytes": 632611,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/seasonal-cleanup-winter.png",
+   "file": "public/wp-content/uploads/2025/02/seasonal-cleanup-winter.png",
+   "exists": true,
+   "bytes": 955775,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/southern-connecticut-map-300x268.webp",
+   "file": "public/wp-content/uploads/2025/02/southern-connecticut-map-300x268.webp",
+   "exists": true,
+   "bytes": 19486,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/02/southern-connecticut-map.webp",
+   "file": "public/wp-content/uploads/2025/02/southern-connecticut-map.webp",
+   "exists": true,
+   "bytes": 104962,
+   "usedIn": 9
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-1-1024x1024.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-1-1024x1024.png",
+   "exists": true,
+   "bytes": 1395172,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-1-150x150.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-1-150x150.png",
+   "exists": true,
+   "bytes": 40858,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-1-300x300.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-1-300x300.png",
+   "exists": true,
+   "bytes": 152405,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-1-768x768.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-1-768x768.png",
+   "exists": true,
+   "bytes": 852166,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-1.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-1.png",
+   "exists": true,
+   "bytes": 1656960,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-2-1024x1024.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-2-1024x1024.png",
+   "exists": true,
+   "bytes": 1052220,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-2-150x150.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-2-150x150.png",
+   "exists": true,
+   "bytes": 33100,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-2-300x300.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-2-300x300.png",
+   "exists": true,
+   "bytes": 116223,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-2-768x768.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-2-768x768.png",
+   "exists": true,
+   "bytes": 634876,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-2.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-2.png",
+   "exists": true,
+   "bytes": 1279963,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-4-1024x1024.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-4-1024x1024.png",
+   "exists": true,
+   "bytes": 1369459,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-4-150x150.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-4-150x150.png",
+   "exists": true,
+   "bytes": 34637,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-4-300x300.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-4-300x300.png",
+   "exists": true,
+   "bytes": 128985,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-4-768x768.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-4-768x768.png",
+   "exists": true,
+   "bytes": 807753,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/03/snow-removal-image-4.png",
+   "file": "public/wp-content/uploads/2025/03/snow-removal-image-4.png",
+   "exists": true,
+   "bytes": 1716140,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/Frame-1984078499-300x39.png",
+   "file": "public/wp-content/uploads/2025/04/Frame-1984078499-300x39.png",
+   "exists": true,
+   "bytes": 6417,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/Frame-1984078499.png",
+   "file": "public/wp-content/uploads/2025/04/Frame-1984078499.png",
+   "exists": true,
+   "bytes": 10505,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/alphahardscapes-logo-icon-green.svg",
+   "file": "public/wp-content/uploads/2025/04/alphahardscapes-logo-icon-green.svg",
+   "exists": true,
+   "bytes": 5157,
+   "usedIn": 11
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/alphahardscapes-logo-white.png",
+   "file": "public/wp-content/uploads/2025/04/alphahardscapes-logo-white.png",
+   "exists": true,
+   "bytes": 2362,
+   "usedIn": 26
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/author-image.png",
+   "file": "public/wp-content/uploads/2025/04/author-image.png",
+   "exists": true,
+   "bytes": 10468,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/faq-image-273x300.png",
+   "file": "public/wp-content/uploads/2025/04/faq-image-273x300.png",
+   "exists": true,
+   "bytes": 106241,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/faq-image.png",
+   "file": "public/wp-content/uploads/2025/04/faq-image.png",
+   "exists": true,
+   "bytes": 399384,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/fireplace-icon.svg",
+   "file": "public/wp-content/uploads/2025/04/fireplace-icon.svg",
+   "exists": true,
+   "bytes": 1406,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-1-1024x1024.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-1-1024x1024.png",
+   "exists": true,
+   "bytes": 1931245,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-1-150x150.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-1-150x150.png",
+   "exists": true,
+   "bytes": 62263,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-1-300x300.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-1-300x300.png",
+   "exists": true,
+   "bytes": 221711,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-1-768x768.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-1-768x768.png",
+   "exists": true,
+   "bytes": 1178122,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-1.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-1.png",
+   "exists": true,
+   "bytes": 2240854,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-2-1024x1024.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-2-1024x1024.png",
+   "exists": true,
+   "bytes": 1993488,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-2-150x150.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-2-150x150.png",
+   "exists": true,
+   "bytes": 58142,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-2-300x300.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-2-300x300.png",
+   "exists": true,
+   "bytes": 217158,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-2-768x768.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-2-768x768.png",
+   "exists": true,
+   "bytes": 1199621,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-2.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-2.png",
+   "exists": true,
+   "bytes": 2377609,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-3-1024x1024.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-3-1024x1024.png",
+   "exists": true,
+   "bytes": 2731889,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-3-150x150.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-3-150x150.png",
+   "exists": true,
+   "bytes": 66228,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-3-300x300.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-3-300x300.png",
+   "exists": true,
+   "bytes": 258403,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-3-768x768.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-3-768x768.png",
+   "exists": true,
+   "bytes": 1592754,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-3.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-3.png",
+   "exists": true,
+   "bytes": 3251012,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-4-1024x1024.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-4-1024x1024.png",
+   "exists": true,
+   "bytes": 2006265,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-4-150x150.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-4-150x150.png",
+   "exists": true,
+   "bytes": 59338,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-4-300x300.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-4-300x300.png",
+   "exists": true,
+   "bytes": 222313,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-4-768x768.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-4-768x768.png",
+   "exists": true,
+   "bytes": 1218927,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-4.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-4.png",
+   "exists": true,
+   "bytes": 2314854,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-6-1024x1024.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-6-1024x1024.png",
+   "exists": true,
+   "bytes": 1827635,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-6-150x150.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-6-150x150.png",
+   "exists": true,
+   "bytes": 59486,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-6-300x300.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-6-300x300.png",
+   "exists": true,
+   "bytes": 212924,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-6-768x768.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-6-768x768.png",
+   "exists": true,
+   "bytes": 1121526,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/leaf-removal-6.png",
+   "file": "public/wp-content/uploads/2025/04/leaf-removal-6.png",
+   "exists": true,
+   "bytes": 2145544,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/left-image-300x210.png",
+   "file": "public/wp-content/uploads/2025/04/left-image-300x210.png",
+   "exists": true,
+   "bytes": 142239,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/left-image.png",
+   "file": "public/wp-content/uploads/2025/04/left-image.png",
+   "exists": true,
+   "bytes": 588533,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/logo-with-bg.png",
+   "file": "public/wp-content/uploads/2025/04/logo-with-bg.png",
+   "exists": true,
+   "bytes": 2662,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/our-passion-image-281x300.png",
+   "file": "public/wp-content/uploads/2025/04/our-passion-image-281x300.png",
+   "exists": true,
+   "bytes": 176011,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/our-passion-image.png",
+   "file": "public/wp-content/uploads/2025/04/our-passion-image.png",
+   "exists": true,
+   "bytes": 689762,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/patio-walkway-image-250x300.png",
+   "file": "public/wp-content/uploads/2025/04/patio-walkway-image-250x300.png",
+   "exists": true,
+   "bytes": 195880,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/patio-walkway-image.png",
+   "file": "public/wp-content/uploads/2025/04/patio-walkway-image.png",
+   "exists": true,
+   "bytes": 437652,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/patios-icon.svg",
+   "file": "public/wp-content/uploads/2025/04/patios-icon.svg",
+   "exists": true,
+   "bytes": 590,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/retaining-wall-icon.svg",
+   "file": "public/wp-content/uploads/2025/04/retaining-wall-icon.svg",
+   "exists": true,
+   "bytes": 1600,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/retaining-wall-image-250x300.png",
+   "file": "public/wp-content/uploads/2025/04/retaining-wall-image-250x300.png",
+   "exists": true,
+   "bytes": 196430,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/retaining-wall-image.png",
+   "file": "public/wp-content/uploads/2025/04/retaining-wall-image.png",
+   "exists": true,
+   "bytes": 407832,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/reviews-icon.png",
+   "file": "public/wp-content/uploads/2025/04/reviews-icon.png",
+   "exists": true,
+   "bytes": 1537,
+   "usedIn": 30
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/stone-veneers-icon.svg",
+   "file": "public/wp-content/uploads/2025/04/stone-veneers-icon.svg",
+   "exists": true,
+   "bytes": 3600,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/stone-veneers-image-250x300.png",
+   "file": "public/wp-content/uploads/2025/04/stone-veneers-image-250x300.png",
+   "exists": true,
+   "bytes": 209657,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/04/stone-veneers-image.png",
+   "file": "public/wp-content/uploads/2025/04/stone-veneers-image.png",
+   "exists": true,
+   "bytes": 496441,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/before-after-1-e1747756186743.png",
+   "file": "public/wp-content/uploads/2025/05/before-after-1-e1747756186743.png",
+   "exists": true,
+   "bytes": 2411780,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/before-after-2-e1747756221339.png",
+   "file": "public/wp-content/uploads/2025/05/before-after-2-e1747756221339.png",
+   "exists": true,
+   "bytes": 1808308,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/before-after-3-e1747756090273.png",
+   "file": "public/wp-content/uploads/2025/05/before-after-3-e1747756090273.png",
+   "exists": true,
+   "bytes": 2212726,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/fire-place-251x300.webp",
+   "file": "public/wp-content/uploads/2025/05/fire-place-251x300.webp",
+   "exists": true,
+   "bytes": 27980,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/fire-place.webp",
+   "file": "public/wp-content/uploads/2025/05/fire-place.webp",
+   "exists": true,
+   "bytes": 422938,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/grid-image-1-1024x1024.webp",
+   "file": "public/wp-content/uploads/2025/05/grid-image-1-1024x1024.webp",
+   "exists": true,
+   "bytes": 447360,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/grid-image-1-150x150.webp",
+   "file": "public/wp-content/uploads/2025/05/grid-image-1-150x150.webp",
+   "exists": true,
+   "bytes": 9504,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/grid-image-1-300x300.webp",
+   "file": "public/wp-content/uploads/2025/05/grid-image-1-300x300.webp",
+   "exists": true,
+   "bytes": 36972,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/grid-image-1-768x768.webp",
+   "file": "public/wp-content/uploads/2025/05/grid-image-1-768x768.webp",
+   "exists": true,
+   "bytes": 254350,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/grid-image-1.webp",
+   "file": "public/wp-content/uploads/2025/05/grid-image-1.webp",
+   "exists": true,
+   "bytes": 1009790,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/grid-image-2-e1747336950379-1020x1024.webp",
+   "file": "public/wp-content/uploads/2025/05/grid-image-2-e1747336950379-1020x1024.webp",
+   "exists": true,
+   "bytes": 236554,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/grid-image-2-e1747336950379-150x150.webp",
+   "file": "public/wp-content/uploads/2025/05/grid-image-2-e1747336950379-150x150.webp",
+   "exists": true,
+   "bytes": 5650,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/grid-image-2-e1747336950379-300x300.webp",
+   "file": "public/wp-content/uploads/2025/05/grid-image-2-e1747336950379-300x300.webp",
+   "exists": true,
+   "bytes": 22194,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/grid-image-2-e1747336950379-768x771.webp",
+   "file": "public/wp-content/uploads/2025/05/grid-image-2-e1747336950379-768x771.webp",
+   "exists": true,
+   "bytes": 143166,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/grid-image-2-e1747336950379.webp",
+   "file": "public/wp-content/uploads/2025/05/grid-image-2-e1747336950379.webp",
+   "exists": true,
+   "bytes": 493680,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/grid-image-3-e1747337140484-150x150.webp",
+   "file": "public/wp-content/uploads/2025/05/grid-image-3-e1747337140484-150x150.webp",
+   "exists": true,
+   "bytes": 8748,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/grid-image-3-e1747337140484-300x300.webp",
+   "file": "public/wp-content/uploads/2025/05/grid-image-3-e1747337140484-300x300.webp",
+   "exists": true,
+   "bytes": 30944,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/grid-image-3-e1747337140484.webp",
+   "file": "public/wp-content/uploads/2025/05/grid-image-3-e1747337140484.webp",
+   "exists": true,
+   "bytes": 160174,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/image-1-250x300.png",
+   "file": "public/wp-content/uploads/2025/05/image-1-250x300.png",
+   "exists": true,
+   "bytes": 192251,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/image-1.png",
+   "file": "public/wp-content/uploads/2025/05/image-1.png",
+   "exists": true,
+   "bytes": 1470694,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/image-2-250x300.png",
+   "file": "public/wp-content/uploads/2025/05/image-2-250x300.png",
+   "exists": true,
+   "bytes": 204069,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/image-2.png",
+   "file": "public/wp-content/uploads/2025/05/image-2.png",
+   "exists": true,
+   "bytes": 1455282,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/image-3-251x300.png",
+   "file": "public/wp-content/uploads/2025/05/image-3-251x300.png",
+   "exists": true,
+   "bytes": 168875,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/image-3.png",
+   "file": "public/wp-content/uploads/2025/05/image-3.png",
+   "exists": true,
+   "bytes": 1239513,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/image-4-251x300.png",
+   "file": "public/wp-content/uploads/2025/05/image-4-251x300.png",
+   "exists": true,
+   "bytes": 177916,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/image-4.png",
+   "file": "public/wp-content/uploads/2025/05/image-4.png",
+   "exists": true,
+   "bytes": 1207646,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/landscaping-image-1-1024x406.jpg",
+   "file": "public/wp-content/uploads/2025/05/landscaping-image-1-1024x406.jpg",
+   "exists": true,
+   "bytes": 139531,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/landscaping-image-1-1536x608.jpg",
+   "file": "public/wp-content/uploads/2025/05/landscaping-image-1-1536x608.jpg",
+   "exists": true,
+   "bytes": 298807,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/landscaping-image-1-2048x811.jpg",
+   "file": "public/wp-content/uploads/2025/05/landscaping-image-1-2048x811.jpg",
+   "exists": true,
+   "bytes": 504359,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/landscaping-image-1-300x119.jpg",
+   "file": "public/wp-content/uploads/2025/05/landscaping-image-1-300x119.jpg",
+   "exists": true,
+   "bytes": 12479,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/landscaping-image-1-768x304.jpg",
+   "file": "public/wp-content/uploads/2025/05/landscaping-image-1-768x304.jpg",
+   "exists": true,
+   "bytes": 77903,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/landscaping-image-1-scaled.jpg",
+   "file": "public/wp-content/uploads/2025/05/landscaping-image-1-scaled.jpg",
+   "exists": true,
+   "bytes": 736816,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/review-image-1.png",
+   "file": "public/wp-content/uploads/2025/05/review-image-1.png",
+   "exists": true,
+   "bytes": 5702,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/review-image-2.png",
+   "file": "public/wp-content/uploads/2025/05/review-image-2.png",
+   "exists": true,
+   "bytes": 5417,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/review-image-3.png",
+   "file": "public/wp-content/uploads/2025/05/review-image-3.png",
+   "exists": true,
+   "bytes": 5417,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/review-image-4.png",
+   "file": "public/wp-content/uploads/2025/05/review-image-4.png",
+   "exists": true,
+   "bytes": 2468,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/wall-block-image-1-300x225.webp",
+   "file": "public/wp-content/uploads/2025/05/wall-block-image-1-300x225.webp",
+   "exists": true,
+   "bytes": 20052,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/wall-block-image-1-768x576.webp",
+   "file": "public/wp-content/uploads/2025/05/wall-block-image-1-768x576.webp",
+   "exists": true,
+   "bytes": 127960,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/wall-block-image-1.webp",
+   "file": "public/wp-content/uploads/2025/05/wall-block-image-1.webp",
+   "exists": true,
+   "bytes": 233196,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/wall-block-image-3-300x225.webp",
+   "file": "public/wp-content/uploads/2025/05/wall-block-image-3-300x225.webp",
+   "exists": true,
+   "bytes": 23856,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/wall-block-image-3-768x576.webp",
+   "file": "public/wp-content/uploads/2025/05/wall-block-image-3-768x576.webp",
+   "exists": true,
+   "bytes": 115150,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/wall-block-image-3.webp",
+   "file": "public/wp-content/uploads/2025/05/wall-block-image-3.webp",
+   "exists": true,
+   "bytes": 180836,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/wall-block-image-300x225.webp",
+   "file": "public/wp-content/uploads/2025/05/wall-block-image-300x225.webp",
+   "exists": true,
+   "bytes": 25798,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/wall-block-image-768x576.webp",
+   "file": "public/wp-content/uploads/2025/05/wall-block-image-768x576.webp",
+   "exists": true,
+   "bytes": 145074,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/05/wall-block-image.webp",
+   "file": "public/wp-content/uploads/2025/05/wall-block-image.webp",
+   "exists": true,
+   "bytes": 253966,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/1000004722-scaled-1-1024x478.jpg",
+   "file": "public/wp-content/uploads/2025/06/1000004722-scaled-1-1024x478.jpg",
+   "exists": true,
+   "bytes": 155565,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/1000004722-scaled-1-1536x718.jpg",
+   "file": "public/wp-content/uploads/2025/06/1000004722-scaled-1-1536x718.jpg",
+   "exists": true,
+   "bytes": 323274,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/1000004722-scaled-1-2048x957.jpg",
+   "file": "public/wp-content/uploads/2025/06/1000004722-scaled-1-2048x957.jpg",
+   "exists": true,
+   "bytes": 530039,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/1000004722-scaled-1-300x140.jpg",
+   "file": "public/wp-content/uploads/2025/06/1000004722-scaled-1-300x140.jpg",
+   "exists": true,
+   "bytes": 16327,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/1000004722-scaled-1-768x359.jpg",
+   "file": "public/wp-content/uploads/2025/06/1000004722-scaled-1-768x359.jpg",
+   "exists": true,
+   "bytes": 91166,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/1000004722-scaled-1.jpg",
+   "file": "public/wp-content/uploads/2025/06/1000004722-scaled-1.jpg",
+   "exists": true,
+   "bytes": 891691,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/60296847-E149-45E1-BCFE-2446A92399A8-1229x1536.jpg",
+   "file": "public/wp-content/uploads/2025/06/60296847-E149-45E1-BCFE-2446A92399A8-1229x1536.jpg",
+   "exists": true,
+   "bytes": 669667,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/60296847-E149-45E1-BCFE-2446A92399A8-240x300.jpg",
+   "file": "public/wp-content/uploads/2025/06/60296847-E149-45E1-BCFE-2446A92399A8-240x300.jpg",
+   "exists": true,
+   "bytes": 25322,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/60296847-E149-45E1-BCFE-2446A92399A8-768x960.jpg",
+   "file": "public/wp-content/uploads/2025/06/60296847-E149-45E1-BCFE-2446A92399A8-768x960.jpg",
+   "exists": true,
+   "bytes": 274953,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/60296847-E149-45E1-BCFE-2446A92399A8-819x1024.jpg",
+   "file": "public/wp-content/uploads/2025/06/60296847-E149-45E1-BCFE-2446A92399A8-819x1024.jpg",
+   "exists": true,
+   "bytes": 316201,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/60296847-E149-45E1-BCFE-2446A92399A8.jpg",
+   "file": "public/wp-content/uploads/2025/06/60296847-E149-45E1-BCFE-2446A92399A8.jpg",
+   "exists": true,
+   "bytes": 1331927,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/8EAA8725-AF47-49CF-ACD6-B9A23E726713-1024x576.jpg",
+   "file": "public/wp-content/uploads/2025/06/8EAA8725-AF47-49CF-ACD6-B9A23E726713-1024x576.jpg",
+   "exists": true,
+   "bytes": 211120,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/8EAA8725-AF47-49CF-ACD6-B9A23E726713-300x169.jpg",
+   "file": "public/wp-content/uploads/2025/06/8EAA8725-AF47-49CF-ACD6-B9A23E726713-300x169.jpg",
+   "exists": true,
+   "bytes": 19432,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/8EAA8725-AF47-49CF-ACD6-B9A23E726713-768x432.jpg",
+   "file": "public/wp-content/uploads/2025/06/8EAA8725-AF47-49CF-ACD6-B9A23E726713-768x432.jpg",
+   "exists": true,
+   "bytes": 119225,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/8EAA8725-AF47-49CF-ACD6-B9A23E726713.jpg",
+   "file": "public/wp-content/uploads/2025/06/8EAA8725-AF47-49CF-ACD6-B9A23E726713.jpg",
+   "exists": true,
+   "bytes": 618739,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B-1229x1536.jpg",
+   "file": "public/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B-1229x1536.jpg",
+   "exists": true,
+   "bytes": 430649,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B-240x300.jpg",
+   "file": "public/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B-240x300.jpg",
+   "exists": true,
+   "bytes": 22795,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B-768x960.jpg",
+   "file": "public/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B-768x960.jpg",
+   "exists": true,
+   "bytes": 196422,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B-819x1024.jpg",
+   "file": "public/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B-819x1024.jpg",
+   "exists": true,
+   "bytes": 221379,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B.jpg",
+   "file": "public/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B.jpg",
+   "exists": true,
+   "bytes": 743447,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B1-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B1-1024x768.jpg",
+   "exists": true,
+   "bytes": 183871,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B1-1536x1152.jpg",
+   "file": "public/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B1-1536x1152.jpg",
+   "exists": true,
+   "bytes": 333006,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B1-2048x1536.jpg",
+   "file": "public/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B1-2048x1536.jpg",
+   "exists": true,
+   "bytes": 504153,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B1-300x225.jpg",
+   "file": "public/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B1-300x225.jpg",
+   "exists": true,
+   "bytes": 21753,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B1-768x576.jpg",
+   "file": "public/wp-content/uploads/2025/06/9CFA6E9B-E46B-47BC-9E38-FC3E99DA4E6B1-768x576.jpg",
+   "exists": true,
+   "bytes": 116754,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0183-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0183-1024x768.jpg",
+   "exists": true,
+   "bytes": 198424,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0183-1536x1152.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0183-1536x1152.jpg",
+   "exists": true,
+   "bytes": 403531,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0183-2048x1536.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0183-2048x1536.jpg",
+   "exists": true,
+   "bytes": 649448,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0183-300x225.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0183-300x225.jpg",
+   "exists": true,
+   "bytes": 20267,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0183-768x576.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0183-768x576.jpg",
+   "exists": true,
+   "bytes": 116998,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0195-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0195-1024x768.jpg",
+   "exists": true,
+   "bytes": 268736,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0195-1536x1152.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0195-1536x1152.jpg",
+   "exists": true,
+   "bytes": 552681,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0195-2048x1536.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0195-2048x1536.jpg",
+   "exists": true,
+   "bytes": 899728,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0195-300x225.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0195-300x225.jpg",
+   "exists": true,
+   "bytes": 26298,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0195-768x576.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0195-768x576.jpg",
+   "exists": true,
+   "bytes": 157437,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0680-1024x768.jpeg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0680-1024x768.jpeg",
+   "exists": true,
+   "bytes": 163903,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0680-1536x1152.jpeg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0680-1536x1152.jpeg",
+   "exists": true,
+   "bytes": 334507,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0680-2048x1536.jpeg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0680-2048x1536.jpeg",
+   "exists": true,
+   "bytes": 539362,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0680-300x225.jpeg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0680-300x225.jpeg",
+   "exists": true,
+   "bytes": 17480,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0680-768x576.jpeg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0680-768x576.jpeg",
+   "exists": true,
+   "bytes": 96691,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_0680-scaled.jpeg",
+   "file": "public/wp-content/uploads/2025/06/IMG_0680-scaled.jpeg",
+   "exists": true,
+   "bytes": 771350,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_1252-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_1252-1024x768.jpg",
+   "exists": true,
+   "bytes": 208369,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_1252-1536x1152.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_1252-1536x1152.jpg",
+   "exists": true,
+   "bytes": 431442,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_1252-2048x1536.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_1252-2048x1536.jpg",
+   "exists": true,
+   "bytes": 696767,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_1252-300x225.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_1252-300x225.jpg",
+   "exists": true,
+   "bytes": 20533,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_1252-768x576.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_1252-768x576.jpg",
+   "exists": true,
+   "bytes": 120157,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_2444-1024x512.webp",
+   "file": "public/wp-content/uploads/2025/06/IMG_2444-1024x512.webp",
+   "exists": true,
+   "bytes": 145304,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_2444-300x150.webp",
+   "file": "public/wp-content/uploads/2025/06/IMG_2444-300x150.webp",
+   "exists": true,
+   "bytes": 16090,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_2444-768x384.webp",
+   "file": "public/wp-content/uploads/2025/06/IMG_2444-768x384.webp",
+   "exists": true,
+   "bytes": 88458,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_2444.webp",
+   "file": "public/wp-content/uploads/2025/06/IMG_2444.webp",
+   "exists": true,
+   "bytes": 195562,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_4488-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_4488-1024x768.jpg",
+   "exists": true,
+   "bytes": 223781,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_4488-1536x1152.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_4488-1536x1152.jpg",
+   "exists": true,
+   "bytes": 470126,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_4488-2048x1536.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_4488-2048x1536.jpg",
+   "exists": true,
+   "bytes": 773753,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_4488-300x225.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_4488-300x225.jpg",
+   "exists": true,
+   "bytes": 21388,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_4488-768x576.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_4488-768x576.jpg",
+   "exists": true,
+   "bytes": 128831,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_4530-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_4530-1024x768.jpg",
+   "exists": true,
+   "bytes": 261306,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_4530-1536x1152.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_4530-1536x1152.jpg",
+   "exists": true,
+   "bytes": 542158,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_4530-2048x1536.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_4530-2048x1536.jpg",
+   "exists": true,
+   "bytes": 879408,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_4530-300x225.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_4530-300x225.jpg",
+   "exists": true,
+   "bytes": 24721,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_4530-768x576.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_4530-768x576.jpg",
+   "exists": true,
+   "bytes": 150892,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_9322-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_9322-1024x768.jpg",
+   "exists": true,
+   "bytes": 202827,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_9322-1536x1152.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_9322-1536x1152.jpg",
+   "exists": true,
+   "bytes": 420942,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_9322-2048x1536.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_9322-2048x1536.jpg",
+   "exists": true,
+   "bytes": 691437,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_9322-300x225.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_9322-300x225.jpg",
+   "exists": true,
+   "bytes": 22446,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_9322-768x576.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_9322-768x576.jpg",
+   "exists": true,
+   "bytes": 119193,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_9324-1-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_9324-1-1024x768.jpg",
+   "exists": true,
+   "bytes": 227897,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_9324-1-1536x1152.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_9324-1-1536x1152.jpg",
+   "exists": true,
+   "bytes": 481571,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_9324-1-2048x1536.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_9324-1-2048x1536.jpg",
+   "exists": true,
+   "bytes": 795518,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_9324-1-300x225.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_9324-1-300x225.jpg",
+   "exists": true,
+   "bytes": 22269,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/IMG_9324-1-768x576.jpg",
+   "file": "public/wp-content/uploads/2025/06/IMG_9324-1-768x576.jpg",
+   "exists": true,
+   "bytes": 131926,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/alpha-150x150.png",
+   "file": "public/wp-content/uploads/2025/06/alpha-150x150.png",
+   "exists": true,
+   "bytes": 28659,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/alpha-300x300.png",
+   "file": "public/wp-content/uploads/2025/06/alpha-300x300.png",
+   "exists": true,
+   "bytes": 98864,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/alpha.png",
+   "file": "public/wp-content/uploads/2025/06/alpha.png",
+   "exists": true,
+   "bytes": 396710,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/alphahardscapes-background-image-1024x1024.webp",
+   "file": "public/wp-content/uploads/2025/06/alphahardscapes-background-image-1024x1024.webp",
+   "exists": true,
+   "bytes": 343624,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/alphahardscapes-background-image-150x150.webp",
+   "file": "public/wp-content/uploads/2025/06/alphahardscapes-background-image-150x150.webp",
+   "exists": true,
+   "bytes": 9618,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/alphahardscapes-background-image-300x300.webp",
+   "file": "public/wp-content/uploads/2025/06/alphahardscapes-background-image-300x300.webp",
+   "exists": true,
+   "bytes": 35630,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/alphahardscapes-background-image-768x768.webp",
+   "file": "public/wp-content/uploads/2025/06/alphahardscapes-background-image-768x768.webp",
+   "exists": true,
+   "bytes": 212352,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/alphahardscapes-background-image.webp",
+   "file": "public/wp-content/uploads/2025/06/alphahardscapes-background-image.webp",
+   "exists": true,
+   "bytes": 874438,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/alphahardscapes-logo-icon-green.svg",
+   "file": "public/wp-content/uploads/2025/06/alphahardscapes-logo-icon-green.svg",
+   "exists": true,
+   "bytes": 5157,
+   "usedIn": 175
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/big-image-267x300.png",
+   "file": "public/wp-content/uploads/2025/06/big-image-267x300.png",
+   "exists": true,
+   "bytes": 160940,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/big-image.png",
+   "file": "public/wp-content/uploads/2025/06/big-image.png",
+   "exists": true,
+   "bytes": 374441,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/chimney-bna.png",
+   "file": "public/wp-content/uploads/2025/06/chimney-bna.png",
+   "exists": true,
+   "bytes": 1025705,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/dot-grahpic.png",
+   "file": "public/wp-content/uploads/2025/06/dot-grahpic.png",
+   "exists": true,
+   "bytes": 5031,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/filled-bg-portrait.png",
+   "file": "public/wp-content/uploads/2025/06/filled-bg-portrait.png",
+   "exists": true,
+   "bytes": 772,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/filled-bg.png",
+   "file": "public/wp-content/uploads/2025/06/filled-bg.png",
+   "exists": true,
+   "bytes": 786,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/fireplace-bna.png",
+   "file": "public/wp-content/uploads/2025/06/fireplace-bna.png",
+   "exists": true,
+   "bytes": 1127690,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/image-725-249x300.png",
+   "file": "public/wp-content/uploads/2025/06/image-725-249x300.png",
+   "exists": true,
+   "bytes": 152710,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/image-725.png",
+   "file": "public/wp-content/uploads/2025/06/image-725.png",
+   "exists": true,
+   "bytes": 438213,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/masonry-services-image-e1749232868105-273x300.webp",
+   "file": "public/wp-content/uploads/2025/06/masonry-services-image-e1749232868105-273x300.webp",
+   "exists": true,
+   "bytes": 28106,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/masonry-services-image-e1749232868105-768x843.webp",
+   "file": "public/wp-content/uploads/2025/06/masonry-services-image-e1749232868105-768x843.webp",
+   "exists": true,
+   "bytes": 198220,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/masonry-services-image-e1749232868105-932x1024.webp",
+   "file": "public/wp-content/uploads/2025/06/masonry-services-image-e1749232868105-932x1024.webp",
+   "exists": true,
+   "bytes": 281496,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/masonry-services-image-e1749232868105.webp",
+   "file": "public/wp-content/uploads/2025/06/masonry-services-image-e1749232868105.webp",
+   "exists": true,
+   "bytes": 447640,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/outdoor-image-300x228.png",
+   "file": "public/wp-content/uploads/2025/06/outdoor-image-300x228.png",
+   "exists": true,
+   "bytes": 168682,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/outdoor-image.png",
+   "file": "public/wp-content/uploads/2025/06/outdoor-image.png",
+   "exists": true,
+   "bytes": 364477,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-5-1152x1536.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-5-1152x1536.webp",
+   "exists": true,
+   "bytes": 604990,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-5-1536x2048.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-5-1536x2048.webp",
+   "exists": true,
+   "bytes": 1009482,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-5-225x300.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-5-225x300.webp",
+   "exists": true,
+   "bytes": 23042,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-5-768x1024.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-5-768x1024.webp",
+   "exists": true,
+   "bytes": 274598,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-5.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-5.webp",
+   "exists": true,
+   "bytes": 1507566,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-6-1152x1536.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-6-1152x1536.webp",
+   "exists": true,
+   "bytes": 475672,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-6-1536x2048.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-6-1536x2048.webp",
+   "exists": true,
+   "bytes": 723398,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-6-225x300.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-6-225x300.webp",
+   "exists": true,
+   "bytes": 22778,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-6-768x1024.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-6-768x1024.webp",
+   "exists": true,
+   "bytes": 233398,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-6.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-6.webp",
+   "exists": true,
+   "bytes": 985442,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-7-1024x768.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-7-1024x768.webp",
+   "exists": true,
+   "bytes": 254670,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-7-1536x1152.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-7-1536x1152.webp",
+   "exists": true,
+   "bytes": 482962,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-7-300x225.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-7-300x225.webp",
+   "exists": true,
+   "bytes": 26828,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-7-768x576.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-7-768x576.webp",
+   "exists": true,
+   "bytes": 156336,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-7.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-7.webp",
+   "exists": true,
+   "bytes": 665820,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-8-1024x768.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-8-1024x768.webp",
+   "exists": true,
+   "bytes": 187354,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-8-1536x1152.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-8-1536x1152.webp",
+   "exists": true,
+   "bytes": 357512,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-8-300x225.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-8-300x225.webp",
+   "exists": true,
+   "bytes": 22116,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-8-768x576.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-8-768x576.webp",
+   "exists": true,
+   "bytes": 114512,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-8.webp",
+   "file": "public/wp-content/uploads/2025/06/patio-8.webp",
+   "exists": true,
+   "bytes": 616134,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/patio-bna.png",
+   "file": "public/wp-content/uploads/2025/06/patio-bna.png",
+   "exists": true,
+   "bytes": 2255623,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/pool-bna.png",
+   "file": "public/wp-content/uploads/2025/06/pool-bna.png",
+   "exists": true,
+   "bytes": 977664,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/review-image-1.png",
+   "file": "public/wp-content/uploads/2025/06/review-image-1.png",
+   "exists": true,
+   "bytes": 5702,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/review-image-11.png",
+   "file": "public/wp-content/uploads/2025/06/review-image-11.png",
+   "exists": true,
+   "bytes": 3777,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/review-image-12.png",
+   "file": "public/wp-content/uploads/2025/06/review-image-12.png",
+   "exists": true,
+   "bytes": 3186,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/review-image-13.png",
+   "file": "public/wp-content/uploads/2025/06/review-image-13.png",
+   "exists": true,
+   "bytes": 19851,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/review-image-14.png",
+   "file": "public/wp-content/uploads/2025/06/review-image-14.png",
+   "exists": true,
+   "bytes": 2573,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/review-image-15.png",
+   "file": "public/wp-content/uploads/2025/06/review-image-15.png",
+   "exists": true,
+   "bytes": 3477,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/review-image-16.png",
+   "file": "public/wp-content/uploads/2025/06/review-image-16.png",
+   "exists": true,
+   "bytes": 11388,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/review-image-2.png",
+   "file": "public/wp-content/uploads/2025/06/review-image-2.png",
+   "exists": true,
+   "bytes": 5417,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/review-image-3.png",
+   "file": "public/wp-content/uploads/2025/06/review-image-3.png",
+   "exists": true,
+   "bytes": 5417,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/review-image-4.png",
+   "file": "public/wp-content/uploads/2025/06/review-image-4.png",
+   "exists": true,
+   "bytes": 2468,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/southern-connecticut-map-300x268.webp",
+   "file": "public/wp-content/uploads/2025/06/southern-connecticut-map-300x268.webp",
+   "exists": true,
+   "bytes": 19486,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/southern-connecticut-map.webp",
+   "file": "public/wp-content/uploads/2025/06/southern-connecticut-map.webp",
+   "exists": true,
+   "bytes": 104962,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/steps-bna.png",
+   "file": "public/wp-content/uploads/2025/06/steps-bna.png",
+   "exists": true,
+   "bytes": 1232305,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/stone-walls-image-1-300x188.jpg",
+   "file": "public/wp-content/uploads/2025/06/stone-walls-image-1-300x188.jpg",
+   "exists": true,
+   "bytes": 21046,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/stone-walls-image-1.jpg",
+   "file": "public/wp-content/uploads/2025/06/stone-walls-image-1.jpg",
+   "exists": true,
+   "bytes": 120946,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/stone-walls-image-2-150x150.jpg",
+   "file": "public/wp-content/uploads/2025/06/stone-walls-image-2-150x150.jpg",
+   "exists": true,
+   "bytes": 9200,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/stone-walls-image-2-300x300.jpg",
+   "file": "public/wp-content/uploads/2025/06/stone-walls-image-2-300x300.jpg",
+   "exists": true,
+   "bytes": 30216,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/stone-walls-image-2.jpg",
+   "file": "public/wp-content/uploads/2025/06/stone-walls-image-2.jpg",
+   "exists": true,
+   "bytes": 114019,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/stone-walls-image-3-300x200.jpg",
+   "file": "public/wp-content/uploads/2025/06/stone-walls-image-3-300x200.jpg",
+   "exists": true,
+   "bytes": 21015,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/stone-walls-image-3.jpg",
+   "file": "public/wp-content/uploads/2025/06/stone-walls-image-3.jpg",
+   "exists": true,
+   "bytes": 81921,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/walkway-bna.png",
+   "file": "public/wp-content/uploads/2025/06/walkway-bna.png",
+   "exists": true,
+   "bytes": 995440,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/walkway-photo-1-1024x1024.webp",
+   "file": "public/wp-content/uploads/2025/06/walkway-photo-1-1024x1024.webp",
+   "exists": true,
+   "bytes": 392296,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/walkway-photo-1-150x150.webp",
+   "file": "public/wp-content/uploads/2025/06/walkway-photo-1-150x150.webp",
+   "exists": true,
+   "bytes": 9828,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/walkway-photo-1-300x300.webp",
+   "file": "public/wp-content/uploads/2025/06/walkway-photo-1-300x300.webp",
+   "exists": true,
+   "bytes": 37538,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/walkway-photo-1-768x768.webp",
+   "file": "public/wp-content/uploads/2025/06/walkway-photo-1-768x768.webp",
+   "exists": true,
+   "bytes": 234992,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/06/walkway-photo-1.webp",
+   "file": "public/wp-content/uploads/2025/06/walkway-photo-1.webp",
+   "exists": true,
+   "bytes": 670316,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2025/08/Alpha-Hardscapes-Reel.webm",
+   "file": "public/wp-content/uploads/2025/08/Alpha-Hardscapes-Reel.webm",
+   "exists": true,
+   "bytes": 3529562,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/1000004169_comp-1024x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/1000004169_comp-1024x1024.jpg",
+   "exists": true,
+   "bytes": 195692,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/1000004169_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/1000004169_comp.jpg",
+   "exists": true,
+   "bytes": 246494,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/1000004611_comp-576x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/1000004611_comp-576x1024.jpg",
+   "exists": true,
+   "bytes": 117826,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/1000004611_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/1000004611_comp.jpg",
+   "exists": true,
+   "bytes": 292236,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/1000004931_comp-1024x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/1000004931_comp-1024x1024.jpg",
+   "exists": true,
+   "bytes": 314779,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/1000004931_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/1000004931_comp.jpg",
+   "exists": true,
+   "bytes": 521638,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/1000006326_comp-1024x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/1000006326_comp-1024x1024.jpg",
+   "exists": true,
+   "bytes": 303978,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/1000006326_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/1000006326_comp.jpg",
+   "exists": true,
+   "bytes": 517600,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/1000006552_comp-1024x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/1000006552_comp-1024x1024.jpg",
+   "exists": true,
+   "bytes": 294180,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/1000006552_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/1000006552_comp.jpg",
+   "exists": true,
+   "bytes": 507631,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/1000007017_comp-1024x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/1000007017_comp-1024x1024.jpg",
+   "exists": true,
+   "bytes": 352566,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/1000007017_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/1000007017_comp.jpg",
+   "exists": true,
+   "bytes": 620030,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/D80146B4-722E-457B-817D-4263589EDA71_comp-1024x576.jpg",
+   "file": "public/wp-content/uploads/2025/09/D80146B4-722E-457B-817D-4263589EDA71_comp-1024x576.jpg",
+   "exists": true,
+   "bytes": 202337,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/D80146B4-722E-457B-817D-4263589EDA71_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/D80146B4-722E-457B-817D-4263589EDA71_comp.jpg",
+   "exists": true,
+   "bytes": 389527,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_0195_comp-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_0195_comp-1024x768.jpg",
+   "exists": true,
+   "bytes": 264962,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_0195_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_0195_comp.jpg",
+   "exists": true,
+   "bytes": 1189617,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_0644_comp-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_0644_comp-1024x768.jpg",
+   "exists": true,
+   "bytes": 241182,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_0644_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_0644_comp.jpg",
+   "exists": true,
+   "bytes": 1229317,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_0680_comp-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_0680_comp-1024x768.jpg",
+   "exists": true,
+   "bytes": 162562,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_0680_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_0680_comp.jpg",
+   "exists": true,
+   "bytes": 637527,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_0681_comp-768x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_0681_comp-768x1024.jpg",
+   "exists": true,
+   "bytes": 228598,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_0681_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_0681_comp.jpg",
+   "exists": true,
+   "bytes": 1016721,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_1601_comp-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_1601_comp-1024x768.jpg",
+   "exists": true,
+   "bytes": 226052,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_1601_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_1601_comp.jpg",
+   "exists": true,
+   "bytes": 1183723,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_2566_comp-1024x576.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_2566_comp-1024x576.jpg",
+   "exists": true,
+   "bytes": 200100,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_2566_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_2566_comp.jpg",
+   "exists": true,
+   "bytes": 920772,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_26661_comp-1024x576.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_26661_comp-1024x576.jpg",
+   "exists": true,
+   "bytes": 180168,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_26661_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_26661_comp.jpg",
+   "exists": true,
+   "bytes": 820954,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_3217_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_3217_comp.jpg",
+   "exists": true,
+   "bytes": 147356,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_3218_comp-768x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_3218_comp-768x1024.jpg",
+   "exists": true,
+   "bytes": 212446,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_3218_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_3218_comp.jpg",
+   "exists": true,
+   "bytes": 621997,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_4488_comp-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_4488_comp-1024x768.jpg",
+   "exists": true,
+   "bytes": 220560,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_4488_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_4488_comp.jpg",
+   "exists": true,
+   "bytes": 1057242,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_4530_comp-768x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_4530_comp-768x1024.jpg",
+   "exists": true,
+   "bytes": 274043,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_4530_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_4530_comp.jpg",
+   "exists": true,
+   "bytes": 1362819,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_4607_comp-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_4607_comp-1024x768.jpg",
+   "exists": true,
+   "bytes": 243757,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_4607_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_4607_comp.jpg",
+   "exists": true,
+   "bytes": 1406039,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_4953_comp-768x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_4953_comp-768x1024.jpg",
+   "exists": true,
+   "bytes": 194027,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_4953_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_4953_comp.jpg",
+   "exists": true,
+   "bytes": 1042384,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_6032_comp-768x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_6032_comp-768x1024.jpg",
+   "exists": true,
+   "bytes": 159547,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_6032_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_6032_comp.jpg",
+   "exists": true,
+   "bytes": 610231,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_6768_comp-768x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_6768_comp-768x1024.jpg",
+   "exists": true,
+   "bytes": 239942,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_6768_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_6768_comp.jpg",
+   "exists": true,
+   "bytes": 1365261,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_6896_comp-1024x768.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_6896_comp-1024x768.jpg",
+   "exists": true,
+   "bytes": 285796,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_6896_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_6896_comp.jpg",
+   "exists": true,
+   "bytes": 1434117,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_7234_comp-768x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_7234_comp-768x1024.jpg",
+   "exists": true,
+   "bytes": 220778,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_7234_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_7234_comp.jpg",
+   "exists": true,
+   "bytes": 1351195,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_8957_comp-1024x576.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_8957_comp-1024x576.jpg",
+   "exists": true,
+   "bytes": 136234,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/IMG_8957_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/IMG_8957_comp.jpg",
+   "exists": true,
+   "bytes": 730086,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/SNvrib4k_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/SNvrib4k_comp.jpg",
+   "exists": true,
+   "bytes": 164490,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/mOp5JaWQ_comp-1024x576.jpg",
+   "file": "public/wp-content/uploads/2025/09/mOp5JaWQ_comp-1024x576.jpg",
+   "exists": true,
+   "bytes": 167568,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/mOp5JaWQ_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/mOp5JaWQ_comp.jpg",
+   "exists": true,
+   "bytes": 244209,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/nHCknubs_comp-579x1024.jpg",
+   "file": "public/wp-content/uploads/2025/09/nHCknubs_comp-579x1024.jpg",
+   "exists": true,
+   "bytes": 126294,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2025/09/nHCknubs_comp.jpg",
+   "file": "public/wp-content/uploads/2025/09/nHCknubs_comp.jpg",
+   "exists": true,
+   "bytes": 330540,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/1776170996117-1024x341.png",
+   "file": "public/wp-content/uploads/2026/04/1776170996117-1024x341.png",
+   "exists": true,
+   "bytes": 688910,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/1776170996117-300x100.png",
+   "file": "public/wp-content/uploads/2026/04/1776170996117-300x100.png",
+   "exists": true,
+   "bytes": 60523,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/1776170996117-768x256.png",
+   "file": "public/wp-content/uploads/2026/04/1776170996117-768x256.png",
+   "exists": true,
+   "bytes": 406515,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/1776170996117.png",
+   "file": "public/wp-content/uploads/2026/04/1776170996117.png",
+   "exists": true,
+   "bytes": 1507844,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/IMG_8957-1024x576.jpg",
+   "file": "public/wp-content/uploads/2026/04/IMG_8957-1024x576.jpg",
+   "exists": true,
+   "bytes": 137532,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/IMG_8957-1536x864.jpg",
+   "file": "public/wp-content/uploads/2026/04/IMG_8957-1536x864.jpg",
+   "exists": true,
+   "bytes": 305443,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/IMG_8957-2048x1152.jpg",
+   "file": "public/wp-content/uploads/2026/04/IMG_8957-2048x1152.jpg",
+   "exists": true,
+   "bytes": 523038,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/IMG_8957-300x169.jpg",
+   "file": "public/wp-content/uploads/2026/04/IMG_8957-300x169.jpg",
+   "exists": true,
+   "bytes": 13306,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/IMG_8957-768x432.jpg",
+   "file": "public/wp-content/uploads/2026/04/IMG_8957-768x432.jpg",
+   "exists": true,
+   "bytes": 77595,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/IMG_8957-scaled.jpg",
+   "file": "public/wp-content/uploads/2026/04/IMG_8957-scaled.jpg",
+   "exists": true,
+   "bytes": 777604,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/custom-outdoor-kitchens-connecticut-backyard-landscape-240x300.png",
+   "file": "public/wp-content/uploads/2026/04/custom-outdoor-kitchens-connecticut-backyard-landscape-240x300.png",
+   "exists": true,
+   "bytes": 142228,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/custom-outdoor-kitchens-connecticut-backyard-landscape.png",
+   "file": "public/wp-content/uploads/2026/04/custom-outdoor-kitchens-connecticut-backyard-landscape.png",
+   "exists": true,
+   "bytes": 268143,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/custom-outdoor-kitchens-connecticut-stone-patio-design-240x300.png",
+   "file": "public/wp-content/uploads/2026/04/custom-outdoor-kitchens-connecticut-stone-patio-design-240x300.png",
+   "exists": true,
+   "bytes": 150482,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/custom-outdoor-kitchens-connecticut-stone-patio-design.png",
+   "file": "public/wp-content/uploads/2026/04/custom-outdoor-kitchens-connecticut-stone-patio-design.png",
+   "exists": true,
+   "bytes": 278298,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/expert-thinstone-installation-connecticut-fireplace-wall-240x300.png",
+   "file": "public/wp-content/uploads/2026/04/expert-thinstone-installation-connecticut-fireplace-wall-240x300.png",
+   "exists": true,
+   "bytes": 114907,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/expert-thinstone-installation-connecticut-fireplace-wall.png",
+   "file": "public/wp-content/uploads/2026/04/expert-thinstone-installation-connecticut-fireplace-wall.png",
+   "exists": true,
+   "bytes": 273998,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/expert-thinstone-installation-connecticut-home-facade-240x300.png",
+   "file": "public/wp-content/uploads/2026/04/expert-thinstone-installation-connecticut-home-facade-240x300.png",
+   "exists": true,
+   "bytes": 145669,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/expert-thinstone-installation-connecticut-home-facade.png",
+   "file": "public/wp-content/uploads/2026/04/expert-thinstone-installation-connecticut-home-facade.png",
+   "exists": true,
+   "bytes": 269625,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/image-1024x717.png",
+   "file": "public/wp-content/uploads/2026/04/image-1024x717.png",
+   "exists": true,
+   "bytes": 1659337,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/image-300x210.png",
+   "file": "public/wp-content/uploads/2026/04/image-300x210.png",
+   "exists": true,
+   "bytes": 158391,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/image-768x538.png",
+   "file": "public/wp-content/uploads/2026/04/image-768x538.png",
+   "exists": true,
+   "bytes": 977105,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/image.png",
+   "file": "public/wp-content/uploads/2026/04/image.png",
+   "exists": true,
+   "bytes": 2640911,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/img-2026-04-08T170606.964Z-1024x341.png",
+   "file": "public/wp-content/uploads/2026/04/img-2026-04-08T170606.964Z-1024x341.png",
+   "exists": true,
+   "bytes": 581199,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/img-2026-04-08T170606.964Z-300x100.png",
+   "file": "public/wp-content/uploads/2026/04/img-2026-04-08T170606.964Z-300x100.png",
+   "exists": true,
+   "bytes": 56588,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/img-2026-04-08T170606.964Z-768x256.png",
+   "file": "public/wp-content/uploads/2026/04/img-2026-04-08T170606.964Z-768x256.png",
+   "exists": true,
+   "bytes": 349501,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/img-2026-04-08T170606.964Z.png",
+   "file": "public/wp-content/uploads/2026/04/img-2026-04-08T170606.964Z.png",
+   "exists": true,
+   "bytes": 1210823,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/natural-stone-steps-connecticut-front-entry-240x300.png",
+   "file": "public/wp-content/uploads/2026/04/natural-stone-steps-connecticut-front-entry-240x300.png",
+   "exists": true,
+   "bytes": 148434,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/natural-stone-steps-connecticut-front-entry.png",
+   "file": "public/wp-content/uploads/2026/04/natural-stone-steps-connecticut-front-entry.png",
+   "exists": true,
+   "bytes": 278949,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/natural-stone-steps-connecticut-retaining-wall-design-240x300.png",
+   "file": "public/wp-content/uploads/2026/04/natural-stone-steps-connecticut-retaining-wall-design-240x300.png",
+   "exists": true,
+   "bytes": 132483,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/natural-stone-steps-connecticut-retaining-wall-design.png",
+   "file": "public/wp-content/uploads/2026/04/natural-stone-steps-connecticut-retaining-wall-design.png",
+   "exists": true,
+   "bytes": 267812,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/new-haven-ct-elevated-wood-deck-focus-150x150.png",
+   "file": "public/wp-content/uploads/2026/04/new-haven-ct-elevated-wood-deck-focus-150x150.png",
+   "exists": true,
+   "bytes": 41986,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/new-haven-ct-elevated-wood-deck-focus-300x300.png",
+   "file": "public/wp-content/uploads/2026/04/new-haven-ct-elevated-wood-deck-focus-300x300.png",
+   "exists": true,
+   "bytes": 147541,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/new-haven-ct-elevated-wood-deck-focus.png",
+   "file": "public/wp-content/uploads/2026/04/new-haven-ct-elevated-wood-deck-focus.png",
+   "exists": true,
+   "bytes": 222739,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/new-haven-ct-modern-composite-backyard-deck-300x240.png",
+   "file": "public/wp-content/uploads/2026/04/new-haven-ct-modern-composite-backyard-deck-300x240.png",
+   "exists": true,
+   "bytes": 142128,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/new-haven-ct-modern-composite-backyard-deck.png",
+   "file": "public/wp-content/uploads/2026/04/new-haven-ct-modern-composite-backyard-deck.png",
+   "exists": true,
+   "bytes": 237510,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/outdoor-fire-features-connecticut-masonry-fireplace-240x300.png",
+   "file": "public/wp-content/uploads/2026/04/outdoor-fire-features-connecticut-masonry-fireplace-240x300.png",
+   "exists": true,
+   "bytes": 133989,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/outdoor-fire-features-connecticut-masonry-fireplace.png",
+   "file": "public/wp-content/uploads/2026/04/outdoor-fire-features-connecticut-masonry-fireplace.png",
+   "exists": true,
+   "bytes": 264178,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/outdoor-fire-features-connecticut-stone-fire-pit-300x200.png",
+   "file": "public/wp-content/uploads/2026/04/outdoor-fire-features-connecticut-stone-fire-pit-300x200.png",
+   "exists": true,
+   "bytes": 121942,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/outdoor-fire-features-connecticut-stone-fire-pit-768x512.png",
+   "file": "public/wp-content/uploads/2026/04/outdoor-fire-features-connecticut-stone-fire-pit-768x512.png",
+   "exists": true,
+   "bytes": 675148,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/outdoor-fire-features-connecticut-stone-fire-pit.png",
+   "file": "public/wp-content/uploads/2026/04/outdoor-fire-features-connecticut-stone-fire-pit.png",
+   "exists": true,
+   "bytes": 262152,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/pool-installation-1024x576.webp",
+   "file": "public/wp-content/uploads/2026/04/pool-installation-1024x576.webp",
+   "exists": true,
+   "bytes": 196056,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/pool-installation-1536x864.webp",
+   "file": "public/wp-content/uploads/2026/04/pool-installation-1536x864.webp",
+   "exists": true,
+   "bytes": 402342,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/pool-installation-300x169.webp",
+   "file": "public/wp-content/uploads/2026/04/pool-installation-300x169.webp",
+   "exists": true,
+   "bytes": 17716,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/pool-installation-768x432.webp",
+   "file": "public/wp-content/uploads/2026/04/pool-installation-768x432.webp",
+   "exists": true,
+   "bytes": 113730,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/pool-installation.webp",
+   "file": "public/wp-content/uploads/2026/04/pool-installation.webp",
+   "exists": true,
+   "bytes": 523726,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/professional-chimney-installation-repair-connecticut-brick-exterior-240x300.png",
+   "file": "public/wp-content/uploads/2026/04/professional-chimney-installation-repair-connecticut-brick-exterior-240x300.png",
+   "exists": true,
+   "bytes": 126764,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/professional-chimney-installation-repair-connecticut-brick-exterior.png",
+   "file": "public/wp-content/uploads/2026/04/professional-chimney-installation-repair-connecticut-brick-exterior.png",
+   "exists": true,
+   "bytes": 291026,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/professional-chimney-installation-repair-connecticut-roof-flashing-240x300.png",
+   "file": "public/wp-content/uploads/2026/04/professional-chimney-installation-repair-connecticut-roof-flashing-240x300.png",
+   "exists": true,
+   "bytes": 142734,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/professional-chimney-installation-repair-connecticut-roof-flashing.png",
+   "file": "public/wp-content/uploads/2026/04/professional-chimney-installation-repair-connecticut-roof-flashing.png",
+   "exists": true,
+   "bytes": 293480,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-complete-hardscape-design-300x200.png",
+   "file": "public/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-complete-hardscape-design-300x200.png",
+   "exists": true,
+   "bytes": 118495,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-complete-hardscape-design-768x512.png",
+   "file": "public/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-complete-hardscape-design-768x512.png",
+   "exists": true,
+   "bytes": 645842,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-complete-hardscape-design.png",
+   "file": "public/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-complete-hardscape-design.png",
+   "exists": true,
+   "bytes": 264649,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-hardscape-collage-2-240x300.png",
+   "file": "public/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-hardscape-collage-2-240x300.png",
+   "exists": true,
+   "bytes": 113433,
+   "usedIn": 4
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-hardscape-collage-2.png",
+   "file": "public/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-hardscape-collage-2.png",
+   "exists": true,
+   "bytes": 263681,
+   "usedIn": 8
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-services-collage-1-240x300.png",
+   "file": "public/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-services-collage-1-240x300.png",
+   "exists": true,
+   "bytes": 144170,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-services-collage-1.png",
+   "file": "public/wp-content/uploads/2026/04/skilled-masonry-contractor-avon-ct-services-collage-1.png",
+   "exists": true,
+   "bytes": 296845,
+   "usedIn": 6
+  },
+  {
+   "path": "/wp-content/uploads/2026/05/IMG_0680-1-1024x768.webp",
+   "file": "public/wp-content/uploads/2026/05/IMG_0680-1-1024x768.webp",
+   "exists": true,
+   "bytes": 150538,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/05/IMG_0680-1-300x225.webp",
+   "file": "public/wp-content/uploads/2026/05/IMG_0680-1-300x225.webp",
+   "exists": true,
+   "bytes": 16150,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/05/IMG_0680-1-768x576.webp",
+   "file": "public/wp-content/uploads/2026/05/IMG_0680-1-768x576.webp",
+   "exists": true,
+   "bytes": 92414,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/05/IMG_0680-1.webp",
+   "file": "public/wp-content/uploads/2026/05/IMG_0680-1.webp",
+   "exists": true,
+   "bytes": 575066,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781705644887-1024x341.png",
+   "file": "public/wp-content/uploads/2026/06/1781705644887-1024x341.png",
+   "exists": true,
+   "bytes": 647567,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781705644887-300x100.png",
+   "file": "public/wp-content/uploads/2026/06/1781705644887-300x100.png",
+   "exists": true,
+   "bytes": 59527,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781705644887-768x256.png",
+   "file": "public/wp-content/uploads/2026/06/1781705644887-768x256.png",
+   "exists": true,
+   "bytes": 383373,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781705644887.png",
+   "file": "public/wp-content/uploads/2026/06/1781705644887.png",
+   "exists": true,
+   "bytes": 1395309,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781709056147-1024x341.png",
+   "file": "public/wp-content/uploads/2026/06/1781709056147-1024x341.png",
+   "exists": true,
+   "bytes": 626235,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781709056147-300x100.png",
+   "file": "public/wp-content/uploads/2026/06/1781709056147-300x100.png",
+   "exists": true,
+   "bytes": 55532,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781709056147-768x256.png",
+   "file": "public/wp-content/uploads/2026/06/1781709056147-768x256.png",
+   "exists": true,
+   "bytes": 369328,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781709056147.png",
+   "file": "public/wp-content/uploads/2026/06/1781709056147.png",
+   "exists": true,
+   "bytes": 1380407,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781710065504-1024x341.png",
+   "file": "public/wp-content/uploads/2026/06/1781710065504-1024x341.png",
+   "exists": true,
+   "bytes": 652157,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781710065504-300x100.png",
+   "file": "public/wp-content/uploads/2026/06/1781710065504-300x100.png",
+   "exists": true,
+   "bytes": 62336,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781710065504-768x256.png",
+   "file": "public/wp-content/uploads/2026/06/1781710065504-768x256.png",
+   "exists": true,
+   "bytes": 389108,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781710065504.png",
+   "file": "public/wp-content/uploads/2026/06/1781710065504.png",
+   "exists": true,
+   "bytes": 1373527,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781729152031-1024x341.png",
+   "file": "public/wp-content/uploads/2026/06/1781729152031-1024x341.png",
+   "exists": true,
+   "bytes": 662623,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781729152031-300x100.png",
+   "file": "public/wp-content/uploads/2026/06/1781729152031-300x100.png",
+   "exists": true,
+   "bytes": 62539,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781729152031-768x256.png",
+   "file": "public/wp-content/uploads/2026/06/1781729152031-768x256.png",
+   "exists": true,
+   "bytes": 395753,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781729152031.png",
+   "file": "public/wp-content/uploads/2026/06/1781729152031.png",
+   "exists": true,
+   "bytes": 1368620,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781729474649-1024x341.png",
+   "file": "public/wp-content/uploads/2026/06/1781729474649-1024x341.png",
+   "exists": true,
+   "bytes": 632070,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781729474649-300x100.png",
+   "file": "public/wp-content/uploads/2026/06/1781729474649-300x100.png",
+   "exists": true,
+   "bytes": 52229,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781729474649-768x256.png",
+   "file": "public/wp-content/uploads/2026/06/1781729474649-768x256.png",
+   "exists": true,
+   "bytes": 374247,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781729474649.png",
+   "file": "public/wp-content/uploads/2026/06/1781729474649.png",
+   "exists": true,
+   "bytes": 1417286,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781729743546-1024x341.png",
+   "file": "public/wp-content/uploads/2026/06/1781729743546-1024x341.png",
+   "exists": true,
+   "bytes": 737529,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781729743546-300x100.png",
+   "file": "public/wp-content/uploads/2026/06/1781729743546-300x100.png",
+   "exists": true,
+   "bytes": 67319,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781729743546-768x256.png",
+   "file": "public/wp-content/uploads/2026/06/1781729743546-768x256.png",
+   "exists": true,
+   "bytes": 437004,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/06/1781729743546.png",
+   "file": "public/wp-content/uploads/2026/06/1781729743546.png",
+   "exists": true,
+   "bytes": 1551660,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/1785250689973-1024x341.png",
+   "file": "public/wp-content/uploads/2026/07/1785250689973-1024x341.png",
+   "exists": true,
+   "bytes": 722889,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/1785250689973-300x100.png",
+   "file": "public/wp-content/uploads/2026/07/1785250689973-300x100.png",
+   "exists": true,
+   "bytes": 64723,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/1785250689973-768x256.png",
+   "file": "public/wp-content/uploads/2026/07/1785250689973-768x256.png",
+   "exists": true,
+   "bytes": 426647,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/1785250689973.png",
+   "file": "public/wp-content/uploads/2026/07/1785250689973.png",
+   "exists": true,
+   "bytes": 1576614,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/1785250981007-1024x341.png",
+   "file": "public/wp-content/uploads/2026/07/1785250981007-1024x341.png",
+   "exists": true,
+   "bytes": 690997,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/1785250981007-300x100.png",
+   "file": "public/wp-content/uploads/2026/07/1785250981007-300x100.png",
+   "exists": true,
+   "bytes": 64468,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/1785250981007-768x256.png",
+   "file": "public/wp-content/uploads/2026/07/1785250981007-768x256.png",
+   "exists": true,
+   "bytes": 411554,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/1785250981007.png",
+   "file": "public/wp-content/uploads/2026/07/1785250981007.png",
+   "exists": true,
+   "bytes": 1465508,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/1785251275694-1024x341.png",
+   "file": "public/wp-content/uploads/2026/07/1785251275694-1024x341.png",
+   "exists": true,
+   "bytes": 638265,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/1785251275694-300x100.png",
+   "file": "public/wp-content/uploads/2026/07/1785251275694-300x100.png",
+   "exists": true,
+   "bytes": 59762,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/1785251275694-768x256.png",
+   "file": "public/wp-content/uploads/2026/07/1785251275694-768x256.png",
+   "exists": true,
+   "bytes": 380855,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/1785251275694.png",
+   "file": "public/wp-content/uploads/2026/07/1785251275694.png",
+   "exists": true,
+   "bytes": 1345551,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_0263-1024x480.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_0263-1024x480.jpg",
+   "exists": true,
+   "bytes": 49973,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_0263.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_0263.jpg",
+   "exists": true,
+   "bytes": 70190,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2504-1024x480.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2504-1024x480.jpg",
+   "exists": true,
+   "bytes": 79125,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2504.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2504.jpg",
+   "exists": true,
+   "bytes": 107620,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2505-1024x479.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2505-1024x479.jpg",
+   "exists": true,
+   "bytes": 108597,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2505.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2505.jpg",
+   "exists": true,
+   "bytes": 177113,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2723-1024x480.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2723-1024x480.jpg",
+   "exists": true,
+   "bytes": 74685,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2723.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2723.jpg",
+   "exists": true,
+   "bytes": 104970,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2725-1024x480.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2725-1024x480.jpg",
+   "exists": true,
+   "bytes": 76135,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2725.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2725.jpg",
+   "exists": true,
+   "bytes": 106558,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2789-1024x479.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2789-1024x479.jpg",
+   "exists": true,
+   "bytes": 96028,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2789.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2789.jpg",
+   "exists": true,
+   "bytes": 168523,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2790-1024x479.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2790-1024x479.jpg",
+   "exists": true,
+   "bytes": 57068,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2790.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2790.jpg",
+   "exists": true,
+   "bytes": 95638,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2796_2-1024x479.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2796_2-1024x479.jpg",
+   "exists": true,
+   "bytes": 54886,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2796_2.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2796_2.jpg",
+   "exists": true,
+   "bytes": 91237,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2797-1024x479.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2797-1024x479.jpg",
+   "exists": true,
+   "bytes": 50523,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2797.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2797.jpg",
+   "exists": true,
+   "bytes": 82918,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2799-1024x479.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2799-1024x479.jpg",
+   "exists": true,
+   "bytes": 42203,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2799.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2799.jpg",
+   "exists": true,
+   "bytes": 70900,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2813-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2813-768x1024.jpg",
+   "exists": true,
+   "bytes": 237442,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_2813-scaled.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_2813-scaled.jpg",
+   "exists": true,
+   "bytes": 1230520,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_3061-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_3061-768x1024.jpg",
+   "exists": true,
+   "bytes": 222446,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/IMG_3061-scaled.jpg",
+   "file": "public/wp-content/uploads/2026/07/IMG_3061-scaled.jpg",
+   "exists": true,
+   "bytes": 1064473,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/bed-0084-1024x768.jpg",
+   "file": "public/wp-content/uploads/2026/07/bed-0084-1024x768.jpg",
+   "exists": true,
+   "bytes": 252241,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/bed-0084.jpg",
+   "file": "public/wp-content/uploads/2026/07/bed-0084.jpg",
+   "exists": true,
+   "bytes": 1680994,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/bed-2813-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/bed-2813-768x1024.jpg",
+   "exists": true,
+   "bytes": 237703,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/bed-2813.jpg",
+   "file": "public/wp-content/uploads/2026/07/bed-2813.jpg",
+   "exists": true,
+   "bytes": 1443218,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/bed-2823-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/bed-2823-768x1024.jpg",
+   "exists": true,
+   "bytes": 275880,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/bed-2823.jpg",
+   "file": "public/wp-content/uploads/2026/07/bed-2823.jpg",
+   "exists": true,
+   "bytes": 1801608,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/bed-3061-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/bed-3061-768x1024.jpg",
+   "exists": true,
+   "bytes": 222397,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/bed-3061.jpg",
+   "file": "public/wp-content/uploads/2026/07/bed-3061.jpg",
+   "exists": true,
+   "bytes": 1229354,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fence-1134-1024x478.jpg",
+   "file": "public/wp-content/uploads/2026/07/fence-1134-1024x478.jpg",
+   "exists": true,
+   "bytes": 155963,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fence-1134.jpg",
+   "file": "public/wp-content/uploads/2026/07/fence-1134.jpg",
+   "exists": true,
+   "bytes": 524650,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fence-2220-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/fence-2220-768x1024.jpg",
+   "exists": true,
+   "bytes": 203775,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fence-2220.jpg",
+   "file": "public/wp-content/uploads/2026/07/fence-2220.jpg",
+   "exists": true,
+   "bytes": 1261461,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fence-2711-1024x768.jpg",
+   "file": "public/wp-content/uploads/2026/07/fence-2711-1024x768.jpg",
+   "exists": true,
+   "bytes": 248998,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fence-2711.jpg",
+   "file": "public/wp-content/uploads/2026/07/fence-2711.jpg",
+   "exists": true,
+   "bytes": 1573224,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fence-5063-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/fence-5063-768x1024.jpg",
+   "exists": true,
+   "bytes": 170914,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fence-5063.jpg",
+   "file": "public/wp-content/uploads/2026/07/fence-5063.jpg",
+   "exists": true,
+   "bytes": 1125618,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fence-9420-1024x576.jpg",
+   "file": "public/wp-content/uploads/2026/07/fence-9420-1024x576.jpg",
+   "exists": true,
+   "bytes": 184551,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fence-9420.jpg",
+   "file": "public/wp-content/uploads/2026/07/fence-9420.jpg",
+   "exists": true,
+   "bytes": 1159245,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fence-att-kbqjccsidlwspnp2i83u-1024x576.jpg",
+   "file": "public/wp-content/uploads/2026/07/fence-att-kbqjccsidlwspnp2i83u-1024x576.jpg",
+   "exists": true,
+   "bytes": 67050,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fence-att-kbqjccsidlwspnp2i83u.jpg",
+   "file": "public/wp-content/uploads/2026/07/fence-att-kbqjccsidlwspnp2i83u.jpg",
+   "exists": true,
+   "bytes": 110835,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fire-pit-1804-1024x768.jpg",
+   "file": "public/wp-content/uploads/2026/07/fire-pit-1804-1024x768.jpg",
+   "exists": true,
+   "bytes": 238882,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fire-pit-1804.jpg",
+   "file": "public/wp-content/uploads/2026/07/fire-pit-1804.jpg",
+   "exists": true,
+   "bytes": 1521465,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fire-pit-2254-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/fire-pit-2254-768x1024.jpg",
+   "exists": true,
+   "bytes": 257142,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fire-pit-2254.jpg",
+   "file": "public/wp-content/uploads/2026/07/fire-pit-2254.jpg",
+   "exists": true,
+   "bytes": 1622609,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fire-pit-2883-1024x681.jpg",
+   "file": "public/wp-content/uploads/2026/07/fire-pit-2883-1024x681.jpg",
+   "exists": true,
+   "bytes": 195607,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/fire-pit-2883.jpg",
+   "file": "public/wp-content/uploads/2026/07/fire-pit-2883.jpg",
+   "exists": true,
+   "bytes": 358761,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-0184-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-0184-768x1024.jpg",
+   "exists": true,
+   "bytes": 233964,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-0184.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-0184.jpg",
+   "exists": true,
+   "bytes": 1438728,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-1258-1024x576.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-1258-1024x576.jpg",
+   "exists": true,
+   "bytes": 163521,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-1258.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-1258.jpg",
+   "exists": true,
+   "bytes": 1002657,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-1804-1024x768.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-1804-1024x768.jpg",
+   "exists": true,
+   "bytes": 238882,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-1804.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-1804.jpg",
+   "exists": true,
+   "bytes": 1521465,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-1805-1024x768.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-1805-1024x768.jpg",
+   "exists": true,
+   "bytes": 262090,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-1805.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-1805.jpg",
+   "exists": true,
+   "bytes": 1669354,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-2077-1024x768.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-2077-1024x768.jpg",
+   "exists": true,
+   "bytes": 249294,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-2077.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-2077.jpg",
+   "exists": true,
+   "bytes": 1475787,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-2221-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-2221-768x1024.jpg",
+   "exists": true,
+   "bytes": 219606,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-2221.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-2221.jpg",
+   "exists": true,
+   "bytes": 1334252,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-2951-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-2951-768x1024.jpg",
+   "exists": true,
+   "bytes": 271411,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-2951.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-2951.jpg",
+   "exists": true,
+   "bytes": 1787078,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-6034-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-6034-768x1024.jpg",
+   "exists": true,
+   "bytes": 208643,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-6034.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-6034.jpg",
+   "exists": true,
+   "bytes": 1222487,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-f61d3894-a49f-4e55-80f8--1024x768.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-f61d3894-a49f-4e55-80f8--1024x768.jpg",
+   "exists": true,
+   "bytes": 280078,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-f61d3894-a49f-4e55-80f8-.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-f61d3894-a49f-4e55-80f8-.jpg",
+   "exists": true,
+   "bytes": 562779,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-file-002-1024x512.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-file-002-1024x512.jpg",
+   "exists": true,
+   "bytes": 142705,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-file-002.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-file-002.jpg",
+   "exists": true,
+   "bytes": 243146,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-techo-bloc-lafayette-pat-1024x768.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-techo-bloc-lafayette-pat-1024x768.jpg",
+   "exists": true,
+   "bytes": 228068,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/patio-techo-bloc-lafayette-pat.jpg",
+   "file": "public/wp-content/uploads/2026/07/patio-techo-bloc-lafayette-pat.jpg",
+   "exists": true,
+   "bytes": 1370670,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/pool-1249-1024x683.jpg",
+   "file": "public/wp-content/uploads/2026/07/pool-1249-1024x683.jpg",
+   "exists": true,
+   "bytes": 163021,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/pool-1249.jpg",
+   "file": "public/wp-content/uploads/2026/07/pool-1249.jpg",
+   "exists": true,
+   "bytes": 537284,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/pool-9420-1024x576.jpg",
+   "file": "public/wp-content/uploads/2026/07/pool-9420-1024x576.jpg",
+   "exists": true,
+   "bytes": 184551,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/pool-9420.jpg",
+   "file": "public/wp-content/uploads/2026/07/pool-9420.jpg",
+   "exists": true,
+   "bytes": 1159245,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/retaining-wall-0282-1024x768.jpg",
+   "file": "public/wp-content/uploads/2026/07/retaining-wall-0282-1024x768.jpg",
+   "exists": true,
+   "bytes": 324554,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/retaining-wall-0282.jpg",
+   "file": "public/wp-content/uploads/2026/07/retaining-wall-0282.jpg",
+   "exists": true,
+   "bytes": 2249023,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/retaining-wall-0313-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/retaining-wall-0313-768x1024.jpg",
+   "exists": true,
+   "bytes": 245452,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/retaining-wall-0313.jpg",
+   "file": "public/wp-content/uploads/2026/07/retaining-wall-0313.jpg",
+   "exists": true,
+   "bytes": 1764979,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/retaining-wall-stoneyard-stone-veneer-b-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/retaining-wall-stoneyard-stone-veneer-b-768x1024.jpg",
+   "exists": true,
+   "bytes": 213711,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/retaining-wall-stoneyard-stone-veneer-b.jpg",
+   "file": "public/wp-content/uploads/2026/07/retaining-wall-stoneyard-stone-veneer-b.jpg",
+   "exists": true,
+   "bytes": 448929,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/sebastian-ullrich-alpha-hardscapes-150x150.jpg",
+   "file": "public/wp-content/uploads/2026/07/sebastian-ullrich-alpha-hardscapes-150x150.jpg",
+   "exists": true,
+   "bytes": 4673,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/sebastian-ullrich-alpha-hardscapes.jpg",
+   "file": "public/wp-content/uploads/2026/07/sebastian-ullrich-alpha-hardscapes.jpg",
+   "exists": true,
+   "bytes": 6370,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-0320-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-0320-768x1024.jpg",
+   "exists": true,
+   "bytes": 275764,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-0320.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-0320.jpg",
+   "exists": true,
+   "bytes": 1585104,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-0321-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-0321-768x1024.jpg",
+   "exists": true,
+   "bytes": 212731,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-0321.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-0321.jpg",
+   "exists": true,
+   "bytes": 1296341,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-1268-472x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-1268-472x1024.jpg",
+   "exists": true,
+   "bytes": 112504,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-1268.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-1268.jpg",
+   "exists": true,
+   "bytes": 549965,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-1752-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-1752-768x1024.jpg",
+   "exists": true,
+   "bytes": 134771,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-1752.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-1752.jpg",
+   "exists": true,
+   "bytes": 725333,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-1823-1024x768.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-1823-1024x768.jpg",
+   "exists": true,
+   "bytes": 205617,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-1823.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-1823.jpg",
+   "exists": true,
+   "bytes": 1220162,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-1898-821x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-1898-821x1024.jpg",
+   "exists": true,
+   "bytes": 201623,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-1898.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-1898.jpg",
+   "exists": true,
+   "bytes": 408248,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-3183-1024x768.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-3183-1024x768.jpg",
+   "exists": true,
+   "bytes": 176139,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-3183.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-3183.jpg",
+   "exists": true,
+   "bytes": 1159071,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-3185-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-3185-768x1024.jpg",
+   "exists": true,
+   "bytes": 211407,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-3185.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-3185.jpg",
+   "exists": true,
+   "bytes": 1255219,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-32f9e8a6-a5ed-4876-b553-.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-32f9e8a6-a5ed-4876-b553-.jpg",
+   "exists": true,
+   "bytes": 146530,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-5266-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-5266-768x1024.jpg",
+   "exists": true,
+   "bytes": 147042,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-5266.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-5266.jpg",
+   "exists": true,
+   "bytes": 843023,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-5525-1024x768.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-5525-1024x768.jpg",
+   "exists": true,
+   "bytes": 233634,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-5525.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-5525.jpg",
+   "exists": true,
+   "bytes": 1424522,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-76969788890-f05c82c2-fcb-576x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-76969788890-f05c82c2-fcb-576x1024.jpg",
+   "exists": true,
+   "bytes": 194688,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/stairs-76969788890-f05c82c2-fcb.jpg",
+   "file": "public/wp-content/uploads/2026/07/stairs-76969788890-f05c82c2-fcb.jpg",
+   "exists": true,
+   "bytes": 1226914,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-0909-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-0909-768x1024.jpg",
+   "exists": true,
+   "bytes": 259187,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-0909.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-0909.jpg",
+   "exists": true,
+   "bytes": 1871133,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-1750-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-1750-768x1024.jpg",
+   "exists": true,
+   "bytes": 241821,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-1750.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-1750.jpg",
+   "exists": true,
+   "bytes": 1685604,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-2065-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-2065-768x1024.jpg",
+   "exists": true,
+   "bytes": 273003,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-2065.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-2065.jpg",
+   "exists": true,
+   "bytes": 1886981,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-2235-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-2235-768x1024.jpg",
+   "exists": true,
+   "bytes": 211704,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-2235.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-2235.jpg",
+   "exists": true,
+   "bytes": 1308119,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-2429-472x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-2429-472x1024.jpg",
+   "exists": true,
+   "bytes": 131736,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-2429.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-2429.jpg",
+   "exists": true,
+   "bytes": 891937,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-2935-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-2935-768x1024.jpg",
+   "exists": true,
+   "bytes": 257104,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-2935.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-2935.jpg",
+   "exists": true,
+   "bytes": 1613439,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-2949-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-2949-768x1024.jpg",
+   "exists": true,
+   "bytes": 277886,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-2949.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-2949.jpg",
+   "exists": true,
+   "bytes": 1561510,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-3113-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-3113-768x1024.jpg",
+   "exists": true,
+   "bytes": 258669,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-3113.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-3113.jpg",
+   "exists": true,
+   "bytes": 1627281,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-3119-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-3119-768x1024.jpg",
+   "exists": true,
+   "bytes": 244863,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-3119.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-3119.jpg",
+   "exists": true,
+   "bytes": 1638325,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-4170-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-4170-768x1024.jpg",
+   "exists": true,
+   "bytes": 306308,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-4170.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-4170.jpg",
+   "exists": true,
+   "bytes": 2186197,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-7418-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-7418-768x1024.jpg",
+   "exists": true,
+   "bytes": 249503,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-7418.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-7418.jpg",
+   "exists": true,
+   "bytes": 1618696,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-7ee152f54b45c4754d29c3c0-768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-7ee152f54b45c4754d29c3c0-768x1024.jpg",
+   "exists": true,
+   "bytes": 274502,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-7ee152f54b45c4754d29c3c0.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-7ee152f54b45c4754d29c3c0.jpg",
+   "exists": true,
+   "bytes": 1728657,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-da99e667-4129-4d1c-a11b--768x1024.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-da99e667-4129-4d1c-a11b--768x1024.jpg",
+   "exists": true,
+   "bytes": 255605,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-da99e667-4129-4d1c-a11b-.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-da99e667-4129-4d1c-a11b-.jpg",
+   "exists": true,
+   "bytes": 855566,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/07/walkway-e4790d43aee4d07bbf604039.jpg",
+   "file": "public/wp-content/uploads/2026/07/walkway-e4790d43aee4d07bbf604039.jpg",
+   "exists": true,
+   "bytes": 210207,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/1786638997493-1024x341.png",
+   "file": "public/wp-content/uploads/2026/08/1786638997493-1024x341.png",
+   "exists": true,
+   "bytes": 608368,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/1786638997493-300x100.png",
+   "file": "public/wp-content/uploads/2026/08/1786638997493-300x100.png",
+   "exists": true,
+   "bytes": 56038,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/1786638997493-768x256.png",
+   "file": "public/wp-content/uploads/2026/08/1786638997493-768x256.png",
+   "exists": true,
+   "bytes": 362998,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/1786638997493.png",
+   "file": "public/wp-content/uploads/2026/08/1786638997493.png",
+   "exists": true,
+   "bytes": 1308870,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/1786640115382-1024x341.png",
+   "file": "public/wp-content/uploads/2026/08/1786640115382-1024x341.png",
+   "exists": true,
+   "bytes": 661336,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/1786640115382-300x100.png",
+   "file": "public/wp-content/uploads/2026/08/1786640115382-300x100.png",
+   "exists": true,
+   "bytes": 62955,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/1786640115382-768x256.png",
+   "file": "public/wp-content/uploads/2026/08/1786640115382-768x256.png",
+   "exists": true,
+   "bytes": 393747,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/1786640115382.png",
+   "file": "public/wp-content/uploads/2026/08/1786640115382.png",
+   "exists": true,
+   "bytes": 1389904,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/featured-1787224974502-1024x341.png",
+   "file": "public/wp-content/uploads/2026/08/featured-1787224974502-1024x341.png",
+   "exists": true,
+   "bytes": 334687,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/featured-1787224974502-300x100.png",
+   "file": "public/wp-content/uploads/2026/08/featured-1787224974502-300x100.png",
+   "exists": true,
+   "bytes": 40005,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/featured-1787224974502-768x256.png",
+   "file": "public/wp-content/uploads/2026/08/featured-1787224974502-768x256.png",
+   "exists": true,
+   "bytes": 203876,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/featured-1787224974502.png",
+   "file": "public/wp-content/uploads/2026/08/featured-1787224974502.png",
+   "exists": true,
+   "bytes": 661347,
+   "usedIn": 11
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/featured-1787288402843-1024x341.png",
+   "file": "public/wp-content/uploads/2026/08/featured-1787288402843-1024x341.png",
+   "exists": true,
+   "bytes": 720317,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/featured-1787288402843-300x100.png",
+   "file": "public/wp-content/uploads/2026/08/featured-1787288402843-300x100.png",
+   "exists": true,
+   "bytes": 66322,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/featured-1787288402843-768x256.png",
+   "file": "public/wp-content/uploads/2026/08/featured-1787288402843-768x256.png",
+   "exists": true,
+   "bytes": 429628,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/featured-1787288402843.png",
+   "file": "public/wp-content/uploads/2026/08/featured-1787288402843.png",
+   "exists": true,
+   "bytes": 1527615,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/featured-1787292002638-1024x341.png",
+   "file": "public/wp-content/uploads/2026/08/featured-1787292002638-1024x341.png",
+   "exists": true,
+   "bytes": 615226,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/featured-1787292002638-300x100.png",
+   "file": "public/wp-content/uploads/2026/08/featured-1787292002638-300x100.png",
+   "exists": true,
+   "bytes": 59836,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/featured-1787292002638-768x256.png",
+   "file": "public/wp-content/uploads/2026/08/featured-1787292002638-768x256.png",
+   "exists": true,
+   "bytes": 368480,
+   "usedIn": 1
+  },
+  {
+   "path": "/wp-content/uploads/2026/08/featured-1787292002638.png",
+   "file": "public/wp-content/uploads/2026/08/featured-1787292002638.png",
+   "exists": true,
+   "bytes": 1287081,
+   "usedIn": 5
+  },
+  {
+   "path": "/wp-content/uploads/elementor/thumbs/01-icon-r44grt7xwkr8q50y695vbuaunosh5qtvz3b64lizzi.png",
+   "file": "public/wp-content/uploads/elementor/thumbs/01-icon-r44grt7xwkr8q50y695vbuaunosh5qtvz3b64lizzi.png",
+   "exists": true,
+   "bytes": 7464,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/elementor/thumbs/02-icon-r44gwkakgf9ff64gfb3yxn4qrtda2np1am1jgyhcj2.png",
+   "file": "public/wp-content/uploads/elementor/thumbs/02-icon-r44gwkakgf9ff64gfb3yxn4qrtda2np1am1jgyhcj2.png",
+   "exists": true,
+   "bytes": 7578,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/elementor/thumbs/03-icon-r44gwo1x7rekplyztcqh7m6l5cuqxg3yn4nhe2bru6.png",
+   "file": "public/wp-content/uploads/elementor/thumbs/03-icon-r44gwo1x7rekplyztcqh7m6l5cuqxg3yn4nhe2bru6.png",
+   "exists": true,
+   "bytes": 7943,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/elementor/thumbs/04-icon-r44gwiew2r6ury76qaapsnltl1mjn9hkmcqkiek4vi.png",
+   "file": "public/wp-content/uploads/elementor/thumbs/04-icon-r44gwiew2r6ury76qaapsnltl1mjn9hkmcqkiek4vi.png",
+   "exists": true,
+   "bytes": 7474,
+   "usedIn": 2
+  },
+  {
+   "path": "/wp-content/uploads/elementor/thumbs/Hero-Banner-r160z18ffv0p8l0w56n0leo7i6hy09rrw6ln9ztyoo.png",
+   "file": "public/wp-content/uploads/elementor/thumbs/Hero-Banner-r160z18ffv0p8l0w56n0leo7i6hy09rrw6ln9ztyoo.png",
+   "exists": true,
+   "bytes": 612395,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/elementor/thumbs/alphahardscapes-image-6-e1732223273419-qxxrywjuuwnqi79phiikbysq2v3parhy1rvntt3x7c.jpeg",
+   "file": "public/wp-content/uploads/elementor/thumbs/alphahardscapes-image-6-e1732223273419-qxxrywjuuwnqi79phiikbysq2v3parhy1rvntt3x7c.jpeg",
+   "exists": true,
+   "bytes": 72809,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/elementor/thumbs/concrete-masonry-r5t560ntt2soww5mmvcn7y1xmyjcm27eafb8rw2zfc.png",
+   "file": "public/wp-content/uploads/elementor/thumbs/concrete-masonry-r5t560ntt2soww5mmvcn7y1xmyjcm27eafb8rw2zfc.png",
+   "exists": true,
+   "bytes": 432787,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/elementor/thumbs/fire-place-r5i80nlmp7wrrepec02hyhx2nant0kc3ps7gqxexug.webp",
+   "file": "public/wp-content/uploads/elementor/thumbs/fire-place-r5i80nlmp7wrrepec02hyhx2nant0kc3ps7gqxexug.webp",
+   "exists": true,
+   "bytes": 77842,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/elementor/thumbs/masonry-1-r14ju7o3l4ierri5ocuki3nce2jtyc04wli16rzowo.png",
+   "file": "public/wp-content/uploads/elementor/thumbs/masonry-1-r14ju7o3l4ierri5ocuki3nce2jtyc04wli16rzowo.png",
+   "exists": true,
+   "bytes": 397070,
+   "usedIn": 3
+  },
+  {
+   "path": "/wp-content/uploads/elementor/thumbs/retaining-walls-image-5-r1622ep1q0x3kjty87cf1gzbb8fgfu2zz2duz9ga1k.webp",
+   "file": "public/wp-content/uploads/elementor/thumbs/retaining-walls-image-5-r1622ep1q0x3kjty87cf1gzbb8fgfu2zz2duz9ga1k.webp",
+   "exists": true,
+   "bytes": 68714,
+   "usedIn": 3
+  }
+ ]
+}

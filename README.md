@@ -28,6 +28,8 @@ Applied to the migrated content and published to Sanity:
 
 `npm run staging-edits` (dry run; `-- --apply` writes `content/seed.json`) applies Kia's answers of 8-9 Nov 2026 to the built-in copy: no "licensed" or "certified" claims about Alpha ("Fully Insured" instead), the ICPI "Certified Craftsmanship" blocks removed, address 1813 Peck Ln, Cheshire, CT 06410 in the contact block and the business schema. Sanity is not changed by it: the same edits must be published there (with a write token, after Kia's go) before the live site shows them.
 
+`npm run export` (no token, no network) writes `content/export/documents.json` (all documents, `_id` and `_type` on each, no dots in ids) and `content/export/image-manifest.json` (every photo, stylesheet-image and video path with size and whether the file exists in `public/`), for loading into Sanity from TTR OS. Photos stay file paths in the repository (`wpImage` fields), so no image upload is needed. Until the load is done, set `SITE_CONTENT=local` on preview deployments to see the built-in copy.
+
 ## Titles and descriptions (scripts/titles.ts)
 
 Every indexable page has a title of 50 to 60 characters and a description of 120 to 160 (proposed in the audit of October 22, 2026, approved by Kia). The texts live in `scripts/titles.ts`: `npm run titles` writes them into `content/seed.json`, and `npm run titles -- --publish` sends only those SEO fields (title, description, their Open Graph copies and the page's JSON-LD node) to Sanity with `SANITY_WRITE_TOKEN`. Blog posts keep their own title without the " | Alpha Hardscapes" suffix. The home page title is 61 characters, approved as written.
