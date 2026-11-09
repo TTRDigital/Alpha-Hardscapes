@@ -1,0 +1,152 @@
+{
+  "slug": "go",
+  "title": "Hardscaping in New Haven & Fairfield County, CT | Alpha Hardscapes",
+  "description": "Expert hardscaping services in New Haven & Fairfield County, CT. Schedule your free consultation today and discover the perfect hardscaping for your style and budget.",
+  "ogTitle": "Expert Hardscaping Services in New Haven & Fairfield County, CT",
+  "ogDescription": "Schedule your free consultation today. Call (472) 203-3284.",
+  "ogImage": "/images/go/hero.jpg",
+  "phone": {
+    "display": "(472) 203-3284",
+    "tel": "4722033284"
+  },
+  "header": {
+    "ctaLong": "Get Your Free Quote",
+    "ctaShort": "Quote",
+    "logo": "/images/logo.png",
+    "logoAlt": "Alpha Hardscapes logo"
+  },
+  "hero": {
+    "image": "/images/go/hero.jpg",
+    "imageAlt": "Paver walkway and garden bed at a Connecticut home",
+    "eyebrow": "",
+    "headline": "Expert Hardscaping Services in New Haven & Fairfield County, CT",
+    "paragraphs": [
+      "Schedule your free consultation today and discover the perfect Hardscaping for your style and budget."
+    ],
+    "heroButtons": true,
+    "galleryLabel": "Browse Gallery",
+    "formTitle": "Request a Quote",
+    "button": "Get My Free Quote",
+    "note": "We'll call you back to set up your free consultation.",
+    "source": "Google Ads - Alpha Hardscapes (go.)",
+    "thanks": "Thanks! We got your request and will call you shortly. Need us sooner? Call {phone}.",
+    "consent": "By submitting, you agree to be contacted about your request."
+  },
+  "sections": [
+    {
+      "type": "bar",
+      "items": [
+        "Pavers & Concrete",
+        "Hardscaping",
+        "Brick & Stone Installations",
+        "Retaining Walls & Decorative Features"
+      ]
+    },
+    {
+      "type": "reviews",
+      "heading": "Client Testimonials",
+      "intro": "",
+      "moreLabel": "",
+      "moreUrl": "",
+      "items": [
+        {
+          "image": "/images/go/avatar-1.webp",
+          "stars": false,
+          "text": "I can always call Alpha Hardscape's and get the same reliability and quality I get from my own employees who have been working with me for years."
+        },
+        {
+          "image": "/images/go/avatar-2.webp",
+          "stars": false,
+          "text": "He did a great job cleaning the walkway and it is repelling water as advertised! We will definitely use Alpha Hardscapes for future projects."
+        },
+        {
+          "image": "/images/go/avatar-3.webp",
+          "stars": false,
+          "text": "The team did an outstanding job—they were detailed, professional, and left everything spotless. I would definitely hire them again for future projects."
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "heading": "About Alpha Hardscapes",
+      "text": "Welcome to Alpha Hardscapes—your go-to team for professional hardscaping contractors in CT and trusted stone paver contractors CT property owners rely on. Specializing in hardscaping and stone pavers, we bring premium craftsmanship and creative design to every outdoor project across New Haven County and Fairfield County. From intricate patios to structural retaining walls and custom garden layouts, our team turns your vision into lasting value."
+    },
+    {
+      "type": "projects",
+      "heading": "Recent Projects",
+      "images": [
+        {
+          "image": "/images/go/project-1.webp",
+          "alt": "Alpha Hardscapes project 1"
+        },
+        {
+          "image": "/images/go/project-2.webp",
+          "alt": "Alpha Hardscapes project 2"
+        },
+        {
+          "image": "/images/go/project-3.webp",
+          "alt": "Alpha Hardscapes project 3"
+        },
+        {
+          "image": "/images/go/project-4.webp",
+          "alt": "Alpha Hardscapes project 4"
+        },
+        {
+          "image": "/images/go/project-5.webp",
+          "alt": "Alpha Hardscapes project 5"
+        },
+        {
+          "image": "/images/go/project-6.webp",
+          "alt": "Alpha Hardscapes project 6"
+        },
+        {
+          "image": "/images/go/project-7.webp",
+          "alt": "Alpha Hardscapes project 7"
+        },
+        {
+          "image": "/images/go/project-8.webp",
+          "alt": "Alpha Hardscapes project 8"
+        },
+        {
+          "image": "/images/go/project-9.webp",
+          "alt": "Alpha Hardscapes project 9"
+        },
+        {
+          "image": "/images/go/project-10.webp",
+          "alt": "Alpha Hardscapes project 10"
+        },
+        {
+          "image": "/images/go/project-11.webp",
+          "alt": "Alpha Hardscapes project 11"
+        },
+        {
+          "image": "/images/go/project-12.webp",
+          "alt": "Alpha Hardscapes project 12"
+        }
+      ]
+    },
+    {
+      "type": "final",
+      "image": "/images/team-member.png",
+      "imageAlt": "Alpha Hardscapes team member",
+      "heading": "Ready to Transform Your Outdoor Space?",
+      "text": "",
+      "primaryCta": "Get Your Free Quote",
+      "callCta": "Call Us",
+      "footerLogo": "/images/logo-footer.png",
+      "footerLinks": [
+        "Get Quote",
+        "Call Us"
+      ],
+      "copyright": "Copyright © 2026 Alpha Hardscapes. All Rights Reserved.",
+      "privacyUrl": "https://alphahardscapes.com/privacy-policy/",
+      "privacyLabel": "Privacy Policy",
+      "address": "1813 Peck Ln, Cheshire, CT 06410",
+      "email": "alphahardscapes1@gmail.com"
+    }
+  ],
+  "mobileBar": {
+    "call": "Call",
+    "quote": "Get Quote"
+  }
+}
