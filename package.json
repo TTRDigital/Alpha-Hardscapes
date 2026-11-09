@@ -11,6 +11,7 @@
     "extract": "node --experimental-strip-types --no-warnings scripts/extract.ts",
     "verify": "node --experimental-strip-types --no-warnings scripts/verify.ts",
     "audit": "node --experimental-strip-types --no-warnings scripts/audit.ts",
+    "staging-edits": "node --experimental-strip-types --no-warnings scripts/staging-edits.ts",
     "seed": "node --experimental-strip-types --no-warnings scripts/seed.ts",
     "fixes": "node --experimental-strip-types --no-warnings scripts/fixes.ts",
     "titles": "node --experimental-strip-types --no-warnings scripts/titles.ts",
