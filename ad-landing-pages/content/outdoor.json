@@ -1,9 +1,9 @@
 {
   "slug": "outdoor",
-  "title": "Alpha Hardscapes | Paver Patios & Walkways in CT",
-  "description": "Alpha Hardscapes builds paver patios and walkways in Fairfield County and New Haven County, CT. Free consultation.",
+  "title": "Alpha Hardscapes | Paver Patios & Walkways in CT | Last Spots for 2026",
+  "description": "Alpha Hardscapes builds paver patios and walkways in Cheshire, Fairfield County and New Haven County, CT. Only a few spots left this season. Free consultation.",
   "ogTitle": "Alpha Hardscapes | Paver Patios & Walkways in CT",
-  "ogDescription": "Free consultation. Call (472) 203-3284.",
+  "ogDescription": "Only a few spots left this season. Free consultation. Call (472) 203-3284.",
   "ogImage": "/images/hero-patio.jpg",
   "phone": {
     "display": "(472) 203-3284",
@@ -18,11 +18,11 @@
   "hero": {
     "image": "/images/hero-patio.jpg",
     "imageAlt": "Finished paver patio at a Connecticut home",
-    "eyebrow": "Free consultation",
+    "eyebrow": "Only a few spots left for 2026",
     "headline": "Paver Patios & Walkways,\nBuilt Right Before\nthe Season Ends",
     "paragraphs": [
-      "Hardscaping team serving Fairfield and New Haven counties, CT. Properly compacted base, quality materials and a free consultation.",
-      "Hardscaping in Connecticut is seasonal. Reach out now to talk through your project and timing."
+      "Cheshire, CT hardscaping team. Properly compacted base, quality materials and a free consultation.",
+      "Our 2026 schedule is nearly full. Reach out now to grab one of the last spots this season."
     ],
     "formTitle": "Claim Your Spot",
     "button": "Get My Free Quote",
@@ -48,17 +48,17 @@
     },
     {
       "type": "season",
-      "heading": "Plan your project [[before winter]]",
+      "heading": "Only a few spots [[left this season]]",
       "paragraphs": [
         "Hardscaping in Connecticut runs on the weather. Once the ground freezes, we can't dig and compact a proper base, and a patio built on a weak base is the one that sinks and cracks after the first winter.",
-        "So we only take on what we can finish the right way. Reach out early and we'll tell you honestly what timing is realistic, this year or in spring."
+        "So we only take on what we can finish the right way. Our 2026 calendar is close to full. When the last spots are gone, new projects move to our spring list."
       ],
       "primaryCta": "Get Your Free Quote",
       "callCta": "Call (472) 203-3284",
       "steps": [
         "Send the form or call us. We'll set up a free consultation at your property.",
         "We walk the site with you, talk through layout and materials, and tell you honestly whether your project fits this season.",
-        "If it fits, we schedule your project. If not, we'll plan it for spring."
+        "If it fits, you get one of our last spots. If not, you're first in line for spring."
       ]
     },
     {
@@ -241,7 +241,7 @@
       "items": [
         {
           "q": "Can you still fit my project in this season?",
-          "a": "Whether yours fits this year depends on its size and the weather, and we'll tell you straight at the free consultation. If it can't happen this year, we'll plan it for spring.",
+          "a": "We're booking the last few spots of the 2026 season now. Whether yours fits depends on its size and the weather, and we'll tell you straight at the free consultation. If it can't happen this year, you'll be first on our spring list.",
           "open": true
         },
         {
@@ -263,6 +263,11 @@
           "q": "Is the consultation free?",
           "a": "Yes. We'll come out, look at your property, talk through options and give you a quote at no cost.",
           "open": false
+        },
+        {
+          "q": "Is your work under warranty?",
+          "a": "Yes, every project comes with a workmanship warranty. Ask us for the details at your consultation.",
+          "open": false
         }
       ]
     },
@@ -270,8 +275,8 @@
       "type": "final",
       "image": "/images/team-member.png",
       "imageAlt": "Alpha Hardscapes team member",
-      "heading": "Ready to Start Your Patio or Walkway?",
-      "text": "If you've been thinking about a new patio or walkway, now's the time to ask. Contact Alpha Hardscapes for a free consultation anywhere in New Haven, Fairfield or in between.",
+      "heading": "Want One of the Last Spots This Season?",
+      "text": "If you've been thinking about a new patio or walkway, now's the time to ask. Contact Alpha Hardscapes for a free consultation anywhere in New Haven, Fairfield or in between. We only have a few spots left before the ground freezes.",
       "primaryCta": "Get Your Free Estimate",
       "callCta": "Call Us",
       "footerLogo": "/images/logo-footer.png",
@@ -282,7 +287,7 @@
       "copyright": "Copyright © 2026 Alpha Hardscapes. All Rights Reserved.",
       "privacyUrl": "https://alphahardscapes.com/privacy-policy/",
       "privacyLabel": "Privacy Policy",
-      "address": "1813 Peck Ln, Cheshire, CT 06410",
+      "address": "Alpha Hardscapes, 1813 Peck Ln, Cheshire, CT 06410",
       "email": "alphahardscapes1@gmail.com"
     }
   ],
