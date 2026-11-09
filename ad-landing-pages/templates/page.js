@@ -1,12 +1,7 @@
 // Shared page behaviour: call number, slider, lightbox, lead form, conversions.
 (function(){
-  // Call number: /number.js sets window.ALPHA_NUMBER; the page falls back to the number in the HTML.
-  var N=window.ALPHA_NUMBER;
-  if(N&&N.tel&&N.display){
-    document.querySelectorAll('[data-phone-link]').forEach(function(a){a.setAttribute('href','tel:'+N.tel);});
-    document.querySelectorAll('[data-phone-text]').forEach(function(e){e.textContent=N.display;});
-  }
-  var shown=function(){return (N&&N.display)||(document.querySelector('[data-phone-text]')||{}).textContent||'us';};
+  // Call number: /number.js swaps phone links and text for ad visitors once Alpha's number pool exists in TTR OS; until then it does nothing.
+  var shown=function(){return (document.querySelector('[data-phone-text]')||{}).textContent||'us';};
 
   var s=document.getElementById('why-slider');
   if(s)document.querySelectorAll('.arrows button').forEach(function(b){

@@ -1,0 +1,117 @@
+{
+  "note": "Claims held (not shown) on the outdoor page until Kia approves each one. To restore, put the 'original' text back in content/outdoor.json (or the Sanity landingPage) and set approved to true. The go page contains none of these four claims.",
+  "held": [
+    {
+      "id": "spots-title",
+      "where": "Page title",
+      "original": "Alpha Hardscapes | Paver Patios & Walkways in CT | Last Spots for 2026",
+      "nowShown": "Alpha Hardscapes | Paver Patios & Walkways in CT",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": false
+    },
+    {
+      "id": "spots-meta",
+      "where": "Meta description (also dropped \"Cheshire\")",
+      "original": "Alpha Hardscapes builds paver patios and walkways in Cheshire, Fairfield County and New Haven County, CT. Only a few spots left this season. Free consultation.",
+      "nowShown": "Alpha Hardscapes builds paver patios and walkways in Fairfield County and New Haven County, CT. Free consultation.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": false
+    },
+    {
+      "id": "spots-og",
+      "where": "Share description",
+      "original": "Only a few spots left this season. Free consultation. Call (472) 203-3284.",
+      "nowShown": "Free consultation. Call (472) 203-3284.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": false
+    },
+    {
+      "id": "spots-eyebrow",
+      "where": "Hero tag",
+      "original": "Only a few spots left for 2026",
+      "nowShown": "Free consultation",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": false
+    },
+    {
+      "id": "cheshire-hero",
+      "where": "Hero paragraph 1",
+      "original": "Cheshire, CT hardscaping team. Properly compacted base, quality materials and a free consultation.",
+      "nowShown": "Hardscaping team serving Fairfield and New Haven counties, CT. Properly compacted base, quality materials and a free consultation.",
+      "why": "\"Cheshire, CT hardscaping team\" held; the address is Cheshire but Ben asked to hold the line until Kia approves.",
+      "approved": false
+    },
+    {
+      "id": "spots-hero",
+      "where": "Hero paragraph 2",
+      "original": "Our 2026 schedule is nearly full. Reach out now to grab one of the last spots this season.",
+      "nowShown": "Hardscaping in Connecticut is seasonal. Reach out now to talk through your project and timing.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": false
+    },
+    {
+      "id": "spots-season-h",
+      "where": "Season band heading",
+      "original": "Only a few spots [[left this season]]",
+      "nowShown": "Plan your project [[before winter]]",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": false
+    },
+    {
+      "id": "spots-season-p",
+      "where": "Season band paragraph 2",
+      "original": "So we only take on what we can finish the right way. Our 2026 calendar is close to full. When the last spots are gone, new projects move to our spring list.",
+      "nowShown": "So we only take on what we can finish the right way. Reach out early and we'll tell you honestly what timing is realistic, this year or in spring.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": false
+    },
+    {
+      "id": "spots-step3",
+      "where": "Season band step 3",
+      "original": "If it fits, you get one of our last spots. If not, you're first in line for spring.",
+      "nowShown": "If it fits, we schedule your project. If not, we'll plan it for spring.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": false
+    },
+    {
+      "id": "spots-faq",
+      "where": "FAQ \"Can you still fit my project in this season?\"",
+      "original": "We're booking the last few spots of the 2026 season now. Whether yours fits depends on its size and the weather, and we'll tell you straight at the free consultation. If it can't happen this year, you'll be first on our spring list.",
+      "nowShown": "Whether yours fits this year depends on its size and the weather, and we'll tell you straight at the free consultation. If it can't happen this year, we'll plan it for spring.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": false
+    },
+    {
+      "id": "days-faq",
+      "where": "FAQ \"How long does installation take?\"",
+      "original": "Most projects take 5 to 10 days, depending on the size and the site.",
+      "nowShown": "(removed, not shown)",
+      "why": "Duration claim not confirmed by Kia.",
+      "approved": false
+    },
+    {
+      "id": "warranty-faq",
+      "where": "FAQ \"Is your work under warranty?\"",
+      "original": "Yes, every project comes with a workmanship warranty. Ask us for the details at your consultation.",
+      "nowShown": "(removed, not shown)",
+      "why": "Warranty claim not confirmed; Kia must say what the warranty is, in writing.",
+      "approved": false
+    },
+    {
+      "id": "spots-final-h",
+      "where": "Final heading",
+      "original": "Want One of the Last Spots This Season?",
+      "nowShown": "Ready to Start Your Patio or Walkway?",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": false
+    },
+    {
+      "id": "spots-final-p",
+      "where": "Final paragraph (last sentence)",
+      "original": "If you've been thinking about a new patio or walkway, now's the time to ask. Contact Alpha Hardscapes for a free consultation anywhere in New Haven, Fairfield or in between. We only have a few spots left before the ground freezes.",
+      "nowShown": "If you've been thinking about a new patio or walkway, now's the time to ask. Contact Alpha Hardscapes for a free consultation anywhere in New Haven, Fairfield or in between.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": false
+    }
+  ]
+}

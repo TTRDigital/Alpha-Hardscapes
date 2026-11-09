@@ -196,8 +196,8 @@ export function render(c, { css, icons, script }) {
 <!-- Google Ads tag, account 816-147-4744 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=${TRACKING.awId}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${TRACKING.awId}');</script>
-<!-- Call number: edit /number.js to swap in a tracking number. -->
-<script src="/number.js"></script>
+<!-- Call number: /number.js (Pro Wildlife version, Alpha site key); inert until the number pool exists in TTR OS. -->
+<script src="/number.js" defer></script>
 
 <style>
 ${css}
