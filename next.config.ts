@@ -40,7 +40,11 @@ const nextConfig: NextConfig = {
   },
   // The season-end ad page is one static file in public/patios-walkways/ (Kia, Nov 6). Serve it at the folder address.
   async rewrites() {
-    return { beforeFiles: [{ source: "/patios-walkways/", destination: "/patios-walkways/index.html" }], afterFiles: [], fallback: [] };
+    return { beforeFiles: [
+      { source: "/patios-walkways/", destination: "/patios-walkways/index.html" },
+      // Throw-away branch only (TTR-1449): hero photo comparison for Kia.
+      { source: "/ttr-1449-hero-compare/", destination: "/ttr-1449-hero-compare/index.html" },
+    ], afterFiles: [], fallback: [] };
   },
   async redirects() {
     return redirects;
