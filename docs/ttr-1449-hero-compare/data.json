@@ -1,0 +1,245 @@
+{
+ "walkway": {
+  "path": "/walkway-patio-connecticut/",
+  "phone": [
+   {
+    "id": "current",
+    "label": "1080 px, WebP q70 (as served now)",
+    "fmt": "webp",
+    "w": 1080,
+    "bytes": 196720,
+    "psnr": 32.8
+   },
+   {
+    "id": "a",
+    "label": "1080 px, WebP q62, effort 6, sharp YUV",
+    "fmt": "webp",
+    "w": 1080,
+    "bytes": 176698,
+    "psnr": 32
+   },
+   {
+    "id": "b",
+    "label": "1080 px, WebP q55, effort 6, sharp YUV",
+    "fmt": "webp",
+    "w": 1080,
+    "bytes": 162084,
+    "psnr": 31.3
+   },
+   {
+    "id": "c",
+    "label": "1080 px, AVIF q45, effort 6",
+    "fmt": "avif",
+    "w": 1080,
+    "bytes": 95061,
+    "psnr": 28.8
+   },
+   {
+    "id": "d",
+    "label": "1080 px, AVIF q35, effort 6",
+    "fmt": "avif",
+    "w": 1080,
+    "bytes": 58808,
+    "psnr": 26.5
+   },
+   {
+    "id": "e",
+    "label": "828 px, WebP q70, effort 6, sharp YUV",
+    "fmt": "webp",
+    "w": 828,
+    "bytes": 119420,
+    "psnr": 32.6
+   },
+   {
+    "id": "f",
+    "label": "828 px, WebP q60, effort 6, sharp YUV",
+    "fmt": "webp",
+    "w": 828,
+    "bytes": 106680,
+    "psnr": 31.6
+   }
+  ],
+  "desktop": [
+   {
+    "id": "current",
+    "label": "Full width, as served now",
+    "fmt": "webp",
+    "bytes": 795960
+   },
+   {
+    "id": "a",
+    "label": "Full width, WebP q62, effort 6, sharp YUV",
+    "fmt": "webp",
+    "bytes": 601024
+   },
+   {
+    "id": "c",
+    "label": "Full width, AVIF q45, effort 6",
+    "fmt": "avif",
+    "bytes": 319341
+   }
+  ]
+ },
+ "retaining": {
+  "path": "/retaining-walls-connecticut/",
+  "phone": [
+   {
+    "id": "current",
+    "label": "1080 px, WebP q70 (as served now)",
+    "fmt": "webp",
+    "w": 1080,
+    "bytes": 109816,
+    "psnr": 32.8
+   },
+   {
+    "id": "a",
+    "label": "1080 px, WebP q62, effort 6, sharp YUV",
+    "fmt": "webp",
+    "w": 1080,
+    "bytes": 97352,
+    "psnr": 32
+   },
+   {
+    "id": "b",
+    "label": "1080 px, WebP q55, effort 6, sharp YUV",
+    "fmt": "webp",
+    "w": 1080,
+    "bytes": 89312,
+    "psnr": 31.3
+   },
+   {
+    "id": "c",
+    "label": "1080 px, AVIF q45, effort 6",
+    "fmt": "avif",
+    "w": 1080,
+    "bytes": 52442,
+    "psnr": 29
+   },
+   {
+    "id": "d",
+    "label": "1080 px, AVIF q35, effort 6",
+    "fmt": "avif",
+    "w": 1080,
+    "bytes": 31215,
+    "psnr": 26.8
+   },
+   {
+    "id": "e",
+    "label": "828 px, WebP q70, effort 6, sharp YUV",
+    "fmt": "webp",
+    "w": 828,
+    "bytes": 64554,
+    "psnr": 32.7
+   },
+   {
+    "id": "f",
+    "label": "828 px, WebP q60, effort 6, sharp YUV",
+    "fmt": "webp",
+    "w": 828,
+    "bytes": 57112,
+    "psnr": 31.8
+   }
+  ],
+  "desktop": [
+   {
+    "id": "current",
+    "label": "Full width, as served now",
+    "fmt": "jpeg",
+    "bytes": 436707
+   },
+   {
+    "id": "a",
+    "label": "Full width, WebP q62, effort 6, sharp YUV",
+    "fmt": "webp",
+    "bytes": 287584
+   },
+   {
+    "id": "c",
+    "label": "Full width, AVIF q45, effort 6",
+    "fmt": "avif",
+    "bytes": 161014
+   }
+  ]
+ },
+ "about": {
+  "path": "/about-us/",
+  "phone": [
+   {
+    "id": "current",
+    "label": "1080 px, WebP q70 (as served now)",
+    "fmt": "webp",
+    "w": 1080,
+    "bytes": 124198,
+    "psnr": 33.3
+   },
+   {
+    "id": "a",
+    "label": "1080 px, WebP q62, effort 6, sharp YUV",
+    "fmt": "webp",
+    "w": 1080,
+    "bytes": 109796,
+    "psnr": 32.5
+   },
+   {
+    "id": "b",
+    "label": "1080 px, WebP q55, effort 6, sharp YUV",
+    "fmt": "webp",
+    "w": 1080,
+    "bytes": 99984,
+    "psnr": 31.8
+   },
+   {
+    "id": "c",
+    "label": "1080 px, AVIF q45, effort 6",
+    "fmt": "avif",
+    "w": 1080,
+    "bytes": 59343,
+    "psnr": 29.9
+   },
+   {
+    "id": "d",
+    "label": "1080 px, AVIF q35, effort 6",
+    "fmt": "avif",
+    "w": 1080,
+    "bytes": 35525,
+    "psnr": 27.6
+   },
+   {
+    "id": "e",
+    "label": "828 px, WebP q70, effort 6, sharp YUV",
+    "fmt": "webp",
+    "w": 828,
+    "bytes": 73098,
+    "psnr": 33
+   },
+   {
+    "id": "f",
+    "label": "828 px, WebP q60, effort 6, sharp YUV",
+    "fmt": "webp",
+    "w": 828,
+    "bytes": 64264,
+    "psnr": 32.1
+   }
+  ],
+  "desktop": [
+   {
+    "id": "current",
+    "label": "Full width, as served now",
+    "fmt": "webp",
+    "bytes": 757166
+   },
+   {
+    "id": "a",
+    "label": "Full width, WebP q62, effort 6, sharp YUV",
+    "fmt": "webp",
+    "bytes": 510976
+   },
+   {
+    "id": "c",
+    "label": "Full width, AVIF q45, effort 6",
+    "fmt": "avif",
+    "bytes": 307210
+   }
+  ]
+ }
+}

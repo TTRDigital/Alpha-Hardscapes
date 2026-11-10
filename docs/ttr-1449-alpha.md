@@ -33,3 +33,21 @@ A local production build of this repo scores the same or lower on mobile (65, 71
 Mobile LCP is the first section's background photo (64 to 197 KB on phones; each 10 KB is about 0.1 s of simulated LCP) plus Elementor script time (TBT 350 to 380 ms on three pages) and about 79% unused global CSS.
 
 Nothing look-neutral moved the score: hero as an `<img>`, delayed below-fold images, no font preloads, AVIF at matched quality (0 to 20% smaller). Not done, need Kia: a lighter phone hero, delaying Elementor until first interaction. Not done, needs screenshot diffs: trimming unused CSS.
+
+## Ahrefs script in the bundle (note for the ticket)
+
+The bundle (`/assets/js/82995ea43b532240f7983d2c4c237464.js`, line 1) starts with Ahrefs analytics code. It reads `data-key` and `data-domain` from its own script tag, which has neither, so it stops at "missing data-key" and sends nothing; no Ahrefs request appears in the page's network traffic. It is left in place (2.3 KB Brotli) until Kia or Rory confirm it can go.
+
+## Hero photo options for Kia (nothing applied)
+
+Open `docs/ttr-1449-hero-compare/index.html` (needs the `img/` folder next to it). For the three pages held back by their hero photo (`/walkway-patio-connecticut/` 76, `/retaining-walls-connecticut/` 76, `/about-us/` 80) it shows the current phone hero and six lighter options, as real page screenshots at 375 px at 2x, 390 px at 3x and 1440 px, with bytes, PSNR and an estimated mobile-score effect.
+
+Phone hero sizes (KB), current then options A (WebP q62, effort 6), B (WebP q55), C (AVIF q45), D (AVIF q35), E (828 px WebP q70), F (828 px WebP q60):
+
+| Page | Now | A | B | C | D | E | F |
+|---|---|---|---|---|---|---|---|
+| Walkway | 192 | 173 | 158 | 93 | 57 | 117 | 104 |
+| Retaining walls | 107 | 95 | 87 | 51 | 30 | 63 | 56 |
+| About us | 121 | 107 | 98 | 58 | 35 | 71 | 63 |
+
+Better WebP settings alone (A, B) save only 10 to 25%. The big savings come from AVIF (C, D) or a smaller phone image (E, F). The estimate is a straight-line extrapolation from one measurement (walkway 197 to 105 KB: mobile 77 to 84, local Lighthouse, about 5 points of run-to-run noise): about 0.076 points per KB. By that estimate the hero alone brings walkway to about 83, retaining walls to about 80 and about us to about 85, so none reaches 90 on this alone.
