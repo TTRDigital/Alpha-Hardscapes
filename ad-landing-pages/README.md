@@ -1,9 +1,12 @@
 # Alpha Hardscapes ad pages (own Vercel project)
 
-One Vercel project per ad account (Kia, Nov 6), apart from the SEO site. Static page in `public/` (index.html + images), and one Vercel Function, `api/season-lead.ts`, for the form.
+One Vercel project per ad account, apart from the SEO site. Project `alpha-ad-pages`, Root Directory `ad-landing-pages`, Framework Other.
 
-- Project: `alpha-ad-pages`, Root Directory `ad-landing-pages`, Framework Other. Production branch: `claude/alpha-ad-pages`.
-- Environment variable (set by a person in Vercel, never in the page): `GHL_SEASON_WEBHOOK_URL` (GoHighLevel inbound webhook). Optional: `TTR_OS_URL`, `NEXT_PUBLIC_TTR_SITE_KEY`.
-- noindex on every response (vercel.json header) and in the page.
-- Domain: add a subdomain later (for example ads.alphahardscapes.com) only on Kia's yes, then point the Google Ads final URL at it.
-- Google Ads tag and conversion labels: to be added in `public/index.html` where marked.
+- `content/*.json` = page content (outdoor, go). Same shape as the Sanity `landingPage` document (project 7ysj6im9). `npm run build` reads Sanity first (read only, public dataset) and falls back to these files, then writes `dist/<slug>/index.html`.
+- `templates/` shared CSS, icons and page script. `scripts/render.mjs` turns content into HTML.
+- Hosts (vercel.json): `outdoor.` and `paver.` serve `/outdoor`, `go.` serves `/go`; any other host (previews) serves outdoor. `/go` and `/outdoor` also work on previews.
+- Form: `api/season-lead.ts` sends each lead to TTR OS (`/api/site/form`) and the GHL webhook (`GHL_SEASON_WEBHOOK_URL`, set in Vercel by a person).
+- Calls: `number.js` is Pro Wildlife's dynamic number script with Alpha's site key. Inert (default (472) 203-3284) until the number pool exists in TTR OS.
+- Sanity: `sanity/landingPage.ts` is the schema (register in the Studio). `node scripts/seed-sanity.mjs` is a dry run; `--write` with `SANITY_WRITE_TOKEN` creates missing documents only, never overwrites.
+- `held-claims.json`: claims taken off the outdoor page until Kia approves each one.
+- noindex on every response and in the pages.

@@ -1,0 +1,143 @@
+{
+  "note": "Claims that were held off the outdoor page. Released (approved) entries are shown again, per Kia via Ben on Nov 9. Still held: the '5 to 10 days' FAQ. No licence or certification wording is shown; 'Fully Insured' stays.",
+  "held": [
+    {
+      "id": "spots-title",
+      "where": "Page title",
+      "original": "Alpha Hardscapes | Paver Patios & Walkways in CT | Last Spots for 2026",
+      "nowShown": "Alpha Hardscapes | Paver Patios & Walkways in CT | Last Spots for 2026",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": true,
+      "released": true,
+      "approvedBy": "Kia, relayed by Ben Nov 9 (spots wording: Kia confirmed true Nov 7)"
+    },
+    {
+      "id": "spots-meta",
+      "where": "Meta description (also dropped \"Cheshire\")",
+      "original": "Alpha Hardscapes builds paver patios and walkways in Cheshire, Fairfield County and New Haven County, CT. Only a few spots left this season. Free consultation.",
+      "nowShown": "Alpha Hardscapes builds paver patios and walkways in Cheshire, Fairfield County and New Haven County, CT. Only a few spots left this season. Free consultation.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": true,
+      "released": true,
+      "approvedBy": "Kia, relayed by Ben Nov 9 (spots wording: Kia confirmed true Nov 7)"
+    },
+    {
+      "id": "spots-og",
+      "where": "Share description",
+      "original": "Only a few spots left this season. Free consultation. Call (472) 203-3284.",
+      "nowShown": "Only a few spots left this season. Free consultation. Call (472) 203-3284.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": true,
+      "released": true,
+      "approvedBy": "Kia, relayed by Ben Nov 9 (spots wording: Kia confirmed true Nov 7)"
+    },
+    {
+      "id": "spots-eyebrow",
+      "where": "Hero tag",
+      "original": "Only a few spots left for 2026",
+      "nowShown": "Only a few spots left for 2026",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": true,
+      "released": true,
+      "approvedBy": "Kia, relayed by Ben Nov 9 (spots wording: Kia confirmed true Nov 7)"
+    },
+    {
+      "id": "cheshire-hero",
+      "where": "Hero paragraph 1",
+      "original": "Cheshire, CT hardscaping team. Properly compacted base, quality materials and a free consultation.",
+      "nowShown": "Cheshire, CT hardscaping team. Properly compacted base, quality materials and a free consultation.",
+      "why": "\"Cheshire, CT hardscaping team\" held; the address is Cheshire but Ben asked to hold the line until Kia approves.",
+      "approved": true,
+      "released": true,
+      "approvedBy": "Kia, relayed by Ben Nov 9 (spots wording: Kia confirmed true Nov 7)"
+    },
+    {
+      "id": "spots-hero",
+      "where": "Hero paragraph 2",
+      "original": "Our 2026 schedule is nearly full. Reach out now to grab one of the last spots this season.",
+      "nowShown": "Our 2026 schedule is nearly full. Reach out now to grab one of the last spots this season.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": true,
+      "released": true,
+      "approvedBy": "Kia, relayed by Ben Nov 9 (spots wording: Kia confirmed true Nov 7)"
+    },
+    {
+      "id": "spots-season-h",
+      "where": "Season band heading",
+      "original": "Only a few spots [[left this season]]",
+      "nowShown": "Only a few spots [[left this season]]",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": true,
+      "released": true,
+      "approvedBy": "Kia, relayed by Ben Nov 9 (spots wording: Kia confirmed true Nov 7)"
+    },
+    {
+      "id": "spots-season-p",
+      "where": "Season band paragraph 2",
+      "original": "So we only take on what we can finish the right way. Our 2026 calendar is close to full. When the last spots are gone, new projects move to our spring list.",
+      "nowShown": "So we only take on what we can finish the right way. Our 2026 calendar is close to full. When the last spots are gone, new projects move to our spring list.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": true,
+      "released": true,
+      "approvedBy": "Kia, relayed by Ben Nov 9 (spots wording: Kia confirmed true Nov 7)"
+    },
+    {
+      "id": "spots-step3",
+      "where": "Season band step 3",
+      "original": "If it fits, you get one of our last spots. If not, you're first in line for spring.",
+      "nowShown": "If it fits, you get one of our last spots. If not, you're first in line for spring.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": true,
+      "released": true,
+      "approvedBy": "Kia, relayed by Ben Nov 9 (spots wording: Kia confirmed true Nov 7)"
+    },
+    {
+      "id": "spots-faq",
+      "where": "FAQ \"Can you still fit my project in this season?\"",
+      "original": "We're booking the last few spots of the 2026 season now. Whether yours fits depends on its size and the weather, and we'll tell you straight at the free consultation. If it can't happen this year, you'll be first on our spring list.",
+      "nowShown": "We're booking the last few spots of the 2026 season now. Whether yours fits depends on its size and the weather, and we'll tell you straight at the free consultation. If it can't happen this year, you'll be first on our spring list.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": true,
+      "released": true,
+      "approvedBy": "Kia, relayed by Ben Nov 9 (spots wording: Kia confirmed true Nov 7)"
+    },
+    {
+      "id": "days-faq",
+      "where": "FAQ \"How long does installation take?\"",
+      "original": "Most projects take 5 to 10 days, depending on the size and the site.",
+      "nowShown": "(removed, not shown)",
+      "why": "Duration claim not confirmed by Kia.",
+      "approved": false
+    },
+    {
+      "id": "warranty-faq",
+      "where": "FAQ \"Is your work under warranty?\"",
+      "original": "Yes, every project comes with a workmanship warranty. Ask us for the details at your consultation.",
+      "nowShown": "Yes, every project comes with a workmanship warranty. Ask us for the details at your consultation.",
+      "why": "Warranty claim not confirmed; Kia must say what the warranty is, in writing.",
+      "approved": true,
+      "released": true,
+      "approvedBy": "Kia, relayed by Ben Nov 9 (spots wording: Kia confirmed true Nov 7)"
+    },
+    {
+      "id": "spots-final-h",
+      "where": "Final heading",
+      "original": "Want One of the Last Spots This Season?",
+      "nowShown": "Want One of the Last Spots This Season?",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": true,
+      "released": true,
+      "approvedBy": "Kia, relayed by Ben Nov 9 (spots wording: Kia confirmed true Nov 7)"
+    },
+    {
+      "id": "spots-final-p",
+      "where": "Final paragraph (last sentence)",
+      "original": "If you've been thinking about a new patio or walkway, now's the time to ask. Contact Alpha Hardscapes for a free consultation anywhere in New Haven, Fairfield or in between. We only have a few spots left before the ground freezes.",
+      "nowShown": "If you've been thinking about a new patio or walkway, now's the time to ask. Contact Alpha Hardscapes for a free consultation anywhere in New Haven, Fairfield or in between. We only have a few spots left before the ground freezes.",
+      "why": "Scarcity claim (Google Misrepresentation) that Kia has not confirmed is true.",
+      "approved": true,
+      "released": true,
+      "approvedBy": "Kia, relayed by Ben Nov 9 (spots wording: Kia confirmed true Nov 7)"
+    }
+  ]
+}

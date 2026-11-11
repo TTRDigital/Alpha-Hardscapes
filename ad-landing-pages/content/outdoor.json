@@ -1,0 +1,298 @@
+{
+  "slug": "outdoor",
+  "title": "Alpha Hardscapes | Paver Patios & Walkways in CT | Last Spots for 2026",
+  "description": "Alpha Hardscapes builds paver patios and walkways in Cheshire, Fairfield County and New Haven County, CT. Only a few spots left this season. Free consultation.",
+  "ogTitle": "Alpha Hardscapes | Paver Patios & Walkways in CT",
+  "ogDescription": "Only a few spots left this season. Free consultation. Call (472) 203-3284.",
+  "ogImage": "/images/hero-patio.jpg",
+  "phone": {
+    "display": "(472) 203-3284",
+    "tel": "4722033284"
+  },
+  "header": {
+    "ctaLong": "Get Your Free Quote",
+    "ctaShort": "Quote",
+    "logo": "/images/logo.png",
+    "logoAlt": "Alpha Hardscapes logo"
+  },
+  "hero": {
+    "image": "/images/hero-patio.jpg",
+    "imageAlt": "Finished paver patio at a Connecticut home",
+    "eyebrow": "Only a few spots left for 2026",
+    "headline": "Paver Patios & Walkways,\nBuilt Right Before\nthe Season Ends",
+    "paragraphs": [
+      "Cheshire, CT hardscaping team. Properly compacted base, quality materials and a free consultation.",
+      "Our 2026 schedule is nearly full. Reach out now to grab one of the last spots this season."
+    ],
+    "formTitle": "Claim Your Spot",
+    "button": "Get My Free Quote",
+    "note": "We'll call you back to set up your free consultation.",
+    "source": "Google Ads - Season End 2026",
+    "thanks": "Thanks! We got your request and will call you shortly. Need us sooner? Call {phone}.",
+    "consent": "By submitting, you agree to be contacted about your request."
+  },
+  "sections": [
+    {
+      "type": "split",
+      "imageSide": "left",
+      "imageStyle": "img-a",
+      "image": "/images/patio-fire-pit.webp",
+      "imageAlt": "Paver patio with fire pit in Connecticut",
+      "first": true,
+      "heading": "Patios & Walkways for\nConnecticut Homes",
+      "paragraphs": [
+        "A new patio or walkway changes how your whole yard looks and works. We build paver projects across southern Connecticut that are made to handle our weather and look good for years. Whether you want a better first impression out front or a place to gather out back, our team handles patios, walkways and pavers throughout Fairfield and New Haven counties."
+      ],
+      "items": [],
+      "cta": "Call Us"
+    },
+    {
+      "type": "season",
+      "heading": "Only a few spots [[left this season]]",
+      "paragraphs": [
+        "Hardscaping in Connecticut runs on the weather. Once the ground freezes, we can't dig and compact a proper base, and a patio built on a weak base is the one that sinks and cracks after the first winter.",
+        "So we only take on what we can finish the right way. Our 2026 calendar is close to full. When the last spots are gone, new projects move to our spring list."
+      ],
+      "primaryCta": "Get Your Free Quote",
+      "callCta": "Call (472) 203-3284",
+      "steps": [
+        "Send the form or call us. We'll set up a free consultation at your property.",
+        "We walk the site with you, talk through layout and materials, and tell you honestly whether your project fits this season.",
+        "If it fits, you get one of our last spots. If not, you're first in line for spring."
+      ]
+    },
+    {
+      "type": "split",
+      "imageSide": "right",
+      "imageStyle": "img-b",
+      "image": "/images/walkway-new-england.webp",
+      "imageAlt": "Paver walkway at a New England home",
+      "first": false,
+      "heading": "Pavers Made for\nNew England Living",
+      "paragraphs": [
+        "From Fairfield's coastal homes to New Haven's older neighborhoods, every property is a little different. We design each patio and walkway to suit the house it sits next to and the way you actually use your yard."
+      ],
+      "items": [
+        "**Bluestone** with natural edging, a great fit for Colonial and Cape-style homes",
+        "**Fieldstone** for a traditional or rustic look",
+        "**Modern pavers** in clean, geometric layouts",
+        "**Custom stone inlays** and borders for extra detail",
+        "**Lighting and stone steps** for safer, nicer evenings outside",
+        "**Drainage and grading** built in so water runs off instead of pooling"
+      ],
+      "cta": "Call Us",
+      "listIntro": "Popular options in Fairfield & New Haven:"
+    },
+    {
+      "type": "benefits",
+      "heading": "Why a [[Paver Patio]] Is Worth It",
+      "intro": "A good patio or walkway isn't only about looks. It gives you more usable space, makes getting around the yard easier and holds up to Connecticut winters when it's built on the right base.",
+      "items": [
+        {
+          "icon": "house",
+          "title": "More Usable Space",
+          "text": "A well-built patio turns part of your yard into a real outdoor room you'll use all season."
+        },
+        {
+          "icon": "leaf",
+          "title": "Better Curb Appeal",
+          "text": "A clean walkway makes a strong first impression and ties your landscape together."
+        },
+        {
+          "icon": "users",
+          "title": "Room to Entertain",
+          "text": "Give cookouts, get-togethers and quiet evenings a space of their own."
+        },
+        {
+          "icon": "wrench",
+          "title": "Easier to Get Around",
+          "text": "Smart layouts make it simple to move between the house, the driveway and the yard."
+        },
+        {
+          "icon": "sun",
+          "title": "Built for Our Winters",
+          "text": "The right materials, base and grading help pavers handle Connecticut's freeze and thaw."
+        },
+        {
+          "icon": "star",
+          "title": "Your Style",
+          "text": "Fieldstone, bluestone or modern pavers, designed to match your home and your taste."
+        }
+      ],
+      "closing": "Whether it's for hosting friends or your morning coffee, a patio that's designed well changes how you use your yard. Talk to us now and we'll tell you if we can get yours in before the season ends.",
+      "cta": "Call Us"
+    },
+    {
+      "type": "projects",
+      "heading": "Recent [[Patio & Walkway]] Projects",
+      "images": [
+        {
+          "image": "/images/project-1.webp",
+          "alt": "Patio and walkway project 1"
+        },
+        {
+          "image": "/images/project-2.webp",
+          "alt": "Patio and walkway project 2"
+        },
+        {
+          "image": "/images/project-3.webp",
+          "alt": "Patio and walkway project 3"
+        },
+        {
+          "image": "/images/project-4.jpg",
+          "alt": "Patio and walkway project 4"
+        },
+        {
+          "image": "/images/project-5.jpg",
+          "alt": "Patio and walkway project 5"
+        },
+        {
+          "image": "/images/project-6.jpg",
+          "alt": "Patio and walkway project 6"
+        },
+        {
+          "image": "/images/project-7.webp",
+          "alt": "Patio and walkway project 7"
+        },
+        {
+          "image": "/images/project-8.jpg",
+          "alt": "Patio and walkway project 8"
+        }
+      ]
+    },
+    {
+      "type": "why",
+      "backgroundImage": "/images/why-background.png",
+      "markImage": "/images/logo-graphic.png",
+      "markAlt": "Alpha Hardscapes logo graphic",
+      "heading": "Why Homeowners Choose [[Alpha Hardscapes]]",
+      "intro": "We're a local team that cares about the parts you can't see as much as the parts you can. Careful prep, good materials and clear communication from the first visit to the final walkthrough.",
+      "cards": [
+        {
+          "icon": "pin",
+          "title": "Local Know-How",
+          "text": "We know the soil, slopes, weather and home styles of Fairfield and New Haven counties, and we build for them."
+        },
+        {
+          "icon": "shield",
+          "title": "Careful Craftsmanship",
+          "text": "Experienced paver installers who take the time to get the base, slope and details right."
+        },
+        {
+          "icon": "star",
+          "title": "Quality Materials",
+          "text": "Natural stone, pavers and fieldstone chosen to last and to look good doing it."
+        },
+        {
+          "icon": "drops",
+          "title": "We Solve Tricky Yards",
+          "text": "Drainage problems, slopes and tight spaces are part of the job, and we plan for them up front."
+        },
+        {
+          "icon": "users",
+          "title": "Happy Homeowners",
+          "text": "Don't take our word for it. Read what our customers say in the reviews below."
+        },
+        {
+          "icon": "check",
+          "title": "Insured",
+          "text": "We're insured, so you can hire us with confidence."
+        }
+      ]
+    },
+    {
+      "type": "reviews",
+      "heading": "Client Reviews",
+      "intro": "Here's what homeowners in Fairfield and New Haven say about working with us:",
+      "moreLabel": "See More Reviews",
+      "moreUrl": "https://share.google/Qmq58TVQkqbZA4dhx",
+      "items": [
+        {
+          "initial": "m",
+          "name": "mjscads",
+          "text": "Sebastian did an awesome job. He was prompt, professional, and very tidy. The work turned out awesome. We will be utilizing his services further in the future. Highly recommend!"
+        },
+        {
+          "initial": "B",
+          "name": "Byron Perez",
+          "text": "Sebastian and his team were great, the walkway came out looking beautiful. We are very happy with the job and end result. I will definitely recommend Alpha Hardscapes."
+        },
+        {
+          "initial": "K",
+          "name": "Kurt",
+          "text": "Sebastian is not just a mason, he's a craftsman. He's done two jobs for us. His bidding is competitive and accurate (no change orders), and he understands exactly what needs to be done."
+        },
+        {
+          "initial": "B",
+          "name": "Beverly Beichner",
+          "text": "Sebastian did an excellent job on my project. He was thorough, completed the job on time, and communicated every step of the way. Would highly recommend."
+        }
+      ]
+    },
+    {
+      "type": "area",
+      "heading": "Our Service Area",
+      "text": "We work across Fairfield County, New Haven County and the rest of southern Connecticut, for homeowners and businesses. If you're not sure we cover your town, give us a call and ask.",
+      "pill": "Southern Connecticut"
+    },
+    {
+      "type": "faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "Can you still fit my project in this season?",
+          "a": "We're booking the last few spots of the 2026 season now. Whether yours fits depends on its size and the weather, and we'll tell you straight at the free consultation. If it can't happen this year, you'll be first on our spring list.",
+          "open": true
+        },
+        {
+          "q": "What materials do you work with?",
+          "a": "Bluestone, fieldstone, natural stone and a wide range of pavers, plus custom inlays and borders. We'll help you pick what suits your home and budget.",
+          "open": false
+        },
+        {
+          "q": "Do you work in both Fairfield and New Haven counties?",
+          "a": "Yes. We serve Fairfield County, New Haven County and the surrounding parts of southern Connecticut.",
+          "open": false
+        },
+        {
+          "q": "Can you fix drainage or grading problems?",
+          "a": "Yes. We plan drainage and grading into every project so water moves away from your patio or walkway instead of pooling on it.",
+          "open": false
+        },
+        {
+          "q": "Is the consultation free?",
+          "a": "Yes. We'll come out, look at your property, talk through options and give you a quote at no cost.",
+          "open": false
+        },
+        {
+          "q": "Is your work under warranty?",
+          "a": "Yes, every project comes with a workmanship warranty. Ask us for the details at your consultation.",
+          "open": false
+        }
+      ]
+    },
+    {
+      "type": "final",
+      "image": "/images/team-member.png",
+      "imageAlt": "Alpha Hardscapes team member",
+      "heading": "Want One of the Last Spots This Season?",
+      "text": "If you've been thinking about a new patio or walkway, now's the time to ask. Contact Alpha Hardscapes for a free consultation anywhere in New Haven, Fairfield or in between. We only have a few spots left before the ground freezes.",
+      "primaryCta": "Get Your Free Estimate",
+      "callCta": "Call Us",
+      "footerLogo": "/images/logo-footer.png",
+      "footerLinks": [
+        "Get Quote",
+        "Call Us"
+      ],
+      "copyright": "Copyright © 2026 Alpha Hardscapes. All Rights Reserved.",
+      "privacyUrl": "https://alphahardscapes.com/privacy-policy/",
+      "privacyLabel": "Privacy Policy",
+      "address": "Alpha Hardscapes, 1813 Peck Ln, Cheshire, CT 06410",
+      "email": "alphahardscapes1@gmail.com"
+    }
+  ],
+  "mobileBar": {
+    "call": "Call",
+    "quote": "Get Quote"
+  }
+}
