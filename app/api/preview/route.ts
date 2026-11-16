@@ -1,5 +1,5 @@
 import { draftMode } from "next/headers";
-import { checkPreviewLink, NOT_SET_UP, PREVIEW_HEADERS, previewSecret } from "@/lib/preview";
+import { checkPreviewLink, NOT_SET_UP, PREVIEW_HEADERS, previewReadToken, previewSecret } from "@/lib/preview";
 
 /**
  * Draft preview for TTR OS (lib/preview.ts): a valid, unexpired signed link turns on draft mode and
@@ -14,6 +14,10 @@ export async function GET(req: Request) {
   const check = checkPreviewLink({ path: q.get("path"), exp: q.get("exp"), sig: q.get("sig") }, previewSecret());
   if (!check.ok) {
     return new Response(check.why, { status: check.why === NOT_SET_UP ? 503 : 401, headers: { ...PREVIEW_HEADERS, "Content-Type": "text/plain; charset=UTF-8" } });
+  }
+  // Without a Sanity read token the page would only show published content and answer 404 for a draft: say so instead.
+  if (!previewReadToken()) {
+    return new Response("Preview is not set up on this site (SANITY_READ_TOKEN or SANITY_PREVIEW_TOKEN is missing).", { status: 503, headers: { ...PREVIEW_HEADERS, "Content-Type": "text/plain; charset=UTF-8" } });
   }
   (await draftMode()).enable();
   return new Response(null, { status: 307, headers: { ...PREVIEW_HEADERS, Location: new URL(check.path, url.origin).toString() } });

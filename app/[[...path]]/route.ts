@@ -30,7 +30,7 @@ export async function GET(_req: Request, ctx: { params: Promise<{ path?: string[
   // Draft preview must show Sanity's content or say it cannot: never the built-in copy in its place.
   const preview = await isPreview();
   if (!site.fromCms && preview) {
-    return new Response("Preview could not read Sanity (check SANITY_READ_TOKEN).", {
+    return new Response("Preview could not read Sanity (check SANITY_READ_TOKEN or SANITY_PREVIEW_TOKEN).", {
       status: 503,
       headers: { "Content-Type": "text/plain; charset=UTF-8", "Cache-Control": "private, no-store", "X-Robots-Tag": "noindex, nofollow" },
     });

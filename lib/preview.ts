@@ -50,6 +50,11 @@ export function checkPreviewLink(link: PreviewLink, secret: string, now = Date.n
   return { ok: true, path };
 }
 
+/** The Sanity token that reads drafts: SANITY_READ_TOKEN, or SANITY_PREVIEW_TOKEN (the name TTR OS's other client sites use), or SANITY_WRITE_TOKEN. */
+export function previewReadToken(): string {
+  return (process.env.SANITY_READ_TOKEN || process.env.SANITY_PREVIEW_TOKEN || process.env.SANITY_WRITE_TOKEN || "").trim();
+}
+
 /** True while this request is in draft mode. Only on Vercel; false anywhere else and on any error. */
 export async function isPreview(): Promise<boolean> {
   if (!process.env.VERCEL) return false;

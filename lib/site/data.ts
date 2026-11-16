@@ -2,7 +2,7 @@ import "server-only";
 
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { isPreview } from "@/lib/preview";
+import { isPreview, previewReadToken } from "@/lib/preview";
 import { apiVersion, dataset, projectId } from "@/sanity/env";
 import { buildSiteData, normalizePath, resolvePath, type SeedDoc } from "./local";
 import type { ArchiveDoc, PageDoc, PostDoc, Resolved, SiteData } from "./render";
@@ -12,7 +12,7 @@ export const REVALIDATE_SECONDS = 300;
 
 /** Draft preview (lib/preview.ts): Sanity's drafts, with the read token, only while draft mode is on. */
 async function previewToken(): Promise<string | undefined> {
-  const token = process.env.SANITY_READ_TOKEN;
+  const token = previewReadToken();
   return token && (await isPreview()) ? token : undefined;
 }
 
