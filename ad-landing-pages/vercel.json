@@ -59,17 +59,5 @@
       "source": "/((?!api/|images/|number\\.js).*)",
       "destination": "/outdoor"
     }
-  ],
-  "redirects": [
-    {
-      "source": "/retaining-walls",
-      "destination": "https://alphahardscapes.com/retaining-walls-connecticut/",
-      "permanent": false
-    },
-    {
-      "source": "/retaining-walls/:path*",
-      "destination": "https://alphahardscapes.com/retaining-walls-connecticut/",
-      "permanent": false
-    }
   ]
 }
