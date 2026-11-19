@@ -1,4 +1,6 @@
+import { execFileSync } from "node:child_process";
 import type { NextConfig } from "next";
+import { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } from "next/constants";
 import { redirects } from "./redirects";
 
 const nextConfig: NextConfig = {
@@ -36,9 +38,21 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // The season-end ad page is one static file in public/patios-walkways/ (Kia, Nov 6). Serve it at the folder address.
+  async rewrites() {
+    return { beforeFiles: [{ source: "/patios-walkways/", destination: "/patios-walkways/index.html" }], afterFiles: [], fallback: [] };
+  },
   async redirects() {
     return redirects;
   },
 };
 
-export default nextConfig;
+// One stylesheet per page (scripts/css-bundles.mjs): made at the start of every build and dev server,
+// whatever command the host runs, before any page refers to a bundle.
+export default function config(phase: string): NextConfig {
+  if ((phase === PHASE_PRODUCTION_BUILD || phase === PHASE_DEVELOPMENT_SERVER) && !process.env.CSS_BUNDLES_MADE) {
+    execFileSync(process.execPath, ["scripts/css-bundles.mjs"], { stdio: "inherit" });
+    process.env.CSS_BUNDLES_MADE = "1";
+  }
+  return nextConfig;
+}

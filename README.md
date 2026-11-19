@@ -22,6 +22,10 @@ Applied to the migrated content and published to Sanity:
 - Favicon set at the site root (favicon.ico, 32/192/512 px icons, apple-touch-icon, web manifest), rendered from the vector logo.
 - Social images: a 1200x630 photo per page in `public/og/` (the homepage used a 136x118 background graphic).
 
+## Sanity vs built-in copy (audit, TTR-1341)
+
+`npm run audit` (read-only, no token) lists what Sanity holds against `content/seed.json`: documents missing in Sanity (what `npm run seed` would add), documents only in Sanity (never deleted), and fields that differ in documents both have (`-- --details` for every field). On 8 Nov 2026 both held the same 109 documents; the only difference is the approved page titles, descriptions and schema (`npm run titles`), which are in the built-in copy but not yet in Sanity. The live site reads Sanity (`X-Content-Source: cms`); the built-in copy is only the fallback.
+
 ## Titles and descriptions (scripts/titles.ts)
 
 Every indexable page has a title of 50 to 60 characters and a description of 120 to 160 (proposed in the audit of October 22, 2026, approved by Kia). The texts live in `scripts/titles.ts`: `npm run titles` writes them into `content/seed.json`, and `npm run titles -- --publish` sends only those SEO fields (title, description, their Open Graph copies and the page's JSON-LD node) to Sanity with `SANITY_WRITE_TOKEN`. Blog posts keep their own title without the " | Alpha Hardscapes" suffix. The home page title is 61 characters, approved as written.
@@ -30,11 +34,36 @@ Every indexable page has a title of 50 to 60 characters and a description of 120
 
 Blog posts and the blog and category listings render through `lib/render/blog.ts` (styles and the few lines of script in `lib/render/blog-assets.ts`), inside the same header, footer and popups as every other page. A post gets a hero photo with a byline card (author photo, date, reading time), an "In short" box with the first paragraph, jump links to every section (a sticky column on desktop), section photos with captions, a numbered timeline for step lists and icon cards for option lists, a call-to-action band, FAQ cards, the related service page, the author card and three more posts. The approved text of a post is never changed. Three post fields feed it, all optional: **Related service page**, **Mid-article call to action** and **Section photos** (a photo from the site's own library, the H2 it goes before, a caption). Photos are served resized and as WebP through the Next.js image optimizer (`/_next/image/`). Posts built with other Elementor widgets (buttons, maps, galleries) keep their Elementor layout; the author pages are unchanged. Everything reads without JavaScript, and the structured data gains `wordCount`, `timeRequired` and a `FAQPage` when a post has FAQs. `npm run verify` compares pages with the WordPress HTML, so blog pages now differ on purpose.
 
+## Speed and technical fixes at render time (lib/site/tune.ts)
+
+Applied to every page as it is served; the CMS content is not changed.
+
+- **Photos:** `npm run webp` (scripts/webp.ts) makes a WebP copy of every PNG/JPEG/WebP over 100 KB that a page or stylesheet uses (same width and height, kept only when at least 25% smaller: 265 MB of originals become 47 MB) and points the stylesheets at them; the page HTML is pointed at them when served. Run it again after adding images to the repo. The first section's background also gets a 1080 px copy for phones.
+- **Stylesheets:** each page loads one stylesheet instead of 22 to 26. `scripts/css-bundles.mjs` joins each page skeleton's list (same files, same order) into `public/assets/css/b-<hash>.css` plus a marker `b-<hash>.css.ok`, at the start of every build and dev server (`next.config.ts`; any error stops the build). The bundles are build output and not in git; `lib/generated/css-bundles.json` maps each list to its bundle. Fail-safe: a page uses its bundle only once the marker is served by the live site (`lib/site/bundles.ts`), otherwise it keeps the original links. So after a deploy, pages switch to the bundle on their first refresh (within about 5 to 10 minutes), and previews behind Vercel's login keep the original links.
+- **Popups:** a page prints only the quote popups it can open (from its links and buttons, or from another popup it opens), not all 12. None of the popups opens on its own (no timer or exit-intent trigger); one that gets a trigger in the CMS is always kept.
+- **Home video:** the hero section shows the video's first frame (`...-poster.webp`, made with ffmpeg) until the video plays over it, and the video starts downloading after the page has loaded.
+- **Links:** internal links to an old address (a rule in `redirects.ts`) go straight to the final page.
+- **Alt text:** where the CMS left it empty, the two decorative graphics used on most pages, the photo beside the closing call to action and author avatars get one. Alt text set in the CMS always wins.
+- **Tables** in posts scroll inside their own box on phones instead of the whole page.
+- **Authors with no posts** are `noindex` and left out of the author sitemap, like Yoast's default.
+
 ## Redirects
 
 - `content/redirects.json` (loaded by `next.config.ts`, all 301): every redirect the live WordPress site answered when probed with ~1,350 old and alternative URLs (old slugs, renamed parents, the redirect plugin's rules, WordPress' own "did you mean" redirects), plus `/?p=ID` and `/?page_id=ID` shortlinks. 711 rules, all tested.
+- `redirects.ts` adds addresses that answered 404 in October 2026 (links in three blog posts to posts that were never published, `/sitemap.xml`, `/faq/`, `/contact-us/`...), each to the closest live page.
 - Any other unknown URL whose last part matches a page or post is 301'd there at request time (`lib/site/guess.ts`), like WordPress did.
 - The redirect plugin's own list could not be exported without a WordPress login. If you have one, export it (Tools > Redirection, or the "Redirect Redirection" plugin screen) and add any rule missing from `content/redirects.json`.
+
+## Draft preview (TTR OS page fixer)
+
+TTR OS reads a page's unpublished Sanity changes before publishing them, through a signed link (same contract as the Beverly Hills site):
+
+`GET /api/preview?path=<path>&exp=<unix seconds>&sig=<hex HMAC-SHA256 of "<path>\n<exp>">`, signed with `PREVIEW_SECRET` (or `SANITY_PREVIEW_SECRET`).
+
+- A valid link (path `/` plus URL-safe characters, up to 300; not expired; at most 31 days ahead; 64 lowercase hex signature) turns on Next.js draft mode and redirects (307) to the path. Otherwise plain text: 503 when no secret is set, 401 for anything else. Every response: `Cache-Control: no-store`, `X-Robots-Tag: noindex`.
+- `/api/preview/exit` turns draft mode off and goes to `/`.
+- In draft mode, on Vercel, pages read Sanity's drafts with `SANITY_READ_TOKEN` (from the live API, not the CDN), are never cached, carry `X-Robots-Tag: noindex, nofollow` and `X-Preview: drafts`, and answer 503 rather than show the built-in copy if Sanity cannot be read.
+- Without the variables nothing changes for visitors. Code: `lib/preview.ts`, `app/api/preview/`, `lib/site/data.ts`; tests: `npm test`.
 
 ## Forms
 
@@ -80,10 +109,12 @@ npm run dev        # local site
 npm run lint       # ESLint
 npm run typecheck  # TypeScript
 npm run build      # production build
+npm test           # unit tests (tests/*.test.ts, Node's test runner)
 npm run verify -- <crawl-dir> [--server=http://localhost:3000]  # compare with the WordPress HTML
 npm run fixes      # apply the review fixes to content/seed.json (after extract)
 npm run titles     # page titles and descriptions into content/seed.json (-- --publish sends them to Sanity)
 npm run seed -- --force  # publish content/seed.json to Sanity
+npm run publish-posts -- post-5106 post-5107  # send only the named posts to Sanity (-- --dry-run to check)
 ```
 
 `scripts/extract.ts` converted the crawled WordPress pages (HTML plus the WordPress REST API) into `content/seed.json` and `lib/generated/shells.json`. It is a one-off migration tool; the crawl itself is not in the repo.

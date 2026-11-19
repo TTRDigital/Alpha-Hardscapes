@@ -1,5 +1,8 @@
 import heroImagesJson from "../generated/hero-images.json" with { type: "json" };
+import cssBundlesJson from "../generated/css-bundles.json" with { type: "json" };
+import webpJson from "../generated/webp.json" with { type: "json" };
 import { escapeAttr } from "../render/html.ts";
+import { redirectRows } from "../../redirects.ts";
 
 /**
  * Speed and accessibility tune-up applied to every rendered page at request
@@ -13,6 +16,8 @@ import { escapeAttr } from "../render/html.ts";
  */
 
 const heroImages = heroImagesJson as Record<string, string>;
+const webp = webpJson as { images: Record<string, string>; phone: Record<string, string> };
+const cssBundles = cssBundlesJson as Record<string, string>;
 
 /** Runs `load` on the first touch, scroll, key press or mouse move, or after `ms` milliseconds. */
 function onFirstInteraction(body: string, ms = 10000) {
@@ -72,9 +77,121 @@ const VIDEO_SCRIPT =
 
 /** The background image of the first section with a classic background: the largest paint on most pages. */
 export function heroImage(html: string): string | undefined {
+  return heroSection(html)?.src;
+}
+
+function heroSection(html: string): { id: string; src: string } | undefined {
   const start = Math.max(0, html.indexOf('id="content"'));
   const m = /elementor-element-([0-9a-f]+)[^>]*data-settings="[^"]*background_background&quot;:&quot;classic/.exec(html.slice(start));
-  return m ? heroImages[m[1]] : undefined;
+  return m && heroImages[m[1]] ? { id: m[1], src: heroImages[m[1]] } : undefined;
+}
+
+/* Photos: the WebP copies made by scripts/webp.ts (same size, 70 to 90% lighter) replace the PNG and
+ * JPEG originals in the page, in src, srcset, lightbox links and Elementor's JSON settings (escaped
+ * slashes). The <head> keeps the originals for social cards and structured data. */
+const UPLOAD = /(\\?\/)wp-content\1uploads\1[^"'\s()<>&?]+?\.(?:png|jpe?g|webp)(?=["'\s()<>&?,])/gi;
+
+function webpImages(body: string) {
+  return body.replace(UPLOAD, (m, slash: string) => {
+    const plain = slash === "/" ? m : m.replace(/\\\//g, "/");
+    const copy = webp.images[plain];
+    if (!copy) return m;
+    return slash === "/" ? copy : copy.replace(/\//g, "\\/");
+  });
+}
+
+/* Alt text where the CMS left it empty, for images that repeat on many pages: two decorative
+ * graphics (also hidden from screen readers) and the photo beside the closing call to action.
+ * Author avatars get the author's name. Any alt text set in the CMS is kept. */
+const DEFAULT_ALT: [RegExp, string, boolean][] = [
+  [/\/filled-bg(?:-portrait)?\.png/, "Green decorative shape", true],
+  [/\/dot-grahpic\.png/, "Decorative dot pattern", true],
+  [/\/uploads\/20\d\d\/\d\d\/alpha(?:-\d+x\d+)?\.png/, "Smiling man in an Alpha Hardscapes T-shirt and cap with his arms crossed", false],
+];
+
+function defaultAlt(html: string) {
+  const author = /<h1 class="page-title ast-archive-title">(?:Author name: )?([^<]+)<\/h1>/.exec(html)?.[1]?.trim();
+  return html.replace(/<img\s[^>]*>/g, (img) => {
+    if (!/\salt=""/.test(img)) return img;
+    const src = /\ssrc="([^"]*)"/.exec(img)?.[1] || "";
+    if (author && /^https:\/\/secure\.gravatar\.com\/avatar\//.test(src)) return img.replace(/\salt=""/, ` alt="${escapeAttr(author)}"`);
+    const hit = DEFAULT_ALT.find(([re]) => re.test(src));
+    if (!hit) return img;
+    return img.replace(/\salt=""/, ` alt="${hit[1]}"${hit[2] ? ' aria-hidden="true"' : ""}`);
+  });
+}
+
+/* Internal links that point at an old address go straight to the page it redirects to (redirects.ts),
+ * so visitors and crawlers skip the extra hop and every live page is linked under its own address. */
+const MOVED = new Map(redirectRows.filter((r) => !r.query).map((r) => [r.source, r.destination]));
+const SITE_HREF = /(<a\s[^>]*?href=")(?:https?:\/\/(?:www\.)?alphahardscapes\.com)?(\/[^"#?]*)([^"]*")/g;
+
+function finalLinks(body: string) {
+  return body.replace(SITE_HREF, (m, start: string, path: string, rest: string) => {
+    let target = MOVED.get(path);
+    for (let i = 0; target && MOVED.has(target) && i < 5; i++) target = MOVED.get(target);
+    return target ? `${start}${target}${rest}` : m;
+  });
+}
+
+/* Tables in blog posts are wider than a phone screen: they scroll inside their own box instead of
+ * pushing the whole page sideways. */
+function scrollTables(body: string) {
+  return body.replace(/<table[\s>][\s\S]*?<\/table>/g, (t) => `<div class="table-scroll" style="overflow-x:auto">${t}</div>`);
+}
+
+/* Phones: the first section's background comes from a 1080 px copy instead of the 1920 to 2880 px one.
+ * The repeated class outweighs the page stylesheet's selector (four classes), and this style comes later. */
+function phoneHero(id: string, small: string) {
+  const sel = `.elementor-element-${id}.elementor-element-${id}.elementor-element-${id}:not(.elementor-motion-effects-element-type-background)`;
+  return `<style id="hero-phone">@media (max-width:767px){${sel}{background-image:url("${small}")}}</style>`;
+}
+
+/* Background videos (the home page reel): the section shows the video's own first frame until the video
+ * plays over it, instead of an empty dark box. Made with
+ *   ffmpeg -i <video>.mp4 -frames:v 1 frame.png   (then WebP, quality 70)
+ * Cover and centre, like Elementor sizes the video, so the switch is invisible. */
+const VIDEO_POSTERS: Record<string, string> = {
+  "/wp-content/uploads/2026/08/55AD24CF-90C1-4D9E-8E77-03BB607646C7.mp4": "/wp-content/uploads/2026/08/55AD24CF-90C1-4D9E-8E77-03BB607646C7-poster.webp",
+};
+const VIDEO_SECTION = /elementor-element-([0-9a-f]+)[^>]*data-settings="[^"]*background_video_link&quot;:&quot;https?:\\\/\\\/(?:www\.)?alphahardscapes\.com([^&]+)&quot;/;
+
+function videoPoster(html: string) {
+  const m = VIDEO_SECTION.exec(html.slice(Math.max(0, html.indexOf('id="content"'))));
+  const poster = m && VIDEO_POSTERS[m[2].replace(/\\\//g, "/")];
+  if (!m || !poster) return html;
+  const sel = `.elementor-element-${m[1]}.elementor-element-${m[1]}.elementor-element-${m[1]}`;
+  const head = `<link rel="preload" as="image" href="${poster}" fetchpriority="high"><style id="video-poster">${sel}{background-image:url("${poster}");background-position:center center;background-size:cover;background-repeat:no-repeat}</style>`;
+  // Elementor gives the video its src when its script starts; that one call waits for the page's load
+  // event, so the 1.3 MB video no longer competes with the first screen. Sizing and playback stay Elementor's.
+  const defer =
+    `<script>(function(){var v=document.querySelector('.elementor-element-${m[1]} .elementor-background-video-hosted');if(!v)return;var set=v.setAttribute;` +
+    `v.setAttribute=function(n,x){if(n==='src'&&document.readyState!=='complete'){addEventListener('load',function(){set.call(v,n,x)},{once:true});return}return set.call(v,n,x)}})();</script>`;
+  const out = html.replace("</head>", `${head}</head>`);
+  const tag = out.indexOf('<video class="elementor-background-video-hosted"', out.indexOf(`elementor-element-${m[1]}`, out.indexOf('id="content"')));
+  const end = tag < 0 ? -1 : out.indexOf("</video>", tag);
+  return end < 0 ? out : out.slice(0, end + 8) + defer + out.slice(end + 8);
+}
+
+/* Stylesheets: the skeleton's 22 to 26 render-blocking files become the one bundle made from the same
+ * files in the same order (scripts/css-bundles.mjs), in the place of the first. Nothing between them is a
+ * style, so the cascade is unchanged. The route only asks for the bundle once it has seen it served
+ * (lib/site/bundles.ts); otherwise, or for a list with no bundle, the original links stay. */
+const STYLESHEET = /<link rel="stylesheet"(?: id="[^"]*")? href="(\/assets\/css\/[a-z0-9-]+\.css)" media="all">/g;
+
+/** The bundle for this page's stylesheets, if the build made one. */
+export function stylesheetBundle(html: string): string | undefined {
+  const head = html.slice(0, Math.max(0, html.indexOf("</head>")));
+  return cssBundles[[...head.matchAll(STYLESHEET)].map((m) => m[1]).join("|")];
+}
+
+function bundleStylesheets(head: string, bundle: string) {
+  let first = true;
+  return head.replace(STYLESHEET, () => {
+    if (!first) return "";
+    first = false;
+    return `<link rel="stylesheet" href="${bundle}" media="all">`;
+  });
 }
 
 /** Adds loading="lazy" and decoding="async" to images in a slice of the page that is never in the first screen. */
@@ -89,7 +206,8 @@ function lazyImages(html: string, from: number, to: number) {
   return html.slice(0, from) + part + html.slice(to);
 }
 
-export function tuneHtml(html: string): string {
+/** `cssBundle`: the page's stylesheet bundle, only when it is known to be served (see stylesheetBundle). */
+export function tuneHtml(html: string, opts: { cssBundle?: string } = {}): string {
   let out = html;
 
   out = out.replace(GTM_SNIPPET, (_m, id: string) => gtmLoader(id));
@@ -104,12 +222,24 @@ export function tuneHtml(html: string): string {
 
   out = out.replace(JQUERY, '<script defer="" id="jquery-core-js" src="/wp-includes/js/jquery/jquery.min.js"></script>');
 
-  const hero = heroImage(out);
+  const hero = heroSection(out);
   if (hero) {
+    const big = webp.images[hero.src] || hero.src;
+    const small = webp.phone[big];
     const anchor = '<link rel="profile" href="https://gmpg.org/xfn/11">';
-    const preload = `<link rel="preload" as="image" href="${escapeAttr(hero)}" fetchpriority="high">`;
+    const preload = small
+      ? `<link rel="preload" as="image" href="${escapeAttr(small)}" media="(max-width: 767px)" fetchpriority="high">` +
+        `<link rel="preload" as="image" href="${escapeAttr(big)}" media="(min-width: 768px)" fetchpriority="high">`
+      : `<link rel="preload" as="image" href="${escapeAttr(big)}" fetchpriority="high">`;
     out = out.includes(anchor) ? out.replace(anchor, anchor + preload) : out.replace("</head>", `${preload}</head>`);
+    if (small) out = out.replace("</head>", `${phoneHero(hero.id, small)}</head>`);
   }
+
+  out = videoPoster(out);
+
+  const bodyAt = out.indexOf("</head>");
+  const bundle = opts.cssBundle && opts.cssBundle === stylesheetBundle(out) ? opts.cssBundle : undefined;
+  if (bodyAt > 0) out = (bundle ? bundleStylesheets(out.slice(0, bodyAt), bundle) : out.slice(0, bodyAt)) + scrollTables(finalLinks(webpImages(defaultAlt(out.slice(bodyAt)))));
 
   if (AUTOPLAY_VIDEO.test(out)) {
     out = out.replace(AUTOPLAY_VIDEO, '<video class="elementor-video"$1 data-autoplay="" preload="metadata"$2>').replace("</body>", `${VIDEO_SCRIPT}</body>`);

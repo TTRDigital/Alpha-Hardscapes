@@ -2,7 +2,9 @@ import { allPaths, getSite, resolve, REVALIDATE_SECONDS } from "@/lib/site/data"
 import { feedXml, sitemapIndex, sitemapXml } from "@/lib/site/sitemaps";
 import { guessRedirect } from "@/lib/site/guess";
 import { renderDocument } from "@/lib/site/render";
-import { tuneHtml } from "@/lib/site/tune";
+import { isPreview } from "@/lib/preview";
+import { bundleServed } from "@/lib/site/bundles";
+import { stylesheetBundle, tuneHtml } from "@/lib/site/tune";
 import { dataset, projectId } from "@/sanity/env";
 
 /**
@@ -25,6 +27,14 @@ const SITEMAPS = new Set(["page-sitemap.xml", "post-sitemap.xml", "category-site
 export async function GET(_req: Request, ctx: { params: Promise<{ path?: string[] }> }) {
   const { path: segments = [] } = await ctx.params;
   const site = await getSite();
+  // Draft preview must show Sanity's content or say it cannot: never the built-in copy in its place.
+  const preview = await isPreview();
+  if (!site.fromCms && preview) {
+    return new Response("Preview could not read Sanity (check SANITY_READ_TOKEN or SANITY_PREVIEW_TOKEN).", {
+      status: 503,
+      headers: { "Content-Type": "text/plain; charset=UTF-8", "Cache-Control": "private, no-store", "X-Robots-Tag": "noindex, nofollow" },
+    });
+  }
   const origin = (process.env.NEXT_PUBLIC_SITE_URL || site.settings.siteUrl || "https://alphahardscapes.com").replace(/\/$/, "");
 
   if (segments.length === 1 && segments[0] === "sitemap_index.xml") return xml(sitemapIndex(origin, await allPaths(site.fromCms), site.data.posts));
@@ -41,16 +51,24 @@ export async function GET(_req: Request, ctx: { params: Promise<{ path?: string[
   // TTR OS website tracker (visits by source and form leads; no personal data). The site key is public; "off" turns it off.
   const ttrKey = process.env.NEXT_PUBLIC_TTR_SITE_KEY === "off" ? "" : process.env.NEXT_PUBLIC_TTR_SITE_KEY || "8ntBK6QgvLkKLHNYnBTF8Q";
   const tracker = ttrKey ? `<script async src="https://ttr-portal.vercel.app/api/site/script" data-site="${ttrKey}"></script>` : "";
-  // TTR Feedback Studio editing bar: Vercel previews only, so the live site is unchanged. It stays hidden unless the URL has #ttr-review=<token>.
-  const bar = process.env.VERCEL_ENV === "preview" ? `<script defer src="https://ttr-portal.vercel.app/api/site/notes/bar"></script>` : "";
+  // TTR OS's "Suggest a change" bar, on Vercel previews only (never the live site). It does nothing unless the page was opened
+  // from the client's private review link (a review token after #); the client highlights words and leaves notes for TTR.
+  const review = process.env.VERCEL_ENV === "preview" ? '<script defer src="https://ttr-portal.vercel.app/api/site/notes/bar"></script>' : "";
   // tuneHtml: Tag Manager and reCAPTCHA after the first interaction, hero image preload, font preloads, lazy footer images (lib/site/tune.ts).
-  const html = tuneHtml(renderDocument(resolved, site.data, path, { projectId, dataset, origin })).replace("</body>", `${tracker}${bar}</body>`);
+  const rendered = renderDocument(resolved, site.data, path, { projectId, dataset, origin });
+  // One stylesheet instead of 22 to 26, only once that bundle is known to be served (lib/site/bundles.ts).
+  const bundle = stylesheetBundle(rendered);
+  const cssBundle = bundle && (await bundleServed(bundle)) ? bundle : undefined;
+  const html = tuneHtml(rendered, { cssBundle }).replace("</body>", `${tracker}${review}</body>`);
+  // Draft preview (lib/preview.ts): unpublished content is never cached or indexed.
+  const draft = preview;
   return new Response(html, {
     status: resolved.kind === "notFound" ? 404 : 200,
     headers: {
       "Content-Type": "text/html; charset=UTF-8",
       "X-Content-Source": site.fromCms ? "cms" : "built-in",
-      "Cache-Control": `public, s-maxage=${REVALIDATE_SECONDS}, stale-while-revalidate=86400`,
+      "Cache-Control": draft ? "private, no-store" : `public, s-maxage=${REVALIDATE_SECONDS}, stale-while-revalidate=86400`,
+      ...(draft ? { "X-Robots-Tag": "noindex, nofollow", "X-Preview": "drafts" } : {}),
     },
   });
 }
