@@ -37,6 +37,8 @@ export type PostDoc = BaseDoc & {
   cardClass?: string;
   /** Code pages (lib/site/codepages.ts): no "By author / date" line under the title. */
   noMeta?: boolean;
+  /** Code pages: paths of existing posts shown as the site's cards under the article. */
+  related?: string[];
 };
 export type ArchiveDoc = BaseDoc & { kind: "blog" | "category" | "author"; slug?: string; authorName?: string; categoryName?: string };
 
@@ -116,6 +118,11 @@ export function renderDocument(resolved: Resolved, data: SiteData, path: string,
     values.thumbnail = singleThumbnail(summary, ctx);
     values.postNav = postNavigation(older ? postSummary(older) : null, newer ? postSummary(newer) : null);
     values.articleClass = post.articleClass || "";
+    const rel = (post.related || []).map((p) => data.posts.find((x) => x.path === p)).filter((x): x is PostDoc => !!x);
+    values.related = rel
+      // No author or date on a code page, so none on its cards either.
+      .map((x, i) => archiveCard(postSummary(x), ctx, i + 1).replace(/<header class="entry-header[^"]*ast-blog-meta-container">.*?<\/header>/, ""))
+      .join("");
   }
 
   if (resolved.kind === "archive") {
@@ -162,7 +169,9 @@ export function renderDocument(resolved: Resolved, data: SiteData, path: string,
   ).join("\n");
 
   const shell = shells[doc.shell || ""] || shells[defaultShell(data)] || "";
-  return renderTpl(shell, {}, ctx);
+  const html = renderTpl(shell, {}, ctx);
+  // Code pages carry no author: the shell's analytics line names the copied post's author, so it goes too.
+  return resolved.kind === "post" && resolved.doc.noMeta ? html.replace(/,"pagePostAuthor":"[^"]*"/, "") : html;
 }
 
 /** Popup ids a piece of HTML can open: "popup:open" action links (plain or URL-encoded) and form actions. */
