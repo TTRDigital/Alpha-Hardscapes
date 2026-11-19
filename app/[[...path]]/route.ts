@@ -2,6 +2,7 @@ import { allPaths, getSite, resolve, REVALIDATE_SECONDS } from "@/lib/site/data"
 import { feedXml, sitemapIndex, sitemapXml } from "@/lib/site/sitemaps";
 import { guessRedirect } from "@/lib/site/guess";
 import { renderDocument } from "@/lib/site/render";
+import { codePage } from "@/lib/site/codepages";
 import { isPreview } from "@/lib/preview";
 import { bundleServed } from "@/lib/site/bundles";
 import { stylesheetBundle, tuneHtml } from "@/lib/site/tune";
@@ -42,7 +43,8 @@ export async function GET(_req: Request, ctx: { params: Promise<{ path?: string[
   if (segments.length === 1 && segments[0] === "feed") return xml(feedXml(origin, site.data.posts), "application/rss+xml; charset=UTF-8");
 
   const path = `/${segments.map((s) => decodeURIComponent(s)).join("/")}${segments.length ? "/" : ""}`;
-  const resolved = await resolve(path, site.fromCms);
+  // Hand-built code pages (TTR-2432) come before the CMS lookup; they copy the site's own frames.
+  const resolved = (await codePage(path, (p) => resolve(p, site.fromCms))) ?? (await resolve(path, site.fromCms));
   if (!resolved) return new Response("Not found", { status: 404 });
   if (resolved.kind === "notFound") {
     const target = guessRedirect(path, await allPaths(site.fromCms));

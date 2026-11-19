@@ -35,6 +35,8 @@ export type PostDoc = BaseDoc & {
   categories?: { name: string; slug: string }[];
   articleClass?: string;
   cardClass?: string;
+  /** Code pages (lib/site/codepages.ts): no "By author / date" line under the title. */
+  noMeta?: boolean;
 };
 export type ArchiveDoc = BaseDoc & { kind: "blog" | "category" | "author"; slug?: string; authorName?: string; categoryName?: string };
 
@@ -110,7 +112,7 @@ export function renderDocument(resolved: Resolved, data: SiteData, path: string,
     // Astra: "previous" is the older post, "next" the newer one.
     const older = idx >= 0 ? data.posts[idx + 1] : undefined;
     const newer = idx > 0 ? data.posts[idx - 1] : undefined;
-    values.entryMeta = entryMeta(summary);
+    values.entryMeta = post.noMeta ? "" : entryMeta(summary);
     values.thumbnail = singleThumbnail(summary, ctx);
     values.postNav = postNavigation(older ? postSummary(older) : null, newer ? postSummary(newer) : null);
     values.articleClass = post.articleClass || "";
