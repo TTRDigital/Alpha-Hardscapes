@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   // WordPress URLs end with a slash; keep them identical.
   trailingSlash: true,
   // content/seed.json is the built-in copy used until the CMS has content.
-  outputFileTracingIncludes: { "/*": ["./content/seed.json"] },
+  outputFileTracingIncludes: { "/*": ["./content/seed.json", "./content/code-pages/*.md"] },
   async headers() {
     const immutable = [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }];
     const week = [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }];
