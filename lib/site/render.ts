@@ -1,6 +1,9 @@
 import shellsJson from "../generated/shells.json" with { type: "json" };
 import { archiveCard, elementorPostsGrid, entryMeta, pagination, postNavigation, singleThumbnail, type PostSummary } from "../render/astra.ts";
+import { injectBlogAssets } from "../render/blog-assets.ts";
+import { renderBlogIndex, renderPostLayout, rendersAsBlogPost } from "../render/blog.ts";
 import { escapeHtml } from "../render/html.ts";
+import type { PtBlock } from "../render/portableText.ts";
 import { renderSeo, type Seo } from "../render/seo.ts";
 import { renderTpl, type ElImage, type Fields, type RenderContext } from "../render/template.ts";
 
@@ -26,6 +29,8 @@ export type BaseDoc = Fields & {
   popups?: number[];
 };
 export type PageDoc = BaseDoc & { parentPath?: string };
+/** A photo placed before a section heading of a post (blog design, lib/render/blog.ts). */
+export type SectionImage = { _key?: string; heading?: string; image?: ElImage | null; caption?: string; ratio?: string; focus?: string };
 export type PostDoc = BaseDoc & {
   date?: string;
   excerpt?: string;
@@ -35,13 +40,28 @@ export type PostDoc = BaseDoc & {
   categories?: { name: string; slug: string }[];
   articleClass?: string;
   cardClass?: string;
+  /** The text: Portable Text, or Elementor nodes (`content`) for the posts built with the page builder. */
+  body?: PtBlock[];
+  content?: Fields[];
+  /** Path of the service page the post supports, shown as the Related service card. */
+  relatedPage?: string;
+  /** One sentence for the call-to-action band after the third section. */
+  ctaText?: string;
+  sectionImages?: SectionImage[];
 };
-export type ArchiveDoc = BaseDoc & { kind: "blog" | "category" | "author"; slug?: string; authorName?: string; categoryName?: string };
+export type ArchiveDoc = BaseDoc & { kind: "blog" | "category" | "author"; slug?: string; authorName?: string; categoryName?: string; heading?: string };
+
+/** What the blog needs to know about a page it links to. */
+export type PageSummary = { path: string; title: string; description?: string; image?: string };
+/** An author, with the photo and role line from the author's own page when it has them. */
+export type AuthorInfo = { slug: string; name: string; bio?: string; role?: string; photo?: ElImage | null; avatar?: string };
 
 export type SiteData = {
   settings: { siteUrl?: string; postsPerPage?: number; businessSchema?: string; header?: TemplateDoc | null; footer?: TemplateDoc | null; popups?: TemplateDoc[] };
   /** All posts, newest first. */
   posts: PostDoc[];
+  pages?: PageSummary[];
+  authors?: AuthorInfo[];
 };
 
 export type Resolved =
@@ -102,6 +122,8 @@ export function renderDocument(resolved: Resolved, data: SiteData, path: string,
   };
   let seo = doc.seo;
   let bodyClass: string | undefined;
+  // The blog design (lib/render/blog.ts) replaces the WordPress frame on posts and listings.
+  let blog: { headLinks: string } | null = null;
 
   if (resolved.kind === "post") {
     const post = resolved.doc;
@@ -114,6 +136,12 @@ export function renderDocument(resolved: Resolved, data: SiteData, path: string,
     values.thumbnail = singleThumbnail(summary, ctx);
     values.postNav = postNavigation(older ? postSummary(older) : null, newer ? postSummary(newer) : null);
     values.articleClass = post.articleClass || "";
+    if (rendersAsBlogPost(post)) {
+      const layout = renderPostLayout(post, data, ctx);
+      values.content = layout.html;
+      seo = layout.seo;
+      blog = { headLinks: layout.headLinks };
+    }
   }
 
   if (resolved.kind === "archive") {
@@ -128,6 +156,10 @@ export function renderDocument(resolved: Resolved, data: SiteData, path: string,
     values.cards = slice.map((p, i) => archiveCard(postSummary(p), ctx, i)).join("");
     values.pagination = pagination(a.path || "/", page, pages);
     values.elementorArchive = elementorPostsGrid(slice.map(postSummary), ctx, a.path || "/", page, pages);
+    if (a.kind === "blog" || a.kind === "category") {
+      values.content = renderBlogIndex(a, slice, page, pages, data, ctx);
+      blog = { headLinks: "" };
+    }
     if (page > 1) {
       const cls = (a.bodyClass || "").split(/\s+/);
       // WordPress: "paged" after the first class, "paged-N" (and "<type>-paged-N") after wp-custom-logo.
@@ -153,14 +185,15 @@ export function renderDocument(resolved: Resolved, data: SiteData, path: string,
   const popups = data.settings.popups || [];
   const order = doc.popups || [];
   const sorted = [...popups].sort((x, y) => (order.indexOf(x.wpId!) + 1 || 999) - (order.indexOf(y.wpId!) + 1 || 999));
-  values.content = renderTpl(doc.frameTpl, doc, ctx);
+  if (values.content === undefined) values.content = renderTpl(doc.frameTpl, doc, ctx);
   values.popups = usedPopups(
     sorted.map((p) => ({ id: String(p.wpId ?? ""), html: renderTpl(p.tpl, p, ctx) })),
     values.header + values.content + values.footer,
   ).join("\n");
 
   const shell = shells[doc.shell || ""] || shells[defaultShell(data)] || "";
-  return renderTpl(shell, {}, ctx);
+  const html = renderTpl(shell, {}, ctx);
+  return blog ? injectBlogAssets(html, blog.headLinks) : html;
 }
 
 /** Popup ids a piece of HTML can open: "popup:open" action links (plain or URL-encoded) and form actions. */
