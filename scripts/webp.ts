@@ -5,17 +5,23 @@
  * backgrounds of 1 to 6 MB (PNG photos at 2880 px) were the largest paint on
  * most pages, at 6 to 10 s.
  *
- * For every PNG, JPEG or WebP over 100 KB that a page, template or stylesheet
+ * For every PNG, JPEG or WebP over 20 KB (100 KB until Nov 20, 2026) that a page, template or stylesheet
  * uses (content/seed.json, lib/generated/shells.json, public/assets/css):
  *   photo.png  -> photo.png.webp    same width and height, WebP quality 80
  *   photo.webp -> photo.min.webp    re-encoded at quality 75 (WordPress saved these close to lossless)
- * kept only when it is at least 25% smaller. Section backgrounds wider than
- * 1080 px also get photo.png.m.webp (photo.m.webp for a WebP), 1080 px wide at
- * quality 70, used on phones.
+ * kept only when it is at least 25% smaller. Section backgrounds over 60 KB
+ * also get photo.png.p.webp (photo.p.webp for a WebP), at most 828 px wide (a
+ * phone screen at 2x) and quality 60, used on phones when at least 20% smaller.
+ * The 1080 px / quality 70 phone copies of October (.m.webp, 100 to 190 KB) were
+ * the largest download before the first paint on phones (Nov 20 sweep, TTR-2513).
  *
  *   npm run webp      # idempotent: existing copies are kept
  *
- * Writes lib/generated/webp.json (original path -> copy, and copy -> phone copy)
+ * Photos over 300 KB and wider than 1200 px also get photo.w1080.webp (1080 px,
+ * quality 72), added to the image's srcset at render time, so phones at 2x to 3x
+ * download it instead of the 1440 to 2560 px original; desktops keep the original.
+ *
+ * Writes lib/generated/webp.json (original path -> copy, copy -> phone copy, copy -> 1080 px copy)
  * and points the url()s in public/assets/css at the copies.
  */
 import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
@@ -26,8 +32,9 @@ const ROOT = new URL("..", import.meta.url).pathname;
 const PUBLIC = join(ROOT, "public");
 const CSS_DIR = join(PUBLIC, "assets/css");
 const OUT = join(ROOT, "lib/generated/webp.json");
-const MIN_BYTES = 100 * 1024;
-const PHONE_WIDTH = 1080;
+const MIN_BYTES = 20 * 1024;
+const PHONE_WIDTH = 828;
+const PHONE_MIN_BYTES = 60 * 1024;
 
 const REF = /\/wp-content\/uploads\/[^"'\s()\\,<>]+?\.(?:png|jpe?g|webp)(?=["'\s()\\,<>&?]|$)/gi;
 
@@ -37,7 +44,7 @@ export function copyPath(src: string) {
 
 /** Paths an image is used under; a copy made by an earlier run counts as its original. */
 function refs(text: string) {
-  return (text.replace(/\\\//g, "/").match(REF) || []).map((r) => r.replace(/\.((?:png|jpe?g))(?:\.m)?\.webp$/i, ".$1").replace(/(?:\.min|\.m)\.webp$/i, ".webp"));
+  return (text.replace(/\\\//g, "/").match(REF) || []).map((r) => r.replace(/\.((?:png|jpe?g))(?:\.m|\.p|\.w1080)?\.webp$/i, ".$1").replace(/(?:\.min|\.m|\.p|\.w1080)\.webp$/i, ".webp"));
 }
 
 const sources = new Set<string>();
@@ -49,6 +56,10 @@ const heroes = new Set(Object.values(JSON.parse(readFileSync(join(ROOT, "lib/gen
 
 const images: Record<string, string> = {};
 const phone: Record<string, string> = {};
+/** Full-size photo -> 1080 px copy, added to its srcset so phones stop downloading the 1440 to 2560 px file (TTR-2513). */
+const mid: Record<string, string> = {};
+const MID_WIDTH = 1080;
+const MID_MIN_BYTES = 300 * 1024;
 let before = 0;
 let after = 0;
 
@@ -70,13 +81,31 @@ for (const src of [...sources].sort()) {
     after += statSync(out).size;
   }
 
+  // Photos over 300 KB wider than 1200 px: a 1080 px copy at quality 72 for the srcset (phones at 2x to 3x).
+  {
+    const usedFile = join(PUBLIC, used);
+    if (statSync(usedFile).size >= MID_MIN_BYTES) {
+      const { width = 0 } = await sharp(file).metadata();
+      if (width > 1200) {
+        const copy = `${used.replace(/(?:\.min)?\.webp$/i, "")}.w1080.webp`;
+        const copyFile = join(PUBLIC, copy);
+        if (!existsSync(copyFile)) writeFileSync(copyFile, await sharp(file).rotate().resize({ width: MID_WIDTH }).webp({ quality: 72, effort: 5 }).toBuffer());
+        mid[used] = copy;
+      }
+    }
+  }
+
   if (heroes.has(src) || heroes.has(target)) {
-    const { width = 0 } = await sharp(file).metadata();
-    if (width > PHONE_WIDTH) {
-      const small = `${target.replace(/(?:\.min)?\.webp$/, "")}.m.webp`;
+    const usedFile = join(PUBLIC, used);
+    const usedSize = statSync(usedFile).size;
+    if (usedSize >= PHONE_MIN_BYTES) {
+      const small = `${used.replace(/(?:\.min)?\.webp$/i, "")}.p.webp`;
       const smallFile = join(PUBLIC, small);
-      if (!existsSync(smallFile)) writeFileSync(smallFile, await sharp(file).rotate().resize({ width: PHONE_WIDTH }).webp({ quality: 70, alphaQuality: 100, effort: 5 }).toBuffer());
-      phone[used] = small;
+      if (!existsSync(smallFile)) {
+        const { width = 0 } = await sharp(file).metadata();
+        writeFileSync(smallFile, await sharp(file).rotate().resize({ width: Math.min(width, PHONE_WIDTH) }).webp({ quality: 60, alphaQuality: 100, effort: 6 }).toBuffer());
+      }
+      if (statSync(smallFile).size <= usedSize * 0.8) phone[used] = small;
     }
   }
 }
@@ -93,5 +122,5 @@ for (const f of cssFiles) {
   }
 }
 
-writeFileSync(OUT, `${JSON.stringify({ images, phone }, null, 0)}\n`);
+writeFileSync(OUT, `${JSON.stringify({ images, phone, mid }, null, 0)}\n`);
 console.log(`${Object.keys(images).length} images: ${(before / 1048576).toFixed(1)} MB -> ${(after / 1048576).toFixed(1)} MB; ${Object.keys(phone).length} phone backgrounds; ${cssChanged} stylesheets updated -> ${OUT}`);

@@ -47,6 +47,17 @@ Applied to every page as it is served; the CMS content is not changed.
 - **Tables** in posts scroll inside their own box on phones instead of the whole page.
 - **Authors with no posts** are `noindex` and left out of the author sitemap, like Yoast's default.
 
+Added after the Nov 20, 2026 site sweep (TTR-2513), same rules (nothing a visitor reads or sees changes):
+
+- **Footer link:** the "Terms & Conditions" link was saved as `terms-and-conditions/` (relative), so on every page but the home page it went to `<page>/terms-and-conditions/` and through a 301. Any link whose address is one bare slug is now made absolute from the root.
+- **Decorative graphics:** the green rounded shapes and the dot pattern (`filled-bg.png`, `filled-bg-portrait.png`, `dot-grahpic.png`) are served as SVG copies in `public/assets/img/` (same size, colour, corners and dot grid, `preserveAspectRatio="none"`), so the stretched sizes Elementor gives them on phones no longer flag as stretched or low resolution.
+- **Console error on every page:** the WordPress script combiner had folded a copy of GoHighLevel's number-pool (call tracking) script into the `public/assets/js` bundles. Without a location id it only sent a failing request on each page. Its auto-start is removed in the bundles (Tag Manager loads the real call tracking); the bundle URLs carry `?v=` (`SCRIPTS_VERSION` in `lib/site/tune.ts`) because `/assets` is cached for a year.
+- **Phone hero images:** `npm run webp` now makes `*.p.webp` copies of section backgrounds over 60 KB, at most 828 px wide and quality 60 (the 1080 px October copies were 100 to 190 KB, the largest download before the first paint).
+- **Large photos:** photos over 300 KB and wider than 1200 px get a `*.w1080.webp` copy that is added to their `srcset`, so phones at 2x to 3x stop downloading the 1440 to 2560 px original. Desktops still pick the original.
+- **Layout shift:** images in the first two sections are no longer lazy (on phones Chrome laid them out 24 px tall, then pushed the page down), and the Poppins font is preloaded with Roboto and Montserrat.
+- **Accessibility markup:** gallery tiles get an `aria-label`; the phone-number icon box titles (`<h3>`) get `role="none"` so the outline goes H1 to H2.
+- **Caching:** `/wp-content` and `/wp-includes` (uploads, fonts, the reel video, theme scripts) are cached for a year instead of a week.
+
 ## Redirects
 
 - `content/redirects.json` (loaded by `next.config.ts`, all 301): every redirect the live WordPress site answered when probed with ~1,350 old and alternative URLs (old slugs, renamed parents, the redirect plugin's rules, WordPress' own "did you mean" redirects), plus `/?p=ID` and `/?page_id=ID` shortlinks. 711 rules, all tested.

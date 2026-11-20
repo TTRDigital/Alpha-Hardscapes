@@ -50,7 +50,8 @@ export async function GET(_req: Request, ctx: { params: Promise<{ path?: string[
   }
   // TTR OS website tracker (visits by source and form leads; no personal data). The site key is public; "off" turns it off.
   const ttrKey = process.env.NEXT_PUBLIC_TTR_SITE_KEY === "off" ? "" : process.env.NEXT_PUBLIC_TTR_SITE_KEY || "8ntBK6QgvLkKLHNYnBTF8Q";
-  const tracker = ttrKey ? `<script async src="https://ttr-portal.vercel.app/api/site/script" data-site="${ttrKey}"></script>` : "";
+  // Versioned address, cached for a year (TTR-2524); the key stays the same.
+  const tracker = ttrKey ? `<script async src="https://portal.ttrdigitalmarketing.com/api/site/script/5a23a7758595" data-site="${ttrKey}"></script>` : "";
   // TTR OS's "Suggest a change" bar, on Vercel previews only (never the live site). It does nothing unless the page was opened
   // from the client's private review link (a review token after #); the client highlights words and leaves notes for TTR.
   const review = process.env.VERCEL_ENV === "preview" ? '<script defer src="https://ttr-portal.vercel.app/api/site/notes/bar"></script>' : "";

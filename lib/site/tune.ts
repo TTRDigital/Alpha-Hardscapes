@@ -16,7 +16,7 @@ import { redirectRows } from "../../redirects.ts";
  */
 
 const heroImages = heroImagesJson as Record<string, string>;
-const webp = webpJson as { images: Record<string, string>; phone: Record<string, string> };
+const webp = webpJson as { images: Record<string, string>; phone: Record<string, string>; mid: Record<string, string> };
 const cssBundles = cssBundlesJson as Record<string, string>;
 
 /** Runs `load` on the first touch, scroll, key press or mouse move, or after `ms` milliseconds. */
@@ -51,12 +51,15 @@ function recaptchaLoader(src: string) {
 }
 
 /* Fonts: the preloads named files no stylesheet uses (two Google-hosted files and three OMGF copies,
- * about 140 KB a page, downloaded at high priority and never used). They become preloads of the two
- * files every page really uses: Roboto and Montserrat, regular, latin. */
+ * about 140 KB a page, downloaded at high priority and never used). They become preloads of the three
+ * files every page really uses: Roboto, Montserrat and Poppins, regular, latin. Poppins (8 KB) was found
+ * only through the stylesheet, arrived after the first paint and its swap moved the hero (layout shift
+ * 0.06 to 0.11 on phones, Nov 20 sweep). */
 const WASTED_PRELOAD = /<link rel="preload" as="font" href="https:\/\/fonts\.gstatic\.com\/[^"]+" crossorigin="">|<link id="omgf-preload-\d" rel="preload" href="\/wp-content\/uploads\/omgf\/elementor-gf-local-[^"]+" as="font" type="font\/woff2" crossorigin="">/g;
 const FONT_PRELOADS = [
   "/wp-content/uploads/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3yuba.woff2",
   "/wp-content/uploads/elementor/google-fonts/fonts/montserrat-jtusjig1_i6t8kchkm459wlhyw.woff2",
+  "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrlgt9z1xlfq.woff2",
 ]
   .map((href) => `<link rel="preload" as="font" type="font/woff2" href="${href}" crossorigin="">`)
   .join("");
@@ -64,6 +67,9 @@ const FONT_PRELOADS = [
 /* jQuery was the one render-blocking script (in the head). Nothing inline uses it before the deferred
  * bundle, which runs after it in document order. */
 const JQUERY = '<script id="jquery-core-js" src="/wp-includes/js/jquery/jquery.min.js"></script>';
+
+/** Bump when a file in public/assets/js changes, so browsers holding the year-long cached copy fetch it again. */
+const SCRIPTS_VERSION = "1120";
 
 /* Hosted videos set to autoplay (the reel on the home page, 3.5 MB) download when they scroll into
  * view instead of with the page. */
@@ -100,6 +106,29 @@ function webpImages(body: string) {
   });
 }
 
+/* Phones at 2x to 3x picked the 1440 to 2560 px original of large photos from the srcset (300 KB to 1 MB
+ * each). Photos with a 1080 px copy (scripts/webp.ts, `mid`) get it as one more srcset candidate; an image
+ * without a srcset gets one made of the copy and the original, with sizes saying it is at most its own
+ * width. Desktops still choose the original, so nothing changes on screen. */
+function midSrcset(body: string) {
+  return body.replace(/<img\s[^>]*>/g, (img) => {
+    const src = /\ssrc="([^"]+)"/.exec(img)?.[1];
+    const srcset = /\ssrcset="([^"]*)"/.exec(img)?.[1];
+    if (srcset) {
+      const cands = srcset.split(/,\s*/).map((c) => c.trim().split(/\s+/)).filter((c) => c[0] && /^\d+w$/.test(c[1] || ""));
+      if (!cands.length || cands.some((c) => +c[1].slice(0, -1) === 1080)) return img;
+      const widest = cands.reduce((a, b) => (+b[1].slice(0, -1) > +a[1].slice(0, -1) ? b : a));
+      const copy = webp.mid[widest[0]];
+      if (!copy || +widest[1].slice(0, -1) <= 1200) return img;
+      return img.replace(/\ssrcset="[^"]*"/, ` srcset="${srcset}, ${copy} 1080w"`);
+    }
+    const width = Number(/\swidth="(\d+)"/.exec(img)?.[1] || 0);
+    const copy = src && webp.mid[src];
+    if (!copy || width <= 1200) return img;
+    return img.replace(/\ssrc="[^"]+"/, (m) => `${m} srcset="${copy} 1080w, ${src} ${width}w" sizes="(max-width: ${width}px) 100vw, ${width}px"`);
+  });
+}
+
 /* Alt text where the CMS left it empty, for images that repeat on many pages: two decorative
  * graphics (also hidden from screen readers) and the photo beside the closing call to action.
  * Author avatars get the author's name. Any alt text set in the CMS is kept. */
@@ -132,6 +161,53 @@ function finalLinks(body: string) {
     for (let i = 0; target && MOVED.has(target) && i < 5; i++) target = MOVED.get(target);
     return target ? `${start}${target}${rest}` : m;
   });
+}
+
+/* The footer's "Terms & Conditions" link was saved as a relative address ("terms-and-conditions/"), so on
+ * every page but the home page it pointed at <page>/terms-and-conditions/ and went through a 301. A link
+ * whose whole address is one bare slug ending in a slash is made absolute from the site root. The link
+ * wording is unchanged. (Nov 20 sweep, TTR-2513.) */
+const RELATIVE_SLUG_HREF = /(<a\s[^>]*?href=")([a-z0-9][a-z0-9-]*\/)(")/g;
+
+function rootRelativeLinks(body: string) {
+  return body.replace(RELATIVE_SLUG_HREF, "$1/$2$3");
+}
+
+/* Decorative graphics: the green rounded shapes and the dot pattern are small PNGs (136x118, 103x118,
+ * 220x242) that the page stretches to other proportions (102x65, 92x111 on phones) and that look soft on
+ * high-density screens. They are drawn again as SVG with the same size, colour (#aecd38), corner radius and
+ * dot grid, and preserveAspectRatio="none", so they stretch exactly as before and stay sharp. Only <img> tags
+ * change; the CMS keeps the PNGs. */
+const DECOR_SVG: [RegExp, string][] = [
+  [/(?:https:\/\/alphahardscapes\.com)?\/wp-content\/uploads\/20\d\d\/\d\d\/filled-bg-portrait\.png/, "/assets/img/filled-bg-portrait.svg"],
+  [/(?:https:\/\/alphahardscapes\.com)?\/wp-content\/uploads\/20\d\d\/\d\d\/filled-bg\.png/, "/assets/img/filled-bg.svg"],
+  [/(?:https:\/\/alphahardscapes\.com)?\/wp-content\/uploads\/20\d\d\/\d\d\/dot-grahpic\.png/, "/assets/img/dot-graphic.svg"],
+];
+
+function decorSvg(body: string) {
+  return body.replace(/<img\s[^>]*>/g, (img) => {
+    const src = /\ssrc="([^"]*)"/.exec(img)?.[1] || "";
+    const hit = DECOR_SVG.find(([re]) => re.test(src));
+    if (!hit || src.replace(hit[0], "") !== "") return img;
+    return img.replace(/\ssrc="[^"]*"/, ` src="${hit[1]}"`).replace(/\s(?:srcset|sizes)="[^"]*"/g, "");
+  });
+}
+
+/* Gallery tiles open the lightbox but contain only a background image, so screen readers announced an
+ * unnamed link. Each gets an aria-label (not shown on screen). */
+function galleryLabels(body: string) {
+  let n = 0;
+  return body.replace(/<a class="e-gallery-item[^"]*"[^>]*>/g, (a) => {
+    n++;
+    return /\saria-label=/.test(a) ? a : a.replace(/>$/, ` aria-label="Open project photo ${n} in the lightbox">`);
+  });
+}
+
+/* The phone number in the header and hero is an Elementor icon box whose title is an <h3>, so the page
+ * outline jumped from the H1 to an H3 ahead of the first H2. It is a phone link, not a section heading:
+ * role="none" takes it out of the outline while the tag, and so its look, stays the same. */
+function phoneTitles(body: string) {
+  return body.replace(/<h3 class="elementor-icon-box-title">(\s*<a href="tel:[^"]*">[^<]*<\/a>\s*)<\/h3>/g, '<h3 class="elementor-icon-box-title" role="none">$1</h3>');
 }
 
 /* Tables in blog posts are wider than a phone screen: they scroll inside their own box instead of
@@ -194,6 +270,20 @@ function bundleStylesheets(head: string, bundle: string) {
   });
 }
 
+/* Images in the first two top-level sections (the hero and the one under it) load normally. On phones
+ * the second section starts inside the first screen, and Chrome laid its lazy images out 24 px tall
+ * until it decided to load them, then pushed everything below down by their real height (layout shift
+ * 0.05 to 0.11, Nov 20 sweep). They were fetched within the first 200 ms anyway. */
+function eagerFirstSections(html: string) {
+  const start = html.indexOf('id="content"');
+  if (start < 0) return html;
+  const parents = [...html.slice(start).matchAll(/<div class="elementor-element elementor-element-[0-9a-f]+ [^"]*\be-parent\b/g)];
+  const end = parents.length > 2 ? start + parents[2].index : -1;
+  if (end < 0) return html;
+  const part = html.slice(start, end).replace(/<img\s[^>]*>/g, (img) => img.replace(/\sloading="lazy"/, ""));
+  return html.slice(0, start) + part + html.slice(end);
+}
+
 /** Adds loading="lazy" and decoding="async" to images in a slice of the page that is never in the first screen. */
 function lazyImages(html: string, from: number, to: number) {
   if (from < 0 || to <= from) return html;
@@ -221,6 +311,9 @@ export function tuneHtml(html: string, opts: { cssBundle?: string } = {}): strin
   });
 
   out = out.replace(JQUERY, '<script defer="" id="jquery-core-js" src="/wp-includes/js/jquery/jquery.min.js"></script>');
+  // The combined theme scripts changed in place (TTR-2513: the copy of the call-tracking snippet no longer
+  // starts on its own); /assets is cached for a year, so the address carries a version.
+  out = out.replace(/(<script defer="" src="\/assets\/js\/[0-9a-f]{32}\.js)(")/g, `$1?v=${SCRIPTS_VERSION}$2`);
 
   const hero = heroSection(out);
   if (hero) {
@@ -239,7 +332,10 @@ export function tuneHtml(html: string, opts: { cssBundle?: string } = {}): strin
 
   const bodyAt = out.indexOf("</head>");
   const bundle = opts.cssBundle && opts.cssBundle === stylesheetBundle(out) ? opts.cssBundle : undefined;
-  if (bodyAt > 0) out = (bundle ? bundleStylesheets(out.slice(0, bodyAt), bundle) : out.slice(0, bodyAt)) + scrollTables(finalLinks(webpImages(defaultAlt(out.slice(bodyAt)))));
+  if (bodyAt > 0) {
+    const body = phoneTitles(galleryLabels(decorSvg(rootRelativeLinks(scrollTables(finalLinks(midSrcset(webpImages(defaultAlt(out.slice(bodyAt))))))))));
+    out = (bundle ? bundleStylesheets(out.slice(0, bodyAt), bundle) : out.slice(0, bodyAt)) + body;
+  }
 
   if (AUTOPLAY_VIDEO.test(out)) {
     out = out.replace(AUTOPLAY_VIDEO, '<video class="elementor-video"$1 data-autoplay="" preload="metadata"$2>').replace("</body>", `${VIDEO_SCRIPT}</body>`);
@@ -248,6 +344,8 @@ export function tuneHtml(html: string, opts: { cssBundle?: string } = {}): strin
   // Accessibility: a video is not a presentation role; a plain div cannot carry aria-label.
   out = out.replace(/(<video class="elementor-background-video-hosted") role="presentation"/g, "$1");
   out = out.replace(/(<div class="elementor-testimonial__icon[^"]*") aria-label="[^"]*"/g, "$1");
+
+  out = eagerFirstSections(out);
 
   // Footer and popups are never in the first screen.
   const footer = out.indexOf("<footer");

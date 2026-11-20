@@ -21,6 +21,8 @@ const moved: Row[] = [
   // Linked from blog posts; WordPress' slug guess (lib/site/guess.ts) sent these on, now a plain rule.
   { source: "/patio-installation-cost-connecticut-cost-guide/", destination: "/blog/patio-installation-cost-connecticut-cost-guide/" },
   { source: "/outdoor-kitchen-cost-connecticut/", destination: "/blog/outdoor-kitchen-cost-connecticut/" },
+  // Linked from the fire pit vs fireplace post (Nov 20 sweep, TTR-2513).
+  { source: "/hardscaping-pavers-planning-your-outdoor-space/", destination: "/blog/hardscaping-pavers-planning-your-outdoor-space/" },
   { source: "/sitemap.xml", destination: "/sitemap_index.xml" },
   { source: "/contact-us/", destination: "/contact/" },
   { source: "/faq/", destination: "/frequently-asked-questions/" },
