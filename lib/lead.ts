@@ -122,17 +122,3 @@ export async function deliverLead(lead: Lead) {
 function esc(s: string) {
   return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
-
-export async function verifyRecaptcha(token: string | null, ip?: string | null) {
-  const secret = clean(process.env.RECAPTCHA_SECRET_KEY);
-  if (!secret) return true; // not configured: accept (Elementor still shows the checkbox)
-  if (!token) return false;
-  const body = new URLSearchParams({ secret, response: token, ...(ip ? { remoteip: ip } : {}) });
-  try {
-    const res = await fetch("https://www.google.com/recaptcha/api/siteverify", { method: "POST", body, signal: AbortSignal.timeout(6000) });
-    const json = (await res.json()) as { success?: boolean };
-    return Boolean(json.success);
-  } catch {
-    return true; // Google unreachable: do not lose the lead
-  }
-}

@@ -6,6 +6,7 @@ import { isPreview } from "@/lib/preview";
 import { bundleServed } from "@/lib/site/bundles";
 import { stylesheetBundle, tuneHtml } from "@/lib/site/tune";
 import { dataset, projectId } from "@/sanity/env";
+import { protectForms, recaptchaKeys } from "@/lib/spam";
 
 /**
  * The whole public site: every URL is rendered from the CMS into the same
@@ -59,7 +60,8 @@ export async function GET(_req: Request, ctx: { params: Promise<{ path?: string[
   // One stylesheet instead of 22 to 26, only once that bundle is known to be served (lib/site/bundles.ts).
   const bundle = stylesheetBundle(rendered);
   const cssBundle = bundle && (await bundleServed(bundle)) ? bundle : undefined;
-  const html = tuneHtml(rendered, { cssBundle }).replace("</body>", `${tracker}${review}</body>`);
+  // protectForms: honeypot, fill timer and (with both reCAPTCHA keys set) the "I'm not a robot" checkbox on every form (lib/spam.ts).
+  const html = protectForms(tuneHtml(rendered, { cssBundle }), { siteKey: recaptchaKeys()?.siteKey }).replace("</body>", `${tracker}${review}</body>`);
   // Draft preview (lib/preview.ts): unpublished content is never cached or indexed.
   const draft = preview;
   return new Response(html, {
