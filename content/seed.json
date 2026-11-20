@@ -79899,5 +79899,3645 @@
    }
   ],
   "businessSchema": "{\n  \"@type\": [\n    \"HomeAndConstructionBusiness\",\n    \"Organization\"\n  ],\n  \"name\": \"Alpha Hardscapes\",\n  \"url\": \"https://alphahardscapes.com/\",\n  \"logo\": {\n    \"@type\": \"ImageObject\",\n    \"url\": \"https://alphahardscapes.com/icon-512.png\",\n    \"contentUrl\": \"https://alphahardscapes.com/icon-512.png\",\n    \"width\": 512,\n    \"height\": 512,\n    \"caption\": \"Alpha Hardscapes\"\n  },\n  \"image\": \"https://alphahardscapes.com/og/home.jpg\",\n  \"telephone\": \"+1-475-227-6896\",\n  \"email\": \"alphahardscapes1@gmail.com\",\n  \"priceRange\": \"$$\",\n  \"description\": \"Hardscaping, paver and masonry contractor serving New Haven, Fairfield and Hartford Counties in Connecticut: patios, walkways, retaining walls, outdoor kitchens, fire features, landscaping and seasonal cleanups.\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"addressLocality\": \"New Haven\",\n    \"addressRegion\": \"CT\",\n    \"postalCode\": \"06510\",\n    \"addressCountry\": \"US\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": 41.3083,\n    \"longitude\": -72.9279\n  },\n  \"openingHoursSpecification\": [\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": [\n        \"Monday\",\n        \"Tuesday\",\n        \"Wednesday\",\n        \"Thursday\",\n        \"Friday\"\n      ],\n      \"opens\": \"08:00\",\n      \"closes\": \"17:00\"\n    },\n    {\n      \"@type\": \"OpeningHoursSpecification\",\n      \"dayOfWeek\": \"Saturday\",\n      \"opens\": \"09:00\",\n      \"closes\": \"13:00\"\n    }\n  ],\n  \"areaServed\": [\n    {\n      \"@type\": \"AdministrativeArea\",\n      \"name\": \"New Haven County, CT\"\n    },\n    {\n      \"@type\": \"AdministrativeArea\",\n      \"name\": \"Fairfield County, CT\"\n    },\n    {\n      \"@type\": \"AdministrativeArea\",\n      \"name\": \"Hartford County, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"New Haven, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Hamden, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"North Haven, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"West Haven, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Cheshire, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Wallingford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Branford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Guilford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Madison, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Milford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Orange, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Woodbridge, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Shelton, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Trumbull, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Fairfield, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Stratford, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Avon, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Berlin, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Farmington, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Glastonbury, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"Southington, CT\"\n    },\n    {\n      \"@type\": \"City\",\n      \"name\": \"West Hartford, CT\"\n    }\n  ],\n  \"sameAs\": [\n    \"https://www.facebook.com/AlphaHardscapes\",\n    \"https://www.instagram.com/alphahardscapes/\"\n  ],\n  \"hasOfferCatalog\": {\n    \"@type\": \"OfferCatalog\",\n    \"name\": \"Hardscaping & Landscaping Services\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Patios & Walkways\",\n          \"url\": \"https://alphahardscapes.com/walkway-patio-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Retaining Walls\",\n          \"url\": \"https://alphahardscapes.com/retaining-walls-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Masonry\",\n          \"url\": \"https://alphahardscapes.com/masonry/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Paver Repairs & Maintenance\",\n          \"url\": \"https://alphahardscapes.com/repairs-maintenance-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Outdoor Kitchens\",\n          \"url\": \"https://alphahardscapes.com/outdoor-kitchens-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Fire Features\",\n          \"url\": \"https://alphahardscapes.com/fire-features-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Stone Steps\",\n          \"url\": \"https://alphahardscapes.com/stone-steps-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Chimney Installation & Repair\",\n          \"url\": \"https://alphahardscapes.com/chimney-installation-and-repair-connecticut/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Landscaping\",\n          \"url\": \"https://alphahardscapes.com/landscaping/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Seasonal Clean-Up\",\n          \"url\": \"https://alphahardscapes.com/seasonal-clean-up/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Snow Removal\",\n          \"url\": \"https://alphahardscapes.com/seasonal-clean-up/snow-removal/\"\n        }\n      },\n      {\n        \"@type\": \"Offer\",\n        \"itemOffered\": {\n          \"@type\": \"Service\",\n          \"name\": \"Leaf Removal\",\n          \"url\": \"https://alphahardscapes.com/seasonal-clean-up/leaf-removal/\"\n        }\n      }\n    ]\n  }\n}"
+ },
+ {
+  "seo": {
+   "title": "Retaining Walls in Avon, CT: Stone and Block Walls",
+   "robots": "noindex, nofollow",
+   "canonical": "https://alphahardscapes.com/retaining-walls-avon-ct/",
+   "ogLocale": "en_US",
+   "ogType": "article",
+   "ogTitle": "Retaining Walls in Avon, CT: Stone and Block Walls",
+   "ogDescription": "Retaining walls in Avon, CT: natural stone or block, what a wall needs underneath to last through frost, permits to check with the town, and what drives the cost.",
+   "ogUrl": "https://alphahardscapes.com/retaining-walls-avon-ct/",
+   "ogSiteName": "Alpha Hardscapes",
+   "articlePublisher": "https://www.facebook.com/AlphaHardscapes",
+   "articleAuthor": "https://www.facebook.com/sebastian.ullrich.710/",
+   "publishedTime": "2026-11-21T13:00:00+00:00",
+   "modifiedTime": "2026-11-21T13:00:00+00:00",
+   "ogImage": "https://alphahardscapes.com/og/retaining-walls-avon-ct.jpg",
+   "ogImageWidth": "1200",
+   "ogImageHeight": "630",
+   "ogImageType": "image/jpeg",
+   "author": "Sebastian Ullrich",
+   "twitterCard": "summary_large_image",
+   "twitterMisc": [
+    {
+     "_key": "t1",
+     "label": "Written by",
+     "data": "Sebastian Ullrich"
+    },
+    {
+     "_key": "t2",
+     "label": "Est. reading time",
+     "data": "6 minutes"
+    }
+   ],
+   "schema": "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://alphahardscapes.com/retaining-walls-avon-ct/#article\",\"isPartOf\":{\"@id\":\"https://alphahardscapes.com/retaining-walls-avon-ct/\"},\"author\":{\"name\":\"Sebastian Ullrich\",\"@id\":\"https://alphahardscapes.com/#/schema/person/8ceca06083f68e876a7c24efb3008961\"},\"headline\":\"Retaining Walls in Avon, CT\",\"datePublished\":\"2026-11-21T13:00:00+00:00\",\"dateModified\":\"2026-11-21T13:00:00+00:00\",\"mainEntityOfPage\":{\"@id\":\"https://alphahardscapes.com/retaining-walls-avon-ct/\"},\"wordCount\":1178,\"publisher\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"image\":{\"@id\":\"https://alphahardscapes.com/retaining-walls-avon-ct/#primaryimage\"},\"thumbnailUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/retaining-wall-0313.jpg\",\"articleSection\":[\"Hardscaping\"],\"inLanguage\":\"en-US\",\"about\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"spatialCoverage\":{\"@type\":\"Place\",\"name\":\"Avon, Connecticut\"}},{\"@type\":\"WebPage\",\"@id\":\"https://alphahardscapes.com/retaining-walls-avon-ct/\",\"url\":\"https://alphahardscapes.com/retaining-walls-avon-ct/\",\"name\":\"Retaining Walls in Avon, CT: Stone and Block Walls\",\"isPartOf\":{\"@id\":\"https://alphahardscapes.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://alphahardscapes.com/retaining-walls-avon-ct/#primaryimage\"},\"image\":{\"@id\":\"https://alphahardscapes.com/retaining-walls-avon-ct/#primaryimage\"},\"thumbnailUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/retaining-wall-0313.jpg\",\"datePublished\":\"2026-11-21T13:00:00+00:00\",\"dateModified\":\"2026-11-21T13:00:00+00:00\",\"description\":\"Retaining walls in Avon, CT: natural stone or block, what a wall needs underneath to last through frost, permits to check with the town, and what drives the cost.\",\"breadcrumb\":{\"@id\":\"https://alphahardscapes.com/retaining-walls-avon-ct/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://alphahardscapes.com/retaining-walls-avon-ct/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://alphahardscapes.com/retaining-walls-avon-ct/#primaryimage\",\"url\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/retaining-wall-0313.jpg\",\"contentUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/retaining-wall-0313.jpg\",\"width\":1920,\"height\":2560},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://alphahardscapes.com/retaining-walls-avon-ct/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://alphahardscapes.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Retaining Walls in Avon, CT\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://alphahardscapes.com/#website\",\"url\":\"https://alphahardscapes.com/\",\"name\":\"Alpha Hardscapes\",\"publisher\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"inLanguage\":\"en-US\"},{\"@type\":\"Person\",\"@id\":\"https://alphahardscapes.com/#/schema/person/8ceca06083f68e876a7c24efb3008961\",\"name\":\"Sebastian Ullrich\",\"url\":\"https://alphahardscapes.com/author/sebastian/\"}]}",
+   "description": "Retaining walls in Avon, CT: natural stone or block, what a wall needs underneath to last through frost, permits to check with the town, and what drives the cost."
+  },
+  "bodyClass": "wp-singular post-template-default single single-post postid-900001 single-format-standard wp-custom-logo wp-theme-astra wp-child-theme-alphahardscapes ast-desktop ast-narrow-container ast-separate-container ast-no-sidebar astra-4.9.2 group-blog ast-blog-single-style-1 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-full-width-primary-header ast-normal-title-enabled elementor-default elementor-kit-7 astra-addon-4.10.0",
+  "popups": [
+   4223,
+   4206,
+   4194,
+   4178,
+   4168,
+   4156,
+   4143,
+   4135,
+   4111,
+   4104,
+   4091,
+   377
+  ],
+  "featuredImage": {
+   "_type": "wpImage",
+   "src": "/wp-content/uploads/2026/07/retaining-wall-0313.jpg",
+   "width": "1920",
+   "height": "2560",
+   "srcset": "/wp-content/uploads/2026/07/retaining-wall-0313.jpg 1920w, /wp-content/uploads/2026/07/retaining-wall-0313-768x1024.jpg 768w",
+   "sizes": "(max-width: 1024px) 100vw, 1024px",
+   "alt": "Two tiers of grey block retaining wall with built-in steps on a sloped Connecticut yard, built by Alpha Hardscapes",
+   "attrs": "class=\"attachment-large size-large wp-post-image\" decoding=\"async\""
+  },
+  "articleClass": "post-900001 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-article-single",
+  "frameTpl": "<div id=\"content\" class=\"site-content\"><div class=\"ast-container\"><div id=\"primary\" class=\"content-area primary\"><main id=\"main\" class=\"site-main\"><article class=\"[[@ctxattr:articleClass]]\" id=\"post-900001\"><div class=\"ast-post-format- single-layout-1\"><header class=\"entry-header \"><h1 class=\"entry-title\">[[@text:title]]</h1>[[@ctx:entryMeta]][[@ctx:thumbnail]]</header><!-- .entry-header --><div class=\"entry-content clear\">[[@rich:body]]</div><!-- .entry-content .clear --></div></article><!-- #post-## -->[[@ctx:postNav]]</main><!-- #main --></div><!-- #primary --></div> <!-- ast-container --></div>",
+  "shell": "ccc5e19af0",
+  "_id": "post-rory-1121-a",
+  "_type": "post",
+  "title": "Retaining Walls in Avon, CT",
+  "path": "/retaining-walls-avon-ct/",
+  "wpId": 900001,
+  "date": "2026-11-21T13:00:00Z",
+  "modified": "2026-11-21T13:00:00Z",
+  "author": {
+   "_type": "reference",
+   "_ref": "author-sebastian"
+  },
+  "categories": [],
+  "wpTemplate": "",
+  "excerpt": "Retaining walls in Avon, CT: natural stone or block, what a wall needs underneath to last through frost, permits to check with the town, and what drives the cost.",
+  "featuredMedium": {
+   "_type": "wpImage",
+   "src": "/wp-content/uploads/2026/07/retaining-wall-0313.jpg",
+   "width": "1920",
+   "height": "2560",
+   "alt": "Two tiers of grey block retaining wall with built-in steps on a sloped Connecticut yard, built by Alpha Hardscapes",
+   "attrs": "loading=\"lazy\" class=\"attachment-medium size-medium\""
+  },
+  "cardClass": "post-900001 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding",
+  "relatedPage": "/retaining-walls-connecticut/",
+  "ctaText": "Have a slope in your Avon yard you want to use? Call (475) 227-6896 to talk it through.",
+  "body": [
+   {
+    "_type": "block",
+    "_key": "f17a5bddc603",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "701e89068ffb",
+      "text": "By Sebastian Ullrich, founder and hardscaping specialist at Alpha Hardscapes. Updated November 21, 2026.",
+      "marks": [
+       "em"
+      ]
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f309c6ab51e6",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "512ff74e27d2",
+      "text": "Alpha Hardscapes builds natural stone and block retaining walls for homeowners in Avon, CT. A wall that holds up here is decided below the surface: a compacted stone base, a drain at the bottom and clean stone behind it so water can get out. Call (475) 227-6896 to talk through your slope.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6d3c6835a406",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "8c3d1d413370",
+      "href": "/retaining-walls-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b78e6e481c03",
+      "text": "Avon is a town of hillsides. Between Talcott Mountain on one side and the Farmington River on the other, many backyards fall away from the house and many driveways are cut into banks that want to slide back down. A good ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "ed21bff62137",
+      "text": "retaining wall",
+      "marks": [
+       "8c3d1d413370"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "5efe9fa9d6d3",
+      "text": " turns that slope into level ground you can actually use. A poorly built one starts to lean within a few winters. Here is what I look at when I build a wall in Avon, and what you should ask any builder.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6d11baa02bad",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "872b96a16d5e",
+      "text": "Where does a retaining wall make sense in an Avon yard?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "8ef191c1235a",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b009bf34c898",
+      "text": "A wall makes sense wherever a slope stops you from using the space, or keeps washing soil onto your lawn, driveway or walkway. The spots I see most often are a backyard that drops away from the back door, a driveway or path cut into a bank, and a front yard that falls steeply toward the street.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9290f3705038",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "e7d5743be544",
+      "href": "/stone-steps-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "76a99d1ac7da",
+      "text": "In each case the wall holds the soil back so the ground above it, below it or both can be leveled. That level ground can become a patio, a lawn or a walkway. On a tall slope, two shorter walls with a flat terrace between them often look better than one tall wall, and each wall has less soil pushing on it. Steps can run right through the wall, and our ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "e290d7776063",
+      "text": "stone steps",
+      "marks": [
+       "e7d5743be544"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "5d1641d53100",
+      "text": " are built to match it.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "14d5e08fd9e2",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1e74f202367c",
+      "text": "Natural stone or block: which suits Avon homes?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "986f9628eaa1",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "6e54a93ca86d",
+      "text": "Both work well in Avon. The choice comes down to the look you want and how tall the wall has to be. Natural stone suits older homes, wooded lots and walls that should look as if they have always been there. Engineered wall block gives straight lines, matching caps and a system made for taller walls.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "bdc9dadd5534",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "d831906170b1",
+      "href": "/stone/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "18045f401d42",
+      "text": "Natural stone:",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "0949e6bd2dba",
+      "text": " every stone is fitted by hand, so no two walls look alike. It sits comfortably next to the old fieldstone walls that still run along many Farmington Valley properties. See our ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "aa220f23d322",
+      "text": "stone retaining walls",
+      "marks": [
+       "d831906170b1"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "d929e2839b9c",
+      "text": ".",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "97abbb123206",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "3a092341e584",
+      "href": "/wall-block/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "71f8749c7f67",
+      "text": "Wall block:",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "943ea5b50ca2",
+      "text": " interlocking units in a range of colors and textures, with matching caps, steps and pillars. See our ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "ca326a00dee0",
+      "text": "wall block installations",
+      "marks": [
+       "3a092341e584"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "b340e3b4c5a7",
+      "text": ".",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "bf53f9a6a1ad",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "82a12ea4dc34",
+      "href": "/blog/natural-stone-vs-wall-block/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "43eca47c5238",
+      "text": "For a fuller comparison of looks, durability and what drives the cost, read our guide to ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "be178c39100d",
+      "text": "natural stone versus wall block retaining walls",
+      "marks": [
+       "82a12ea4dc34"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "dcd54bc4567c",
+      "text": ".",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ad092163d0cf",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "7cf1c1e3ac69",
+      "text": "What does a retaining wall need underneath to last through Connecticut winters?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "3db2702a5af9",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2bd4b7bd625b",
+      "text": "It needs a firm base, a way for water to drain out from behind it, and the right fill. Most walls that fail around here fail because water gets trapped behind them, freezes and pushes the wall forward.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "a0f1d42bd6c3",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c671647446bb",
+      "text": "This is what goes into a wall before you see the first finished course:",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e13e2dece37d",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c737a7af8a37",
+      "text": "A trench dug down to firm soil, filled with crushed stone and compacted in layers, with the first course set partly below the ground.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "bee40bc4b915",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d228b1b87fbe",
+      "text": "A perforated drain pipe along the back of the base, run out to daylight so the water has somewhere to go.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "a6819f5ab069",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2cf9148a957f",
+      "text": "Clean crushed stone behind the wall instead of the soil that was dug out, so water drops to the pipe instead of building up.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "edceadb44405",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "73053e607865",
+      "text": "Filter fabric between that stone and the soil, so fine soil does not clog the drainage over the years.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "70cde631a101",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "022787cb7ac5",
+      "text": "A slight lean back into the slope, so the wall rests against the hill instead of standing straight up against it.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d33decaadb09",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "36067501713a",
+      "text": "Taller walls also get layers of reinforcement grid that tie the wall into the soil behind it. Whether a wall needs grid, and how much, depends on its height, the slope above it and what sits on top, such as a driveway or a patio.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "081da1ceb06a",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9e56fa9b9482",
+      "text": "Do I need a permit to build a retaining wall in Avon?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "4a433da1b5e2",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8f4ed73cba9a",
+      "text": "It depends on how tall the wall is, what it holds up and what is near it, so check with the Town of Avon before work starts. Taller walls, walls that support a driveway or a building, and walls close to wetlands or a stream can need a town review, and some need a design from an engineer.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d55165d1f9cf",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e07bdc980e88",
+      "text": "The town's building department and its planning and zoning office are the right people to ask. If the wall is part of a larger project, ask early, because a review can affect when work can begin.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e921944ba453",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "4aab8da7574d",
+      "text": "What affects the cost of a retaining wall in Avon?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "83afd53b5252",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "67191163ce05",
+      "text": "Alpha Hardscapes does not publish set prices, because no two walls are the same. Every project gets its own quote. These are the things that move the cost the most:",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "8e8bb0710586",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5dd7721179f9",
+      "text": "The height and length of the wall, and whether it needs reinforcement grid.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b9269a311bb0",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "fed3acf7b1a1",
+      "text": "Natural stone or block, and which block style.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "428c43f909ad",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b186fff7fa91",
+      "text": "How much digging the slope needs, and whether ledge or large boulders turn up.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ab58797dcc25",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5a1adb17d43e",
+      "text": "Access for equipment: a backyard with no side access takes longer than a wall along a driveway.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "066a5d4165e6",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2110956a1d8c",
+      "text": "Extras such as steps, caps, pillars, lighting or a patio on the level ground the wall creates.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "c0f76524b84c",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1d46efa215c9",
+      "text": "Do you build retaining walls in towns near Avon?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d9f47d92e9ef",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "d74abbbef8d0",
+      "href": "/avon/"
+     },
+     {
+      "_type": "link",
+      "_key": "68c6138e937b",
+      "href": "/farmington/"
+     },
+     {
+      "_type": "link",
+      "_key": "dae6573ab78b",
+      "href": "/hartford-county-ct/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "72c60449e49b",
+      "text": "Yes. Besides ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "b67734a57f9c",
+      "text": "Avon",
+      "marks": [
+       "d74abbbef8d0"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "d25c1a64f7d6",
+      "text": ", we work in ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "7483c3305270",
+      "text": "Farmington",
+      "marks": [
+       "68c6138e937b"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "eb12eabbc28d",
+      "text": " and other towns across ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "91d36b8002ad",
+      "text": "Hartford County",
+      "marks": [
+       "dae6573ab78b"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "80e3f7353a39",
+      "text": ", as well as in Southern Connecticut. If your town is nearby, call and ask.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "7de537578899",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "139947fd01b7",
+      "text": "Frequently asked questions",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "eda9f7488070",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "68372e6b232a",
+      "text": "Can a retaining wall be built in late fall or winter?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f12cbd76eff7",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "15004284178a",
+      "text": "Work can go on until the ground freezes hard. Frozen soil cannot be compacted properly, so a wall that is not started before a deep freeze usually waits for spring. Late fall and winter are a good time to plan the wall and get on the schedule.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5876fe4c35bf",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "61002ff9dc67",
+      "text": "My existing wall is leaning. Can it be saved?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "c0e7789f7b4f",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "a7c8b8b9a63c",
+      "href": "/blog/leaning-retaining-wall-repair-or-rebuild-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "28ab560699ed",
+      "text": "Sometimes. A small lean that has stopped can often be repaired, while a wall that is still moving usually needs to be taken down and rebuilt on a proper base. Our guide to ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "3b88fb5791ac",
+      "text": "a leaning retaining wall",
+      "marks": [
+       "a7c8b8b9a63c"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "5bbf7b030def",
+      "text": " explains how to tell the difference.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f7c7501d1bf1",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "dc5103cd5dfd",
+      "text": "Can a retaining wall include steps or a seating wall?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "08779ed69ca8",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "90060f536b97",
+      "text": "Yes. Steps can be built through the wall, and a wall around a patio can be built at seat height with a wide cap so it doubles as seating.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "477597336f24",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "90c5d419bd2e",
+      "text": "How long does a retaining wall last?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "518252d16460",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a815b977b13d",
+      "text": "That depends mostly on what is under and behind it. A wall with a compacted base, a drain and clean stone behind it can stand for many years. Most early failures we see trace back to water that had no way out.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "7c613795cf47",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a64ee3de0d6e",
+      "text": "Do you remove an old wall before building the new one?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f049cf9631aa",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b2ba1ae15405",
+      "text": "Yes, when the old wall is in the way or failing, taking it out is part of the job. Sound stone from an old wall can sometimes be reused.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2690aa018720",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "7978d752b028",
+      "text": "Ready to make your Avon slope usable?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e36bb4a63752",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ce177e5ffa3d",
+      "text": "Call Alpha Hardscapes at (475) 227-6896 to talk about the retaining wall your yard needs.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "sectionImages": [
+   {
+    "_key": "635eac532558",
+    "_type": "sectionImage",
+    "heading": "Natural stone or block: which suits Avon homes?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/retaining-wall-stoneyard-stone-veneer-b.jpg",
+     "width": "1512",
+     "height": "2016",
+     "alt": "Low natural stone wall and pillar along a lawn in front of a grey Connecticut home"
+    },
+    "caption": "A low natural stone wall and pillar along a Connecticut lawn, built by Alpha Hardscapes.",
+    "ratio": "3:2",
+    "focus": "50% 64%"
+   },
+   {
+    "_key": "a725142be5ca",
+    "_type": "sectionImage",
+    "heading": "What does a retaining wall need underneath to last through Connecticut winters?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/retaining-wall-0282.jpg",
+     "width": "2560",
+     "height": "1920",
+     "alt": "New grey block retaining wall with a capped lamp pillar beside an asphalt driveway"
+    },
+    "caption": "A block retaining wall and lamp pillar at the foot of a Connecticut driveway, built by Alpha Hardscapes.",
+    "ratio": "3:2",
+    "focus": "50% 52%"
+   }
+  ]
+ },
+ {
+  "seo": {
+   "title": "Natural Stone Patios in Avon, CT: Bluestone and Flagstone",
+   "robots": "noindex, nofollow",
+   "canonical": "https://alphahardscapes.com/natural-stone-patios-avon-ct/",
+   "ogLocale": "en_US",
+   "ogType": "article",
+   "ogTitle": "Natural Stone Patios in Avon, CT: Bluestone and Flagstone",
+   "ogDescription": "Natural stone patios in Avon, CT: bluestone, flagstone, fieldstone or granite, cut or irregular, dry-laid or mortared, and the base that keeps a stone patio flat.",
+   "ogUrl": "https://alphahardscapes.com/natural-stone-patios-avon-ct/",
+   "ogSiteName": "Alpha Hardscapes",
+   "articlePublisher": "https://www.facebook.com/AlphaHardscapes",
+   "articleAuthor": "https://www.facebook.com/sebastian.ullrich.710/",
+   "publishedTime": "2026-11-21T13:00:00+00:00",
+   "modifiedTime": "2026-11-21T13:00:00+00:00",
+   "ogImage": "https://alphahardscapes.com/og/natural-stone-patios-avon-ct.jpg",
+   "ogImageWidth": "1200",
+   "ogImageHeight": "630",
+   "ogImageType": "image/jpeg",
+   "author": "Sebastian Ullrich",
+   "twitterCard": "summary_large_image",
+   "twitterMisc": [
+    {
+     "_key": "t1",
+     "label": "Written by",
+     "data": "Sebastian Ullrich"
+    },
+    {
+     "_key": "t2",
+     "label": "Est. reading time",
+     "data": "5 minutes"
+    }
+   ],
+   "schema": "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://alphahardscapes.com/natural-stone-patios-avon-ct/#article\",\"isPartOf\":{\"@id\":\"https://alphahardscapes.com/natural-stone-patios-avon-ct/\"},\"author\":{\"name\":\"Sebastian Ullrich\",\"@id\":\"https://alphahardscapes.com/#/schema/person/8ceca06083f68e876a7c24efb3008961\"},\"headline\":\"Natural Stone Patios in Avon, CT\",\"datePublished\":\"2026-11-21T13:00:00+00:00\",\"dateModified\":\"2026-11-21T13:00:00+00:00\",\"mainEntityOfPage\":{\"@id\":\"https://alphahardscapes.com/natural-stone-patios-avon-ct/\"},\"wordCount\":1045,\"publisher\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"image\":{\"@id\":\"https://alphahardscapes.com/natural-stone-patios-avon-ct/#primaryimage\"},\"thumbnailUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/patio-6034.jpg\",\"articleSection\":[\"Hardscaping\"],\"inLanguage\":\"en-US\",\"about\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"spatialCoverage\":{\"@type\":\"Place\",\"name\":\"Avon, Connecticut\"}},{\"@type\":\"WebPage\",\"@id\":\"https://alphahardscapes.com/natural-stone-patios-avon-ct/\",\"url\":\"https://alphahardscapes.com/natural-stone-patios-avon-ct/\",\"name\":\"Natural Stone Patios in Avon, CT: Bluestone and Flagstone\",\"isPartOf\":{\"@id\":\"https://alphahardscapes.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://alphahardscapes.com/natural-stone-patios-avon-ct/#primaryimage\"},\"image\":{\"@id\":\"https://alphahardscapes.com/natural-stone-patios-avon-ct/#primaryimage\"},\"thumbnailUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/patio-6034.jpg\",\"datePublished\":\"2026-11-21T13:00:00+00:00\",\"dateModified\":\"2026-11-21T13:00:00+00:00\",\"description\":\"Natural stone patios in Avon, CT: bluestone, flagstone, fieldstone or granite, cut or irregular, dry-laid or mortared, and the base that keeps a stone patio flat.\",\"breadcrumb\":{\"@id\":\"https://alphahardscapes.com/natural-stone-patios-avon-ct/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://alphahardscapes.com/natural-stone-patios-avon-ct/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://alphahardscapes.com/natural-stone-patios-avon-ct/#primaryimage\",\"url\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/patio-6034.jpg\",\"contentUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/patio-6034.jpg\",\"width\":1920,\"height\":2560},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://alphahardscapes.com/natural-stone-patios-avon-ct/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://alphahardscapes.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Natural Stone Patios in Avon, CT\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://alphahardscapes.com/#website\",\"url\":\"https://alphahardscapes.com/\",\"name\":\"Alpha Hardscapes\",\"publisher\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"inLanguage\":\"en-US\"},{\"@type\":\"Person\",\"@id\":\"https://alphahardscapes.com/#/schema/person/8ceca06083f68e876a7c24efb3008961\",\"name\":\"Sebastian Ullrich\",\"url\":\"https://alphahardscapes.com/author/sebastian/\"}]}",
+   "description": "Natural stone patios in Avon, CT: bluestone, flagstone, fieldstone or granite, cut or irregular, dry-laid or mortared, and the base that keeps a stone patio flat."
+  },
+  "bodyClass": "wp-singular post-template-default single single-post postid-900002 single-format-standard wp-custom-logo wp-theme-astra wp-child-theme-alphahardscapes ast-desktop ast-narrow-container ast-separate-container ast-no-sidebar astra-4.9.2 group-blog ast-blog-single-style-1 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-full-width-primary-header ast-normal-title-enabled elementor-default elementor-kit-7 astra-addon-4.10.0",
+  "popups": [
+   4223,
+   4206,
+   4194,
+   4178,
+   4168,
+   4156,
+   4143,
+   4135,
+   4111,
+   4104,
+   4091,
+   377
+  ],
+  "featuredImage": {
+   "_type": "wpImage",
+   "src": "/wp-content/uploads/2026/07/patio-6034.jpg",
+   "width": "1920",
+   "height": "2560",
+   "srcset": "/wp-content/uploads/2026/07/patio-6034.jpg 1920w, /wp-content/uploads/2026/07/patio-6034-768x1024.jpg 768w",
+   "sizes": "(max-width: 1024px) 100vw, 1024px",
+   "alt": "Irregular natural stone patio with outdoor dining furniture behind a Connecticut home, built by Alpha Hardscapes",
+   "attrs": "class=\"attachment-large size-large wp-post-image\" decoding=\"async\""
+  },
+  "articleClass": "post-900002 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-article-single",
+  "frameTpl": "<div id=\"content\" class=\"site-content\"><div class=\"ast-container\"><div id=\"primary\" class=\"content-area primary\"><main id=\"main\" class=\"site-main\"><article class=\"[[@ctxattr:articleClass]]\" id=\"post-900002\"><div class=\"ast-post-format- single-layout-1\"><header class=\"entry-header \"><h1 class=\"entry-title\">[[@text:title]]</h1>[[@ctx:entryMeta]][[@ctx:thumbnail]]</header><!-- .entry-header --><div class=\"entry-content clear\">[[@rich:body]]</div><!-- .entry-content .clear --></div></article><!-- #post-## -->[[@ctx:postNav]]</main><!-- #main --></div><!-- #primary --></div> <!-- ast-container --></div>",
+  "shell": "ccc5e19af0",
+  "_id": "post-rory-1121-b",
+  "_type": "post",
+  "title": "Natural Stone Patios in Avon, CT",
+  "path": "/natural-stone-patios-avon-ct/",
+  "wpId": 900002,
+  "date": "2026-11-21T13:00:00Z",
+  "modified": "2026-11-21T13:00:00Z",
+  "author": {
+   "_type": "reference",
+   "_ref": "author-sebastian"
+  },
+  "categories": [],
+  "wpTemplate": "",
+  "excerpt": "Natural stone patios in Avon, CT: bluestone, flagstone, fieldstone or granite, cut or irregular, dry-laid or mortared, and the base that keeps a stone patio flat.",
+  "featuredMedium": {
+   "_type": "wpImage",
+   "src": "/wp-content/uploads/2026/07/patio-6034.jpg",
+   "width": "1920",
+   "height": "2560",
+   "alt": "Irregular natural stone patio with outdoor dining furniture behind a Connecticut home, built by Alpha Hardscapes",
+   "attrs": "loading=\"lazy\" class=\"attachment-medium size-medium\""
+  },
+  "cardClass": "post-900002 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding",
+  "relatedPage": "/walkway-patio-connecticut/",
+  "ctaText": "Thinking about a bluestone or flagstone patio in Avon? Call (475) 227-6896 to talk about the stone and the layout.",
+  "body": [
+   {
+    "_type": "block",
+    "_key": "0976a47062a5",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "025d83987afd",
+      "text": "By Sebastian Ullrich, founder and hardscaping specialist at Alpha Hardscapes. Updated November 21, 2026.",
+      "marks": [
+       "em"
+      ]
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "bd8b8fce78a7",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b82fdc3749ec",
+      "text": "Alpha Hardscapes builds natural stone patios for homeowners in Avon, CT, in bluestone, flagstone, fieldstone and granite. Whatever stone you pick, a patio that stays flat through Connecticut winters depends on a compacted, well drained base under it. Call (475) 227-6896 to talk about the patio you have in mind.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9f5c8c1c8964",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "4a70c8a0ffe0",
+      "text": "Natural stone suits Avon. Plenty of homes here sit on wooded lots with old stone walls along the property line, and a stone patio looks like it belongs. It also asks more of the builder than pavers do, because every stone is a different thickness and shape. Here is how to choose the stone, the layout and the way it is set, so the patio still looks right years from now.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5d92d80ca17d",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0cd5d707844d",
+      "text": "Which natural stone works best for a patio in Avon?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "54012e29feba",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "85679cee2e8c",
+      "text": "Bluestone is one of the most common patio stones in Connecticut: it is dense, it comes in cut and irregular shapes, and its blue gray color goes with almost any house. Flagstone, fieldstone and granite each suit a different look.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "908ef3e62360",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a5122ea54fad",
+      "text": "Bluestone:",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "837aa56c0049",
+      "text": " cut into squares and rectangles for a tailored patio, or left irregular. Colors run from blue gray to a mix of blues, tans and rust tones.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "a71eb27342c2",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "15e7baaa865c",
+      "text": "Irregular flagstone:",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "3765a442d54e",
+      "text": " large flat pieces fitted together like a puzzle. It gives a relaxed, natural look that suits wooded lots.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5662d183bad5",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0541b2af5b86",
+      "text": "Fieldstone:",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "5788c00ca2d2",
+      "text": " rounded, weathered stone with local character. It is better for walls, edges and garden paths than for a dining area, because the surface is uneven.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "201596f5f15a",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "dbda8723c789",
+      "text": "Granite:",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "2a991d92595f",
+      "text": " very hard and long lasting. It is often used as cobbles for edging, steps or a border around a softer stone.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "03ef2ab8f894",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "475b64369103",
+      "href": "/blog/best-patio-materials-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0eab02909c1b",
+      "text": "Our ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "9c6d702a0ff7",
+      "text": "guide to the best patio materials in Connecticut",
+      "marks": [
+       "475b64369103"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "8d55b055ba12",
+      "text": " compares these stones with pavers and concrete.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e9b6f78bd93a",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "05eb86470775",
+      "text": "Should the stone be cut or irregular?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6c6a498a2521",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2dd1cbee67cc",
+      "text": "Choose cut stone for a formal look and irregular stone for a natural one. Cut bluestone laid in a pattern lines up with doors, steps and the walls of the house, so it suits colonials and newer homes. Irregular flagstone flows around trees, beds and curves, so it suits wooded yards and older homes.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2e9d47f708c5",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a323dc1204fb",
+      "text": "A common middle ground is irregular stone in the middle of the patio with a border of cut stone or granite cobble around the edge. The border gives a clean line against the lawn and helps hold the stones in place.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "205b4eae1cf4",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "334f2a99f959",
+      "text": "Dry-laid or mortared: what is the difference?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "85c5916dcdc9",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c84cb51782cc",
+      "text": "A dry-laid patio sits on a compacted gravel base and a bedding layer, with stone dust or sand in the joints. A mortared patio is set in mortar on top of a concrete slab. Both can work in Avon; they behave differently over the years.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "eb154e3069cd",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "081b258897ca",
+      "text": "Dry-laid:",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "602a5ab9ebb9",
+      "text": " the patio can move very slightly with frost and settle back, and if one stone sinks or cracks it can be lifted and reset on its own. Water drains through the joints. Joints need topping up now and then.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0cd0cb0cca3e",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "6b5b2caeae3d",
+      "text": "Mortared:",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "45917a99b4e3",
+      "text": " a solid, clean look with neat joints and no weeds between stones. It needs a concrete slab built for frost underneath, and cracked mortar joints have to be repaired so water does not get in and freeze.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "17dcb10e39d7",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "606ee07eb802",
+      "text": "Which method fits your yard depends on the stone, how the patio will be used and how the ground drains. We will go over it with you before anything is built.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "49d6892d6de6",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9dac9854a644",
+      "text": "What goes under a natural stone patio?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1df6aec3eab0",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f313207e9652",
+      "text": "The part you never see does most of the work. Under a stone patio that lasts there is:",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0a4175f09fa9",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ec18f669295c",
+      "text": "Excavation down to firm soil, removing topsoil and anything soft.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f5e139147e24",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "763d5af9c362",
+      "text": "Crushed stone placed and compacted in layers, not all at once.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "7c4352a0c71b",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "64343a702ef5",
+      "text": "A gentle pitch away from the house, so rain runs off the patio and away from the foundation.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f164c49bf843",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "16b1714a1c15",
+      "text": "A firm edge along any side that is not held by a wall or step.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "eeda2ac6d8c9",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1ca611a46ac4",
+      "text": "A plan for downspouts and wet spots, so roof water is not dumped under the patio.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d5de38e7c9c5",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "dc340aa5f745",
+      "text": "Is natural stone better than pavers?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6ae42be78a07",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "abfe1c14007d",
+      "href": "/uncategorized/paver-patio-vs-natural-stone-patio-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "23692a4200dd",
+      "text": "Neither is better everywhere. Natural stone gives a one of a kind surface and a classic look. Pavers give an even surface, many colors and an easier price for large areas. Our ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "d1a9a30db8dd",
+      "text": "paver patio versus natural stone patio guide",
+      "marks": [
+       "abfe1c14007d"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "ee975b22d959",
+      "text": " walks through the choice in detail.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "84c4ac93df02",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5152e57a920e",
+      "text": "What affects the cost of a natural stone patio?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "4bf3026c4970",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "676ba8b4979a",
+      "href": "/walkway-patio-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "617839267873",
+      "text": "Alpha Hardscapes does not publish set prices, because every patio is different. Every project gets its own quote. The main things that affect it are the size of the patio, the stone you choose, cut or irregular, dry-laid or mortared, how much digging and base the ground needs, access for equipment, and extras such as steps, a seating wall or a ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "d1a1f9e421f9",
+      "text": "walkway",
+      "marks": [
+       "676ba8b4979a"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "7c2364a78477",
+      "text": " to the driveway.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0dd55613dd52",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8e1e49dd73f9",
+      "text": "Do you build stone patios in Avon and nearby towns?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "868cd599a109",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "1e3b11e2500f",
+      "href": "/avon/"
+     },
+     {
+      "_type": "link",
+      "_key": "d6e55b231977",
+      "href": "/farmington/"
+     },
+     {
+      "_type": "link",
+      "_key": "ee38dd18659b",
+      "href": "/hartford-county-ct/"
+     },
+     {
+      "_type": "link",
+      "_key": "5f17a6104001",
+      "href": "/retaining-walls-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b0734f26fd3e",
+      "text": "Yes. We work in ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "39dc1f3ac963",
+      "text": "Avon",
+      "marks": [
+       "1e3b11e2500f"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "bafed1bf2bf9",
+      "text": ", in ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "97e2c4799895",
+      "text": "Farmington",
+      "marks": [
+       "d6e55b231977"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "1db93f83dc03",
+      "text": " and in other towns across ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "802338886637",
+      "text": "Hartford County",
+      "marks": [
+       "ee38dd18659b"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "2c0c7aadb584",
+      "text": ", as well as in Southern Connecticut. If a slope is in the way, a ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "2d0346ea7e17",
+      "text": "retaining wall",
+      "marks": [
+       "5f17a6104001"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "23b93bb5343d",
+      "text": " can create the level ground the patio needs.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "cb6a3da28f23",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5e3d0b68377f",
+      "text": "Frequently asked questions",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "823dd692c3bb",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e448eb9e3a9c",
+      "text": "Is bluestone slippery when it is wet?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2c2b8847127e",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a7c7731e292a",
+      "text": "Smoother finishes can feel slick when wet. A thermal finish, which is textured on purpose, gives better footing. Ask to see the stone samples wet before you choose.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "c79610285d7e",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2b48bfc42bb2",
+      "text": "Does bluestone get hot in the sun?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "dc79e35b8cb6",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "95a62a596ee6",
+      "text": "Darker stone absorbs more heat than lighter stone, so a dark bluestone patio in full sun can get warm underfoot in July. Lighter tones or a spot with afternoon shade stay cooler.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6cf60d83253b",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b79d819d4d3a",
+      "text": "Do I need to seal a natural stone patio?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "072124102e87",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d7c5ffcfa069",
+      "text": "Sealing is optional. It can make stains easier to clean and deepen the color, but it is not needed to protect a well built patio. If you do seal, use a product made for the stone you have.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "4fc3a32765c2",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "75b579eccdbf",
+      "text": "Can steps and a walkway match the patio?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "fd3fc4bed20b",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "c47b6a2298a6",
+      "href": "/stone-steps-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ef518d572ea6",
+      "text": "Yes. Using the same stone for the patio, the ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "21c519ddc83d",
+      "text": "stone steps",
+      "marks": [
+       "c47b6a2298a6"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "e39f692d4eb2",
+      "text": " and the walkway ties the whole yard together.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2d282a85c9b8",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "bb05cc88976e",
+      "text": "When is the best time to build a stone patio?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0cd29ca626a5",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "284cb9e7f5b9",
+      "text": "Patios are built from spring through fall, until the ground freezes. Winter is a good time to choose the stone and plan the layout so the work can start early in the season.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "67cc8bfb17d2",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "92325796f39e",
+      "text": "Planning a stone patio in Avon?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1d25f1429ecd",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0bd22e286b33",
+      "text": "Call Alpha Hardscapes at (475) 227-6896 to talk about the stone, the layout and your yard.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "sectionImages": [
+   {
+    "_key": "df796aaefa2f",
+    "_type": "sectionImage",
+    "heading": "Should the stone be cut or irregular?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/patio-0184.jpg",
+     "width": "1920",
+     "height": "2560",
+     "alt": "Irregular flagstone patio in blue and red tones with a granite cobble border beside a white house"
+    },
+    "caption": "Irregular flagstone with a granite cobble border, a common way to frame a natural stone patio.",
+    "ratio": "3:2",
+    "focus": "50% 60%"
+   },
+   {
+    "_key": "aa562ddda3e5",
+    "_type": "sectionImage",
+    "heading": "What goes under a natural stone patio?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/walkway-2935.jpg",
+     "width": "1920",
+     "height": "2560",
+     "alt": "Curved natural stone walkway with a bluestone step along planting beds beside a Connecticut home"
+    },
+    "caption": "A natural stone walkway and bluestone step by Alpha Hardscapes, laid on a compacted base.",
+    "ratio": "3:2",
+    "focus": "50% 55%"
+   }
+  ]
+ },
+ {
+  "seo": {
+   "title": "Why Are My Pavers Sinking? Causes and Fixes in Connecticut",
+   "robots": "noindex, nofollow",
+   "canonical": "https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/",
+   "ogLocale": "en_US",
+   "ogType": "article",
+   "ogTitle": "Why Are My Pavers Sinking? Causes and Fixes in Connecticut",
+   "ogDescription": "Why pavers sink in Connecticut patios and walkways: a weak base, water, failed edges or soft ground, how frost makes it worse, and how a sunken area is repaired.",
+   "ogUrl": "https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/",
+   "ogSiteName": "Alpha Hardscapes",
+   "articlePublisher": "https://www.facebook.com/AlphaHardscapes",
+   "articleAuthor": "https://www.facebook.com/sebastian.ullrich.710/",
+   "publishedTime": "2026-11-21T13:00:00+00:00",
+   "modifiedTime": "2026-11-21T13:00:00+00:00",
+   "ogImage": "https://alphahardscapes.com/og/blog-why-are-my-pavers-sinking-connecticut.jpg",
+   "ogImageWidth": "1200",
+   "ogImageHeight": "630",
+   "ogImageType": "image/jpeg",
+   "author": "Sebastian Ullrich",
+   "twitterCard": "summary_large_image",
+   "twitterMisc": [
+    {
+     "_key": "t1",
+     "label": "Written by",
+     "data": "Sebastian Ullrich"
+    },
+    {
+     "_key": "t2",
+     "label": "Est. reading time",
+     "data": "6 minutes"
+    }
+   ],
+   "schema": "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/#article\",\"isPartOf\":{\"@id\":\"https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/\"},\"author\":{\"name\":\"Sebastian Ullrich\",\"@id\":\"https://alphahardscapes.com/#/schema/person/8ceca06083f68e876a7c24efb3008961\"},\"headline\":\"Why are my pavers sinking, and can they be fixed?\",\"datePublished\":\"2026-11-21T13:00:00+00:00\",\"dateModified\":\"2026-11-21T13:00:00+00:00\",\"mainEntityOfPage\":{\"@id\":\"https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/\"},\"wordCount\":1113,\"publisher\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"image\":{\"@id\":\"https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/#primaryimage\"},\"thumbnailUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/patio-2077.jpg\",\"articleSection\":[\"Blog\"],\"inLanguage\":\"en-US\"},{\"@type\":\"WebPage\",\"@id\":\"https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/\",\"url\":\"https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/\",\"name\":\"Why Are My Pavers Sinking? Causes and Fixes in Connecticut\",\"isPartOf\":{\"@id\":\"https://alphahardscapes.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/#primaryimage\"},\"image\":{\"@id\":\"https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/#primaryimage\"},\"thumbnailUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/patio-2077.jpg\",\"datePublished\":\"2026-11-21T13:00:00+00:00\",\"dateModified\":\"2026-11-21T13:00:00+00:00\",\"description\":\"Why pavers sink in Connecticut patios and walkways: a weak base, water, failed edges or soft ground, how frost makes it worse, and how a sunken area is repaired.\",\"breadcrumb\":{\"@id\":\"https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/#primaryimage\",\"url\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/patio-2077.jpg\",\"contentUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/patio-2077.jpg\",\"width\":2560,\"height\":1920},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://alphahardscapes.com/blog/why-are-my-pavers-sinking-connecticut/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://alphahardscapes.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://alphahardscapes.com/blog/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Why are my pavers sinking, and can they be fixed?\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://alphahardscapes.com/#website\",\"url\":\"https://alphahardscapes.com/\",\"name\":\"Alpha Hardscapes\",\"publisher\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"inLanguage\":\"en-US\"},{\"@type\":\"Person\",\"@id\":\"https://alphahardscapes.com/#/schema/person/8ceca06083f68e876a7c24efb3008961\",\"name\":\"Sebastian Ullrich\",\"url\":\"https://alphahardscapes.com/author/sebastian/\"}]}",
+   "description": "Why pavers sink in Connecticut patios and walkways: a weak base, water, failed edges or soft ground, how frost makes it worse, and how a sunken area is repaired."
+  },
+  "bodyClass": "wp-singular post-template-default single single-post postid-900003 single-format-standard wp-custom-logo wp-theme-astra wp-child-theme-alphahardscapes ast-desktop ast-narrow-container ast-separate-container ast-no-sidebar astra-4.9.2 group-blog ast-blog-single-style-1 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-full-width-primary-header ast-normal-title-enabled elementor-default elementor-kit-7 astra-addon-4.10.0",
+  "popups": [
+   4223,
+   4206,
+   4194,
+   4178,
+   4168,
+   4156,
+   4143,
+   4135,
+   4111,
+   4104,
+   4091,
+   377
+  ],
+  "featuredImage": {
+   "_type": "wpImage",
+   "src": "/wp-content/uploads/2026/07/patio-2077.jpg",
+   "width": "2560",
+   "height": "1920",
+   "srcset": "/wp-content/uploads/2026/07/patio-2077.jpg 2560w, /wp-content/uploads/2026/07/patio-2077-1024x768.jpg 1024w",
+   "sizes": "(max-width: 1024px) 100vw, 1024px",
+   "alt": "Grey paver patio with a dark border beside a blue Connecticut home, built by Alpha Hardscapes",
+   "attrs": "class=\"attachment-large size-large wp-post-image\" decoding=\"async\""
+  },
+  "articleClass": "post-900003 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-article-single",
+  "frameTpl": "<div id=\"content\" class=\"site-content\"><div class=\"ast-container\"><div id=\"primary\" class=\"content-area primary\"><main id=\"main\" class=\"site-main\"><article class=\"[[@ctxattr:articleClass]]\" id=\"post-900003\"><div class=\"ast-post-format- single-layout-1\"><header class=\"entry-header \"><h1 class=\"entry-title\">[[@text:title]]</h1>[[@ctx:entryMeta]][[@ctx:thumbnail]]</header><!-- .entry-header --><div class=\"entry-content clear\">[[@rich:body]]</div><!-- .entry-content .clear --></div></article><!-- #post-## -->[[@ctx:postNav]]</main><!-- #main --></div><!-- #primary --></div> <!-- ast-container --></div>",
+  "shell": "ccc5e19af0",
+  "_id": "post-rory-1121-c",
+  "_type": "post",
+  "title": "Why are my pavers sinking, and can they be fixed?",
+  "path": "/blog/why-are-my-pavers-sinking-connecticut/",
+  "wpId": 900003,
+  "date": "2026-11-21T13:00:00Z",
+  "modified": "2026-11-21T13:00:00Z",
+  "author": {
+   "_type": "reference",
+   "_ref": "author-sebastian"
+  },
+  "categories": [
+   {
+    "_type": "reference",
+    "_ref": "category-blog",
+    "_key": "blog"
+   }
+  ],
+  "wpTemplate": "",
+  "excerpt": "Why pavers sink in Connecticut patios and walkways: a weak base, water, failed edges or soft ground, how frost makes it worse, and how a sunken area is repaired.",
+  "featuredMedium": {
+   "_type": "wpImage",
+   "src": "/wp-content/uploads/2026/07/patio-2077.jpg",
+   "width": "2560",
+   "height": "1920",
+   "alt": "Grey paver patio with a dark border beside a blue Connecticut home, built by Alpha Hardscapes",
+   "attrs": "loading=\"lazy\" class=\"attachment-medium size-medium\""
+  },
+  "cardClass": "post-900003 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding",
+  "relatedPage": "/repairs-maintenance-connecticut/",
+  "ctaText": "Have a low spot in your patio or walkway? Call (475) 227-6896 and get it on the spring repair schedule.",
+  "body": [
+   {
+    "_type": "block",
+    "_key": "306399d7ce63",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "13bbb71f1d39",
+      "text": "By Sebastian Ullrich, founder and hardscaping specialist at Alpha Hardscapes. Updated November 21, 2026.",
+      "marks": [
+       "em"
+      ]
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ab8402d1ce1a",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d5aa1b1252ef",
+      "text": "Pavers sink when the layers under them move: the base was too thin or not compacted, water is washing out the sand and gravel, or the edge has let go and the pavers are spreading. In most cases a sunken area can be fixed by lifting the pavers, rebuilding the base under them and setting the same pavers back down.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "be91d04d5397",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "4a2f95a4c4bc",
+      "href": "/repairs-maintenance-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1479fb825de8",
+      "text": "A dip in a patio or walkway is one of the most common calls I get after a Connecticut winter. The good news is that pavers are made to come up and go back down. The important part is finding out why the spot sank, because if the cause is not fixed, the repair sinks again. Here is how to read the signs, what usually causes them, and what a proper ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "8d5ca9bd1c95",
+      "text": "paver repair",
+      "marks": [
+       "4a2f95a4c4bc"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "136439b48778",
+      "text": " involves.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "62f978906ef0",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9dc443856f0a",
+      "text": "What are the signs that pavers are sinking?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5df1ea2790cb",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "be6791311cd7",
+      "text": "The clearest sign is a low spot that holds a puddle after rain. Others are pavers that rock when you step on them, edges that sit lower than the middle, joints that have opened up, and a patio that now slopes toward the house instead of away from it.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "79113a34c1f2",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "6e350e994f44",
+      "text": "Look closely after a heavy rain. Water shows you where the surface has dropped and where it is flowing. Also check the edges: if the outer row has tipped outward or the border has pulled away from the lawn, the patio is spreading, and the middle will follow.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "351bad9ce2d5",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c796d0712db2",
+      "text": "Why do pavers sink?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "4b0f04625739",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "cce0b8ef3a75",
+      "text": "Almost every sunken area comes back to one of four causes:",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0d0d75e80bd3",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3087e77f9173",
+      "text": "A weak base.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "f676fb74d63c",
+      "text": " The crushed stone under the pavers was too thin, the wrong material, or was not compacted in layers. It keeps settling under foot traffic and the weight of furniture or a grill.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "af5d870be0bd",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "bcdb1ad90f88",
+      "text": "Water.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "4cbde5e6b0b6",
+      "text": " A downspout that empties onto or beside the patio, or a low spot with nowhere to drain, slowly washes the bedding sand and fine gravel out from under the pavers.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d20ad9204c76",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "af9b184d45f9",
+      "text": "A failed edge.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "dabb3dd2f199",
+      "text": " Without a solid edge restraint, the pavers slowly creep outward. The joints open, the sand drops into them and the surface sinks.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "dd2c79a2aa48",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d39226984c04",
+      "text": "Soft ground below.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "1b9ade24a034",
+      "text": " Soil that was backfilled against the foundation, an old trench for a utility line, or roots from a removed tree rotting away can all leave soft ground under an otherwise good base.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e9156a014405",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e41506aae288",
+      "text": "Sometimes it is a mix. A patio built on a thin base next to a downspout will often sink in exactly the spot where the water lands.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "000f648137bd",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ce713d56a5c1",
+      "text": "Does frost make sinking pavers worse?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "48d3a13ab4cb",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "cb8445a19120",
+      "text": "Yes. Connecticut ground freezes and thaws many times every winter. Water trapped in a weak or poorly drained base expands when it freezes and lifts the pavers, then leaves a loose, soft base behind when it thaws. Each cycle loosens things a little more, which is why a small dip in the fall can be a real hollow by spring.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f2cea91fdc2c",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "7cd1c185d365",
+      "text": "A base built from compacted crushed stone that drains well gives frost very little water to work with. That is why the fix is almost always about the base and the drainage, not the pavers themselves.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d0df198e0c4a",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "7fb74a68dc49",
+      "text": "How do you fix pavers that have sunk?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d790bfc7372c",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a7a50bf58873",
+      "text": "The sunken area is lifted, the base under it is repaired and compacted, and the same pavers are put back. Done properly, it is a rebuild of the layers under that spot, not just a top-up of sand.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "12e855735d79",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c3c7d56f12f7",
+      "text": "Mark the pavers and lift them out, working a little past the edge of the low area.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d1fee3745a1d",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "135676d61558",
+      "text": "Take out the old bedding sand, and dig out base material that is soft or mixed with soil.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "be204244c3a5",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "87eeb275686d",
+      "text": "Fix the cause: move or extend the downspout, add a drain, or rebuild the edge restraint.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "97490fc47752",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a150904b6e43",
+      "text": "Add new crushed stone and compact it in layers until it is firm and level with the good area around it.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "396135c2ddd3",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a527eeb8ed1b",
+      "text": "Screed a fresh, even bedding layer, usually about an inch of sand.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d958af19eecf",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b1dcc6901e7d",
+      "text": "Relay the pavers in their original pattern, compact them with a plate compactor, and sweep joint sand into the joints.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "01a0f5d866ac",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0d8f0eae2098",
+      "text": "Pouring sand into the joints or packing sand under a single paver can hide a dip for a season, but it does not stop the base from moving.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1852f7c66b3b",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2f9fd79d2344",
+      "text": "When does a patio need a full rebuild instead of a repair?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "eaf85d0514f3",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "928793539430",
+      "text": "A repair makes sense when the problem is in one or two areas. A full rebuild is the better call when large parts of the patio have sunk or heaved, when the base was built without enough crushed stone across the whole patio, or when the patio drains toward the house.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6f327dc15fe4",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "c22a3b7b8bc5",
+      "href": "/walkway-patio-connecticut/"
+     },
+     {
+      "_type": "link",
+      "_key": "b238287a5819",
+      "href": "/uncategorized/how-long-does-a-paver-patio-last/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a6bda5931a92",
+      "text": "A rebuild is also the moment to change the layout, add a ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "6bc1d8899395",
+      "text": "walkway",
+      "marks": [
+       "c22a3b7b8bc5"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "a6842116abe0",
+      "text": ", or switch materials. In many cases the existing pavers can be cleaned and reused. Our guide on ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "8b170d4bf1f1",
+      "text": "how long a paver patio lasts in Connecticut",
+      "marks": [
+       "b238287a5819"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "30f78299ca23",
+      "text": " explains what to expect from a patio that is built well.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6b4edc595cbd",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "66e59632f94e",
+      "text": "Can sinking pavers be fixed in the winter?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "c912227163ec",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c3ca04300ef0",
+      "text": "Usually not. Frozen or saturated ground cannot be dug and compacted properly, so a repair made in the middle of winter is likely to move again. Most paver repairs wait for the ground to thaw and dry out in spring.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1d95dd62e7d7",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "16fb8e9bb731",
+      "href": "/blog/prepare-patio-for-winter-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "096e3a000127",
+      "text": "Winter is a good time to look and plan. Photograph the low spots after a rain, note where the downspouts empty, and get on the schedule early. Our ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "2b8ef76568de",
+      "text": "winter patio guide",
+      "marks": [
+       "16fb8e9bb731"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "a65a5c236214",
+      "text": " covers how to protect the patio until then.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "a1971dc5c52b",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "242a5676899c",
+      "text": "Frequently asked questions",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0ffd3de405da",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e096517e5725",
+      "text": "Can I just add sand under the sunken pavers?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b62cf158f5fc",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "cb4b1ae378d8",
+      "text": "You can lift a single paver and add sand to bring it level, but it rarely lasts. The low spot came from the base or from water, and sand alone does not fix either.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "c8bde5c27781",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "33d48ec92038",
+      "text": "Will polymeric sand stop pavers from sinking?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "68d59707c078",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ad4a5de12aba",
+      "text": "No. Polymeric sand helps keep joints full and weeds out, but it sits in the joints, not under the pavers. If the base moves, the pavers move with it.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "3eaf7b11fc86",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9a2f6e04dbe9",
+      "text": "Are sinking pavers next to the house a problem?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0d362d161894",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "52022584f7bd",
+      "text": "They can be. A dip along the foundation can send rainwater toward the house instead of away from it. That is worth fixing sooner rather than later.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "7f7fdab83d81",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a319426ddd84",
+      "text": "Can the same pavers be used again?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9377ff84ce51",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d0a4ab67662b",
+      "text": "Usually yes. Pavers are cleaned and reset in their original pattern. Cracked or chipped units are replaced, and older colors can be hard to match exactly.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b7fd20a769f1",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "bb150584fdfa",
+      "text": "How do I keep it from happening again?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "47524d11349a",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "31d6974b806f",
+      "href": "/blog/patio-and-walkway-maintenance-checklist/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3060d5f270f9",
+      "text": "Keep water off the patio and its edges, keep joints full, and fix small dips before they grow. Our ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "9e8da6bbb1e5",
+      "text": "patio and walkway maintenance checklist",
+      "marks": [
+       "31d6974b806f"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "ce116606a14b",
+      "text": " has a simple routine.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "fa54bdb4197c",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "7982ae73fd46",
+      "text": "Have pavers that are sinking?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2726ce2eb088",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "7d0e0639eeec",
+      "text": "Call Alpha Hardscapes at (475) 227-6896 to talk about your patio or walkway and get it on the spring schedule.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "sectionImages": [
+   {
+    "_key": "ca05a6e232c8",
+    "_type": "sectionImage",
+    "heading": "Why do pavers sink?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/walkway-0909.jpg",
+     "width": "1920",
+     "height": "2560",
+     "alt": "Paver walkway with a dark soldier course and granite cobble edging leading to a driveway"
+    },
+    "caption": "A paver walkway with a soldier course and granite edging. A solid edge keeps pavers from creeping outward.",
+    "ratio": "3:2",
+    "focus": "50% 60%"
+   },
+   {
+    "_key": "efe23d7aebce",
+    "_type": "sectionImage",
+    "heading": "How do you fix pavers that have sunk?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/patio-2951.jpg",
+     "width": "1920",
+     "height": "2560",
+     "alt": "New paver patio with a charcoal border beside a deck on freshly graded soil"
+    },
+    "caption": "A new paver patio by Alpha Hardscapes. The same layered, compacted base goes under a repaired area.",
+    "ratio": "3:2",
+    "focus": "50% 55%"
+   }
+  ]
+ },
+ {
+  "seo": {
+   "title": "Sloped Backyard Ideas for Connecticut: Walls, Terraces, Patios",
+   "robots": "noindex, nofollow",
+   "canonical": "https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/",
+   "ogLocale": "en_US",
+   "ogType": "article",
+   "ogTitle": "Sloped Backyard Ideas for Connecticut: Walls, Terraces, Patios",
+   "ogDescription": "What to do with a sloped backyard in Connecticut: retaining walls, terraces, a patio cut into or built up from the slope, steps between levels, and drainage first.",
+   "ogUrl": "https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/",
+   "ogSiteName": "Alpha Hardscapes",
+   "articlePublisher": "https://www.facebook.com/AlphaHardscapes",
+   "articleAuthor": "https://www.facebook.com/sebastian.ullrich.710/",
+   "publishedTime": "2026-11-21T13:00:00+00:00",
+   "modifiedTime": "2026-11-21T13:00:00+00:00",
+   "ogImage": "https://alphahardscapes.com/og/blog-sloped-backyard-ideas-connecticut.jpg",
+   "ogImageWidth": "1200",
+   "ogImageHeight": "630",
+   "ogImageType": "image/jpeg",
+   "author": "Sebastian Ullrich",
+   "twitterCard": "summary_large_image",
+   "twitterMisc": [
+    {
+     "_key": "t1",
+     "label": "Written by",
+     "data": "Sebastian Ullrich"
+    },
+    {
+     "_key": "t2",
+     "label": "Est. reading time",
+     "data": "6 minutes"
+    }
+   ],
+   "schema": "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/#article\",\"isPartOf\":{\"@id\":\"https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/\"},\"author\":{\"name\":\"Sebastian Ullrich\",\"@id\":\"https://alphahardscapes.com/#/schema/person/8ceca06083f68e876a7c24efb3008961\"},\"headline\":\"What can you do with a sloped backyard in Connecticut?\",\"datePublished\":\"2026-11-21T13:00:00+00:00\",\"dateModified\":\"2026-11-21T13:00:00+00:00\",\"mainEntityOfPage\":{\"@id\":\"https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/\"},\"wordCount\":1145,\"publisher\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"image\":{\"@id\":\"https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/#primaryimage\"},\"thumbnailUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/patio-1805.jpg\",\"articleSection\":[\"Blog\"],\"inLanguage\":\"en-US\"},{\"@type\":\"WebPage\",\"@id\":\"https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/\",\"url\":\"https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/\",\"name\":\"Sloped Backyard Ideas for Connecticut: Walls, Terraces, Patios\",\"isPartOf\":{\"@id\":\"https://alphahardscapes.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/#primaryimage\"},\"image\":{\"@id\":\"https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/#primaryimage\"},\"thumbnailUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/patio-1805.jpg\",\"datePublished\":\"2026-11-21T13:00:00+00:00\",\"dateModified\":\"2026-11-21T13:00:00+00:00\",\"description\":\"What to do with a sloped backyard in Connecticut: retaining walls, terraces, a patio cut into or built up from the slope, steps between levels, and drainage first.\",\"breadcrumb\":{\"@id\":\"https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/#primaryimage\",\"url\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/patio-1805.jpg\",\"contentUrl\":\"https://alphahardscapes.com/wp-content/uploads/2026/07/patio-1805.jpg\",\"width\":2560,\"height\":1920},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://alphahardscapes.com/blog/sloped-backyard-ideas-connecticut/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://alphahardscapes.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\",\"item\":\"https://alphahardscapes.com/blog/\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"What can you do with a sloped backyard in Connecticut?\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://alphahardscapes.com/#website\",\"url\":\"https://alphahardscapes.com/\",\"name\":\"Alpha Hardscapes\",\"publisher\":{\"@id\":\"https://alphahardscapes.com/#organization\"},\"inLanguage\":\"en-US\"},{\"@type\":\"Person\",\"@id\":\"https://alphahardscapes.com/#/schema/person/8ceca06083f68e876a7c24efb3008961\",\"name\":\"Sebastian Ullrich\",\"url\":\"https://alphahardscapes.com/author/sebastian/\"}]}",
+   "description": "What to do with a sloped backyard in Connecticut: retaining walls, terraces, a patio cut into or built up from the slope, steps between levels, and drainage first."
+  },
+  "bodyClass": "wp-singular post-template-default single single-post postid-900004 single-format-standard wp-custom-logo wp-theme-astra wp-child-theme-alphahardscapes ast-desktop ast-narrow-container ast-separate-container ast-no-sidebar astra-4.9.2 group-blog ast-blog-single-style-1 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-full-width-primary-header ast-normal-title-enabled elementor-default elementor-kit-7 astra-addon-4.10.0",
+  "popups": [
+   4223,
+   4206,
+   4194,
+   4178,
+   4168,
+   4156,
+   4143,
+   4135,
+   4111,
+   4104,
+   4091,
+   377
+  ],
+  "featuredImage": {
+   "_type": "wpImage",
+   "src": "/wp-content/uploads/2026/07/patio-1805.jpg",
+   "width": "2560",
+   "height": "1920",
+   "srcset": "/wp-content/uploads/2026/07/patio-1805.jpg 2560w, /wp-content/uploads/2026/07/patio-1805-1024x768.jpg 1024w",
+   "sizes": "(max-width: 1024px) 100vw, 1024px",
+   "alt": "Paver patio with a fire pit and a low stone wall at the foot of a sloped Connecticut backyard, built by Alpha Hardscapes",
+   "attrs": "class=\"attachment-large size-large wp-post-image\" decoding=\"async\""
+  },
+  "articleClass": "post-900004 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-article-single",
+  "frameTpl": "<div id=\"content\" class=\"site-content\"><div class=\"ast-container\"><div id=\"primary\" class=\"content-area primary\"><main id=\"main\" class=\"site-main\"><article class=\"[[@ctxattr:articleClass]]\" id=\"post-900004\"><div class=\"ast-post-format- single-layout-1\"><header class=\"entry-header \"><h1 class=\"entry-title\">[[@text:title]]</h1>[[@ctx:entryMeta]][[@ctx:thumbnail]]</header><!-- .entry-header --><div class=\"entry-content clear\">[[@rich:body]]</div><!-- .entry-content .clear --></div></article><!-- #post-## -->[[@ctx:postNav]]</main><!-- #main --></div><!-- #primary --></div> <!-- ast-container --></div>",
+  "shell": "ccc5e19af0",
+  "_id": "post-rory-1121-d",
+  "_type": "post",
+  "title": "What can you do with a sloped backyard in Connecticut?",
+  "path": "/blog/sloped-backyard-ideas-connecticut/",
+  "wpId": 900004,
+  "date": "2026-11-21T13:00:00Z",
+  "modified": "2026-11-21T13:00:00Z",
+  "author": {
+   "_type": "reference",
+   "_ref": "author-sebastian"
+  },
+  "categories": [
+   {
+    "_type": "reference",
+    "_ref": "category-blog",
+    "_key": "blog"
+   }
+  ],
+  "wpTemplate": "",
+  "excerpt": "What to do with a sloped backyard in Connecticut: retaining walls, terraces, a patio cut into or built up from the slope, steps between levels, and drainage first.",
+  "featuredMedium": {
+   "_type": "wpImage",
+   "src": "/wp-content/uploads/2026/07/patio-1805.jpg",
+   "width": "2560",
+   "height": "1920",
+   "alt": "Paver patio with a fire pit and a low stone wall at the foot of a sloped Connecticut backyard, built by Alpha Hardscapes",
+   "attrs": "loading=\"lazy\" class=\"attachment-medium size-medium\""
+  },
+  "cardClass": "post-900004 post type-post status-publish format-standard has-post-thumbnail hentry category-blog ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding",
+  "relatedPage": "/retaining-walls-connecticut/",
+  "ctaText": "Have a sloped yard you want to use? Call (475) 227-6896 to talk about walls, terraces and a patio.",
+  "body": [
+   {
+    "_type": "block",
+    "_key": "b85a7fbfb29c",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "36ee7f3c7833",
+      "text": "By Sebastian Ullrich, founder and hardscaping specialist at Alpha Hardscapes. Updated November 21, 2026.",
+      "marks": [
+       "em"
+      ]
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "cc0c8f93e4f4",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "780847a96fde",
+      "text": "A sloped backyard can be turned into level, usable space with retaining walls, terraces, a patio set into the hill, and steps that tie the levels together. The right plan depends on how steep the slope is, where the water runs, and how you want to use the yard. The first step is always drainage, then the walls, then the surfaces.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "bc553ccaaeaa",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ceeb7fa3d0d2",
+      "text": "Plenty of Connecticut homes sit on hillsides, and a lot of homeowners tell me the same thing: they have a big yard but nowhere flat to put a table. A slope is not a dead end. Handled well, it gives a yard more character than a flat lot, with views, levels and places to sit. Here are the options I build most often, and how to choose between them.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "651a6a780e77",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "63e1452399f1",
+      "text": "What should you look at before planning a sloped yard?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "63cc8a58f706",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "031198bdaa38",
+      "text": "Start with how steep the slope is, where the rain goes, and how you want to use the space. Those three answers decide whether you need one wall or several, where a patio can sit, and how big the project really is.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "234cb9c15009",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3f29a9d1c91b",
+      "text": "The grade:",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "d95b3aef152e",
+      "text": " how far the ground drops between the house and the bottom of the yard. A gentle grade can often be handled with a low wall and a few steps. A steep one usually needs terraces.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5e86bb4a2efd",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3e6fbb49f409",
+      "text": "The water:",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "24fc04c6db51",
+      "text": " where downspouts empty, where puddles form and where the ground stays wet. Water that runs toward the house has to be dealt with first.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9ecf78e503a0",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0f3d772383e9",
+      "text": "The use:",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "3f8474784d28",
+      "text": " a patio for dining, a lawn, a fire pit area, a path down to the shed. Each needs a different amount of flat ground.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5c736d9a1448",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3f37624e792a",
+      "text": "How do retaining walls and terraces change a slope?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "a069c6634db2",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a5d3fe16f4c3",
+      "text": "A retaining wall holds back the hill so the ground beside it can be made level. On a steep slope, a series of shorter walls, each with a flat terrace in front of it, usually works better than one tall wall. Each wall carries less soil, and the yard steps down in levels you can use.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6b9b88210d2c",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "da7da5daf0f3",
+      "href": "/retaining-walls-connecticut/"
+     },
+     {
+      "_type": "link",
+      "_key": "4bcea4e7488e",
+      "href": "/blog/natural-stone-vs-wall-block/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5cb6bc7a3388",
+      "text": "Terraces can be as wide or as narrow as the slope allows. The upper level near the house often becomes the patio, and the lower levels become lawn or a sitting area. The walls themselves can be natural stone or engineered block. Our ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "d661b5fa1309",
+      "text": "retaining walls",
+      "marks": [
+       "da7da5daf0f3"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "bf8befaee748",
+      "text": " page explains both, and our guide to ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "1deb28d3422c",
+      "text": "natural stone versus wall block",
+      "marks": [
+       "4bcea4e7488e"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "032dfe634205",
+      "text": " helps with the choice.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "78a2cf2d599e",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1576897bed8f",
+      "text": "Can you put a patio on a sloped backyard?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "16f28c89fad7",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "10780b9c3741",
+      "text": "Yes. There are two common ways. The patio can be cut into the slope, with a retaining wall holding back the higher ground behind it, or it can be built up on the low side, with a wall holding the new fill in front of it.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f4419915da67",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "21f34ee48b39",
+      "href": "/walkway-patio-connecticut/"
+     },
+     {
+      "_type": "link",
+      "_key": "c3ff1087e318",
+      "href": "/fire-features-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "95fd92b0ce3a",
+      "text": "Cutting in works well when the yard rises away from the house, and it often leaves a wall right at seat height along the back of the patio. Building up works when the yard falls away from the house, and it gives a raised patio with a view. Either way, the ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "704eb07594ca",
+      "text": "patio",
+      "marks": [
+       "21f34ee48b39"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "3044f6e96de9",
+      "text": " needs a compacted base and a gentle pitch so water runs off it, not toward the house. A fire pit or a seating wall fits naturally on one of the levels; see our ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "6e411925b530",
+      "text": "fire features",
+      "marks": [
+       "c3ff1087e318"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "e82e548b1168",
+      "text": ".",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5a353ca639a7",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8a85c7c28a29",
+      "text": "How do you get from one level to the next?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5674319fe369",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "7907fe9e6cea",
+      "text": "With steps, built into the walls or set into the slope between them. Steps make a terraced yard feel like one design instead of separate pieces. Natural stone slab steps, bluestone treads or block steps that match the walls are the usual choices.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "04906fc765e5",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "a485464aca4c",
+      "href": "/stone-steps-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "bb27c9c50aeb",
+      "text": "On a long slope, a walkway that turns across the hill is gentler to walk than one straight flight. Low lighting on the steps makes them safer at night. Our ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "c51b3cc41f47",
+      "text": "stone steps",
+      "marks": [
+       "a485464aca4c"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "0103091860be",
+      "text": " page shows the styles we build.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "bb3b5e2b4680",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c902e4c22ef2",
+      "text": "How do you handle drainage on a slope?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5ef5733f16a0",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1ffda29b0061",
+      "text": "Plan it first. On a slope, water moves fast, and every wall and patio changes where it goes. Each retaining wall needs a drain at its base and clean stone behind it, and each level needs a gentle pitch that sends water to a safe spot, away from the house and away from the walls below.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b54fd9e28515",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0f236ca39f6f",
+      "text": "Downspouts are often the biggest source of water in a sloped yard. They can be piped past the new walls instead of letting roof water pour onto a terrace. If the water problem is not solved, the walls and patios will not last, however good they look on day one.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "3d7bccd5ee7d",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e1a870727c05",
+      "text": "Do you need a permit or an engineer for a sloped yard project?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e09b251c15bf",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "411e0e75899d",
+      "text": "Sometimes. Taller retaining walls, walls that hold up a driveway or a structure, and work near wetlands or a stream can need a town permit or review, and some walls need an engineer's design. The rules differ from town to town in Connecticut, so check with your town's building department before work starts.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6a019c200ee5",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2796798e61d2",
+      "text": "Can a sloped yard be done in stages?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0476248aac4f",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f6f9383621d1",
+      "text": "Yes, and many homeowners do it that way. Building the walls and drainage first, then adding the patio, steps or a fire pit later, spreads the project out. The key is to plan the whole yard at the start, so the first stage does not get in the way of the next.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0c040dd30cd7",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1407a88085fa",
+      "text": "Frequently asked questions",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d6240b912c23",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5f150d10c39b",
+      "text": "Is it better to dig into the slope or build it up?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "67d262e603ab",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "817c0145078e",
+      "text": "It depends on which way the yard slopes and how much soil would have to move. Digging in suits a yard that rises away from the house. Building up suits one that falls away. Often the best plan does a little of both.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "23bab159a814",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "99858605d321",
+      "text": "How many terraces does a slope need?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f73cdba8111d",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a3d159febcd7",
+      "text": "That depends on how steep it is and how wide you want each level. Shorter walls with wider terraces usually look better and put less load on each wall than one tall wall.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "cc3fda1cb83a",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "52ee44ec0bad",
+      "text": "Can a slope be made level for a lawn?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "24898e0b87e5",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "feb966b07781",
+      "text": "Yes. A retaining wall at the low edge of the yard, with fill behind it, can create a flat lawn area. The wall has to be built for the weight of the new soil and the water in it.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e0d7a130f337",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2b614b5d36cd",
+      "text": "What is the best time of year to plan a sloped yard?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f776ebd5d411",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2917afbcaddc",
+      "text": "Late fall and winter are a good time to plan, because you can see the shape of the land with the leaves down. Building starts in spring once the ground has thawed and dried out.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "757dda5e4533",
+    "style": "h3",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "df3af9c3ccc8",
+      "text": "Can you fix a sloped yard that already has a failing wall?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "341083e275d4",
+    "style": "normal",
+    "markDefs": [
+     {
+      "_type": "link",
+      "_key": "0b43df296dc6",
+      "href": "/blog/leaning-retaining-wall-repair-or-rebuild-connecticut/"
+     }
+    ],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "703c6c80aaea",
+      "text": "Yes. A failing wall is often the starting point. Our guide to ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "4e9c9f46add2",
+      "text": "a leaning retaining wall",
+      "marks": [
+       "0b43df296dc6"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "85d979d9ae30",
+      "text": " explains when a wall can be repaired and when it has to be rebuilt.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9077e9eaa71a",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "4e8ee0769679",
+      "text": "Have a sloped backyard you want to use?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "fe5978663c78",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "4118b92e9d26",
+      "text": "Call Alpha Hardscapes at (475) 227-6896 to talk about your yard and the options for your slope.",
+      "marks": []
+     }
+    ]
+   }
+  ],
+  "sectionImages": [
+   {
+    "_key": "f941f138c553",
+    "_type": "sectionImage",
+    "heading": "Can you put a patio on a sloped backyard?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/fire-pit-2883.jpg",
+     "width": "1290",
+     "height": "858",
+     "alt": "Paver patio with a round fire pit and a low wall below a deck in a wooded backyard"
+    },
+    "caption": "A paver patio with a fire pit and a low wall, built by Alpha Hardscapes on a backyard that changes level.",
+    "ratio": "3:2",
+    "focus": "50% 55%"
+   },
+   {
+    "_key": "fa858b181eb8",
+    "_type": "sectionImage",
+    "heading": "How do you get from one level to the next?",
+    "image": {
+     "_type": "wpImage",
+     "src": "/wp-content/uploads/2026/07/stairs-0320.jpg",
+     "width": "1920",
+     "height": "2560",
+     "alt": "Bluestone slab steps with brick risers climbing a slope toward a grey house"
+    },
+    "caption": "Bluestone steps climbing a slope to the house, built by Alpha Hardscapes.",
+    "ratio": "3:2",
+    "focus": "50% 60%"
+   }
+  ]
  }
 ]

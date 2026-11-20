@@ -82,8 +82,10 @@ export function authorsFrom(authorDocs: SeedDoc[], authorPages: { slug?: string;
 export function buildSiteData(docs: SeedDoc[]): SiteData {
   const map = byId(docs);
   const settings = map.get("siteSettings") || ({} as SeedDoc);
+  // Drafts waiting for approval (robots noindex) open on their own address but stay out of
+  // the blog lists, the "more posts" cards, the feed and previous/next links.
   const posts = docs
-    .filter((d) => d._type === "post")
+    .filter((d) => d._type === "post" && !/noindex/.test(String((d.seo as { robots?: string } | undefined)?.robots || "")))
     .map((p) => postView(map, p))
     .sort((a, b) => String(b.date).localeCompare(String(a.date)));
   const authorPages = docs

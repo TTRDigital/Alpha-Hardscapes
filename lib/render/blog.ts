@@ -516,7 +516,9 @@ export function renderPostLayout(post: PostDoc, data: SiteData, ctx: RenderConte
     (author ? `<a class="ah-byline__avatar" href="/author/${escapeAttr(author.slug)}/" aria-hidden="true" tabindex="-1">${avatar(author, 56, ctx)}</a>` : "") +
     `<div class="ah-byline__who">${bylineNote ? `<p class="ah-byline__name">${bylineNote}</p>` : bylineName}` +
     `<p class="ah-byline__meta">${dateIso ? dateTime(dateIso) : ""}<span class="ah-byline__time">${ICON_CLOCK}${minutes} min read</span></p></div></div>`;
-  const crumbs = `<nav class="ah-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a></nav>`;
+  // Service and town pages built on the blog design (no category, outside /blog/) are not blog posts.
+  const isPage = !(post.categories || []).length && !/^\/(blog|uncategorized)\//.test(post.path || "");
+  const crumbs = `<nav class="ah-crumbs" aria-label="Breadcrumb"><a href="/">Home</a>${isPage ? "" : `<span aria-hidden="true">/</span><a href="/blog/">Blog</a>`}</nav>`;
   const heroHtml =
     `<header class="ah-hero ${heroClass}"><div class="ah-wrap ah-hero__grid">` +
     `<div class="ah-hero__text">${crumbs}${categoryPills(post)}<h1 class="ah-title entry-title">${escapeHtml(title)}</h1>${byline}</div>` +
