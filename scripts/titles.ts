@@ -28,13 +28,19 @@ const publish = process.argv.includes("--publish");
 /** Wording approved as written although one character over 60 (Kia, Oct 22, 2026). */
 const APPROVED_LENGTH: Record<string, number> = { "/": 61 };
 
+/**
+ * Never sent to Sanity: Alpha Hardscapes does not build or service pools (Kia, Nov 19, 2026: no pool pages,
+ * posts, keywords or claims anywhere). Their texts stay here only so the built-in copy is unchanged.
+ */
+const NOT_PUBLISHED = new Set(["/pool-builders-south-connecticut/", "/blog/pool-patio-materials-connecticut/"]);
+
 const TEXTS: Record<string, Text> = {
   /* Kia's yes, exact wording. */
   "/": { title: "Landscaping & Hardscaping Contractor in CT | Alpha Hardscapes" },
   "/walkway-patio-connecticut/": { title: "Walkway & Patio Pavers in Cheshire, CT | Alpha Hardscapes" },
   "/outdoor-living-packages-connecticut/": {
     title: "Outdoor Living Packages in Connecticut | Alpha Hardscapes",
-    description: "Outdoor living design and build packages in Connecticut from Alpha Hardscapes: a custom patio paired with features like an outdoor kitchen, fire pit or pool.",
+    description: "Outdoor living design and build packages in Connecticut from Alpha Hardscapes: a custom patio paired with features like an outdoor kitchen or fire pit.",
   },
   "/contact/": { title: "Contact Alpha Hardscapes | Free Quote in Cheshire, CT" },
   "/gallery/": {
@@ -273,7 +279,7 @@ if (publish) {
     console.error("Set SANITY_WRITE_TOKEN (an Editor token from sanity.io/manage > API > Tokens).");
     process.exit(1);
   }
-  const mutations = Object.keys(TEXTS).map((path) => {
+  const mutations = Object.keys(TEXTS).filter((path) => !NOT_PUBLISHED.has(path)).map((path) => {
     const seo = byPath.get(path)!.seo!;
     const set: Record<string, string> = {};
     for (const k of ["title", "ogTitle", "description", "ogDescription", "schema"] as const) if (typeof seo[k] === "string") set[`seo.${k}`] = seo[k] as string;
