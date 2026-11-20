@@ -58,7 +58,7 @@ if (dryRun && !token) {
   console.log(`Checked ${chosen.length} document(s); nothing sent (--dry-run without a token).`);
   process.exit(0);
 }
-const url = `https://api.sanity.io/v2024-01-01/projects/${projectId}/datasets/${dataset}/mutate?returnIds=true${dryRun ? "&dryRun=true" : ""}`;
+const url = `https://${projectId}.api.sanity.io/v2024-01-01/data/mutate/${dataset}?returnIds=true${dryRun ? "&dryRun=true" : ""}`;
 const res = await fetch(url, {
   method: "POST",
   headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
