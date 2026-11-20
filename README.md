@@ -89,9 +89,10 @@ All 15 Elementor forms (homepage, landing page, opt-in, and the 12 quote popups)
 3. **CORS (done):** `http://localhost:3000`, `https://alphahardscapes.com` and `https://www.alphahardscapes.com` are allowed with credentials. Add the Vercel preview URL too (sanity.io/manage > API > CORS origins).
 4. **Run locally:** `npm install`, `npm run dev`, open http://localhost:3000 and http://localhost:3000/cms.
 5. **Search engines:** only alphahardscapes.com (and www) can be indexed. Every other host (the vercel.app address, preview deployments) answers with `X-Robots-Tag: noindex, nofollow` (`next.config.ts`). If the domain ever changes, update the host list there.
-6. **Vercel:** import the repo, add the variables from `.env.example` (not `SANITY_WRITE_TOKEN`), deploy, then point alphahardscapes.com at it. reCAPTCHA in the forms only works on alphahardscapes.com (the site key is tied to that domain).
+6. **Vercel:** import the repo, add the variables from `.env.example` (not `SANITY_WRITE_TOKEN`), deploy, then point alphahardscapes.com at it. reCAPTCHA in the forms only works on the domains listed on its key (see Spam protection below).
 6. **Publish webhook:** in Sanity, API > Webhooks: URL `https://alphahardscapes.com/api/revalidate`, triggers create/update/delete, secret = `SANITY_REVALIDATE_SECRET`. Changes then go live within seconds (otherwise within 5 minutes).
 7. **Form leads:** every form submission goes to the GoHighLevel webhook set in `lib/lead.ts` (the `GHL_WEBHOOK_URL` env var overrides it). Optional email copy: `RESEND_API_KEY` + `LEAD_EMAIL_TO`. The thank-you page of each form is set in **Site settings > Forms**.
+8. **Spam protection** (`lib/spam.ts`, TTR-2495): every form gets a hidden honeypot field (`website`) and a fill timer (`ah_t`, under 3 seconds = bot). Spam gets the normal thank-you answer, is not sent anywhere, and is counted: `[spam] dropped` lines in Vercel's logs (on SiteGround: `_sg/spam-count.json` and the PHP error log). The "I'm not a robot" checkbox (reCAPTCHA v2) is on every form and checked on the server only when both `RECAPTCHA_SITE_KEY` and `RECAPTCHA_SECRET_KEY` are set (Vercel env, or GitHub secrets for the SiteGround deploy), and the key lists alphahardscapes.com; redeploy after setting them. With either one missing the forms work with the honeypot and timer alone.
 
 ## Editing in /cms
 

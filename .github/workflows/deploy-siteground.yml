@@ -13,6 +13,7 @@
 #   SG_FTP_USERNAME  FTP account whose folder is the site's public_html
 #   SG_FTP_PASSWORD
 #   GHL_WEBHOOK_URL  optional: overrides the GoHighLevel webhook in lib/lead.ts
+#   RECAPTCHA_SITE_KEY, RECAPTCHA_SECRET_KEY  optional: the "I'm not a robot" checkbox (both or neither)
 # Until SG_FTP_SERVER is set the upload is skipped (build check only).
 #
 # The upload only adds and replaces files: nothing already on the server
@@ -40,6 +41,8 @@ jobs:
     env:
       SG_FTP_SERVER: ${{ secrets.SG_FTP_SERVER }}
       GHL_WEBHOOK_URL: ${{ secrets.GHL_WEBHOOK_URL }}
+      RECAPTCHA_SITE_KEY: ${{ secrets.RECAPTCHA_SITE_KEY }}
+      RECAPTCHA_SECRET_KEY: ${{ secrets.RECAPTCHA_SECRET_KEY }}
       NEXT_PUBLIC_SITE_URL: https://alphahardscapes.com
       NEXT_TELEMETRY_DISABLED: 1
     steps:

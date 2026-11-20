@@ -1,5 +1,6 @@
 import { getSite } from "@/lib/site/data";
-import { deliverLead, verifyRecaptcha } from "@/lib/lead";
+import { deliverLead } from "@/lib/lead";
+import { checkRecaptcha, countSpam, HONEYPOT_FIELD, spamReason, TIMER_FIELD } from "@/lib/spam";
 import formFields from "@/content/form-fields.json";
 
 /**
@@ -35,13 +36,16 @@ export async function POST(req: Request) {
   }
   const page = String(form.get("referrer") || req.headers.get("referer") || "");
 
-  // Honeypot fields (Elementor "honeypot" type) must stay empty.
-  const honeypot = Object.entries(fields).some(([k, v]) => /honeypot/i.test(k) && v);
-  const captcha = form.get("g-recaptcha-response");
-  const human = !honeypot && (await verifyRecaptcha(typeof captcha === "string" ? captcha : null, req.headers.get("x-forwarded-for")?.split(",")[0]));
-  if (!human) {
+  // Spam protection (lib/spam.ts, TTR-2495). Elementor's own honeypot fields and ours must stay empty.
+  const honeypot = Object.entries(fields).some(([k, v]) => /honeypot/i.test(k) && v) ? "filled" : form.get(HONEYPOT_FIELD);
+  const token = form.get("g-recaptcha-response");
+  const captcha = await checkRecaptcha(typeof token === "string" ? token : null, req.headers.get("x-forwarded-for")?.split(",")[0]);
+  // A person who did not tick the box is told so (only when reCAPTCHA is set up: both keys in Vercel).
+  if (captcha === "fail" && !honeypot) {
     return reply({ success: false, data: { message: "Please confirm you are not a robot and try again.", errors: [], data: [] } });
   }
+  const timer = form.get(TIMER_FIELD);
+  const spam = spamReason({ honeypot: typeof honeypot === "string" ? honeypot : null, timer: typeof timer === "string" ? timer : null, captcha });
 
   const { settings } = await getSite();
   const setting = (settings.forms || []).find((f) => f.formKey === `${postId}:${formId}`) || (settings.forms || []).find((f) => f.formKey?.endsWith(`:${formId}`) && f.formKey.startsWith(`${postId}:`));
@@ -52,11 +56,20 @@ export async function POST(req: Request) {
   if (!known || !reachable) {
     return reply({ success: false, data: { message: "Please add your name and a phone number or email so we can reach you.", errors: [], data: [] } }, known ? 200 : 400);
   }
+  if (spam) {
+    // Dropped quietly: the same answer a person gets, nothing sent to GoHighLevel, counted in the logs.
+    countSpam(setting?.name || `${postId}:${formId}`, spam, page);
+    return thanks();
+  }
   const delivered = await deliverLead({ form: setting?.name || `${postId}:${formId}`, fields, page, tag: setting?.tag });
   if (!delivered) {
     return reply({ success: false, data: { message: "Something went wrong. Please call us at (475) 227-6896.", errors: [], data: [] } });
   }
-  const origin = new URL(req.url).origin;
-  const data: Json = setting?.redirect ? { redirect_url: new URL(setting.redirect, origin).toString() } : {};
-  return reply({ success: true, data: { message: setting?.message ?? "Your submission was successful.", data } });
+  return thanks();
+
+  function thanks() {
+    const origin = new URL(req.url).origin;
+    const data: Json = setting?.redirect ? { redirect_url: new URL(setting.redirect, origin).toString() } : {};
+    return reply({ success: true, data: { message: setting?.message ?? "Your submission was successful.", data } });
+  }
 }
