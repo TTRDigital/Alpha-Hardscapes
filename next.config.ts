@@ -11,11 +11,13 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: { "/*": ["./content/seed.json"] },
   async headers() {
     const immutable = [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }];
-    const week = [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }];
+    // Uploads, fonts, the reel video and the theme's scripts never change under the same name (a new
+    // image or font gets a new file name), so browsers keep them for a year (Nov 20 sweep, TTR-2513).
+    const year = [{ key: "Cache-Control", value: "public, max-age=31536000, stale-while-revalidate=86400" }];
     return [
       { source: "/assets/:path*", headers: immutable },
-      { source: "/wp-content/:path*", headers: week },
-      { source: "/wp-includes/:path*", headers: week },
+      { source: "/wp-content/:path*", headers: year },
+      { source: "/wp-includes/:path*", headers: year },
       {
         source: "/:path*",
         headers: [
