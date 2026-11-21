@@ -25,8 +25,9 @@ const SITE = "https://alphahardscapes.com";
 const file = join(ROOT, "content/seed.json");
 const publish = process.argv.includes("--publish");
 
-/** Wording approved as written although one character over 60 (Kia, Oct 22, 2026). */
-const APPROVED_LENGTH: Record<string, number> = { "/": 61 };
+/** Titles allowed over 60 characters. None since Nov 21, 2026: the home title was 61 (approved by Kia on Oct 22)
+ * and the Nov 21 health check asked for 60 or fewer, so it is now "Contractor, CT" instead of "Contractor in CT". */
+const APPROVED_LENGTH: Record<string, number> = {};
 
 /**
  * Never sent to Sanity: Alpha Hardscapes does not build or service pools (Kia, Nov 19, 2026: no pool pages,
@@ -35,8 +36,8 @@ const APPROVED_LENGTH: Record<string, number> = { "/": 61 };
 const NOT_PUBLISHED = new Set(["/pool-builders-south-connecticut/", "/blog/pool-patio-materials-connecticut/"]);
 
 const TEXTS: Record<string, Text> = {
-  /* Kia's yes, exact wording. */
-  "/": { title: "Landscaping & Hardscaping Contractor in CT | Alpha Hardscapes" },
+  /* Kia's yes, exact wording (the home title one word shorter, Nov 21 health check). */
+  "/": { title: "Landscaping & Hardscaping Contractor, CT | Alpha Hardscapes" },
   "/walkway-patio-connecticut/": { title: "Walkway & Patio Pavers in Cheshire, CT | Alpha Hardscapes" },
   "/outdoor-living-packages-connecticut/": {
     title: "Outdoor Living Packages in Connecticut | Alpha Hardscapes",

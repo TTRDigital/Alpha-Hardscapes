@@ -68,6 +68,8 @@ const FONT_PRELOADS = [
  * bundle, which runs after it in document order. */
 const JQUERY = '<script id="jquery-core-js" src="/wp-includes/js/jquery/jquery.min.js"></script>';
 
+const WP_HELPERS = /<script id="(wp-(?:hooks|i18n)-js)" src="(\/wp-includes\/js\/dist\/(?:hooks|i18n)\.min\.js)"><\/script>/g;
+
 /** Bump when a file in public/assets/js changes, so browsers holding the year-long cached copy fetch it again. */
 const SCRIPTS_VERSION = "1120";
 
@@ -236,8 +238,12 @@ function videoPoster(html: string) {
   const m = VIDEO_SECTION.exec(html.slice(Math.max(0, html.indexOf('id="content"'))));
   const poster = m && VIDEO_POSTERS[m[2].replace(/\\\//g, "/")];
   if (!m || !poster) return html;
-  const sel = `.elementor-element-${m[1]}.elementor-element-${m[1]}.elementor-element-${m[1]}`;
-  const head = `<link rel="preload" as="image" href="${poster}" fetchpriority="high"><style id="video-poster">${sel}{background-image:url("${poster}");background-position:center center;background-size:cover;background-repeat:no-repeat}</style>`;
+  // The first frame is an <img> under the video (see HERO_IMG_SECTIONS): same file, cover and centred.
+  // Elementor's video container is positioned with z-index 0 inside the section, so the video still plays over it.
+  const withImg = intoSection(html, m[1], heroImgTag(poster, undefined));
+  if (!withImg) return html;
+  html = withImg;
+  const head = `<link rel="preload" as="image" href="${poster}" fetchpriority="high">${heroImgStyle(m[1]).replace('id="hero-img"', 'id="video-poster"')}`;
   // Elementor gives the video its src when its script starts; that one call waits for the page's load
   // event, so the 1.3 MB video no longer competes with the first screen. Sizing and playback stay Elementor's.
   const defer =
@@ -247,6 +253,43 @@ function videoPoster(html: string) {
   const tag = out.indexOf('<video class="elementor-background-video-hosted"', out.indexOf(`elementor-element-${m[1]}`, out.indexOf('id="content"')));
   const end = tag < 0 ? -1 : out.indexOf("</video>", tag);
   return end < 0 ? out : out.slice(0, end + 8) + defer + out.slice(end + 8);
+}
+
+/* Hero photo as an <img> (Nov 21 health check, TTR-2513). The first section's photo was a CSS background,
+ * which the browser only finds once the stylesheet is in and the section is laid out, and which it never
+ * fetches at high priority on its own. It becomes a real <img fetchpriority="high"> with the same files
+ * (the phone copy under 768 px, the full photo above, exactly as the background and its preloads chose) and
+ * the same crop: absolutely placed over the whole section, object-fit cover and centred, like the CSS
+ * (background-size: cover; background-position: center center). The section stops painting its background
+ * and becomes its own stacking context (isolation), so the photo sits under the overlay gradient and the
+ * content as before. Only for sections checked to have exactly that background on every screen width, no
+ * motion effects and no other background per breakpoint: */
+const HERO_IMG_SECTIONS = new Set([
+  "52d7a675", // /masonry/
+  "60893e9b", // /walkway-patio-connecticut/
+  "5a3fa005", // /retaining-walls-connecticut/
+  "61ae782", // /landscaping/
+]);
+
+function heroImgTag(big: string, small: string | undefined) {
+  // Out of the section's flex layout (absolute), over its whole box, under everything else in it.
+  const box = "position:absolute;inset:0;width:100%;height:100%;max-width:none;z-index:-1;pointer-events:none;margin:0";
+  const fit = "object-fit:cover;object-position:center center";
+  if (!small) return `<img class="ah-hero-img" src="${escapeAttr(big)}" alt="" fetchpriority="high" decoding="async" style="${box};${fit}">`;
+  const img = `<img src="${escapeAttr(big)}" alt="" fetchpriority="high" decoding="async" style="display:block;width:100%;height:100%;max-width:none;${fit}">`;
+  return `<picture class="ah-hero-img" style="${box};display:block"><source media="(max-width: 767px)" srcset="${escapeAttr(small)}">${img}</picture>`;
+}
+
+function heroImgStyle(id: string) {
+  const sel = `.elementor-element-${id}.elementor-element-${id}.elementor-element-${id}.elementor-element-${id}:not(.elementor-motion-effects-element-type-background)`;
+  return `<style id="hero-img">${sel}{background-image:none;isolation:isolate}</style>`;
+}
+
+/** Puts `tag` right after the opening tag of the section `id` in the page content. */
+function intoSection(html: string, id: string, tag: string) {
+  const at = html.indexOf(`<div class="elementor-element elementor-element-${id} `, Math.max(0, html.indexOf('id="content"')));
+  const end = at < 0 ? -1 : html.indexOf(">", at);
+  return end < 0 ? undefined : html.slice(0, end + 1) + tag + html.slice(end + 1);
 }
 
 /* Stylesheets: the skeleton's 22 to 26 render-blocking files become the one bundle made from the same
@@ -284,10 +327,26 @@ function eagerFirstSections(html: string) {
   return html.slice(0, start) + part + html.slice(end);
 }
 
-/** Adds loading="lazy" and decoding="async" to images in a slice of the page that is never in the first screen. */
-function lazyImages(html: string, from: number, to: number) {
+/* Images from the third top-level section down to the footer load when they come near the screen (Nov 21
+ * health check, TTR-2513). They started downloading with the page, alongside the hero: on /masonry/ six
+ * before-and-after photos (1 MB) shared the phone's bandwidth with the hero photo, and Lighthouse put the
+ * hero at 5.5 to 7 s. Images that already say how they load (loading=, lazysizes' data-src) are left alone.
+ * The first two sections stay eager (see eagerFirstSections). */
+function lazyBelowFold(html: string) {
+  const start = html.indexOf('id="content"');
+  if (start < 0) return html;
+  const parents = [...html.slice(start).matchAll(/<div class="elementor-element elementor-element-[0-9a-f]+ [^"]*\be-parent\b/g)];
+  if (parents.length < 3) return html;
+  const footer = html.indexOf("<footer", start);
+  return lazyImages(html, start + parents[2].index, footer < 0 ? html.length : footer, true);
+}
+
+/** Adds loading="lazy" and decoding="async" to images in a slice of the page that is never in the first screen.
+ * `skipLazysizes`: leave images that lazysizes loads itself (data-src / data-srcset) as they are. */
+function lazyImages(html: string, from: number, to: number, skipLazysizes = false) {
   if (from < 0 || to <= from) return html;
   const part = html.slice(from, to).replace(/<img\s[^>]*>/g, (img) => {
+    if (skipLazysizes && /\sdata-src(?:set)?=/.test(img)) return img;
     let out = img;
     if (!/\sloading=/.test(out)) out = out.replace(/^<img\s/, '<img loading="lazy" ');
     if (!/\sdecoding=/.test(out)) out = out.replace(/^<img\s/, '<img decoding="async" ');
@@ -311,6 +370,9 @@ export function tuneHtml(html: string, opts: { cssBundle?: string } = {}): strin
   });
 
   out = out.replace(JQUERY, '<script defer="" id="jquery-core-js" src="/wp-includes/js/jquery/jquery.min.js"></script>');
+  // WordPress' hooks and i18n helpers ran in the middle of parsing, at the end of the body. Nothing inline
+  // calls them: the first user is the deferred theme bundle after them, and defer keeps that order.
+  out = out.replace(WP_HELPERS, '<script defer="" id="$1" src="$2"></script>');
   // The combined theme scripts changed in place (TTR-2513: the copy of the call-tracking snippet no longer
   // starts on its own); /assets is cached for a year, so the address carries a version.
   out = out.replace(/(<script defer="" src="\/assets\/js\/[0-9a-f]{32}\.js)(")/g, `$1?v=${SCRIPTS_VERSION}$2`);
@@ -325,7 +387,9 @@ export function tuneHtml(html: string, opts: { cssBundle?: string } = {}): strin
         `<link rel="preload" as="image" href="${escapeAttr(big)}" media="(min-width: 768px)" fetchpriority="high">`
       : `<link rel="preload" as="image" href="${escapeAttr(big)}" fetchpriority="high">`;
     out = out.includes(anchor) ? out.replace(anchor, anchor + preload) : out.replace("</head>", `${preload}</head>`);
-    if (small) out = out.replace("</head>", `${phoneHero(hero.id, small)}</head>`);
+    const withImg = HERO_IMG_SECTIONS.has(hero.id) ? intoSection(out, hero.id, heroImgTag(big, small)) : undefined;
+    if (withImg) out = withImg.replace("</head>", `${heroImgStyle(hero.id)}</head>`);
+    else if (small) out = out.replace("</head>", `${phoneHero(hero.id, small)}</head>`);
   }
 
   out = videoPoster(out);
@@ -346,6 +410,7 @@ export function tuneHtml(html: string, opts: { cssBundle?: string } = {}): strin
   out = out.replace(/(<div class="elementor-testimonial__icon[^"]*") aria-label="[^"]*"/g, "$1");
 
   out = eagerFirstSections(out);
+  out = lazyBelowFold(out);
 
   // Footer and popups are never in the first screen.
   const footer = out.indexOf("<footer");
