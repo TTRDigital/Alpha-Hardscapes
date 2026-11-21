@@ -60,3 +60,39 @@ test("images in the first two sections lose loading=lazy, later ones keep it", (
   assert.doesNotMatch(out, /loading="lazy"[^>]*src="\/p2\.jpg"/);
   assert.match(out, /loading="lazy"[^>]*src="\/p3\.jpg"/);
 });
+
+test("images from the third section down are lazy, the first two and lazysizes images are left alone", () => {
+  const sec = (id: string, img: string) => `<div class="elementor-element elementor-element-${id} e-flex e-con-boxed e-con e-parent">${img}</div>`;
+  const out = tuneHtml(
+    page(
+      sec("a1", '<img width="10" height="10" src="/p1.jpg" alt="">') +
+        sec("b2", '<img width="10" height="10" src="/p2.jpg" alt="">') +
+        sec("c3", '<img width="10" height="10" src="/p3.jpg" alt=""><img data-src="/p4.jpg" src="data:," alt="">'),
+    ),
+  );
+  assert.doesNotMatch(out, /loading="lazy"[^>]*src="\/p1\.jpg"/);
+  assert.doesNotMatch(out, /loading="lazy"[^>]*src="\/p2\.jpg"/);
+  assert.match(out, /<img decoding="async" loading="lazy" width="10" height="10" src="\/p3\.jpg"/);
+  assert.match(out, /<img data-src="\/p4\.jpg" src="data:," alt="">/);
+});
+
+test("a listed hero's background becomes a high-priority <img> with the same files and crop", () => {
+  const hero =
+    '<div class="elementor-element elementor-element-52d7a675 e-con-full banner-wrapper e-flex e-con e-parent" data-id="52d7a675" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"><h1>Masonry</h1></div>';
+  const out = tuneHtml(page(hero));
+  assert.match(out, /data-settings="[^"]*"><picture class="ah-hero-img" style="position:absolute;inset:0;[^"]*"><source media="\(max-width: 767px\)" srcset="[^"]+Masonry-banner-scaled[^"]+"><img src="[^"]+Masonry-banner-scaled[^"]+" alt="" fetchpriority="high"[^>]*object-fit:cover;object-position:center center"><\/picture><h1>/);
+  assert.match(out, /<style id="hero-img">[^<]*elementor-element-52d7a675[^<]*\{background-image:none;isolation:isolate\}<\/style><\/head>/);
+  assert.doesNotMatch(out, /id="hero-phone"/);
+});
+
+test("an unlisted hero keeps its CSS background", () => {
+  const hero = '<div class="elementor-element elementor-element-6760925 e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"></div>';
+  const out = tuneHtml(page(hero));
+  assert.doesNotMatch(out, /ah-hero-img/);
+  assert.match(out, /rel="preload" as="image"/);
+});
+
+test("WordPress hooks and i18n helpers are deferred, in the same order", () => {
+  const out = tuneHtml(page('<script id="wp-hooks-js" src="/wp-includes/js/dist/hooks.min.js"></script><script id="wp-i18n-js" src="/wp-includes/js/dist/i18n.min.js"></script>'));
+  assert.match(out, /<script defer="" id="wp-hooks-js" src="\/wp-includes\/js\/dist\/hooks\.min\.js"><\/script><script defer="" id="wp-i18n-js" src="\/wp-includes\/js\/dist\/i18n\.min\.js"><\/script>/);
+});
