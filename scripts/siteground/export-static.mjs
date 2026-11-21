@@ -164,6 +164,13 @@ async function main() {
   );
   write("_sg/paths.json", JSON.stringify(meta.paths.map((p) => ({ path: p.path, type: p.type }))));
   cpSync(join(HERE, "ajax.php"), join(OUT, "_sg/ajax.php"));
+  // reCAPTCHA (TTR-2495): the secret, only when both keys are set (the pages were rendered with the site key
+  // then). A .php file: the server runs it, never shows it. Without it ajax.php checks Part 1 only.
+  {
+    const siteKey = (process.env.RECAPTCHA_SITE_KEY || "").trim();
+    const secret = (process.env.RECAPTCHA_SECRET_KEY || "").trim();
+    write("_sg/recaptcha.php", `<?php return ${JSON.stringify(siteKey && secret ? secret : "").replace(/\$/g, "\\$")};\n`);
+  }
   cpSync(join(HERE, "404.php"), join(OUT, "_sg/404.php"));
   if (meta.search) {
     write("_sg/search.json", JSON.stringify(meta.search));

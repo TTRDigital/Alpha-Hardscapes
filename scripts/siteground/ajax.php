@@ -42,9 +42,60 @@ if (is_array($raw)) {
 }
 $page = (string) ($_POST['referrer'] ?? ($_SERVER['HTTP_REFERER'] ?? ''));
 
-// Honeypot fields must stay empty.
+// Spam protection, same rules as lib/spam.ts (TTR-2495). Elementor's honeypot fields and ours ("website")
+// must stay empty; "ah_t" (how long the page was open, in ms) must be at least 3000; reCAPTCHA v2 is checked
+// only when its secret is set (recaptcha.php, written by export-static.mjs from RECAPTCHA_SECRET_KEY).
+$honeypot = trim((string) ($_POST['website'] ?? ''));
 foreach ($fields as $k => $v) {
-    if (stripos($k, 'honeypot') !== false && $v !== '') fail('Please confirm you are not a robot and try again.');
+    if (stripos($k, 'honeypot') !== false && $v !== '') $honeypot = 'filled';
+}
+function recaptcha_check($token) {
+    $file = __DIR__ . '/recaptcha.php';
+    $secret = is_file($file) ? (string) (include $file) : '';
+    if ($secret === '') return 'off';
+    if (trim((string) $token) === '') return 'fail';
+    $ch = curl_init('https://www.google.com/recaptcha/api/siteverify');
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => http_build_query(['secret' => $secret, 'response' => (string) $token, 'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '']),
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT => 6,
+    ]);
+    $body = curl_exec($ch);
+    $status = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    $json = is_string($body) ? json_decode($body, true) : null;
+    if ($status !== 200 || !is_array($json)) return 'unreachable'; // never lose a lead to Google being down
+    if (!empty($json['success'])) return 'pass';
+    foreach (($json['error-codes'] ?? []) as $c) {
+        if ($c === 'invalid-input-secret' || $c === 'missing-input-secret') { error_log('[recaptcha] secret is not valid'); return 'unreachable'; }
+    }
+    return 'fail';
+}
+$captcha = recaptcha_check($_POST['g-recaptcha-response'] ?? '');
+if ($captcha === 'fail' && $honeypot === '') fail('Please confirm you are not a robot and try again.');
+$timer = trim((string) ($_POST['ah_t'] ?? ''));
+$spam = null;
+if ($honeypot !== '') $spam = 'honeypot';
+elseif (!preg_match('/^\d{1,12}$/', $timer)) $spam = $captcha === 'pass' ? null : 'no-timer';
+elseif ((int) $timer < 3000) $spam = 'too-fast';
+
+/** Counts dropped spam by reason in spam-count.json (not public: _sg/.htaccess denies .json) and the PHP error log. */
+function count_spam($reason, $form) {
+    $file = __DIR__ . '/spam-count.json';
+    $fh = @fopen($file, 'c+');
+    if ($fh && flock($fh, LOCK_EX)) {
+        $counts = json_decode((string) stream_get_contents($fh), true) ?: [];
+        $counts[$reason] = ($counts[$reason] ?? 0) + 1;
+        $counts['total'] = ($counts['total'] ?? 0) + 1;
+        $counts['last'] = gmdate('c');
+        ftruncate($fh, 0);
+        rewind($fh);
+        fwrite($fh, json_encode($counts));
+        flock($fh, LOCK_UN);
+    }
+    if ($fh) fclose($fh);
+    error_log("[spam] dropped form=$form reason=$reason");
 }
 
 // Form settings (name, thank-you page, message, tag).
@@ -70,6 +121,24 @@ function phone_e164($raw) {
     if (strlen($d) === 10) return "+1$d";
     if (strlen($d) === 11 && $d[0] === '1') return "+$d";
     return trim($raw);
+}
+
+function thanks($setting) {
+    $data = [];
+    if (!empty($setting['redirect'])) {
+        $redirect = $setting['redirect'];
+        if (!preg_match('#^https?://#', $redirect)) {
+            $redirect = 'https://' . $_SERVER['HTTP_HOST'] . '/' . ltrim($redirect, '/');
+        }
+        $data['redirect_url'] = $redirect;
+    }
+    reply(['success' => true, 'data' => ['message' => $setting['message'] ?? 'Your submission was successful.', 'data' => (object) $data]]);
+}
+
+// Spam is dropped quietly: the same answer a person gets, nothing sent to GoHighLevel.
+if ($spam !== null) {
+    count_spam($spam, $setting['name'] ?? "$postId:$formId");
+    thanks($setting);
 }
 
 $name = pick($fields, '/^(full )?name$/i') ?: ($fields['name'] ?? '');
@@ -126,13 +195,4 @@ if ($webhook === '' || !post_json($webhook, $payload)) {
     fail('Something went wrong.' . $phoneText);
 }
 
-$data = [];
-if (!empty($setting['redirect'])) {
-    $redirect = $setting['redirect'];
-    if (!preg_match('#^https?://#', $redirect)) {
-        $scheme = 'https';
-        $redirect = $scheme . '://' . $_SERVER['HTTP_HOST'] . '/' . ltrim($redirect, '/');
-    }
-    $data['redirect_url'] = $redirect;
-}
-reply(['success' => true, 'data' => ['message' => $setting['message'] ?? 'Your submission was successful.', 'data' => (object) $data]]);
+thanks($setting);
