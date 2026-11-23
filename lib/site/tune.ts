@@ -363,10 +363,16 @@ function lazyImages(html: string, from: number, to: number, skipLazysizes = fals
 const TESTIMONIAL_ICON = /data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfUAAAIACAIAAAAUnWJxAAAgAElEQVR4Ae2dXWwVyZ7YefHjPvAQRZEiRVqtokirO5EW7DVz[A-Za-z0-9+\/=]*/g;
 const TESTIMONIAL_ICON_FILE = "/assets/img/testimonial-icon-280ae2d09b.png";
 
+/* The header and footer logo is drawn at about 35% of the screen below 768 px and 16% above (109 px at
+ * 320, 265 px at 767, 154 px at 1024, 298 px at 1920), but WordPress gave it sizes="... 100vw, 552px", so
+ * every phone downloaded the 552 px file. With its real size, a phone at 2x takes the 300 px copy. */
+const LOGO_SIZES = /(<img\b[^>]*\/alpha-hardscapes-logo[^>]*\ssizes=")\(max-width: 552px\) 100vw, 552px(")/g;
+
 export function tuneHtml(html: string, opts: { cssBundle?: string } = {}): string {
   let out = html;
 
   out = out.replace(TESTIMONIAL_ICON, TESTIMONIAL_ICON_FILE);
+  out = out.replace(LOGO_SIZES, "$1(max-width: 767px) 35vw, 16vw$2");
 
   out = out.replace(GTM_SNIPPET, (_m, id: string) => gtmLoader(id));
   out = out.replace(RECAPTCHA, (_m, src: string) => recaptchaLoader(src));

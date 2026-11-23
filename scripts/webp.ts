@@ -5,7 +5,7 @@
  * backgrounds of 1 to 6 MB (PNG photos at 2880 px) were the largest paint on
  * most pages, at 6 to 10 s.
  *
- * For every PNG, JPEG or WebP over 20 KB (100 KB until Nov 20, 2026) that a page, template or stylesheet
+ * For every PNG, JPEG or WebP over 10 KB (100 KB until Nov 20, 2026; 20 KB until Nov 23: the 11 to 19 KB review photos stayed PNG) that a page, template or stylesheet
  * uses (content/seed.json, lib/generated/shells.json, public/assets/css):
  *   photo.png  -> photo.png.webp    same width and height, WebP quality 80
  *   photo.webp -> photo.min.webp    re-encoded at quality 75 (WordPress saved these close to lossless)
@@ -32,7 +32,7 @@ const ROOT = new URL("..", import.meta.url).pathname;
 const PUBLIC = join(ROOT, "public");
 const CSS_DIR = join(PUBLIC, "assets/css");
 const OUT = join(ROOT, "lib/generated/webp.json");
-const MIN_BYTES = 20 * 1024;
+const MIN_BYTES = 10 * 1024;
 const PHONE_WIDTH = 828;
 const PHONE_MIN_BYTES = 60 * 1024;
 
