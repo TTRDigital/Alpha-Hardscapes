@@ -356,8 +356,17 @@ function lazyImages(html: string, from: number, to: number, skipLazysizes = fals
 }
 
 /** `cssBundle`: the page's stylesheet bundle, only when it is known to be served (see stylesheetBundle). */
+/* The testimonial cards' small icon (an SVG shown at 30 x 31 px) embeds a 501 x 512 PNG as base64:
+ * about 20 KB of page per card, ten cards on the home page (about 200 KB). The SVG's <image> keeps its
+ * 501 x 512 box, so pointing it at one small copy of the same picture (128 px, cached once; the file name carries its hash, as /assets is cached for a year) draws the
+ * same icon in the same place. Matched by the start of that exact image, so nothing else changes. */
+const TESTIMONIAL_ICON = /data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfUAAAIACAIAAAAUnWJxAAAgAElEQVR4Ae2dXWwVyZ7YefHjPvAQRZEiRVqtokirO5EW7DVz[A-Za-z0-9+\/=]*/g;
+const TESTIMONIAL_ICON_FILE = "/assets/img/testimonial-icon-280ae2d09b.png";
+
 export function tuneHtml(html: string, opts: { cssBundle?: string } = {}): string {
   let out = html;
+
+  out = out.replace(TESTIMONIAL_ICON, TESTIMONIAL_ICON_FILE);
 
   out = out.replace(GTM_SNIPPET, (_m, id: string) => gtmLoader(id));
   out = out.replace(RECAPTCHA, (_m, src: string) => recaptchaLoader(src));
