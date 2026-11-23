@@ -357,7 +357,7 @@ function postCard(post: PostDoc, ctx: RenderContext, opts: { heading: "h2" | "h3
   const minutes = readingMinutes(postWordCount(post));
   return (
     `<article class="ah-card ah-reveal${opts.big ? " ah-card--big" : ""}">` +
-    `<a class="ah-card__media" href="${escapeAttr(post.path || "/")}" tabindex="-1" aria-hidden="true">${img || `<span class="ah-card__blank"><img src="${LOGO_ICON}" width="56" height="66" alt="" loading="lazy" decoding="async"></span>`}</a>` +
+    `<a class="ah-card__media" href="${escapeAttr(post.path || "/")}" tabindex="-1" aria-hidden="true">${img || `<span class="ah-card__blank"><img src="${LOGO_ICON}" width="56" height="66" alt="Alpha Hardscapes" loading="lazy" decoding="async"></span>`}</a>` +
     `<div class="ah-card__body">` +
     (cat ? `<a class="ah-pill ah-pill--small" href="/category/${escapeAttr(cat.slug)}/" rel="category tag">${escapeHtml(cat.name)}</a>` : "") +
     `<${opts.heading} class="ah-card__title"><a href="${escapeAttr(post.path || "/")}" rel="bookmark">${escapeHtml(title)}</a></${opts.heading}>` +
@@ -554,7 +554,7 @@ export function renderPostLayout(post: PostDoc, data: SiteData, ctx: RenderConte
   if (related || minis.length) {
     const card = related
       ? `<div class="ah-related__card">` +
-        (related.image ? `<a class="ah-related__media" href="${escapeAttr(related.path)}" tabindex="-1" aria-hidden="true"><img loading="lazy" decoding="async" width="1200" height="630" src="${escapeAttr(related.image)}" alt=""></a>` : "") +
+        (related.image ? `<a class="ah-related__media" href="${escapeAttr(related.path)}" tabindex="-1" aria-hidden="true"><img loading="lazy" decoding="async" width="1200" height="630" src="${escapeAttr(related.image)}" alt="${escapeAttr(related.title)}"></a>` : "") +
         `<div class="ah-related__text"><p class="ah-eyebrow">Related service</p><h2 class="ah-h2" id="ah-related">${escapeHtml(related.title)}</h2>${related.description ? `<p>${escapeHtml(related.description)}</p>` : ""}<a class="ah-btn" href="${escapeAttr(related.path)}">See this service</a></div></div>`
       : "";
     const list = minis.length
