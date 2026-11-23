@@ -240,7 +240,7 @@ function videoPoster(html: string) {
   if (!m || !poster) return html;
   // The first frame is an <img> under the video (see HERO_IMG_SECTIONS): same file, cover and centred.
   // Elementor's video container is positioned with z-index 0 inside the section, so the video still plays over it.
-  const withImg = intoSection(html, m[1], heroImgTag(poster, undefined));
+  const withImg = intoSection(html, m[1], heroImgTag(poster, undefined, heroAlt(html)));
   if (!withImg) return html;
   html = withImg;
   const head = `<link rel="preload" as="image" href="${poster}" fetchpriority="high">${heroImgStyle(m[1]).replace('id="hero-img"', 'id="video-poster"')}`;
@@ -271,12 +271,19 @@ const HERO_IMG_SECTIONS = new Set([
   "61ae782", // /landscaping/
 ]);
 
-function heroImgTag(big: string, small: string | undefined) {
+/* Alt text for the hero photo (TTR-2880: every image has alt text): the page's H1, which names what the
+ * photo shows. Read from the page as it is, so it is already escaped; only tags and spacing are dropped. */
+function heroAlt(html: string) {
+  const h1 = /<h1[^>]*>([\s\S]*?)<\/h1>/.exec(html.slice(Math.max(0, html.indexOf("</head>"))))?.[1] ?? "";
+  return h1.replace(/<[^>]*>/g, " ").replace(/"/g, "&quot;").replace(/\s+/g, " ").trim() || "Alpha Hardscapes";
+}
+
+function heroImgTag(big: string, small: string | undefined, alt: string) {
   // Out of the section's flex layout (absolute), over its whole box, under everything else in it.
   const box = "position:absolute;inset:0;width:100%;height:100%;max-width:none;z-index:-1;pointer-events:none;margin:0";
   const fit = "object-fit:cover;object-position:center center";
-  if (!small) return `<img class="ah-hero-img" src="${escapeAttr(big)}" alt="" fetchpriority="high" decoding="async" style="${box};${fit}">`;
-  const img = `<img src="${escapeAttr(big)}" alt="" fetchpriority="high" decoding="async" style="display:block;width:100%;height:100%;max-width:none;${fit}">`;
+  if (!small) return `<img class="ah-hero-img" src="${escapeAttr(big)}" alt="${alt}" fetchpriority="high" decoding="async" style="${box};${fit}">`;
+  const img = `<img src="${escapeAttr(big)}" alt="${alt}" fetchpriority="high" decoding="async" style="display:block;width:100%;height:100%;max-width:none;${fit}">`;
   return `<picture class="ah-hero-img" style="${box};display:block"><source media="(max-width: 767px)" srcset="${escapeAttr(small)}">${img}</picture>`;
 }
 
@@ -402,7 +409,7 @@ export function tuneHtml(html: string, opts: { cssBundle?: string } = {}): strin
         `<link rel="preload" as="image" href="${escapeAttr(big)}" media="(min-width: 768px)" fetchpriority="high">`
       : `<link rel="preload" as="image" href="${escapeAttr(big)}" fetchpriority="high">`;
     out = out.includes(anchor) ? out.replace(anchor, anchor + preload) : out.replace("</head>", `${preload}</head>`);
-    const withImg = HERO_IMG_SECTIONS.has(hero.id) ? intoSection(out, hero.id, heroImgTag(big, small)) : undefined;
+    const withImg = HERO_IMG_SECTIONS.has(hero.id) ? intoSection(out, hero.id, heroImgTag(big, small, heroAlt(out))) : undefined;
     if (withImg) out = withImg.replace("</head>", `${heroImgStyle(hero.id)}</head>`);
     else if (small) out = out.replace("</head>", `${phoneHero(hero.id, small)}</head>`);
   }
