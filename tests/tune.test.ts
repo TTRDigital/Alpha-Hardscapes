@@ -96,3 +96,17 @@ test("WordPress hooks and i18n helpers are deferred, in the same order", () => {
   const out = tuneHtml(page('<script id="wp-hooks-js" src="/wp-includes/js/dist/hooks.min.js"></script><script id="wp-i18n-js" src="/wp-includes/js/dist/i18n.min.js"></script>'));
   assert.match(out, /<script defer="" id="wp-hooks-js" src="\/wp-includes\/js\/dist\/hooks\.min\.js"><\/script><script defer="" id="wp-i18n-js" src="\/wp-includes\/js\/dist\/i18n\.min\.js"><\/script>/);
 });
+
+test("on a blog post the theme scripts start after the first paint, in order, before the load event", () => {
+  const body = '<script defer="" src="/assets/js/0dfeceeb67a14d57b0cbe68ee88ad222.js"></script><script id="ah-blog-js">x</script>';
+  const out = tuneHtml(page(body));
+  assert.doesNotMatch(out, /<script defer="" src="\/assets\/js\//);
+  assert.match(out, /requestAnimationFrame\(function\(\)\{setTimeout\(function\(\)\{var s=document\.createElement\("script"\);s\.src="\/assets\/js\/0dfeceeb67a14d57b0cbe68ee88ad222\.js\?v=\d+";s\.async=false/);
+  assert.match(out, /DOMContentLoaded/);
+});
+
+test("other pages keep the theme scripts deferred as before", () => {
+  const out = tuneHtml(page('<script defer="" src="/assets/js/0dfeceeb67a14d57b0cbe68ee88ad222.js"></script>'));
+  assert.match(out, /<script defer="" src="\/assets\/js\/0dfeceeb67a14d57b0cbe68ee88ad222\.js\?v=\d+"><\/script>/);
+  assert.doesNotMatch(out, /requestAnimationFrame/);
+});

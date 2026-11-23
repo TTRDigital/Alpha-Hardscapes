@@ -73,6 +73,22 @@ const WP_HELPERS = /<script id="(wp-(?:hooks|i18n)-js)" src="(\/wp-includes\/js\
 /** Bump when a file in public/assets/js changes, so browsers holding the year-long cached copy fetch it again. */
 const SCRIPTS_VERSION = "1120";
 
+/* Blog posts (TTR-2999, phone speed): the theme scripts (Elementor, Astra and their add-ons, one 750 KB
+ * file) start right after the first paint instead of before it. On a phone the browser ran that file
+ * before painting the post's photo, which held the photo back by about a second (Lighthouse: 3.45 s with
+ * it, 2.3 s without). The file still loads before the page's load event, in the same order after jQuery
+ * and the WordPress helpers, so its "ready" and "load" handlers run as before. Nothing on a post waits on
+ * it to show: the post itself is plain HTML from lib/render/blog.ts. */
+const THEME_BUNDLE = /<script defer="" src="(\/assets\/js\/[0-9a-f]{32}\.js\?v=\d+)"><\/script>/;
+
+function afterFirstPaint(src: string) {
+  return (
+    `<script>(function(){function go(){requestAnimationFrame(function(){setTimeout(function(){var s=document.createElement("script");` +
+    `s.src="${src}";s.async=false;document.body.appendChild(s)},0)})}` +
+    `if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",go);else go()})();</script>`
+  );
+}
+
 /* Hosted videos set to autoplay (the reel on the home page, 3.5 MB) download when they scroll into
  * view instead of with the page. */
 const AUTOPLAY_VIDEO = /<video class="elementor-video"([^>]*) autoplay=""([^>]*)>/g;
@@ -398,6 +414,7 @@ export function tuneHtml(html: string, opts: { cssBundle?: string } = {}): strin
   // The combined theme scripts changed in place (TTR-2513: the copy of the call-tracking snippet no longer
   // starts on its own); /assets is cached for a year, so the address carries a version.
   out = out.replace(/(<script defer="" src="\/assets\/js\/[0-9a-f]{32}\.js)(")/g, `$1?v=${SCRIPTS_VERSION}$2`);
+  if (out.includes('<script id="ah-blog-js">')) out = out.replace(THEME_BUNDLE, (_m, src: string) => afterFirstPaint(src));
 
   const hero = heroSection(out);
   if (hero) {
