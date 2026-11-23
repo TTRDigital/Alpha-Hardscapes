@@ -21,16 +21,36 @@
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { sharedWords, trimCss, wordsOf } from "./css-trim.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const CSS_DIR = join(ROOT, "public/assets/css");
 const OUT = join(ROOT, "lib/generated/css-bundles.json");
+/*
+ * Page types whose bundles are trimmed to the rules their pages use (scripts/css-trim.mjs, TTR-2999).
+ * Switched on one type at a time, each after screenshots of every page of that type match at 375 and
+ * 1440 px. A bundle is trimmed only when every document using it is one of these types.
+ */
+const TRIM_TYPES = new Set(["post"]);
+
 const LINK = /<link rel="stylesheet"(?: id="[^"]*")? href="(\/assets\/css\/[a-z0-9-]+\.css)" media="all">/g;
 
 function main() {
   const shells = JSON.parse(readFileSync(join(ROOT, "lib/generated/shells.json"), "utf8"));
+  const seed = JSON.parse(readFileSync(join(ROOT, "content/seed.json"), "utf8"));
   const map = {};
   const keep = new Set();
+
+  // Each bundle's skeletons and the documents that use them (for the trim).
+  const keyOf = (shell) => [...shell.slice(0, shell.indexOf("</head>")).matchAll(LINK)].map((m) => m[1]).join("|");
+  const uses = new Map();
+  for (const [id, shell] of Object.entries(shells)) {
+    const key = keyOf(shell);
+    if (!uses.has(key)) uses.set(key, { shells: [], docs: [] });
+    uses.get(key).shells.push(shell);
+    for (const doc of seed) if (doc.shell === id) uses.get(key).docs.push(doc);
+  }
+  let shared;
 
   for (const shell of Object.values(shells)) {
     const head = shell.slice(0, shell.indexOf("</head>"));
@@ -39,9 +59,14 @@ function main() {
     const key = hrefs.join("|");
     if (map[key]) continue;
     // @charset is only valid as the first rule: one at the top, the files' own are dropped.
-    const css =
+    let css =
       '@charset "UTF-8";\n' +
       hrefs.map((h) => `/* ${h} */\n${readFileSync(join(ROOT, "public", h), "utf8").replace(/^\uFEFF?\s*@charset\s+["'][^"']*["'];?/i, "")}`).join("\n");
+    const used = uses.get(key);
+    if (used.docs.length && used.docs.every((d) => TRIM_TYPES.has(d._type))) {
+      shared ??= sharedWords(ROOT, seed);
+      css = trimCss(css, wordsOf([...used.shells, ...used.docs.map((d) => JSON.stringify(d))], shared));
+    }
     const name = `b-${createHash("sha256").update(css).digest("hex").slice(0, 12)}.css`;
     const path = `/assets/css/${name}`;
     writeFileSync(join(CSS_DIR, name), css);
