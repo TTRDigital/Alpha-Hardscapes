@@ -18,7 +18,8 @@
     "blog-images": "node --experimental-strip-types --no-warnings scripts/blog-images.ts",
     "webp": "node --experimental-strip-types --no-warnings scripts/webp.ts",
     "publish-posts": "node --experimental-strip-types --no-warnings scripts/publish-posts.ts",
-    "test": "node --conditions=react-server --experimental-strip-types --no-warnings --test tests/*.test.ts"
+    "test": "node --conditions=react-server --experimental-strip-types --no-warnings --test tests/*.test.ts",
+    "client-photos": "node --experimental-strip-types --no-warnings scripts/client-photos.ts"
   },
   "dependencies": {
     "@sanity/vision": "^6.18.0",

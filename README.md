@@ -61,6 +61,10 @@ Added after the Nov 20, 2026 site sweep (TTR-2513), same rules (nothing a visito
 - **Accessibility markup:** gallery tiles get an `aria-label`; the phone-number icon box titles (`<h3>`) get `role="none"` so the outline goes H1 to H2.
 - **Caching:** `/wp-content` and `/wp-includes` (uploads, fonts, the reel video, theme scripts) are cached for a year instead of a week.
 
+## Client project photos (Nov 2026, scripts/client-photos.ts)
+
+Five photos the client sent (front entry with lit stone steps, granite walkway) are in `public/wp-content/uploads/2026/11/` with WordPress-style sizes. They were added without changing any layout: first in the /gallery/ filterable gallery (Paths, Stairs, Patios), one more row of four in "Featured Patio & Walkway Projects" on /walkway-patio-connecticut/, and in place of the two illustrations on /stone-steps-connecticut/ (cropped to the same 4:5 shape; same size on the page at 390 and 1440 px). The homeowner seen in one photo is cropped out. `npm run client-photos` writes them into `content/seed.json`; `-- --publish` (with `SANITY_WRITE_TOKEN`) changes only those blocks of the three pages in Sanity, keeping other CMS edits. The client's videos are converted to MP4 but not placed yet: any spot for them means a new block on a page.
+
 ## Redirects
 
 - `content/redirects.json` (loaded by `next.config.ts`, all 301): every redirect the live WordPress site answered when probed with ~1,350 old and alternative URLs (old slugs, renamed parents, the redirect plugin's rules, WordPress' own "did you mean" redirects), plus `/?p=ID` and `/?page_id=ID` shortlinks. 711 rules, all tested.
